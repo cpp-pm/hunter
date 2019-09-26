@@ -10,11 +10,11 @@
   * https://ci.appveyor.com/project/<username>/hunter/build/<build-number>
   * https://travis-ci.org/<username>/hunter/builds/<build-number>
 
-* I have submitted CI configs to https://github.com/ingenue/hunter targeting `pkg.template` branch,
-  see this merged pull request https://github.com/ingenue/hunter/pull/<number>
+* I have submitted CI configs to https://github.com/cpp-pm/hunter-testing targeting `pkg.template` branch,
+  see this merged pull request https://github.com/cpp-pm/hunter-testing/pull/<number>
 
 <!--- Remove next line if there is no corresponding "New package" issue. -->
-* My change will resolve this "New package" request: https://github.com/ruslo/hunter/issues/<number>
+* My change will resolve this "New package" request: https://github.com/cpp-pm/hunter/issues/<number>
 
 ---
 <!--- END -->
@@ -33,7 +33,7 @@
 
 <!--- Remove next line if this update doesn't break old toolchains -->
 * This update will break few old toolchains.
-  They are excluded in this pull request: https://github.com/ingenue/hunter/pull/<number>
+  They are excluded in this pull request: https://github.com/cpp-pm/hunter-testing/pull/<number>
 
 ---
 <!--- END -->
