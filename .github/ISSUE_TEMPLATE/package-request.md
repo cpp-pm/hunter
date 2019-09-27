@@ -32,7 +32,7 @@ assignees: ''
 * This package has next dependencies:
 
   * `<dependency-1>` (required, available in Hunter: https://docs.hunter.sh/en/latest/packages/pkg/<dependency-1>.html)
-  * `<dependency-2>` (required, not available in Hunter, corresponding "New package" request: https://github.com/ruslo/hunter/issues/<number>)
-  * `<dependency-3>` (optional, not available in Hunter, corresponding "New package" request: https://github.com/ruslo/hunter/issues/<number>)
+  * `<dependency-2>` (required, not available in Hunter, corresponding "New package" request: https://github.com/cpp-pm/hunter/issues/<number>)
+  * `<dependency-3>` (optional, not available in Hunter, corresponding "New package" request: https://github.com/cpp-pm/hunter/issues/<number>)
 
 ---
