@@ -6,6 +6,7 @@
 
 include(hunter_add_version)
 include(hunter_cacheable)
+include(hunter_cmake_args)
 include(hunter_download)
 include(hunter_pick_scheme)
 
@@ -18,6 +19,12 @@ hunter_add_version(
     https://github.com/KhronosGroup/SPIRV-Headers/archive/1.5.1.tar.gz
     SHA1
     77018bfe6cb1eceaf824e401dbd206660a25bf66
+)
+
+hunter_cmake_args(
+    SPIRV-Tools
+    CMAKE_ARGS
+      SPIRV_HEADERS_SKIP_EXAMPLES=ON
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
