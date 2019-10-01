@@ -13,7 +13,7 @@ SPIRV-Tools
 -  `Official <https://github.com/KhronosGroup/SPIRV-Tools>`__
 -  `Hunterized <https://github.com/cpp-pm/SPIRV-Tools>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/SPIRV-Tools/CMakeLists.txt>`__
--  Added by `Mathieu-Andre Chiasson <https://github.com/mchiasson>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
+-  Added by `Mathieu-Andre Chiasson <https://github.com/mchiasson>`__ (`pr-23 <https://github.com/cpp-pm/hunter/pull/23>`__)
 
 .. literalinclude:: /../examples/SPIRV-Tools/CMakeLists.txt
   :language: cmake
