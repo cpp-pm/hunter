@@ -15,8 +15,8 @@ Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
 * Contacts: https://docs.hunter.sh/en/latest/contacts.html
 * `Per package testing table <https://github.com/ingenue/hunter/branches/all>`_
 
-.. |gitter| image:: https://badges.gitter.im/ruslo/hunter.svg
-  :target: https://gitter.im/ruslo/hunter
+.. |gitter| image:: https://badges.gitter.im/cpp-pm/community.svg
+  :target: https://gitter.im/cpp-pm/community
   :alt: Gitter public chat room
   
 .. |rtfd| image:: https://readthedocs.org/projects/hunter/badge/?version=latest
@@ -31,7 +31,7 @@ Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
   :target: https://ci.appveyor.com/project/ingenue/hunter/history
   :alt: AppVeyor CI
   
-.. |license| image:: https://img.shields.io/github/license/ruslo/hunter.svg
+.. |license| image:: https://img.shields.io/github/license/cpp-pm/hunter.svg
   :target: https://github.com/cpp-pm/hunter/blob/master/LICENSE
   :alt: LICENSE
   
