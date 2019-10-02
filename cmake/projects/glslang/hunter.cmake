@@ -13,6 +13,17 @@ hunter_add_version(
     PACKAGE_NAME
     glslang
     VERSION
+    7.12.3352-p1
+    URL
+    "https://github.com/cpp-pm/glslang/archive/v7.12.3352-p1.tar.gz"
+    SHA1
+    537a647b25a02d1a15bc3c87e3ed27b9a7db7982
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    glslang
+    VERSION
     7.7.2767-p0
     URL
     "https://github.com/hunter-packages/glslang/archive/v7.7.2767-p0.tar.gz"
@@ -24,14 +35,14 @@ if(IOS)
 hunter_cmake_args(
     glslang
     CMAKE_ARGS
-        ENABLE_HLSL=OFF
+        BUILD_TESTING=OFF
         ENABLE_GLSLANG_BINARIES=OFF
 )
 else()
 hunter_cmake_args(
     glslang
     CMAKE_ARGS
-        ENABLE_HLSL=OFF
+        BUILD_TESTING=OFF
 )
 endif()
 
