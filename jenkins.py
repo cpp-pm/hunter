@@ -53,13 +53,15 @@ def get_changed_files(ci_type, build_type):
   if build_type == BuildType.PUSH:
     # Push builds are only allowed on master, so this must be a post-merge build.
     # Always assume squash merges only.
-    return subprocess.check_output('git diff --name-only HEAD~1..'.split()).decode()
+    return subprocess.check_output('git diff --name-only HEAD~1..'.split()).decode().splitlines()
   elif ci_type == CI.TRAVIS:
-    print(os.environ.get('TRAVIS_COMMIT', None))
-    print(os.environ.get('TRAVIS_PULL_REQUEST_BRANCH', None))
-    print(os.environ.get('TRAVIS_PULL_REQUEST_SHA', None))
-    print(os.environ.get('TRAVIS_PULL_REQUEST_SLUG', None))
-    print(os.environ.get('TRAVIS_REPO_SLUG', None))
+    target_branch = os.environ['TRAVIS_BRANCH']
+    fetch_command = 'git getch origin {}'.format(target_branch)
+    print(fetch_command)
+
+    print("Fetching cpp-pm/master...\n")
+    subprocess.check_call(fetch_command.split())
+    return subprocess.check_output('git diff --name-only FETCH_HEAD...'.split()).decode().splitlines()
   else:
     assert 0, 'TODO(appveyor)'
 
