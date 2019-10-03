@@ -77,9 +77,11 @@ def get_project_dirs(current_dir, ci_type):
     project_dirs = []
     for changed_file in changed_files:
       if changed_file.startswith('examples/'):
-        project_dirs.append(changed_file.split('/')[1])
+        project_dir = changed_file.split('/')[1]
+        project_dirs.append(os.path.join('examples', project_dir))
       elif changed_file.startswith('cmake/projects/'):
-        project_dirs.append(changed_file.split('/')[2])
+        project_dir = changed_file.split('/')[2]
+        project_dirs.append(os.path.join('examples', project_dir))
   else:
     project_dirs = [project_dir]
 
@@ -261,6 +263,7 @@ def run():
   for project_dir in project_dirs:
     args[args.index(project_dir_placeholder)] = project_dir
 
+    print('Testing: ', project_dir, '\n\n\n')
     print('Execute command: [')
     for i in args:
       print('  `{}`'.format(i))
