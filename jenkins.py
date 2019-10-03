@@ -220,7 +220,7 @@ def run():
   print('Testing in: {}'.format(testing_dir))
   os.chdir(testing_dir)
 
-  project_dir_placeholder = 'PROJECT_DIR_PLACEHOLDER'
+  project_dir_index = 8
   args = [
       sys.executable,
       build_script,
@@ -230,7 +230,7 @@ def run():
       '--toolchain',
       toolchain,
       '--home',
-      project_dir_placeholder,
+      PROJECT_DIR_PLACEHOLDER,
       '--fwd',
       'CMAKE_POLICY_DEFAULT_CMP0069=NEW',
       'HUNTER_SUPPRESS_LIST_OF_FILES=ON',
@@ -261,7 +261,7 @@ def run():
     args += ['--tail', '200']
 
   for project_dir in project_dirs:
-    args[args.index(project_dir_placeholder)] = project_dir
+    args[project_dir_index] = project_dir
 
     print('Testing: ', project_dir, '\n\n\n')
     print('Execute command: [')
