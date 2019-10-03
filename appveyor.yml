@@ -78,7 +78,5 @@ build_script:
 # http://www.appveyor.com/docs/branches#white-and-blacklisting
 # Exclude branch 'pkg.template'. Nothing to build there.
 branches:
-  except:
-    - pkg.template
-    - /^pr\..*/
-    - /^v[0-9]+\.[0-9]+\.[0-9]+$/
+  only:
+    - master
