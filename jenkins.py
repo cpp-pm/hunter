@@ -17,9 +17,13 @@ import time
 from enum import Enum
 
 class CI(Enum):
-    NONE = 'none'
-    TRAVIS = 'travis'
-    APPVEYOR = 'appveyor'
+  NONE = 'none'
+  TRAVIS = 'travis'
+  APPVEYOR = 'appveyor'
+
+class BuildType(Enum):
+  PUSH = 'push'
+  PR = 'pr'
 
 def clear_except_download(hunter_root):
   base_dir = os.path.join(hunter_root, '_Base')
@@ -37,9 +41,37 @@ def clear_except_download(hunter_root):
         else:
           shutil.rmtree(to_remove)
 
-def get_project_dirs(current_dir):
+def get_build_type(ci_type):
+  if ci_type == CI.TRAVIS:
+    return BuildType.PUSH if os.environ.get('TRAVIS_PULL_REQUEST', None) == 'false' else BuildType.PR
+  elif ci_type == CI.APPVEYOR:
+    return BuildType.PUSH if not os.environ.get('APPVEYOR_PULL_REQUEST_NUMBER', None) else BuildType.PR
+  else:
+    assert 0, 'Build type only available in CI'
+
+def get_changed_files(ci_type, build_type):
+  if build_type == BuildType.PUSH:
+    # Push builds are only allowed on master, so this must be a post-merge build.
+    # Always assume squash merges only.
+    return subprocess.check_output('git diff --name-only HEAD~1..'.split()).decode()
+  elif ci_type == CI.TRAVIS:
+    print(os.environ.get('TRAVIS_COMMIT', None))
+    print(os.environ.get('TRAVIS_PULL_REQUEST_BRANCH', None))
+    print(os.environ.get('TRAVIS_PULL_REQUEST_SHA', None))
+    print(os.environ.get('TRAVIS_PULL_REQUEST_SLUG', None))
+    print(os.environ.get('TRAVIS_REPO_SLUG', None))
+  else:
+    assert 0, 'TODO(appveyor)'
+
+def get_project_dirs(current_dir, ci_type):
   project_dir = os.getenv('PROJECT_DIR')
   if not project_dir:
+    build_type = get_build_type(ci_type)
+    print('Build type: ', build_type)
+
+    changed_files = get_changed_files(ci_type, build_type)
+    print(changed_files)
+
     sys.exit('Expected environment variable PROJECT_DIR')
   else:
     project_dirs = [project_dir]
@@ -99,13 +131,13 @@ def run():
     ci_type = CI.APPVEYOR
   else:
     ci_type = CI.NONE
-  print('CI: {}'.format(ci_type))
+  print('CI: ', ci_type)
 
   if ci_type is not CI.NONE and toolchain == 'dummy':
     print('Skip build: CI dummy (workaround)')
     sys.exit(0)
 
-  project_dirs = get_project_dirs(cdir)
+  project_dirs = get_project_dirs(cdir, ci_type)
 
   verbose = True
   env_verbose = os.getenv('VERBOSE')
