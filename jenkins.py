@@ -17,9 +17,9 @@ import time
 from enum import Enum
 
 class CI(Enum):
-    NONE = "none"
-    TRAVIS = "travis"
-    APPVEYOR = "appveyor"
+    NONE = 'none'
+    TRAVIS = 'travis'
+    APPVEYOR = 'appveyor'
 
 def clear_except_download(hunter_root):
   base_dir = os.path.join(hunter_root, '_Base')
@@ -99,7 +99,7 @@ def run():
     ci_type = CI.APPVEYOR
   else:
     ci_type = CI.NONE
-  print('CI: '.format(ci_type))
+  print('CI: {}'.format(ci_type))
 
   if ci_type is not CI.NONE and toolchain == 'dummy':
     print('Skip build: CI dummy (workaround)')
@@ -228,6 +228,9 @@ def run():
     subprocess.check_call(args)
 
   if parsed_args.upload:
+    assert len(project_dirs) == 1, 'Upload can only be used on one package at a time'
+    project_dir = project_dirs[0]
+
     seconds = 60
     print(
         'Wait for GitHub changes became visible ({} seconds)...'.format(seconds)
