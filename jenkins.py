@@ -72,11 +72,18 @@ def get_project_dirs(current_dir, ci_type):
     print('Build type: ', build_type)
 
     changed_files = get_changed_files(ci_type, build_type)
-    print(changed_files)
+    print('Changed files:\n', changed_files)
 
-    sys.exit('Expected environment variable PROJECT_DIR')
+    project_dirs = []
+    for changed_file in changed_files:
+      if changed_file.startswith('examples/'):
+        project_dirs.append(changed_file.split('/')[1])
+      elif changed_file.startswith('cmake/projects/'):
+        project_dirs.append(changed_file.split('/')[2])
   else:
     project_dirs = [project_dir]
+
+  print('Project dirs: \n', project_dirs)
 
   return [os.path.normpath(os.path.join(current_dir, x)) for x in project_dirs]
 
