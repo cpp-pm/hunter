@@ -14,6 +14,12 @@ import sys
 import tarfile
 import tempfile
 import time
+from enum import Enum
+
+class CI(Enum):
+    NONE = "none"
+    TRAVIS = "travis"
+    APPVEYOR = "appveyor"
 
 def clear_except_download(hunter_root):
   base_dir = os.path.join(hunter_root, '_Base')
@@ -30,6 +36,15 @@ def clear_except_download(hunter_root):
           subprocess.check_call(['cmd', '/c', 'rmdir', to_remove, '/S', '/Q'])
         else:
           shutil.rmtree(to_remove)
+
+def get_project_dirs(current_dir):
+  project_dir = os.getenv('PROJECT_DIR')
+  if not project_dir:
+    sys.exit('Expected environment variable PROJECT_DIR')
+  else:
+    project_dirs = [project_dir]
+
+  return [os.path.normpath(os.path.join(current_dir, x)) for x in project_dirs]
 
 def run():
   parser = argparse.ArgumentParser("Testing script")
@@ -78,14 +93,19 @@ def run():
   if not toolchain:
     sys.exit('Environment variable TOOLCHAIN is empty')
 
-  project_dir = os.getenv('PROJECT_DIR')
-  if not project_dir:
-    sys.exit('Expected environment variable PROJECT_DIR')
+  if os.getenv('TRAVIS'):
+    ci_type = CI.TRAVIS
+  elif os.getenv('APPVEYOR'):
+    ci_type = CI.APPVEYOR
+  else:
+    ci_type = CI.NONE
+  print('CI: '.format(ci_type))
 
-  ci = os.getenv('TRAVIS') or os.getenv('APPVEYOR')
-  if (ci and toolchain == 'dummy'):
+  if ci_type is not CI.NONE and toolchain == 'dummy':
     print('Skip build: CI dummy (workaround)')
     sys.exit(0)
+
+  project_dirs = get_project_dirs(cdir)
 
   verbose = True
   env_verbose = os.getenv('VERBOSE')
@@ -100,9 +120,6 @@ def run():
               env_verbose
           )
       )
-
-  project_dir = os.path.join(cdir, project_dir)
-  project_dir = os.path.normpath(project_dir)
 
   testing_dir = os.path.join(os.getcwd(), '_testing')
   if os.path.exists(testing_dir) and parsed_args.clear:
@@ -160,6 +177,7 @@ def run():
   print('Testing in: {}'.format(testing_dir))
   os.chdir(testing_dir)
 
+  project_dir_placeholder = 'PROJECT_DIR_PLACEHOLDER'
   args = [
       sys.executable,
       build_script,
@@ -169,7 +187,7 @@ def run():
       '--toolchain',
       toolchain,
       '--home',
-      project_dir,
+      project_dir_placeholder,
       '--fwd',
       'CMAKE_POLICY_DEFAULT_CMP0069=NEW',
       'HUNTER_SUPPRESS_LIST_OF_FILES=ON',
@@ -199,12 +217,15 @@ def run():
     args += ['--discard', '10']
     args += ['--tail', '200']
 
-  print('Execute command: [')
-  for i in args:
-    print('  `{}`'.format(i))
-  print(']')
+  for project_dir in project_dirs:
+    args[args.index(project_dir_placeholder)] = project_dir
 
-  subprocess.check_call(args)
+    print('Execute command: [')
+    for i in args:
+      print('  `{}`'.format(i))
+    print(']')
+
+    subprocess.check_call(args)
 
   if parsed_args.upload:
     seconds = 60
