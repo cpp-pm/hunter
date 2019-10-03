@@ -230,7 +230,7 @@ def run():
       '--toolchain',
       toolchain,
       '--home',
-      PROJECT_DIR_PLACEHOLDER,
+      'PROJECT_DIR_PLACEHOLDER',
       '--fwd',
       'CMAKE_POLICY_DEFAULT_CMP0069=NEW',
       'HUNTER_SUPPRESS_LIST_OF_FILES=ON',
