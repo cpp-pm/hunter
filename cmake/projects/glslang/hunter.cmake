@@ -31,7 +31,7 @@ hunter_add_version(
     44d6157e5bf6005f1f611bcea323488e6268d9c9
 )
 
-if(IOS)
+if(IOS OR ANDROID)
 hunter_cmake_args(
     glslang
     CMAKE_ARGS
