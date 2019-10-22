@@ -12,6 +12,17 @@ hunter_add_version(
     PACKAGE_NAME
     Lua
     VERSION
+    "5.3.5"
+    URL
+    "https://github.com/cpp-pm/lua/archive/v5.3.5-p0.tar.gz"
+    SHA1
+    cda86ad41bceaee63aadec8df13a6ec480b327c8
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Lua
+    VERSION
     "5.3.2"
     URL
     "https://github.com/hunter-packages/lua/archive/v5.3.2-p1.tar.gz"
