@@ -63,6 +63,17 @@ hunter_add_version(
     787a568322e08cebb1e164b3c9766e27ca18b2c8
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    fmt
+    VERSION
+    "6.0.0"
+    URL
+    "https://github.com/fmtlib/fmt/archive/6.0.0.tar.gz"
+    SHA1
+    40635ee94d24cb9856422293c04150017a8911df
+)
+
 hunter_cmake_args(
     fmt
     CMAKE_ARGS
