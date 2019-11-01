@@ -245,6 +245,8 @@ else()
   set(_gtest_license "googletest/LICENSE")
 endif()
 
+# gtest_force_shared_crt prevents GoogleTest from modifying options
+# rather than forcing it to use shared libraries
 hunter_cmake_args(
     GTest
     CMAKE_ARGS
