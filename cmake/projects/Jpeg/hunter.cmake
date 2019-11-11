@@ -5,6 +5,7 @@
 
 include(hunter_add_version)
 include(hunter_cacheable)
+include(hunter_cmake_args)
 include(hunter_download)
 include(hunter_pick_scheme)
 
@@ -51,6 +52,28 @@ hunter_add_version(
     SHA1
     42ff243ae28bdda5b4df5c47fb727272a534dc94
 )
+
+hunter_add_version(
+    PACKAGE_NAME
+    Jpeg
+    VERSION
+    "turbo-2.0.3-p4"
+    URL
+    "https://github.com/cpp-pm/libjpeg-turbo/archive/v2.0.3-p4.tar.gz"
+    SHA1
+    75c9961f52ef9f79a79498e3d46f9107f467494d
+)
+
+string(FIND "${HUNTER_Jpeg_VERSION}" "turbo" HUNTER_Jpeg_IS_TURBO)
+if(NOT HUNTER_Jpeg_IS_TURBO EQUAL -1)
+  hunter_cmake_args(
+    Jpeg
+    CMAKE_ARGS
+      ENABLE_SHARED=OFF
+      ENABLE_STATIC=ON
+      EXPORT_AS_JPEG=ON
+  )
+endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(Jpeg)
