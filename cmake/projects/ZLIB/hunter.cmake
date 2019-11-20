@@ -85,10 +85,24 @@ hunter_add_version(
     2fc1f19ef5ba48c415a614e56e1c12507f4676ab
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    ZLIB
+    VERSION
+    "0.0.0-chromium-f87c2b10efb4-p1"
+    URL
+    "https://github.com/cpp-pm/chromium_zlib/archive/v0.0.0-f87c2b10efb4-p1.tar.gz"
+    SHA1
+    c11a03c2db12d8af908c91a8dfd0f75e44c90e47
+)
+
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(ZLIB)
-hunter_download(PACKAGE_NAME ZLIB
+string(FIND "${HUNTER_ZLIB_VERSION}" "chromium" HUNTER_ZLIB_IS_CHROMIUM)
+if(HUNTER_ZLIB_IS_CHROMIUM EQUAL -1)
+  hunter_download(PACKAGE_NAME ZLIB
     PACKAGE_INTERNAL_DEPS_ID "1"
     PACKAGE_UNRELOCATABLE_TEXT_FILES
     "share/pkgconfig/zlib.pc"
-)
+  )
+endif()
