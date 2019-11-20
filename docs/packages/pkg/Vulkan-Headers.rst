@@ -1,6 +1,6 @@
 .. spelling::
 
-    Vulkan-Headers
+    Vulkan
 
 .. index::
   single: graphics ; Vulkan-Headers

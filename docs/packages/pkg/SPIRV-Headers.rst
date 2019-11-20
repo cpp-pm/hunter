@@ -1,6 +1,6 @@
 .. spelling::
 
-    SPIRV-Headers
+    SPIRV
 
 .. index::
   single: unsorted ; SPIRV-Headers
