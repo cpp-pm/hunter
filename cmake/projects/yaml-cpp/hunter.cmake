@@ -58,7 +58,7 @@ hunter_add_version(
   URL
   "https://github.com/hunter-packages/yaml-cpp/archive/v0.6.2-0f9a586-p1.zip"
   SHA1
-  956C2B5FBF5AA0EB8EF5EF890C0328B3AA357A13
+  956c2b5fbf5aa0eb8ef5ef890c0328b3aa357a13
   )
 
 hunter_cmake_args(
