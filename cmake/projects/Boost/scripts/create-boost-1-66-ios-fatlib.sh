@@ -12,11 +12,25 @@ INSTALL_DIR="$4"
 
 COMMON_DIR="${BUILD_DIR}/bin.v2/libs/${DIRNAME}/build"
 
-IPHONE_DEBUG=`find "${COMMON_DIR}/darwin-gnu-iphoneos/debug" -name "libboost_${LIBNAME}[^_]*.a"`
-IPHONE_RELEASE=`find "${COMMON_DIR}/darwin-gnu-iphoneos/release" -name "libboost_${LIBNAME}[^_]*.a"`
+if [[ -d "${COMMON_DIR}/darwin-gnu-iphoneos/debug" ]]
+then
+  IPHONE_DEBUG=`find "${COMMON_DIR}/darwin-gnu-iphoneos/debug" -name "libboost_${LIBNAME}[^_]*.a"`
+fi
 
-SIM_DEBUG=`find "${COMMON_DIR}/darwin-gnu-iphonesimulator/debug" -name "libboost_${LIBNAME}[^_]*.a"`
-SIM_RELEASE=`find "${COMMON_DIR}/darwin-gnu-iphonesimulator/release" -name "libboost_${LIBNAME}[^_]*.a"`
+if [[ -d "${COMMON_DIR}/darwin-gnu-iphoneos/release" ]]
+then
+  IPHONE_RELEASE=`find "${COMMON_DIR}/darwin-gnu-iphoneos/release" -name "libboost_${LIBNAME}[^_]*.a"`
+fi
+
+if [[ -d "${COMMON_DIR}/darwin-gnu-iphonesimulator/debug" ]]
+then
+  SIM_DEBUG=`find "${COMMON_DIR}/darwin-gnu-iphonesimulator/debug" -name "libboost_${LIBNAME}[^_]*.a"`
+fi
+
+if [[ -d "${COMMON_DIR}/darwin-gnu-iphonesimulator/release" ]]
+then
+  SIM_RELEASE=`find "${COMMON_DIR}/darwin-gnu-iphonesimulator/release" -name "libboost_${LIBNAME}[^_]*.a"`
+fi
 
 echo "-- [iOS universal] IPHONE_DEBUG: $IPHONE_DEBUG"
 echo "-- [iOS universal] IPHONE_RELEASE: $IPHONE_RELEASE"
