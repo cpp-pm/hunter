@@ -4,12 +4,20 @@
 cmake_minimum_required(VERSION 3.0)
 project(Hunter)
 
+include(ExternalProject) # ExternalProject_Add
+
+# Just download archive (do not install to CMAKE_INSTALL_PREFIX)
+
+# Note that archive will be copied to a special internal location and can
+# be found by <package-name>_ROOT variable. I.e. there are no files installed
+# into CMAKE_INSTALL_PREFIX. For instance this scheme doesn't fit for
+# header-only library. Even if header-only library has no build
+# instructions it still can be installed. Actually using CMake CONFIG-mode
+# (see 'find_package' manuals) is the best way to install such package.
+
 list(APPEND CMAKE_MODULE_PATH "@HUNTER_SELF@/cmake/modules")
 
-include(hunter_fatal_error)
-include(hunter_user_error)
 include(hunter_status_debug)
-include(hunter_status_print)
 include(hunter_assert_not_empty_string)
 
 hunter_status_debug("Scheme: url_sha1_download")
@@ -32,51 +40,40 @@ hunter_status_debug("  @HUNTER_PACKAGE_URL@")
 hunter_status_debug("  -> ${dest}")
 hunter_status_debug("  -> ${dest_home}")
 
-set(counter "")
-
-while(TRUE)
-  string(COMPARE EQUAL "${counter}" "xxx" stop)
-  if(stop)
-    hunter_user_error("Download failed")
-  endif()
-
-  if(EXISTS "${dest}")
-    file(SHA1 "${dest}" dest_sha1)
-    string(COMPARE EQUAL "${dest_sha1}" "@HUNTER_PACKAGE_SHA1@" is_good)
-    if(is_good)
-      break()
-    endif()
-  endif()
-
-  # Copy/paste from CMake standard module Modules/ExternalProject.cmake
-  file(
-      DOWNLOAD "@HUNTER_PACKAGE_URL@" "${dest}"
-      SHOW_PROGRESS
-      STATUS status
-      LOG log
-      TLS_VERIFY "@HUNTER_TLS_VERIFY@"
+string(COMPARE EQUAL "@HUNTER_PACKAGE_PROTECTED_SOURCES@" "" is_empty)
+if(is_empty)
+  set(http_credentials "")
+else()
+  set(
+      http_credentials
+      HTTP_USERNAME "@HUNTER_PACKAGE_HTTP_USERNAME@"
+      HTTP_PASSWORD "@HUNTER_PACKAGE_HTTP_PASSWORD@"
   )
-  list(GET status 0 status_code)
-  list(GET status 1 status_string)
+endif()
 
-  if(NOT status_code EQUAL 0)
-    hunter_status_print("Error: downloading '@HUNTER_PACKAGE_URL@' failed")
-    hunter_status_print("  status_code: ${status_code}")
-    hunter_status_print("  status_string: ${status_string}")
-    hunter_status_print("  log: ${log}")
-  else()
-    file(SHA1 "${dest}" dest_sha1)
-    string(COMPARE EQUAL "${dest_sha1}" "@HUNTER_PACKAGE_SHA1@" is_good)
-    if(is_good)
-      break()
-    else()
-      hunter_status_print("Hash mismatch:")
-      hunter_status_print("  expected: @HUNTER_PACKAGE_SHA1@")
-      hunter_status_print("  got: ${dest_sha1}")
-    endif()
-  endif()
+ExternalProject_Add(
+    "@HUNTER_EP_NAME@"
+    URL
+    @HUNTER_PACKAGE_URL@
+    URL_HASH
+    SHA1=@HUNTER_PACKAGE_SHA1@
+    ${http_credentials}
+    DOWNLOAD_DIR
+    "@HUNTER_PACKAGE_DOWNLOAD_DIR@"
+    DOWNLOAD_NO_EXTRACT YES
+    TLS_VERIFY
+    "@HUNTER_TLS_VERIFY@"
+    SOURCE_DIR
+    "@HUNTER_PACKAGE_SOURCE_DIR@"
+    CONFIGURE_COMMAND
+    ""
+    BUILD_COMMAND
+        # copy file from download dir to source dir
+        "@CMAKE_COMMAND@"
+        -E copy
+        "${dest}"
+        "@HUNTER_PACKAGE_SOURCE_DIR@"
+    INSTALL_COMMAND
+    ""
+)
 
-  set(counter "${counter}x")
-endwhile()
-
-file(COPY "${dest}" DESTINATION "@HUNTER_PACKAGE_SOURCE_DIR@")
