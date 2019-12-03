@@ -54,6 +54,17 @@ hunter_add_version(
     11fb2b502a425ccc07142f869cce8b3bbae5f1ea
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    BZip2
+    VERSION
+    "1.0.8-p4"
+    URL
+    "https://github.com/Bjoe/bzip2/archive/hunter-1.0.8.zip"
+    SHA1
+    d5617ec07546fa51d269bde92b5fd2f8481a1ae9
+)
+
 hunter_cmake_args(
     BZip2
     CMAKE_ARGS
