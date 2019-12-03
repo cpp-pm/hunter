@@ -12,7 +12,7 @@ assignees: ''
 * I've read [Code of Conduct](https://github.com/cpp-pm/hunter/blob/master/.github/CODE_OF_CONDUCT.md), I promise to be polite and will do my best at being constructive. **[Yes|No]**
 * I've read [Reporting bugs section](https://docs.hunter.sh/en/latest/contributing.html#reporting-bugs) carefully. **[Yes|No]**
 * I've checked that all the `hunter_add_package`/`find_package` API used by me in the example is the same as in [documentation](https://docs.hunter.sh/en/latest/packages.html). **[Yes|No]**
-* I'm using [latest](https://github.com/ruslo/hunter/releases) Hunter `URL`/`SHA1`. **[Yes|No]**
+* I'm using [latest](https://github.com/cpp-pm/hunter/releases) Hunter `URL`/`SHA1`. **[Yes|No]**
 
 <!--- If you can reproduce an issue using just one small CMakeLists.txt, paste it here. -->
 * I've created [SSCCE](http://www.sscce.org/) reproducing the issue:
