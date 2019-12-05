@@ -13,7 +13,7 @@ Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
 * Reporting issues: https://github.com/cpp-pm/hunter/issues/new
 * Contributing guide: https://docs.hunter.sh/en/latest/contributing.html
 * Contacts: https://docs.hunter.sh/en/latest/contacts.html
-* `Per package testing table <https://github.com/ingenue/hunter/branches/all>`_
+* `Per package testing table <https://github.com/cpp-pm/hunter-testing/branches/all>`_
 
 .. |gitter| image:: https://badges.gitter.im/cpp-pm/community.svg
   :target: https://gitter.im/cpp-pm/community
@@ -23,12 +23,12 @@ Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
   :target: http://hunter.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation status
   
-.. |travis| image:: https://img.shields.io/travis/ingenue/hunter/pkg.gtest.svg?style=flat-square&label=Linux%20OSX%20Android%20iOS
-  :target: https://travis-ci.org/ingenue/hunter/builds
+.. |travis| image:: https://img.shields.io/travis/cpp-pm/hunter-testing/pkg.gtest.svg?style=flat-square&label=Linux%20OSX%20Android%20iOS
+  :target: https://travis-ci.com/cpp-pm/hunter-testing/builds
   :alt: Travis CI
   
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/ingenue/hunter/pkg.gtest.svg?style=flat-square&label=Windows
-  :target: https://ci.appveyor.com/project/ingenue/hunter/history
+.. |appveyor| image:: https://img.shields.io/appveyor/ci/cpp-pm/hunter-testing/pkg.gtest.svg?style=flat-square&label=Windows
+  :target: https://ci.appveyor.com/project/cpp-pm/hunter-testing/history
   :alt: AppVeyor CI
   
 .. |license| image:: https://img.shields.io/github/license/cpp-pm/hunter.svg
