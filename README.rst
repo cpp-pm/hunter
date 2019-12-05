@@ -6,13 +6,13 @@ Hunter
 CMake driven cross-platform package manager for C/C++.
 Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
 
-* Documentation: https://docs.hunter.sh
-* Brief overview: https://docs.hunter.sh/en/latest/overview.html (**Must-read!**)
-* Packages: https://docs.hunter.sh/en/latest/packages.html
+* Documentation: https://cpp-pm-hunter.readthedocs.io
+* Brief overview: https://cpp-pm-hunter.readthedocs.io/en/latest/overview.html (**Must-read!**)
+* Packages: https://cpp-pm-hunter.readthedocs.io/en/latest/packages.html
 * Sources: https://github.com/cpp-pm/hunter
 * Reporting issues: https://github.com/cpp-pm/hunter/issues/new
-* Contributing guide: https://docs.hunter.sh/en/latest/contributing.html
-* Contacts: https://docs.hunter.sh/en/latest/contacts.html
+* Contributing guide: https://cpp-pm-hunter.readthedocs.io/en/latest/contributing.html
+* Contacts: https://cpp-pm-hunter.readthedocs.io/en/latest/contacts.html
 * `Per package testing table <https://github.com/cpp-pm/hunter-testing/branches/all>`_
 
 .. |gitter| image:: https://badges.gitter.im/cpp-pm/community.svg
