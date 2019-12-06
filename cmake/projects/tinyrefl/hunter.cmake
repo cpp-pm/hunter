@@ -29,7 +29,7 @@ hunter_add_version(
 #endif()
 
 #hunter_configuration_types(tinyrefl CONFIGURATION_TYPES Release)
-hunter_pick_scheme(DEFAULT url_sha1_autotools)
+hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(tinyrefl)
 hunter_download(
     PACKAGE_NAME tinyrefl
