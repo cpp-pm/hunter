@@ -2,7 +2,7 @@
 
 include(hunter_add_version)
 include(hunter_cacheable)
-#include(hunter_cmake_args)
+include(hunter_cmake_args)
 #include(hunter_configuration_types)
 include(hunter_download)
 include(hunter_pick_scheme)
@@ -11,11 +11,11 @@ hunter_add_version(
     PACKAGE_NAME
     tinyrefl
     VERSION
-    0.5.0
+    0.4.1
     URL
-    "https://github.com/Manu343726/tinyrefl/archive/v0.5.0.tar.gz"
+    "https://github.com/Manu343726/tinyrefl/archive/b7296be55e75024289fe11e2d696d4227fc09f0b.zip"
     SHA1
-    26a0fd4ceb169ce2578a9bc401296c137a909eb3
+    e3e3c3b0c826c2bb0c9a59730154c0c37d2b42c6
 )
 
 #if (ANDROID OR IOS)
