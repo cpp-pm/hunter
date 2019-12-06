@@ -11,11 +11,11 @@ hunter_add_version(
     PACKAGE_NAME
     cppast
     VERSION
-    1.0.0
+    0.0.1-b155d6a
     URL
-    "https://github.com/hunter-packages/foo/archive/v1.0.0.tar.gz"
+    "https://github.com/foonathan/cppast/archive/b155d6abccdf97b6940a0543e93354cb05a2ed04.zip"
     SHA1
-    1111111111111111111111111111111111111111
+    9606fa6d8397d9d7cca0e9c8a2d99feecb9479c8
 )
 
 #if (ANDROID OR IOS)
@@ -29,7 +29,7 @@ hunter_add_version(
 #endif()
 
 #hunter_configuration_types(cppast CONFIGURATION_TYPES Release)
-hunter_pick_scheme(DEFAULT url_sha1_autotools)
+hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(cppast)
 hunter_download(
     PACKAGE_NAME cppast
