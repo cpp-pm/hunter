@@ -10,10 +10,9 @@
 cppfs
 ===
 
--  `Official <https://official_foo>`__
--  `Hunterized <https://github.com/hunter-packages/foo>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/cppfs/CMakeLists.txt>`__
--  Added by `foo_developer <https://github.com/foo_developer>`__ (`pr-N <https://github.com/ruslo/hunter/pull/N>`__)
+-  `Official <https://github.com/cginternals/cppfs>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/cppfs/CMakeLists.txt>`__
+-  Added by `Joerg-Christian Boehme <https://github.com/Bjoe>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
 
 .. literalinclude:: /../examples/cppfs/CMakeLists.txt
   :language: cmake

@@ -14,5 +14,5 @@ hunter_add_package(cppfs)
 find_package(cppfs CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC PkgConfig::cppfs)
+target_link_libraries(boo PRIVATE cppfs::cppfs)
 # DOCUMENTATION_END }
