@@ -21,8 +21,6 @@ hunter_cmake_args(
    cppfs
    CMAKE_ARGS
     OPTION_BUILD_TESTS=OFF
-#   DEPENDS_ON_PACKAGES=foo;bar
-#   EXTRA_FLAGS=--enable-bots
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
