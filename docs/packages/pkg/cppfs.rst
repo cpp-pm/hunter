@@ -8,7 +8,7 @@
 .. _pkg.cppfs:
 
 cppfs
-===
+=====
 
 -  `Official <https://github.com/cginternals/cppfs>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/cppfs/CMakeLists.txt>`__
