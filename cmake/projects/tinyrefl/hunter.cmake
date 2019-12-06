@@ -11,11 +11,11 @@ hunter_add_version(
     PACKAGE_NAME
     tinyrefl
     VERSION
-    1.0.0
+    0.5.0
     URL
-    "https://github.com/hunter-packages/foo/archive/v1.0.0.tar.gz"
+    "https://github.com/Manu343726/tinyrefl/archive/v0.5.0.tar.gz"
     SHA1
-    1111111111111111111111111111111111111111
+    26a0fd4ceb169ce2578a9bc401296c137a909eb3
 )
 
 #if (ANDROID OR IOS)
