@@ -165,6 +165,8 @@ foreach(configuration ${configuration_types})
       INSTALL_DIR
       "@HUNTER_PACKAGE_INSTALL_PREFIX@"
           # not used, just avoid creating Install/<name> empty directory
+      SOURCE_SUBDIR
+      "@HUNTER_PACKAGE_SOURCE_SUBDIR@"
       BUILD_COMMAND
           # Separate build and install stage so we can suppress install log
           # which may consist of a long list of files

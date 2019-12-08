@@ -16,6 +16,7 @@ include(hunter_get_configuration_types)
 include(hunter_get_keep_package_sources)
 include(hunter_get_package_sha1)
 include(hunter_get_package_url)
+include(hunter_get_source_subdir)
 include(hunter_internal_error)
 include(hunter_jobs_number)
 include(hunter_load_from_cache)
@@ -102,6 +103,11 @@ function(hunter_download)
       PACKAGE "${package}"
       UNRELOCATABLE "${HUNTER_PACKAGE_UNRELOCATABLE_TEXT_FILES}"
       OUT HUNTER_PACKAGE_CACHEABLE
+  )
+
+  hunter_get_source_subdir(
+      PACKAGE "${package}"
+      OUT HUNTER_PACKAGE_SOURCE_SUBDIR
   )
 
   set(HUNTER_PACKAGE_PROTECTED_SOURCES "${HUNTER_${package}_PROTECTED_SOURCES}")
