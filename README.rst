@@ -20,7 +20,7 @@ Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
   :alt: Gitter public chat room
   
 .. |rtfd| image:: https://readthedocs.org/projects/hunter/badge/?version=latest
-  :target: http://hunter.readthedocs.io/en/latest/?badge=latest
+  :target: http://cpp-pm-hunter.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation status
   
 .. |travis| image:: https://img.shields.io/travis/cpp-pm/hunter-testing/pkg.gtest.svg?style=flat-square&label=Linux%20OSX%20Android%20iOS
