@@ -35,7 +35,7 @@ You can check that everything is fine by invoking this script:
 
   file(
       DOWNLOAD
-      "https://github.com/ruslo/hunter/archive/v0.23.13.tar.gz"
+      "https://github.com/cpp-pm/hunter/archive/v0.23.13.tar.gz"
       "${CMAKE_CURRENT_LIST_DIR}/hunter-archive.tar.gz"
       EXPECTED_HASH SHA1=ef7d6ac5a4ba88307b2bea3e6ed7206c69f542e8
       SHOW_PROGRESS

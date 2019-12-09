@@ -4,7 +4,7 @@ rm -f v0.14.5.tar.gz
 rm -rf hunter-0.14.5
 
 # doc: download-start
-wget https://github.com/ruslo/hunter/archive/v0.14.5.tar.gz
+wget https://github.com/cpp-pm/hunter/archive/v0.14.5.tar.gz
 tar xf v0.14.5.tar.gz
 # doc: download-end
 

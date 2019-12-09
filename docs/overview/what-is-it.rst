@@ -13,7 +13,7 @@ the ``URL`` and ``SHA1``:
   :emphasize-lines: 2-3
 
   HunterGate(
-      URL "https://github.com/ruslo/hunter/archive/v0.14.5.tar.gz"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.14.5.tar.gz"
       SHA1 "f2c3de6d13baf8c5d2aa77bdc47c516e668c677e"
   )
 

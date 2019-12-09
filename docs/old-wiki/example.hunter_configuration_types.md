@@ -75,7 +75,7 @@ You can customize package using `hunter_config` command (see also other [customi
 ```cmake
 # CMakeLists.txt
 HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.8.10.tar.gz"
+    URL "https://github.com/cpp-pm/hunter/archive/v0.8.10.tar.gz"
     SHA1 "9308d01ea52c7b8cf1347073c982c679dbac3c09"
     LOCAL # <----- Use local config.cmake
 )
