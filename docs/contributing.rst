@@ -101,7 +101,7 @@ If everything seems OK:
   there is a bug somewhere. If you want to figure out what is the origin
   of the problem please do keep ``~/.hunter`` directory.
 
-* Open an `issue <https://github.com/ruslo/hunter/issues/new>`__ and provide
+* Open an `issue <https://github.com/cpp-pm/hunter/issues/new>`__ and provide
   next info:
 
   * CMake version you're using ``cmake --version``. CMake build from source?

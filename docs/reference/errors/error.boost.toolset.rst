@@ -23,4 +23,4 @@ This is unimplemented part of boost download scheme, there are several alternati
 - Otherwise at least *file a bug* [#]_ please
 
 .. [#] https://github.com/boost-cmake/boost-cmake
-.. [#] https://github.com/ruslo/hunter/issues/new
+.. [#] https://github.com/cpp-pm/hunter/issues/new

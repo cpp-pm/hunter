@@ -22,7 +22,7 @@ Private
 * Write me at ruslan_baratov@yahoo.com
 * Private chat room on Gitter: https://gitter.im/ruslo
 
-.. _issue: https://github.com/ruslo/hunter/issues/new
+.. _issue: https://github.com/cpp-pm/hunter/issues/new
 
 Please don't
 ============
