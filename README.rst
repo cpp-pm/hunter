@@ -23,11 +23,11 @@ Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
   :target: http://cpp-pm-hunter.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation status
   
-.. |travis| image:: https://img.shields.io/travis/cpp-pm/hunter-testing/pkg.gtest.svg?style=flat-square&label=Linux%20OSX%20Android%20iOS
+.. |travis| image:: https://img.shields.io/travis/cpp-pm/hunter-testing/pkg.gtest.svg?style=flat&logo=travis&label=Linux%20OSX%20Android%20iOS
   :target: https://travis-ci.com/cpp-pm/hunter-testing/builds
   :alt: Travis CI
   
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/rbsheth/hunter-testing/pkg.gtest.svg?style=flat-square&label=Windows
+.. |appveyor| image:: https://img.shields.io/appveyor/ci/rbsheth/hunter-testing/pkg.gtest.svg?style=flat&logo=appveyor&label=Windows
   :target: https://ci.appveyor.com/project/rbsheth/hunter-testing/history
   :alt: AppVeyor CI
   
