@@ -27,11 +27,10 @@ Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
   :target: https://travis-ci.com/cpp-pm/hunter-testing/builds
   :alt: Travis CI
   
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/cpp-pm/hunter-testing/pkg.gtest.svg?style=flat-square&label=Windows
-  :target: https://ci.appveyor.com/project/cpp-pm/hunter-testing/history
+.. |appveyor| image:: https://img.shields.io/appveyor/ci/rbsheth/hunter-testing/pkg.gtest.svg?style=flat-square&label=Windows
+  :target: https://ci.appveyor.com/project/rbsheth/hunter-testing/history
   :alt: AppVeyor CI
   
 .. |license| image:: https://img.shields.io/github/license/cpp-pm/hunter.svg
   :target: https://github.com/cpp-pm/hunter/blob/master/LICENSE
   :alt: LICENSE
-  
