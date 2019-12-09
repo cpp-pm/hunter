@@ -90,7 +90,7 @@ Message in logs:
 
 .. admonition:: Polly
 
-  * `Collection of toolchains <https://github.com/ruslo/polly>`__
+  * `Collection of toolchains <https://github.com/cpp-pm/polly>`__
 
 .. _simple toolchains:
 

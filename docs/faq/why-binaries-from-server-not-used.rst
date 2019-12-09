@@ -29,13 +29,13 @@ Next information will help you to set your environment.
 * Xcode 6.1 used by default on Travis CI:
 
  * `The OS X Build Environment <https://docs.travis-ci.com/user/osx-ci-environment/#Xcode>`__
- * `iOS 8.1 SDK is default for Xcode 6.1 <https://github.com/ruslo/polly/wiki/Toolchain-list#ios>`__
+ * `iOS 8.1 SDK is default for Xcode 6.1 <https://github.com/cpp-pm/polly/wiki/Toolchain-list#ios>`__
  * `Xcode 6.1 direct download link <http://adcdownload.apple.com/Developer_Tools/xcode_6.1/56841_xcode_6.1.dmg>`__
 
 * Xcode 7.3.1 used for ``osx_image: xcode7.3`` on Travis CI:
 
  * `Xcode 7.3.1 image <https://docs.travis-ci.com/user/osx-ci-environment/#Xcode-7.3>`__
- * `iOS 9.3 SDK is default for Xcode 7.3 <https://github.com/ruslo/polly/wiki/Toolchain-list#ios>`__
+ * `iOS 9.3 SDK is default for Xcode 7.3 <https://github.com/cpp-pm/polly/wiki/Toolchain-list#ios>`__
  * `Xcode 7.3.1 direct download link <http://adcdownload.apple.com/Developer_Tools/Xcode_7.3.1/Xcode_7.3.1.dmg>`__
 
 * Visual Studio versions on AppVeyor:

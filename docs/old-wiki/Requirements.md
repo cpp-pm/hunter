@@ -27,8 +27,8 @@ For example windows (VS 64/32 + cygwin):
 
 Projects that uses different toolchains can be build in one HUNTER_ROOT directory if each toolchain
 define `HUNTER_INSTALL_TAG` variable.
-For example if [clang_libstdcxx](https://github.com/ruslo/polly/wiki/Toolchain-list#clang_libstdcxx)
-and [gcc](https://github.com/ruslo/polly/wiki/Toolchain-list#gcc) toolchain used:
+For example if [clang_libstdcxx](https://github.com/cpp-pm/polly/wiki/Toolchain-list#clang_libstdcxx)
+and [gcc](https://github.com/cpp-pm/polly/wiki/Toolchain-list#gcc) toolchain used:
 
 * HUNTER_ROOT/Base/Install/clang_libstdcxx
 * HUNTER_ROOT/Base/Install/gcc
@@ -53,7 +53,7 @@ target_link_libraries(... PUBLIC ${Boost_LIBRARIES})
 * Download archive, unpack it and set `POLLY_ROOT` environment variable. Unix-style:
 ```
 > POLLY_VERSION="0.4.4"
-> wget "https://github.com/ruslo/polly/archive/v${POLLY_VERSION}.tar.gz"
+> wget "https://github.com/cpp-pm/polly/archive/v${POLLY_VERSION}.tar.gz"
 > tar xf "v${POLLY_VERSION}.tar.gz"
 > export POLLY_ROOT="`pwd`/polly-${POLLY_VERSION}"
 > export PATH="${POLLY_ROOT}/bin:${PATH}" # If you want to use build.py script
@@ -82,5 +82,5 @@ clang++ -std=c++11 -fsanitize=address ...
 ...
 ```
 
-* https://github.com/ruslo/polly
+* https://github.com/cpp-pm/polly
 

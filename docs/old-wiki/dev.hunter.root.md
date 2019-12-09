@@ -57,7 +57,7 @@ To avoid such problems script `jenkins.py` can be used. This script will pack cu
 Python 3.4.3
 
 # download build.py script
-> git clone https://github.com/ruslo/polly
+> git clone https://github.com/cpp-pm/polly
 > export PATH="`pwd`/polly/bin:$PATH"
 > which build.py
 /.../polly/bin/build.py
@@ -76,7 +76,7 @@ Python 3.4.3
 -- [hunter]   -> /.../_testing/Hunter/_Base/Download/Hunter/unknown/f055021
 ```
 
-About `build.py` and toolchains: [link](https://github.com/ruslo/polly#buildpy)
+About `build.py` and toolchains: [link](https://github.com/cpp-pm/polly#buildpy)
 
 See `jenkins.py --help` for more options:
 * `--nocreate` will not pack new Hunter archive but reuse old one (`_testing/hunter.tar.gz`). This may be useful for testing several packages one-by-one. Also it means that any new changes in Hunter internal modules will not be used.

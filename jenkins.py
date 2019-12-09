@@ -3,7 +3,7 @@
 # Copyright (c) 2014, Ruslan Baratov
 # All rights reserved.
 
-# https://github.com/ruslo/polly/wiki/Jenkins
+# https://github.com/cpp-pm/polly/wiki/Jenkins
 
 import argparse
 import hashlib

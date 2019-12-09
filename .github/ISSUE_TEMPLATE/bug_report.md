@@ -58,8 +58,8 @@ I've checked that the first error in logs **IS NOT** `external.build.failed`. **
 
 <!--- What toolchain you're using if any -->
 * I'm not using toolchain
-* I'm using unmodified toolchain <toolchain-name> from [Polly](https://github.com/ruslo/polly)
-* I've patched toolchain <toolchain-name> from [Polly](https://github.com/ruslo/polly). Here is my patch: https://github.com/<username>/polly
+* I'm using unmodified toolchain <toolchain-name> from [Polly](https://github.com/cpp-pm/polly)
+* I've patched toolchain <toolchain-name> from [Polly](https://github.com/cpp-pm/polly). Here is my patch: https://github.com/<username>/polly
 * I'm using my toolchain: https://github.com/<username>/<repo-with-toolchain>
 
 I'm using the next command line on generate step:
