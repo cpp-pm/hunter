@@ -11,7 +11,7 @@ harfbuzz
 
 -  `Official <http://harfbuzz.org/>`__
 -  `Hunterized <https://github.com/hunter-packages/harfbuzz>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/harfbuzz/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/harfbuzz/CMakeLists.txt>`__
 -  Added by `Jon Spencer <https://github.com/jhs67>`__ (`pr-1440 <https://github.com/ruslo/hunter/pull/1440>`__)
 
 .. literalinclude:: /../examples/harfbuzz/CMakeLists.txt

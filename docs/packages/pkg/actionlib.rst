@@ -12,7 +12,7 @@ actionlib
 
 -  `Official <https://github.com/ros/actionlib>`__
 -  `Hunterized <https://github.com/hunter-packages/actionlib>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/actionlib/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/actionlib/CMakeLists.txt>`__
 -  Added by `Krasimir Georgiev <https://github.com/kgeorgiev93>`__ (`pr-1931 <https://github.com/ruslo/hunter/pull/1931>`__)
     - Contribution partially as part of work at `SeeByte Ltd. <http://www.seebyte.com>`__
 

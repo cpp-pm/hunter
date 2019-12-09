@@ -14,8 +14,8 @@ GTest
 -  `Hunterized <https://github.com/hunter-packages/googletest>`__ (`old
    repo <https://github.com/hunter-packages/gtest>`__)
 -  `Dev branch <https://github.com/ruslo/hunter/tree/gtest>`__
--  `Versions <https://github.com/ruslo/hunter/blob/master/cmake/projects/GTest/hunter.cmake>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/GTest/CMakeLists.txt>`__
+-  `Versions <https://github.com/cpp-pm/hunter/blob/master/cmake/projects/GTest/hunter.cmake>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/GTest/CMakeLists.txt>`__
 -  Added by `Knitschi <https://github.com/Knitschi>`__
    (`pr-306 <https://github.com/ruslo/hunter/pull/306>`__)
 

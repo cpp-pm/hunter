@@ -11,7 +11,7 @@ mojoshader
 
 -  https://www.icculus.org/mojoshader/
 -  `Hunterized <https://github.com/hunter-packages/mojoshader>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/mojoshader/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/mojoshader/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

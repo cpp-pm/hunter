@@ -11,7 +11,7 @@ aes
 
 -  `Official <https://github.com/kokke/tiny-AES128-C>`__
 -  `Hunterized <https://github.com/hunter-packages/aes>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/aes/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/aes/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

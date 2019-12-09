@@ -14,7 +14,7 @@ Avahi
   :alt: Hunter v0.12.10
 
 -  `Official <http://www.avahi.org>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Avahi/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Avahi/CMakeLists.txt>`__
 - Available since |hunter|
 -  Added by `Damien Buhl <https://github.com/daminetreg>`__
    (`pr-237 <https://github.com/ruslo/hunter/pull/237>`__)

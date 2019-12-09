@@ -16,7 +16,7 @@ Leptonica
 -  `Official <http://www.leptonica.org>`__
 -  `GitHub <https://github.com/danbloomberg/leptonica>`__
 -  `Hunterized <https://github.com/hunter-packages/Leptonica>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Leptonica/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Leptonica/CMakeLists.txt>`__
 -  Available since |hunter|
 -  Added by `Sacha Refshauge <https://github.com/xsacha>`__ (`pr-815 <https://github.com/ruslo/hunter/pull/815>`__)
 

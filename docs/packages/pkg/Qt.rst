@@ -142,7 +142,7 @@ Customization
   * Adds ``-gstreamer 1.0``
   * Only configuration with shared libraries tested. Also you have to set
     runtime paths with ``LD_LIBRARY_PATH``/``GST_PLUGIN_PATH``, see
-    `example <https://github.com/ruslo/hunter/blob/master/examples/qt-camera/CMakeLists.txt>`__.
+    `example <https://github.com/cpp-pm/hunter/blob/master/examples/qt-camera/CMakeLists.txt>`__.
   * To test GStreamer camera you can run ``gst-launch -v -m camerabin``
 
 * ``QT_OPENGL_DESKTOP``

@@ -13,7 +13,7 @@ pcre2
 
 - https://www.pcre.org/
 - `Hunterized <https://github.com/hunter-packages/pcre2>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/pcre2/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/pcre2/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/pcre2/CMakeLists.txt
   :language: cmake

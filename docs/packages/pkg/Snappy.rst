@@ -10,7 +10,7 @@ Snappy
 ======
 
 -  `Official <https://google.github.io/snappy>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Snappy/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Snappy/CMakeLists.txt>`__
 -  Available since `v0.19.68 <https://github.com/ruslo/hunter/releases/tag/v0.19.68>`__
 -  Added by `Paweł Bylica <https://github.com/chfast>`__ (`pr-949 <https://github.com/ruslo/hunter/pull/949>`__)
 

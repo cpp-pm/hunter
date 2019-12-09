@@ -10,7 +10,7 @@ flex
 =====
 
 -  `Official <https://github.com/westes/flex>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/flex/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/flex/CMakeLists.txt>`__
 -  Added by `Isaac Hier <https://github.com/isaachier>`__ (`pr-1039 <https://github.com/ruslo/hunter/pull/1039>`__)
 
 Simple flex example (no bison).

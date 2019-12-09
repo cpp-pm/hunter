@@ -11,7 +11,7 @@ freetype
 
 -  `Official <http://www.freetype.org/download.html>`__
 -  `Hunterized <https://github.com/hunter-packages/freetype>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/freetype/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/freetype/CMakeLists.txt>`__
 -  Added by `Denis A. Kerzhemanov <https://github.com/Dinno>`__
    (`pr-284 <https://github.com/ruslo/hunter/pull/284>`__)
 

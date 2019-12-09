@@ -12,7 +12,7 @@ libogg
 
 -  `Official <https://xiph.org/ogg/>`__
 -  `Hunterized <https://github.com/hunter-packages/ogg>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/libogg/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/libogg/CMakeLists.txt>`__
 -  Added by `Meralis40 <https://github.com/Meralis40>`__ (`pr-1451 <https://github.com/ruslo/hunter/pull/1451>`__)
 
 .. literalinclude:: /../examples/libogg/CMakeLists.txt

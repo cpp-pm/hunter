@@ -11,7 +11,7 @@ TIFF
 
 -  `Official <http://www.remotesensing.org/libtiff/>`__
 -  `Hunterized <https://github.com/hunter-packages/tiff>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/TIFF/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/TIFF/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

@@ -15,7 +15,7 @@ SuiteSparse
 
 -  `Official <https://github.com/jlblancoc/suitesparse-metis-for-windows>`__
 -  `Hunterized <https://github.com/hunter-packages/suitesparse-metis-for-windows>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/SuiteSparse/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/SuiteSparse/CMakeLists.txt>`__
 - Available since |hunter|
 -  Added by `Neroburner <https://github.com/NeroBurner>`__ (`pr-861 <https://github.com/ruslo/hunter/pull/861>`__)
 -  Dependencies:

@@ -14,7 +14,7 @@ android_mips_system_image_packer
 ================================
 
 -  `Official <https://github.com/hunter-packages/android_mips_system_image_packer>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/android_mips_system_image_packer/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/android_mips_system_image_packer/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/android_mips_system_image_packer/CMakeLists.txt
   :language: cmake

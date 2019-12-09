@@ -16,7 +16,7 @@ tacopie
 -  `Official <https://github.com/Cylix/tacopie>`__
 -  `Official github fork <https://github.com/Cylix/tacopie>`__
 -  `Hunterized <https://github.com/hunter-packages/tacopie>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/tacopie/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/tacopie/CMakeLists.txt>`__
 - Available since |hunter|
 
 .. code-block:: cmake

@@ -14,7 +14,7 @@ jsoncpp
   :alt: Hunter v0.17.19
 
 -  `Official <https://github.com/open-source-parsers/jsoncpp>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/jsoncpp/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/jsoncpp/CMakeLists.txt>`__
 - Available since |hunter|
 
 .. code-block:: cmake

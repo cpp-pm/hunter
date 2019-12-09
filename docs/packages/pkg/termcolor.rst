@@ -15,7 +15,7 @@ Termcolor is a header-only C++ library for printing colored messages to the term
 Written just for fun with a help of the Force.
 
 -  `Official <https://github.com/ikalnytskyi/termcolor>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/termcolor/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/termcolor/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/termcolor/CMakeLists.txt
   :language: cmake

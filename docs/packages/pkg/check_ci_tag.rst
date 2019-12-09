@@ -10,7 +10,7 @@ check_ci_tag
 ============
 
 -  `Official GitHub <https://github.com/hunter-packages/check_ci_tag>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/check_ci_tag/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/check_ci_tag/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/check_ci_tag/CMakeLists.txt
   :language: cmake

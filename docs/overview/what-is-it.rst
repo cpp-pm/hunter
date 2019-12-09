@@ -92,6 +92,6 @@ Default version from `default.cmake`_
 
 .. _release: https://github.com/ruslo/hunter/releases
 .. _Atom feed: https://github.com/ruslo/hunter/releases.atom
-.. _default.cmake: https://github.com/ruslo/hunter/blob/master/cmake/configs/default.cmake
-.. _hunter.cmake: https://github.com/ruslo/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake
-.. _url_sha1_openssl.cmake.in: https://github.com/ruslo/hunter/blob/master/cmake/projects/OpenSSL/schemes/url_sha1_openssl.cmake.in
+.. _default.cmake: https://github.com/cpp-pm/hunter/blob/master/cmake/configs/default.cmake
+.. _hunter.cmake: https://github.com/cpp-pm/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake
+.. _url_sha1_openssl.cmake.in: https://github.com/cpp-pm/hunter/blob/master/cmake/projects/OpenSSL/schemes/url_sha1_openssl.cmake.in

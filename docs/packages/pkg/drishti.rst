@@ -10,7 +10,7 @@ drishti
 =======
 
 - `Official <https://github.com/elucideye/drishti>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/drishti/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/drishti/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/drishti/CMakeLists.txt
   :language: cmake

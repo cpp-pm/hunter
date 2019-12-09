@@ -11,7 +11,7 @@ LLVM
 
 -  `Official <http://llvm.org/releases/download.html>`__
 -  `Hunterized <https://github.com/hunter-packages/LLVM>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/LLVM/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/LLVM/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/LLVM/CMakeLists.txt
   :language: cmake

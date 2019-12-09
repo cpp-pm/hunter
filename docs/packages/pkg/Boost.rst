@@ -12,7 +12,7 @@ Boost
     find_package(Boost CONFIG REQUIRED)
     target_link_libraries(... Boost::boost)
 
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Boost/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Boost/CMakeLists.txt>`__
 
 .. code-block:: cmake
 
@@ -23,13 +23,13 @@ Boost
 
 Examples:
 
-- `Boost-uuid <https://github.com/ruslo/hunter/blob/master/examples/Boost-uuid/CMakeLists.txt>`__
-- `Boost-system <https://github.com/ruslo/hunter/blob/master/examples/Boost-system/CMakeLists.txt>`__
-- `Boost-iostreams <https://github.com/ruslo/hunter/blob/master/examples/Boost-iostreams/CMakeLists.txt>`__
-- `Boost-filesystem <https://github.com/ruslo/hunter/blob/master/examples/Boost-filesystem/CMakeLists.txt>`__
-- `Boost-math <https://github.com/ruslo/hunter/blob/master/examples/Boost-math/CMakeLists.txt>`__
-- `Boost-contract <https://github.com/ruslo/hunter/blob/master/examples/Boost-contract/CMakeLists.txt>`__
-- `Boost-stacktrace <https://github.com/ruslo/hunter/blob/master/examples/Boost-stacktrace/CMakeLists.txt>`__
+- `Boost-uuid <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-uuid/CMakeLists.txt>`__
+- `Boost-system <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-system/CMakeLists.txt>`__
+- `Boost-iostreams <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-iostreams/CMakeLists.txt>`__
+- `Boost-filesystem <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-filesystem/CMakeLists.txt>`__
+- `Boost-math <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-math/CMakeLists.txt>`__
+- `Boost-contract <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-contract/CMakeLists.txt>`__
+- `Boost-stacktrace <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-stacktrace/CMakeLists.txt>`__
 
 List of components and availability (other libraries are header-only):
 

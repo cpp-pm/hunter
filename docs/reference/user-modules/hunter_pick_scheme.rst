@@ -4,8 +4,8 @@
 hunter_pick_scheme
 ------------------
 
-* `Source <https://github.com/ruslo/hunter/blob/master/cmake/modules/hunter_pick_scheme.cmake>`__
-* `Example <https://github.com/ruslo/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake>`__
+* `Source <https://github.com/cpp-pm/hunter/blob/master/cmake/modules/hunter_pick_scheme.cmake>`__
+* `Example <https://github.com/cpp-pm/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake>`__
 
 This command used to pick a
 `build scheme <https://github.com/ruslo/hunter/wiki/dev.build.schemes>`__ for

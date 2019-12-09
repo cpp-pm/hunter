@@ -12,7 +12,7 @@ crc32c
 
 -  `Official <https://github.com/google/crc32c>`__
 -  `Hunterized <https://github.com/hunter-packages/crc32c>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/crc32c/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/crc32c/CMakeLists.txt>`__
 -  Added by `Isaac Hier <https://github.com/isaachier>`__ (`pr-1243 <https://github.com/ruslo/hunter/pull/1243>`__)
 
 .. code-block:: cmake

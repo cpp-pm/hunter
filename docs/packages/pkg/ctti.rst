@@ -12,7 +12,7 @@ ctti
 
 -  `Official <https://github.com/Manu343726/ctti>`__
 -  `Hunterized <https://github.com/hunter-packages/ctti>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/ctti/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/ctti/CMakeLists.txt>`__
 -  Added by `Casey <https://github.com/caseymcc>`__ (`pr-1518 <https://github.com/ruslo/hunter/pull/1518>`__)
 
 Compile Time Type Information for the C++ programming language.

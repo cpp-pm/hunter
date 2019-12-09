@@ -13,7 +13,7 @@
 Android-ARM64-v8a-System-Image
 ==============================
 
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Android-ARM64-v8a-System-Image/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Android-ARM64-v8a-System-Image/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/Android-ARM64-v8a-System-Image/CMakeLists.txt
   :language: cmake

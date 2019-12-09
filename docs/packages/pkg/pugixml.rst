@@ -12,7 +12,7 @@ pugixml
 -  `Official <https://pugixml.org/>`__
 -  `Official GitHub <https://github.com/zeux/pugixml>`__
 -  `Hunterized <https://github.com/rusdevops/pugixml>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/pugixml/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/pugixml/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

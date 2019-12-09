@@ -11,7 +11,7 @@ nlohmann_json
 =============
 
 -  `Official GitHub <https://github.com/nlohmann/json/>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/nlohmann_json/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/nlohmann_json/CMakeLists.txt>`__
 
 .. note::
 

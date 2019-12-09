@@ -10,7 +10,7 @@ flatbuffers
 ===========
 
 -  `Official GitHub <https://github.com/google/flatbuffers>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/flatbuffers/foo.cpp>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/flatbuffers/foo.cpp>`__
 
 .. literalinclude:: /../examples/flatbuffers/CMakeLists.txt
   :language: cmake

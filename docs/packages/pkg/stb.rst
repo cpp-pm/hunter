@@ -11,7 +11,7 @@ stb
 
 -  `Official <https://github.com/nothings/stb>`__
 -  `Hunterized <https://github.com/hunter-packages/stb>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/stb/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/stb/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

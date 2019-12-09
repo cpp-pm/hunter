@@ -16,7 +16,7 @@ ZMQPP
 -  `Official <http://zeromq.github.io/zmqpp/>`__
 -  `Official GitHub <https://github.com/zeromq/zeromq4-1>`__
 -  `Hunterized <https://github.com/hunter-packages/zeromq4-1>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/ZMQPP/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/ZMQPP/CMakeLists.txt>`__
 - Available since |hunter|
 -  Added by `Antal Tátrai <https://github.com/tatraian>`__
    (`pr-343 <https://github.com/ruslo/hunter/pull/343>`__)

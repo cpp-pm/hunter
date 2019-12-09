@@ -13,7 +13,7 @@ pip_pylint
 - `Official <http://pylint.pycqa.org>`__
 - `Official GitHub <https://github.com/PyCQA/pylint>`__
 - `PyPI <https://pypi.org/project/pylint>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/pip_pylint/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/pip_pylint/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/pip_pylint/CMakeLists.txt
   :language: cmake

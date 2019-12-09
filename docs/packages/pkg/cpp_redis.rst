@@ -17,7 +17,7 @@ cpp_redis
 -  `Official <https://github.com/Cylix/cpp_redis>`__
 -  `Official github fork <https://github.com/Cylix/cpp_redis>`__
 -  `Hunterized <https://github.com/hunter-packages/cpp_redis>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/cpp_redis/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/cpp_redis/CMakeLists.txt>`__
 - Available since |hunter|
 
 .. code-block:: cmake

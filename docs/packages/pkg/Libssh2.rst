@@ -12,7 +12,7 @@ Libssh2
 -  `Official <http://www.libssh2.org/>`__
 -  `Hunterized <https://github.com/hunter-packages/libssh2>`__
 
-.. -  `__FIXME__ Example <https://github.com/ruslo/hunter/blob/master/examples/__FIXME__/CMakeLists.txt>`__
+.. -  `__FIXME__ Example <https://github.com/cpp-pm/hunter/blob/master/examples/__FIXME__/CMakeLists.txt>`__
 .. -  Available since `__FIXME__ vX.Y.Z <https://github.com/ruslo/hunter/releases/tag/vX.Y.Z>`__
 
 -  Added by `Alexander Lamaison <https://github.com/alamaison>`__

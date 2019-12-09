@@ -6,9 +6,9 @@ Using license files
 
 After package was installed Hunter will search for the license file(s) in
 sources. Next priority is used (see
-`script <https://github.com/ruslo/hunter/blob/master/scripts/try-copy-license.cmake>`__):
+`script <https://github.com/cpp-pm/hunter/blob/master/scripts/try-copy-license.cmake>`__):
 
-* Licenses specified explicitly by `HUNTER_INSTALL_LICENSE_FILES <https://github.com/ruslo/hunter/blob/46c2b042d7fedb38cbc01c69f8b4291a5ce5bb43/cmake/projects/Eigen/hunter.cmake#L48>`__
+* Licenses specified explicitly by `HUNTER_INSTALL_LICENSE_FILES <https://github.com/cpp-pm/hunter/blob/46c2b042d7fedb38cbc01c69f8b4291a5ce5bb43/cmake/projects/Eigen/hunter.cmake#L48>`__
 
 * Default names (only first found used):
 
@@ -25,7 +25,7 @@ sources. Next priority is used (see
 
 In case search was successful variable ``<PACKAGE>_LICENSES`` can be used to
 obtain full paths to the licenses
-(`example <https://github.com/ruslo/hunter/blob/master/examples/Boost/CMakeLists.txt>`__):
+(`example <https://github.com/cpp-pm/hunter/blob/master/examples/Boost/CMakeLists.txt>`__):
 
 .. code-block:: cmake
 

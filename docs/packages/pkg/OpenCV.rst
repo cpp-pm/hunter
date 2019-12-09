@@ -13,7 +13,7 @@ OpenCV
 
 -  `Official <https://github.com/Itseez/opencv>`__
 -  `Hunterized <https://github.com/hunter-packages/opencv>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/OpenCV/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/OpenCV/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/OpenCV/CMakeLists.txt
   :language: cmake

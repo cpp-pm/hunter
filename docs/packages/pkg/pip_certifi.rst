@@ -11,7 +11,7 @@ pip_certifi
 ===========
 
 - `PyPI <https://pypi.org/project/certifi>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/pip_certifi/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/pip_certifi/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/pip_certifi/CMakeLists.txt
   :language: cmake

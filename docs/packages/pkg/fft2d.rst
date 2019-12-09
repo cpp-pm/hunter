@@ -11,7 +11,7 @@ fft2d
 
 -  `Official <http://www.kurims.kyoto-u.ac.jp/~ooura/fft.html>`__
 -  `Hunterized <https://github.com/hunter-packages/fft2d>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/fft2d/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/fft2d/CMakeLists.txt>`__
 -  Added by `David Hirvonen <https://github.com/headupinclouds>`__ (`pr-1161 <https://github.com/ruslo/hunter/pull/1161>`__)
 
 .. code-block:: cmake

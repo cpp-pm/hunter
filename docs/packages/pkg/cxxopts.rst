@@ -10,7 +10,7 @@ cxxopts
 =======
 
 -  `Official <https://github.com/jarro2783/cxxopts>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/cxxopts/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/cxxopts/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/cxxopts/CMakeLists.txt
   :language: cmake

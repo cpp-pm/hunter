@@ -13,7 +13,7 @@ intx
 ====
 
 -  `Official <https://github.com/chfast/intx>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/intx/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/intx/CMakeLists.txt>`__
 -  Added by `Paweł Bylica <https://github.com/chfast>`__ (`pr-1846 <https://github.com/ruslo/hunter/pull/1846>`__)
 
 .. literalinclude:: /../examples/intx/CMakeLists.txt

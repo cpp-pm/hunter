@@ -14,9 +14,9 @@ ceres-solver
 -  `Hunterized <https://github.com/hunter-packages/ceres-solver/tree/hunter>`__
 -  Examples:
 
-  -  `Basic <https://github.com/ruslo/hunter/blob/master/examples/ceres-solver/CMakeLists.txt>`__
-  -  `with SuiteSparse <https://github.com/ruslo/hunter/blob/master/examples/ceres-solver-suitesparse/CMakeLists.txt>`__
-  -  `with SuiteSparse dyn LAPACK <https://github.com/ruslo/hunter/blob/master/examples/ceres-solver-suitesparse-dynLAPACK/CMakeLists.txt>`__
+  -  `Basic <https://github.com/cpp-pm/hunter/blob/master/examples/ceres-solver/CMakeLists.txt>`__
+  -  `with SuiteSparse <https://github.com/cpp-pm/hunter/blob/master/examples/ceres-solver-suitesparse/CMakeLists.txt>`__
+  -  `with SuiteSparse dyn LAPACK <https://github.com/cpp-pm/hunter/blob/master/examples/ceres-solver-suitesparse-dynLAPACK/CMakeLists.txt>`__
 
 -  Available since
    `v0.18.30 <https://github.com/ruslo/hunter/releases/tag/v0.18.30>`__

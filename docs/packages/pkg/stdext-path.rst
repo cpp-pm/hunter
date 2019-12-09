@@ -11,7 +11,7 @@ stdext-path
 
 -  `Official GitHub <https://github.com/srand/stdext-path>`__
 -  `Hunterized <https://github.com/hunter-packages/stdext-path>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/stdext-path/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/stdext-path/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/stdext-path/CMakeLists.txt
   :language: cmake

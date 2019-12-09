@@ -14,7 +14,7 @@ CapnProto
   :alt: Hunter v0.18.49
 
 -  `Official <https://capnproto.org/>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/CapnProto/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/CapnProto/CMakeLists.txt>`__
 - Available since |hunter|
 
 .. code-block:: cmake

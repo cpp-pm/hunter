@@ -11,7 +11,7 @@ class_loader
 
 -  `Official <https://github.com/ros/class_loader>`__
 -  `Hunterized <https://github.com/hunter-packages/class_loader>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/class_loader/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/class_loader/CMakeLists.txt>`__
 -  Added by `Krasimir Georgiev <https://github.com/kgeorgiev93>`__ (`pr-1899 <https://github.com/ruslo/hunter/pull/1899>`__)
     - Contribution partially as part of work at `SeeByte Ltd. <http://www.seebyte.com>`__
 

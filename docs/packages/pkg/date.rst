@@ -11,7 +11,7 @@ date
 ====
 
 - https://github.com/HowardHinnant/date
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/date/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/date/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/date/CMakeLists.txt
   :language: cmake

@@ -10,7 +10,7 @@ gstreamer
 =========
 
 -  `Official <https://gstreamer.freedesktop.org>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/gstreamer/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/gstreamer/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

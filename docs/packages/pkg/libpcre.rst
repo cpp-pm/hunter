@@ -10,7 +10,7 @@ libpcre
 =======
 
 -  `Official <http://www.pcre.org>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/libpcre/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/libpcre/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

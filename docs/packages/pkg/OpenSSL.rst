@@ -10,7 +10,7 @@ OpenSSL
 =======
 
 -  `Official <http://www.openssl.org/>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/OpenSSL/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/OpenSSL/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

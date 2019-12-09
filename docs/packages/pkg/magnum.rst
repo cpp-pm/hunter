@@ -14,7 +14,7 @@ magnum is a lightweight and modular C++11/C++14 graphics middleware for games an
 
 -  `Official <https://github.com/mosra/magnum>`__
 -  `Main Site <https://magnum.graphics/>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/magnum/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/magnum/CMakeLists.txt>`__
 -  Developed by `Vladimír Vondruš <https://github.com/mosra>`__
 -  Added by `Pascal Thomet <https://github.com/pthom>`__ (`pr-1731 <https://github.com/ruslo/hunter/pull/1731>`__)
 

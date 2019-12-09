@@ -12,7 +12,7 @@ lz4
 -  http://www.lz4.org
 -  `Official GitHub <https://github.com/lz4/lz4>`__
 -  `Hunterized <https://github.com/hunter-packages/lz4>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/lz4/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/lz4/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

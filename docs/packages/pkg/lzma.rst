@@ -15,7 +15,7 @@ lzma
 
 -  `Official <http://tukaani.org/xz/>`__
 -  `Hunterized <https://github.com/hunter-packages/lzma>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/lzma/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/lzma/CMakeLists.txt>`__
 - Available since |hunter|
 
 .. code-block:: cmake

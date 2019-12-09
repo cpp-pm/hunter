@@ -11,7 +11,7 @@ ccv
 
 -  `Official <https://github.com/liuliu/ccv>`__
 -  `Hunterized <https://github.com/hunter-packages/ccv>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/ccv/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/ccv/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/ccv/CMakeLists.txt
   :language: cmake

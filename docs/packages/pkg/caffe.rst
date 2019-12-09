@@ -16,7 +16,7 @@ caffe
 -  `Official <https://github.com/BVLC/caffe>`__
 -  `Hunterized <https://github.com/hunter-packages/caffe>`__
 - Available since |hunter|
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/caffe/foo.cpp>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/caffe/foo.cpp>`__
 
 .. code-block:: cmake
 

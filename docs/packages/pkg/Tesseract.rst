@@ -15,7 +15,7 @@ Tesseract
 
 -  `Official <https://github.com/tesseract-ocr/tesseract>`__
 -  `Hunterized <https://github.com/hunter-packages/tesseract>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Tesseract/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Tesseract/CMakeLists.txt>`__
 -  Available since |hunter|
 -  Added by `Sacha Refshauge <https://github.com/xsacha>`__ (`pr-830 <https://github.com/ruslo/hunter/pull/830>`__)
 

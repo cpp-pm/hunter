@@ -10,7 +10,7 @@ glib
 ====
 
 -  `Official <https://wiki.gnome.org/Projects/GLib>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/glib/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/glib/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

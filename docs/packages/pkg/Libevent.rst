@@ -11,7 +11,7 @@ Libevent
 
 -  `Official <https://github.com/libevent/libevent>`__
 -  `Hunterized <https://github.com/hunter-packages/libevent>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Libevent/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Libevent/CMakeLists.txt>`__
 -  Added by `Isaac Hier <https://github.com/isaachier>`__ (`pr-1019 <https://github.com/ruslo/hunter/pull/1019>`__)
 
 .. code-block:: cmake

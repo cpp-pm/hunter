@@ -11,7 +11,7 @@ OpenCL-cpp
 
 -  `Official <https://github.com/KhronosGroup/OpenCL-CLHPP>`__
 -  `Hunterized <https://github.com/hunter-packages/OpenCL-CLHPP>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/OpenCL-cpp/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/OpenCL-cpp/CMakeLists.txt>`__
 
 Adds c++ wrappers for OpenCL, http://github.khronos.org/OpenCL-CLHPP/
 

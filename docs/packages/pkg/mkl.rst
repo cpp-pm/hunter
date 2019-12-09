@@ -11,7 +11,7 @@ mkl
 ===
 
 -  `Official <https://software.intel.com/mkl>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/mkl/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/mkl/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/mkl/CMakeLists.txt
   :language: cmake

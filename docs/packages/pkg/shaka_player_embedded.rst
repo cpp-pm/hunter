@@ -12,7 +12,7 @@ shaka_player_embedded
 
 -  `Official GitHub <https://github.com/google/shaka-player-embedded>`__
 -  `Hunterized <https://github.com/hunter-packages/shaka-player-embedded>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/shaka_player_embedded/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/shaka_player_embedded/CMakeLists.txt>`__
 -  `Stand-alone example <https://github.com/forexample/shaka-demo>`__
 
 Next customization should be applied for dependencies:

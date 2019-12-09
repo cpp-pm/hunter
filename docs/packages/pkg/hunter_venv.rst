@@ -11,7 +11,7 @@ hunter_venv
 ===========
 
 - https://github.com/hunter-packages/hunter_venv
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/hunter_venv/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/hunter_venv/CMakeLists.txt>`__
 
 This package is used to create
 `an isolated Python environment <https://virtualenv.pypa.io>`__ inside Hunter and

@@ -34,6 +34,6 @@ Components are as follows:
 - Zip (``Poco::Zip``)
 
 **Note**: Components can be enabled or disabled by using
-`CMAKE_ARGS <https://github.com/ruslo/hunter/blob/master/cmake/projects/PocoCpp/hunter.cmake>`__.
+`CMAKE_ARGS <https://github.com/cpp-pm/hunter/blob/master/cmake/projects/PocoCpp/hunter.cmake>`__.
 The map between ``CMAKE_ARGS`` and PocoCpp components can be found
 `here <https://github.com/pocoproject/poco/blob/develop/CMakeLists.txt>`__.

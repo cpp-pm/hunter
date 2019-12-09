@@ -11,7 +11,7 @@ kNet
 
 -  `Official GitHub <https://github.com/juj/kNet>`__
 -  `Hunterized <https://github.com/hunter-packages/kNet>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/kNet/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/kNet/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

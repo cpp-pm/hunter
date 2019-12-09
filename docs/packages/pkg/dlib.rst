@@ -16,7 +16,7 @@ dlib
 -  `Official <http://dlib.net/>`__
 -  `Official GitHub <https://github.com/davisking/dlib>`__
 -  `Hunterized <https://github.com/hunter-packages/dlib>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/dlib/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/dlib/CMakeLists.txt>`__
 - Available since |hunter|
 
 .. literalinclude:: /../examples/dlib/CMakeLists.txt

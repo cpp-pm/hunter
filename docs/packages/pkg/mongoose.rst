@@ -11,7 +11,7 @@ mongoose
 
 -  `Official <https://github.com/cesanta/mongoose>`__
 -  `Hunterized <https://github.com/hunter-packages/mongoose>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/mongoose/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/mongoose/CMakeLists.txt>`__
 -  Added by `dvirtz <https://github.com/dvirtz>`__ (`pr-1195 <https://github.com/ruslo/hunter/pull/1195>`__)
 
 .. code-block:: cmake

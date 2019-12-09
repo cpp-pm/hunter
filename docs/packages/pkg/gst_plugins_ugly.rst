@@ -10,7 +10,7 @@ gst_plugins_ugly
 ================
 
 -  `Official <https://gstreamer.freedesktop.org>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/gst_plugins_ugly/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/gst_plugins_ugly/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

@@ -11,7 +11,7 @@ civetweb
 
 -  `Official GitHub <https://github.com/civetweb/civetweb>`__
 -  `Hunterized <https://github.com/hunter-packages/civetweb>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/civetweb/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/civetweb/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

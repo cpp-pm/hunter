@@ -12,7 +12,7 @@ libxdg-basedir
 ==============
 
 - `Official <https://github.com/devnev/libxdg-basedir>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/libxdg-basedir/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/libxdg-basedir/CMakeLists.txt>`__
 -  Added by `tastytea <https://github.com/tastytea>`__ (`pr-1924 <https://github.com/ruslo/hunter/pull/1924>`__)
 
 .. literalinclude:: /../examples/libxdg-basedir/CMakeLists.txt

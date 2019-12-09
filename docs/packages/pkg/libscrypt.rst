@@ -11,7 +11,7 @@ libscrypt
 
 -  `Official <https://github.com/technion/libscrypt>`__
 -  `Hunterized <https://github.com/hunter-packages/libscrypt>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/libscrypt/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/libscrypt/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/libscrypt/CMakeLists.txt
   :language: cmake
