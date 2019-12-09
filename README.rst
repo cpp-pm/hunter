@@ -1,7 +1,7 @@
 Hunter
 ======
 
-|gitter| |rtfd| |travis| |appveyor| |license|
+|gitter| |rtfd| |travis| |license|
 
 CMake driven cross-platform package manager for C/C++.
 Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
@@ -26,10 +26,6 @@ Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
 .. |travis| image:: https://img.shields.io/travis/cpp-pm/hunter-testing/pkg.gtest.svg?style=flat-square&label=Linux%20OSX%20Android%20iOS
   :target: https://travis-ci.com/cpp-pm/hunter-testing/builds
   :alt: Travis CI
-  
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/cpp-pm/hunter-testing/pkg.gtest.svg?style=flat-square&label=Windows
-  :target: https://ci.appveyor.com/project/cpp-pm/hunter-testing/history
-  :alt: AppVeyor CI
   
 .. |license| image:: https://img.shields.io/github/license/cpp-pm/hunter.svg
   :target: https://github.com/cpp-pm/hunter/blob/master/LICENSE
