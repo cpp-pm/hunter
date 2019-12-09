@@ -10,7 +10,7 @@ Tesseract
 =========
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.19.20-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.19.20
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.19.20
   :alt: Hunter v0.19.20
 
 -  `Official <https://github.com/tesseract-ocr/tesseract>`__

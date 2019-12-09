@@ -10,7 +10,7 @@ half
 ====
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.31-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.31
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.31
   :alt: Hunter v0.12.31
 
 -  `Official <http://half.sourceforge.net>`__

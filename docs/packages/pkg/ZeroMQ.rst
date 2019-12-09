@@ -10,7 +10,7 @@ ZeroMQ
 ======
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.52-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.52
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.52
   :alt: Hunter v0.12.52
 
 -  `Official <https://github.com/zeromq/zeromq4-1>`__

@@ -10,7 +10,7 @@ Lua
 ===
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.35-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.35
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.35
   :alt: Hunter v0.12.35
 
 -  `Official <http://www.lua.org/ftp/>`__

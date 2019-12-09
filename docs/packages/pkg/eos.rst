@@ -10,7 +10,7 @@ eos
 ===
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.15.28-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.15.28
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.15.28
   :alt: Hunter v0.15.28
 
 -  `Official GitHub <https://github.com/patrikhuber/eos>`__

@@ -20,7 +20,7 @@ Eigen
   :start-after: # DOCUMENTATION_START {
   :end-before: # DOCUMENTATION_END }
 
-For Hunter < `v0.17.15 <https://github.com/ruslo/hunter/releases/tag/v0.17.15>`__
+For Hunter < `v0.17.15 <https://github.com/cpp-pm/hunter/releases/tag/v0.17.15>`__
 
 .. code-block:: cmake
 

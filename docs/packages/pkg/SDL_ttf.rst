@@ -10,7 +10,7 @@ SDL_ttf
 =======
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.19.180-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.19.180
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.19.180
   :alt: Hunter v0.12.35
 
 -  `Official <https://www.libsdl.org/projects/SDL_ttf/>`__

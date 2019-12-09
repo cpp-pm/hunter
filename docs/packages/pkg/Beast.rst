@@ -10,7 +10,7 @@ Beast
 =====
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.9.9-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.9.9
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.9.9
   :alt: Hunter v0.9.9
 
 -  `Official <https://github.com/vinniefalco/Beast>`__

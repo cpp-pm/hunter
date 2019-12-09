@@ -10,7 +10,7 @@ SuiteSparse
 ===========
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.19.31-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.19.31
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.19.31
   :alt: Hunter v0.19.31
 
 -  `Official <https://github.com/jlblancoc/suitesparse-metis-for-windows>`__

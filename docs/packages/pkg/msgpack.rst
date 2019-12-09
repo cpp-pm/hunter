@@ -10,7 +10,7 @@ msgpack
 =======
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.14.19-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.14.19
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.14.19
   :alt: Hunter v0.14.19
 
 -  `Hunterized <https://github.com/msgpack/msgpack-c>`__

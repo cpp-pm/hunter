@@ -10,7 +10,7 @@ LAPACK
 ======
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.19.24-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.19.24
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.19.24
   :alt: Hunter v0.19.24
 
 -  `Official <https://github.com/Reference-LAPACK/lapack>`__

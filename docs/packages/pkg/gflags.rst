@@ -10,7 +10,7 @@ gflags
 ======
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.16.3-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.16.3
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.16.3
   :alt: Hunter v0.16.3
 
 -  `Official <https://github.com/gflags/gflags>`__

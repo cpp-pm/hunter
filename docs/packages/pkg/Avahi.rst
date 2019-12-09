@@ -10,7 +10,7 @@ Avahi
 =====
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.10-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.10
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.10
   :alt: Hunter v0.12.10
 
 -  `Official <http://www.avahi.org>`__

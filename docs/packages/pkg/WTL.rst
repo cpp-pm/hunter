@@ -10,7 +10,7 @@ WTL
 ===
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.49-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.49
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.49
   :alt: Hunter v0.12.49
 
 -  `Official <https://github.com/alamaison/wtl>`__

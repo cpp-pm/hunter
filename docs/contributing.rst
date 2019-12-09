@@ -83,7 +83,7 @@ If everything seems OK:
 * Make sure you're not using :ref:`HUNTER_NO_TOOLCHAIN_ID_RECALCULATION <hunter no toolchain id recalculation>`
 * Take a look at **first** error reported by Hunter. If Hunter reports chain
   of errors the last error you see is **not relevant**!
-* Update to `latest Hunter URL/SHA1 <https://github.com/ruslo/hunter/releases>`__
+* Update to `latest Hunter URL/SHA1 <https://github.com/cpp-pm/hunter/releases>`__
   and check that issue you have hit is not already fixed/reported
 * Check this document if the first error you see is ``external.build.failed``:
 

@@ -40,7 +40,7 @@ GMock
 =====
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.42-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.42
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.42
   :alt: Hunter v0.12.42
 
 - Available since |hunter|

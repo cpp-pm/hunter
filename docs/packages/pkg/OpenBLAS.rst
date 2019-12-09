@@ -10,7 +10,7 @@ OpenBLAS
 ========
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.16.4-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.16.4
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.16.4
   :alt: Hunter v0.16.4
 
 -  `Official <https://github.com/xianyi/OpenBLAS>`__

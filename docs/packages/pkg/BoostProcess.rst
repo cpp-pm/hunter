@@ -10,7 +10,7 @@ BoostProcess
 ============
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.50-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.50
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.50
   :alt: Hunter v0.12.50
 
 -  `Official <https://github.com/BorisSchaeling/boost-process>`__

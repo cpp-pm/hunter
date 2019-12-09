@@ -10,7 +10,7 @@ lzma
 ====
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.18.17-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.18.17
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.18.17
   :alt: Hunter v0.18.17
 
 -  `Official <http://tukaani.org/xz/>`__

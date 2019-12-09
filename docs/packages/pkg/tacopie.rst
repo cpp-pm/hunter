@@ -10,7 +10,7 @@ tacopie
 =======
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.18.50-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.18.50
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.18.50
   :alt: Hunter v0.18.50
 
 -  `Official <https://github.com/Cylix/tacopie>`__

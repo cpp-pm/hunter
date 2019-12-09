@@ -10,7 +10,7 @@ dlib
 ====
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.9.2-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.9.2
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.9.2
   :alt: Hunter v0.9.2
 
 -  `Official <http://dlib.net/>`__
