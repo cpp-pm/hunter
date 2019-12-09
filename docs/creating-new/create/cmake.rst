@@ -241,7 +241,7 @@ Fork Hunter
 Hunter hosted on GitHub service where common way to add code is to fork
 project and create pull request.
 
-Fork `ruslo/hunter <https://github.com/ruslo/hunter>`__, clone
+Fork `cpp-pm/hunter <https://github.com/cpp-pm/hunter>`__, clone
 `your fork <https://github.com/hunterbox/hunter>`__ and initialize all
 submodules:
 

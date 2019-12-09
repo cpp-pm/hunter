@@ -16,7 +16,7 @@ Where `hunter-id` is the first 7 digits of `SHA1` of archive (i.e. first 7 digit
 
 However for development purposes like [adding new package][4] there is git-based functionality in `HunterGate`. Do clone and set [HUNTER_ROOT][5] environment variable:
 ```bash
-> git clone https://github.com/ruslo/hunter
+> git clone https://github.com/cpp-pm/hunter
 > export HUNTER_ROOT="`pwd`/hunter"
 ```
 
@@ -63,7 +63,7 @@ Python 3.4.3
 /.../polly/bin/build.py
 
 # clone Hunter repository
-> git clone https://github.com/ruslo/hunter
+> git clone https://github.com/cpp-pm/hunter
 > cd hunter
 
 # run build for some package, like GTest

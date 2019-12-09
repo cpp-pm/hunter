@@ -138,7 +138,7 @@ if args.raw:
 
 cpp_head = """
 // This file generated automatically by `create-predefined-list.py` script.
-// * https://github.com/ruslo/hunter
+// * https://github.com/cpp-pm/hunter
 
 #define HUNTER_QUOTE(x) #x
 #define HUNTER_STRING(x) HUNTER_QUOTE(x)
