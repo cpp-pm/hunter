@@ -8,12 +8,11 @@
 .. _pkg.tiny-process-library:
 
 tiny-process-library
-===
+====================
 
--  `Official <https://official_foo>`__
--  `Hunterized <https://github.com/hunter-packages/foo>`__
+-  `Official <https://gitlab.com/eidheim/tiny-process-library>`__
 -  `Example <https://github.com/ruslo/hunter/blob/master/examples/tiny-process-library/CMakeLists.txt>`__
--  Added by `foo_developer <https://github.com/foo_developer>`__ (`pr-N <https://github.com/ruslo/hunter/pull/N>`__)
+-  Added by `Joerg-Chirstian Boehme <https://github.com/Bjoe>`__ (`pr-N <https://github.com/ruslo/hunter/pull/N>`__)
 
 .. literalinclude:: /../examples/tiny-process-library/CMakeLists.txt
   :language: cmake
