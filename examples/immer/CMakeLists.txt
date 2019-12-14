@@ -14,5 +14,5 @@ hunter_add_package(immer)
 find_package(immer CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC PkgConfig::immer)
+target_link_libraries(boo PUBLIC immer)
 # DOCUMENTATION_END }
