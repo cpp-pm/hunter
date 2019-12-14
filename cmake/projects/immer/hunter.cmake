@@ -11,11 +11,11 @@ hunter_add_version(
     PACKAGE_NAME
     immer
     VERSION
-    1.0.0
+    0.6.2
     URL
-    "https://github.com/hunter-packages/foo/archive/v1.0.0.tar.gz"
+    "https://github.com/arximboldi/immer/archive/v0.6.2.zip"
     SHA1
-    1111111111111111111111111111111111111111
+    5e2064cd0f40a654549d05f252ce72187992e150
 )
 
 #if (ANDROID OR IOS)
@@ -29,7 +29,7 @@ hunter_add_version(
 #endif()
 
 #hunter_configuration_types(immer CONFIGURATION_TYPES Release)
-hunter_pick_scheme(DEFAULT url_sha1_autotools)
+hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(immer)
 hunter_download(
     PACKAGE_NAME immer
