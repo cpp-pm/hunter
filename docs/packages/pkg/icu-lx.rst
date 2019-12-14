@@ -13,7 +13,7 @@ icu-lx
 
 - http://site.icu-project.org
 - `Hunterized <https://github.com/hunter-packages/icu-lx>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/icu-lx/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/icu-lx/CMakeLists.txt>`__
 
 This library is part of the ICU project and separated from the main
 :ref:`ICU <pkg.icu>` package to break a circular dependency

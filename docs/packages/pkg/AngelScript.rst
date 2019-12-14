@@ -11,7 +11,7 @@ AngelScript
 
 -  `Official <http://www.angelcode.com/angelscript/>`__
 -  `Hunterized <https://github.com/hunter-packages/AngelScript>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/AngelScript/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/AngelScript/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

@@ -10,7 +10,7 @@ OpenSSL
 =======
 
 -  `Official <http://www.openssl.org/>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/OpenSSL/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/OpenSSL/CMakeLists.txt>`__
 
 .. code-block:: cmake
 
@@ -22,7 +22,7 @@ Fixed/workaround
 ----------------
 
 -  `space in path <https://github.com/openssl/openssl/pull/185>`__,
-   `related <https://docs.hunter.sh/en/latest/reference/errors/error.spaces.in.hunter.root.html>`__
+   `related <https://cpp-pm-hunter.readthedocs.io/en/latest/reference/errors/error.spaces.in.hunter.root.html>`__
 -  Can't be build with ``make -jN``:
    https://github.com/ruslo/hunter/issues/87
 

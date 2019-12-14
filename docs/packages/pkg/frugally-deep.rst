@@ -10,7 +10,7 @@ frugally-deep
 =============
 
 -  `Official <https://github.com/Dobiasd/frugally-deep>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/frugally-deep/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/frugally-deep/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/frugally-deep/CMakeLists.txt
   :language: cmake

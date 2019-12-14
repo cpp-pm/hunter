@@ -65,4 +65,4 @@ cmake -H./examples/Sugar/ -B./_builds -DHUNTER_ROOT="`pwd`" -DHUNTER_BASE="`pwd`
 
 #### HUNTER_CMAKE_GENERATOR
 
-* Set by [toolchain](https://github.com/ruslo/polly/blob/master/utilities/polly_init.cmake). This generator used for all the projects in superbuild (optimization possible, like `NMake` -> `Visual Studio`)
+* Set by [toolchain](https://github.com/cpp-pm/polly/blob/master/utilities/polly_init.cmake). This generator used for all the projects in superbuild (optimization possible, like `NMake` -> `Visual Studio`)

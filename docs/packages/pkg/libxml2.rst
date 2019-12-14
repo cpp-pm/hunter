@@ -10,7 +10,7 @@ libxml2
 =======
 
 - http://xmlsoft.org/
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/libxml2/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/libxml2/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/libxml2/CMakeLists.txt
   :language: cmake

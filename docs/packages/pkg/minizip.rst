@@ -11,7 +11,7 @@ minizip
 
 -  `Official <http://www.winimage.com/zLibDll/minizip.html>`__
 -  `Hunterized <https://github.com/hunter-packages/minizip>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/minizip/foo.cpp>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/minizip/foo.cpp>`__
 
 .. code-block:: cmake
 

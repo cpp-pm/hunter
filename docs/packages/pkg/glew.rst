@@ -12,7 +12,7 @@ glew
 -  http://glew.sourceforge.net
 -  `Official GitHub <https://github.com/nigels-com/glew>`__
 -  `Hunterized <https://github.com/hunter-packages/glew>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/glew/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/glew/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

@@ -10,7 +10,7 @@ doctest
 =======
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.18.29-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.18.29
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.18.29
   :alt: Hunter v0.18.29
 
 -  `Official <https://github.com/onqtam/doctest>`__

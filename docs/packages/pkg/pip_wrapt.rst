@@ -13,7 +13,7 @@ pip_wrapt
 - `Official <https://wrapt.readthedocs.io>`__
 - `Official GitHub <https://github.com/GrahamDumpleton/wrapt>`__
 - `PyPI <https://pypi.org/project/wrapt>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/pip_wrapt/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/pip_wrapt/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/pip_wrapt/CMakeLists.txt
   :language: cmake

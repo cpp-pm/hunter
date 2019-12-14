@@ -13,7 +13,7 @@ the ``URL`` and ``SHA1``:
   :emphasize-lines: 2-3
 
   HunterGate(
-      URL "https://github.com/ruslo/hunter/archive/v0.14.5.tar.gz"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.14.5.tar.gz"
       SHA1 "f2c3de6d13baf8c5d2aa77bdc47c516e668c677e"
   )
 
@@ -90,8 +90,8 @@ Default version from `default.cmake`_
   * :doc:`Detailed sources layout </reference/layouts/sources>`
   * :doc:`Creating version on the fly from Git submodule </user-guides/hunter-user/git-submodule>`
 
-.. _release: https://github.com/ruslo/hunter/releases
-.. _Atom feed: https://github.com/ruslo/hunter/releases.atom
-.. _default.cmake: https://github.com/ruslo/hunter/blob/master/cmake/configs/default.cmake
-.. _hunter.cmake: https://github.com/ruslo/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake
-.. _url_sha1_openssl.cmake.in: https://github.com/ruslo/hunter/blob/master/cmake/projects/OpenSSL/schemes/url_sha1_openssl.cmake.in
+.. _release: https://github.com/cpp-pm/hunter/releases
+.. _Atom feed: https://github.com/cpp-pm/hunter/releases.atom
+.. _default.cmake: https://github.com/cpp-pm/hunter/blob/master/cmake/configs/default.cmake
+.. _hunter.cmake: https://github.com/cpp-pm/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake
+.. _url_sha1_openssl.cmake.in: https://github.com/cpp-pm/hunter/blob/master/cmake/projects/OpenSSL/schemes/url_sha1_openssl.cmake.in

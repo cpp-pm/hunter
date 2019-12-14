@@ -10,12 +10,12 @@ OpenCL
 ======
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.17.3-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.17.3
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.17.3
   :alt: Hunter v0.17.3
 
 -  `Official <https://github.com/KhronosGroup/OpenCL-ICD-Loader>`__
 -  `Hunterized <https://github.com/hunter-packages/OpenCL-ICD-Loader/tree/hunter>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/OpenCL/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/OpenCL/CMakeLists.txt>`__
 - Available since |hunter|
 
 Adds OpenCL headers and ICD (Installable Client Driver)

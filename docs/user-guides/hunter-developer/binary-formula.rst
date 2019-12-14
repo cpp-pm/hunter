@@ -56,7 +56,7 @@ types from ``Config-ID`` (highest priority). I.e.
 
 .. seealso::
 
-  * `hunter_get_configuration_types <https://github.com/ruslo/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/cmake/modules/hunter_get_configuration_types.cmake#L30-L45>`__
+  * `hunter_get_configuration_types <https://github.com/cpp-pm/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/cmake/modules/hunter_get_configuration_types.cmake#L30-L45>`__
 
 ``hunter.cmake`` can contain
 :doc:`PACKAGE_INTERNAL_DEPS_ID </reference/user-modules/hunter_download>`.
@@ -72,14 +72,14 @@ Toolchain-ID
 
 Global settings for all packages, no package specific information saved here.
 Created by analyzing an output of compilation of C++ file
-`ShowPredefined.cpp <https://github.com/ruslo/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/scripts/ShowPredefined.cpp>`__
+`ShowPredefined.cpp <https://github.com/cpp-pm/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/scripts/ShowPredefined.cpp>`__
 (created from
-`list <https://github.com/ruslo/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/scripts/predefined.list>`__).
+`list <https://github.com/cpp-pm/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/scripts/predefined.list>`__).
 We get unified information about compiler, compiler version, compiler
 flags, etc. (everything from user's ``CMAKE_TOOLCHAIN_FILE``).
 
 Additionally next global variables
-`saved there too <https://github.com/ruslo/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/scripts/create-toolchain-info.cmake#L34-L69>`__:
+`saved there too <https://github.com/cpp-pm/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/scripts/create-toolchain-info.cmake#L34-L69>`__:
 
 * ``IPHONEOS_ARCHS`` (Polly toolchains)
 * ``IPHONESIMULATOR_ARCHS`` (Polly toolchains)
@@ -93,7 +93,7 @@ Config-ID
 =========
 
 Package specific information saved here. Created by merging file with
-`hunter_default_version commands <https://github.com/ruslo/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/cmake/configs/default.cmake>`__
+`hunter_default_version commands <https://github.com/cpp-pm/hunter/blob/50330c772ad57eeb6495b2d61985e57eeaa450e4/cmake/configs/default.cmake>`__
 and user's ``config.cmake`` with ``hunter_config`` commands (if present).
 Result is automatically generated ``config.cmake`` file with
 ``hunter_final_config`` command. First 7 digits of SHA1 of ``config.cmake``

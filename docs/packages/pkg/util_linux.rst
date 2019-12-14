@@ -11,7 +11,7 @@ util_linux
 ==========
 
 -  `Official <https://www.kernel.org/pub/linux/utils/util-linux/>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/util_linux/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/util_linux/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

@@ -10,7 +10,7 @@ gauze
 =====
 
 -  `Official <https://github.com/hunter-packages/gauze>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/gauze/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/gauze/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

@@ -16,6 +16,7 @@ include(hunter_get_configuration_types)
 include(hunter_get_keep_package_sources)
 include(hunter_get_package_sha1)
 include(hunter_get_package_url)
+include(hunter_get_source_subdir)
 include(hunter_internal_error)
 include(hunter_jobs_number)
 include(hunter_load_from_cache)
@@ -102,6 +103,11 @@ function(hunter_download)
       PACKAGE "${package}"
       UNRELOCATABLE "${HUNTER_PACKAGE_UNRELOCATABLE_TEXT_FILES}"
       OUT HUNTER_PACKAGE_CACHEABLE
+  )
+
+  hunter_get_source_subdir(
+      PACKAGE "${package}"
+      OUT HUNTER_PACKAGE_SOURCE_SUBDIR
   )
 
   set(HUNTER_PACKAGE_PROTECTED_SOURCES "${HUNTER_${package}_PROTECTED_SOURCES}")
@@ -315,7 +321,7 @@ function(hunter_download)
   hunter_create_args_file("${package_cmake_args}" "${HUNTER_ARGS_FILE}")
 
   # Pass the raw list of arguments to build scheme:
-  # * https://github.com/ruslo/hunter/blob/v0.23.18/cmake/projects/Boost/schemes/url_sha1_boost.cmake.in#L95-L100
+  # * https://github.com/cpp-pm/hunter/blob/v0.23.18/cmake/projects/Boost/schemes/url_sha1_boost.cmake.in#L95-L100
   # * https://github.com/ruslo/hunter/issues/1525
   set(HUNTER_${HUNTER_PACKAGE_NAME}_CMAKE_ARGS "${package_cmake_args}")
 

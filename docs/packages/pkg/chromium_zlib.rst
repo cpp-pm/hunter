@@ -13,7 +13,7 @@ chromium_zlib
 
 - https://chromium.googlesource.com/chromium/src/third_party/+/master/zlib
 - https://github.com/hunter-packages/chromium_zlib
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/chromium_zlib/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/chromium_zlib/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/chromium_zlib/CMakeLists.txt
   :language: cmake

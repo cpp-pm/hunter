@@ -4,12 +4,12 @@
 hunter_download
 ---------------
 
-* `Source <https://github.com/ruslo/hunter/blob/master/cmake/modules/hunter_download.cmake>`__
+* `Source <https://github.com/cpp-pm/hunter/blob/master/cmake/modules/hunter_download.cmake>`__
 * Usage examples:
 
- * `PACKAGE_NAME <https://github.com/ruslo/hunter/blob/71daf403edd1cc870452ae7bf5c8e873c6d6398c/cmake/projects/GTest/hunter.cmake#L138>`__
- * `PACKAGE_COMPONENT <https://github.com/ruslo/hunter/blob/71daf403edd1cc870452ae7bf5c8e873c6d6398c/cmake/projects/Boost/atomic/hunter.cmake#L20>`__
- * `PACKAGE_INTERNAL_DEPS_ID <https://github.com/ruslo/hunter/blob/71daf403edd1cc870452ae7bf5c8e873c6d6398c/cmake/projects/Qt/qt3d/hunter.cmake#L14>`__
+ * `PACKAGE_NAME <https://github.com/cpp-pm/hunter/blob/71daf403edd1cc870452ae7bf5c8e873c6d6398c/cmake/projects/GTest/hunter.cmake#L138>`__
+ * `PACKAGE_COMPONENT <https://github.com/cpp-pm/hunter/blob/71daf403edd1cc870452ae7bf5c8e873c6d6398c/cmake/projects/Boost/atomic/hunter.cmake#L20>`__
+ * `PACKAGE_INTERNAL_DEPS_ID <https://github.com/cpp-pm/hunter/blob/71daf403edd1cc870452ae7bf5c8e873c6d6398c/cmake/projects/Qt/qt3d/hunter.cmake#L14>`__
 
 Final stage of adding package to the project. This command will read all
 package related variables and start the real download/build (or cache unpack)

@@ -11,7 +11,7 @@ duktape
 
 - http://duktape.org/
 - `Hunterized <https://github.com/hunter-packages/duktape>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/duktape/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/duktape/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/duktape/CMakeLists.txt
   :language: cmake

@@ -19,7 +19,7 @@ glog
     find_package(glog CONFIG REQUIRED)
     target_link_libraries(... glog::glog)
 
-For Hunter <= `v0.17.15 <https://github.com/ruslo/hunter/releases/tag/v0.17.15>`__:
+For Hunter <= `v0.17.15 <https://github.com/cpp-pm/hunter/releases/tag/v0.17.15>`__:
 
 .. code-block:: cmake
 

@@ -10,7 +10,7 @@ libffi
 ======
 
 -  `Official <https://sourceware.org/libffi>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/libffi/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/libffi/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

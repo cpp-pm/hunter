@@ -14,7 +14,7 @@ android_sdk_platform_tools_packer
 =================================
 
 -  `Official <https://github.com/hunter-packages/android_sdk_platform_tools_packer>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/android_sdk_platform_tools_packer/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/android_sdk_platform_tools_packer/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/android_sdk_platform_tools_packer/CMakeLists.txt
   :language: cmake

@@ -12,7 +12,7 @@ tvm
 
 -  `Official GitHub <https://github.com/dmlc/tvm>`__
 -  `Hunterized <https://github.com/hunter-packages/tvm>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/tvm/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/tvm/CMakeLists.txt>`__
 
 .. note::
 

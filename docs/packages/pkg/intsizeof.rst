@@ -10,7 +10,7 @@ intsizeof
 =========
 
 -  `Official <https://github.com/ruslo/intsizeof>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/intsizeof/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/intsizeof/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

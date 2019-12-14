@@ -11,7 +11,7 @@ imgui
 
 -  `Official <https://github.com/ocornut/imgui>`__
 -  `Hunterized <https://github.com/hunter-packages/imgui>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/imgui/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/imgui/CMakeLists.txt>`__
 -  Added by `Casey <https://github.com/caseymcc>`__ (`pr-1521 <https://github.com/ruslo/hunter/pull/1521>`__)
 
 Immediate-mode, bloat-free graphical user interface library for C++ 

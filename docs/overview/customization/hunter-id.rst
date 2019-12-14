@@ -57,5 +57,5 @@ Message in logs:
 
 .. admonition:: Hunter
 
-  * `Releases <https://github.com/ruslo/hunter/releases>`__
-  * `Atom feed <https://github.com/ruslo/hunter/releases.atom>`__
+  * `Releases <https://github.com/cpp-pm/hunter/releases>`__
+  * `Atom feed <https://github.com/cpp-pm/hunter/releases.atom>`__

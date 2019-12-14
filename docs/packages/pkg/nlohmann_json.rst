@@ -11,7 +11,7 @@ nlohmann_json
 =============
 
 -  `Official GitHub <https://github.com/nlohmann/json/>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/nlohmann_json/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/nlohmann_json/CMakeLists.txt>`__
 
 .. note::
 
@@ -51,12 +51,12 @@ CMake API that should be used for ``nlohmann_json`` v1.0.0:
 Related Hunter releases:
 
 -  v1.0.0 Available from
-   `v0.12.13 <https://github.com/ruslo/hunter/releases/tag/v0.12.13>`__
+   `v0.12.13 <https://github.com/cpp-pm/hunter/releases/tag/v0.12.13>`__
    to
-   `v0.19.52 <https://github.com/ruslo/hunter/releases/tag/v0.19.52>`__
+   `v0.19.52 <https://github.com/cpp-pm/hunter/releases/tag/v0.19.52>`__
 
 -  v2.1.1+ Available since
-   `v0.19.52 <https://github.com/ruslo/hunter/releases/tag/v0.19.52>`__
+   `v0.19.52 <https://github.com/cpp-pm/hunter/releases/tag/v0.19.52>`__
 
 migration from v1.0.0 to v2.1.1+
 --------------------------------

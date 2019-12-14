@@ -16,8 +16,8 @@ odb-boost
 
 -  `__FIXME__ Official <https://__FIXME__>`__
 -  `__FIXME__ Hunterized <https://github.com/hunter-packages/__FIXME__>`__
--  `__FIXME__ Example <https://github.com/ruslo/hunter/blob/master/examples/__FIXME__/CMakeLists.txt>`__
--  Available since `__FIXME__ vX.Y.Z <https://github.com/ruslo/hunter/releases/tag/vX.Y.Z>`__
+-  `__FIXME__ Example <https://github.com/cpp-pm/hunter/blob/master/examples/__FIXME__/CMakeLists.txt>`__
+-  Available since `__FIXME__ vX.Y.Z <https://github.com/cpp-pm/hunter/releases/tag/vX.Y.Z>`__
 -  Added by `__FIXME__ <https://github.com/__FIXME__>`__ (`__FIXME__ pr-N <https://github.com/ruslo/hunter/pull/N>`__)
 
 .. code-block:: cmake

@@ -13,7 +13,7 @@ pip_requests
 - `Official <http://docs.python-requests.org>`__
 - `Official GitHub <https://github.com/kennethreitz/requests>`__
 - `PyPI <https://pypi.org/project/requests>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/pip_requests/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/pip_requests/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/pip_requests/CMakeLists.txt
   :language: cmake

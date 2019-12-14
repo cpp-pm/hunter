@@ -10,7 +10,7 @@ FakeIt
 ======
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.18.24-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.18.24
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.18.24
   :alt: Hunter v0.18.24
 
 -  `Official <https://github.com/eranpeer/FakeIt>`__

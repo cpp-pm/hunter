@@ -22,7 +22,7 @@ toluapp
 
 -  `Official GitHub <https://github.com/LuaDist/toluapp>`__
 -  `Hunterized <https://github.com/hunter-packages/toluapp>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/toluapp/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/toluapp/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/toluapp/CMakeLists.txt
   :language: cmake

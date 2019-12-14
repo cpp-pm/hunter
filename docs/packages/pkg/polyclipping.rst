@@ -11,7 +11,7 @@ polyclipping
 
 -  `Official <https://sourceforge.net/projects/polyclipping/>`__
 -  `Hunterized <https://github.com/hunter-packages/polyclipping>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/polyclipping/foo.cpp>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/polyclipping/foo.cpp>`__
 
 .. code-block:: cmake
 

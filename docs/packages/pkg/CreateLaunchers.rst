@@ -10,7 +10,7 @@ CreateLaunchers
 ===============
 
 -  `Official GitHub <https://github.com/caseymcc/CreateLaunchers>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/CreateLaunchers/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/CreateLaunchers/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/CreateLaunchers/CMakeLists.txt
   :language: cmake

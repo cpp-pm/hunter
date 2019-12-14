@@ -11,7 +11,7 @@ cctz
 
 -  `Official <https://github.com/google/cctz>`__
 -  `Hunterized <https://github.com/hunter-packages/cctz>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/cctz/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/cctz/CMakeLists.txt>`__
 -  Added by `Isaac Hier <https://github.com/isaachier>`__ (`pr-1370 <https://github.com/ruslo/hunter/pull/1370>`__)
 
 .. literalinclude:: /../examples/cctz/CMakeLists.txt

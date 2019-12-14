@@ -12,7 +12,7 @@ pip_decorator
 
 - `Official GitHub <https://github.com/micheles/decorator>`__
 - `PyPI <https://pypi.org/project/decorator>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/pip_decorator/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/pip_decorator/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/pip_decorator/CMakeLists.txt
   :language: cmake

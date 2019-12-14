@@ -11,7 +11,7 @@ zip
 ===
 
 -  `Official <https://github.com/kuba--/zip>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/zip/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/zip/CMakeLists.txt>`__
 -  Added by `Rahul Sheth <https://github.com/rbsheth>`__ (`pr-1878 <https://github.com/ruslo/hunter/pull/1878>`__)
 
 .. literalinclude:: /../examples/zip/CMakeLists.txt

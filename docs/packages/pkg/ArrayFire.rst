@@ -10,12 +10,12 @@ ArrayFire
 =========
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.48-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.48
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.48
   :alt: Hunter v0.12.48
 
 -  `Official <https://github.com/arrayfire/arrayfire>`__
 -  `Hunterized <https://github.com/hunter-packages/arrayfire>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/yaml-cpp/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/yaml-cpp/CMakeLists.txt>`__
 -  `Testing <https://github.com/ingenue/hunter/branches/all?utf8=%E2%9C%93&query=arrayfire>`__
 - Available since |hunter|
 

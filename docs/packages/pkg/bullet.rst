@@ -12,7 +12,7 @@ bullet
 -  http://bulletphysics.org/wordpress/
 -  `Official GitHub <https://github.com/bulletphysics/bullet3>`__
 -  `Hunterized <https://github.com/hunter-packages/bullet3>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/bullet/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/bullet/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

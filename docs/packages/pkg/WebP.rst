@@ -14,7 +14,7 @@ WebP codec: library to encode and decode images in WebP format. This package con
 
 -  `Official <https://chromium.googlesource.com/webm/libwebp>`__
 -  `Hunterized <https://github.com/hunter-packages/libwebp>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/WebP/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/WebP/CMakeLists.txt>`__
 -  Added by `Mathieu-Andre Chiasson <https://github.com/mchiasson>`__ (`pr-1371 <https://github.com/ruslo/hunter/pull/1371>`__)
 
 .. literalinclude:: /../examples/WebP/CMakeLists.txt

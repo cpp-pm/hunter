@@ -11,8 +11,8 @@ zookeeper
 
 -  `Official <https://zookeeper.apache.org/>`__
 -  `Hunterized <https://github.com/hunter-packages/zookeeper>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/zookeeper/CMakeLists.txt>`__
--  Available since `v0.18.5 <https://github.com/ruslo/hunter/releases/tag/v0.18.5>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/zookeeper/CMakeLists.txt>`__
+-  Available since `v0.18.5 <https://github.com/cpp-pm/hunter/releases/tag/v0.18.5>`__
 -  Added by `<https://github.com/wheybags>`__ (`pr-639 <https://github.com/ruslo/hunter/pull/639>`__)
 
 .. code-block:: cmake

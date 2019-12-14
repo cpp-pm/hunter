@@ -14,9 +14,9 @@ libuv
 -  `Official <http://libuv.org/>`__
 -  `Testing branch <https://github.com/ingenue/hunter/tree/pkg.libuv>`__
 -  `Example
-   CMakeLists.txt <https://github.com/ruslo/hunter/blob/master/examples/libuv/CMakeLists.txt>`__
+   CMakeLists.txt <https://github.com/cpp-pm/hunter/blob/master/examples/libuv/CMakeLists.txt>`__
 -  `Example C
-   file <https://github.com/ruslo/hunter/blob/master/examples/libuv/example.c>`__
+   file <https://github.com/cpp-pm/hunter/blob/master/examples/libuv/example.c>`__
 
 .. code-block:: cmake
 

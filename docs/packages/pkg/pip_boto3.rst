@@ -13,7 +13,7 @@ pip_boto3
 - `Official <https://aws.amazon.com/sdk-for-python/>`__
 - `Official GitHub <https://github.com/boto/boto3>`__
 - `PyPI <https://pypi.org/project/boto3>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/pip_boto3/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/pip_boto3/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/pip_boto3/CMakeLists.txt
   :language: cmake

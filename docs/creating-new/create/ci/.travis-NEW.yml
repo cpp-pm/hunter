@@ -79,7 +79,7 @@ install:
   - if [[ "`uname`" == "Linux" ]]; then travis_retry pip3 install --user requests; fi
 
   # Install latest Polly toolchains and scripts
-  - wget https://github.com/ruslo/polly/archive/master.zip
+  - wget https://github.com/cpp-pm/polly/archive/master.zip
   - unzip master.zip
   - POLLY_ROOT="`pwd`/polly-master"
   - export PATH="${POLLY_ROOT}/bin:${PATH}"

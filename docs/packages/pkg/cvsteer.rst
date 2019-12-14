@@ -10,7 +10,7 @@ cvsteer
 =======
 
 -  `Official <http://github.com/headupinclouds/cvsteer>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/cvsteer/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/cvsteer/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/cvsteer/CMakeLists.txt
   :language: cmake

@@ -12,7 +12,7 @@ pip_idna
 
 - `Official GitHub <https://github.com/kjd/idna>`__
 - `PyPI <https://pypi.org/project/idna>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/pip_idna/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/pip_idna/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/pip_idna/CMakeLists.txt
   :language: cmake

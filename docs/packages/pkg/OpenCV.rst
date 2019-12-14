@@ -13,7 +13,7 @@ OpenCV
 
 -  `Official <https://github.com/Itseez/opencv>`__
 -  `Hunterized <https://github.com/hunter-packages/opencv>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/OpenCV/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/OpenCV/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/OpenCV/CMakeLists.txt
   :language: cmake
@@ -52,7 +52,7 @@ Known issues
 ------------
 
 -  since hunter
-   `v0.18.44 <https://github.com/ruslo/hunter/releases/tag/v0.18.44>`__
+   `v0.18.44 <https://github.com/cpp-pm/hunter/releases/tag/v0.18.44>`__
    OpenCV can't find system libraries to link against on Linux. If you
    need those dependencies (FFMPEG, GTK, GStreamer, V4L2, etc.) you need
    to fork hunter and revert commit

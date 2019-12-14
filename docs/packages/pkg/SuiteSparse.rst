@@ -10,12 +10,12 @@ SuiteSparse
 ===========
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.19.31-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.19.31
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.19.31
   :alt: Hunter v0.19.31
 
 -  `Official <https://github.com/jlblancoc/suitesparse-metis-for-windows>`__
 -  `Hunterized <https://github.com/hunter-packages/suitesparse-metis-for-windows>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/SuiteSparse/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/SuiteSparse/CMakeLists.txt>`__
 - Available since |hunter|
 -  Added by `Neroburner <https://github.com/NeroBurner>`__ (`pr-861 <https://github.com/ruslo/hunter/pull/861>`__)
 -  Dependencies:

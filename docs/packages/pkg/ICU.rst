@@ -11,7 +11,7 @@ ICU
 
 - http://site.icu-project.org/
 - `Hunterized <https://github.com/hunter-packages/icu>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/ICU/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/ICU/CMakeLists.txt>`__
 - `Stand-alone example with advanced testing <https://github.com/forexample/icu-sample>`__
 
 .. literalinclude:: /../examples/ICU/CMakeLists.txt

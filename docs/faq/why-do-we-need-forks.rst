@@ -68,7 +68,7 @@ variables introduced by new CMake version and general improvements):
 Note that Hunter keep all available ``OpenCV`` versions in
 ``cmake/projects/OpenCV/hunter.cmake`` file:
 
-* https://github.com/ruslo/hunter/blob/e412a3a1e9d58056efb56cb75440aead83f2e9e5/cmake/projects/OpenCV/hunter.cmake
+* https://github.com/cpp-pm/hunter/blob/e412a3a1e9d58056efb56cb75440aead83f2e9e5/cmake/projects/OpenCV/hunter.cmake
 
 At this moment there are 29 versions of ``OpenCV`` available for users, hence
 it will be 19 x 29 = 551 ``*.patch`` files to maintain. Some of them can be
@@ -126,7 +126,7 @@ fork-free approach:
 Any non-CMake custom build scheme suffers from this problem since build
 instructions have to know everything about all versions available,
 e.g. see
-`Boost components <https://github.com/ruslo/hunter/blob/bd8b7cddeb74ea3bda67401a23aee0db8702fc9e/cmake/modules/hunter_get_boost_libs.cmake#L52-L82>`__
+`Boost components <https://github.com/cpp-pm/hunter/blob/bd8b7cddeb74ea3bda67401a23aee0db8702fc9e/cmake/modules/hunter_get_boost_libs.cmake#L52-L82>`__
 .
 
 .. [1] http://enterprisecraftsmanship.com/2015/09/02/cohesion-coupling-difference/

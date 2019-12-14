@@ -10,7 +10,7 @@ aglet
 =====
 
 -  `Official <https://github.com/elucideye/aglet>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/aglet/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/aglet/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

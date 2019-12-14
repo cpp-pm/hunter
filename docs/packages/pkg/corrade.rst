@@ -11,7 +11,7 @@ corrade
 =======
 
 -  `Official <https://github.com/mosra/corrade>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/corrade/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/corrade/CMakeLists.txt>`__
 -  Developed by `Vladimír Vondruš <https://github.com/mosra>`__
 -  Added by `Pascal Thomet <https://github.com/pthom>`__ (`pr-1646 <https://github.com/ruslo/hunter/pull/1646>`__)
 

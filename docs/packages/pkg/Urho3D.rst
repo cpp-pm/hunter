@@ -13,7 +13,7 @@ Urho3D
 -  https://urho3d.github.io
 -  `Official GitHub <https://github.com/urho3d/Urho3D>`__
 -  `Hunterized <https://github.com/hunter-packages/Urho3D>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Urho3D/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Urho3D/CMakeLists.txt>`__
 -  `Stand-alone example (includes configuration for iOS and Android) <https://github.com/forexample/urho3d-with-hunter>`__
 
 You have to explicitly switch to these versions of dependencies:

@@ -38,7 +38,7 @@ this repository** in general, see `notes`_):
   :emphasize-lines: 2, 3
 
   HunterGate(
-      URL "https://github.com/ruslo/hunter/archive/v0.16.15.tar.gz"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.16.15.tar.gz"
       SHA1 "6974c2150fc0d3b09de3ad1efcbf15d360647ffa"
   )
 
@@ -72,7 +72,7 @@ Summarize:
 
   include("cmake/HunterGate.cmake")
   HunterGate(
-      URL "https://github.com/ruslo/hunter/archive/v0.10.9.tar.gz"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.10.9.tar.gz"
       SHA1 "53b198e364dc7bc8360fc545f798563229bd7e20"
   )
 

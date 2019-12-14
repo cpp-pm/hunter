@@ -15,7 +15,7 @@ thrift
 
 -  `Official <https://thrift.apache.org>`__
 -  `Hunterized <https://github.com/hunter-packages/thrift>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/thrift/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/thrift/CMakeLists.txt>`__
 -  Added by `isaachier <https://github.com/isaachier>`__ (`pr-1064 <https://github.com/ruslo/hunter/pull/1064>`__)
 
 This package **does not** compile the Thrift compiler by default. Nor does it

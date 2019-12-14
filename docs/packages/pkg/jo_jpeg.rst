@@ -12,7 +12,7 @@ jo_jpeg
 
 - http://www.jonolick.com/code.html
 - `Hunterized <https://github.com/hunter-packages/jo_jpeg>`__
-- `Example <https://github.com/ruslo/hunter/blob/master/examples/jo_jpeg/CMakeLists.txt>`__
+- `Example <https://github.com/cpp-pm/hunter/blob/master/examples/jo_jpeg/CMakeLists.txt>`__
 
 .. code-block:: cmake
 

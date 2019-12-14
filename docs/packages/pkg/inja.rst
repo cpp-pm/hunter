@@ -10,7 +10,7 @@ inja
 ====
 
 -  `Official <https://github.com/pantor/inja>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/inja/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/inja/CMakeLists.txt>`__
 -  Added by `Jorrit Wronski <https://github.com/jowr>`__ (`pr-1207 <https://github.com/ruslo/hunter/pull/1207>`__)
 
 .. code-block:: cmake

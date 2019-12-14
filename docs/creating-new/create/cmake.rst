@@ -15,19 +15,19 @@ Examples of such packages:
 * :ref:`pkg.flatbuffers`
 
   * https://github.com/google/flatbuffers
-  * See `flatbuffers/hunter.cmake <https://github.com/ruslo/hunter/blob/08a6cbcf06bb5934b6b18aa1f2028cf56a1063b7/cmake/projects/flatbuffers/hunter.cmake#L23-L32>`__
+  * See `flatbuffers/hunter.cmake <https://github.com/cpp-pm/hunter/blob/08a6cbcf06bb5934b6b18aa1f2028cf56a1063b7/cmake/projects/flatbuffers/hunter.cmake#L23-L32>`__
   * Testing table: `AppVeyor <https://ci.appveyor.com/project/ingenue/hunter/build/1.0.3215>`__, `Travis <https://travis-ci.org/ingenue/hunter/builds/326881125>`__
 
 * :ref:`pkg.rocksdb`
 
   * https://github.com/facebook/rocksdb
-  * See `rocksdb/hunter.cmake <https://github.com/ruslo/hunter/blob/08a6cbcf06bb5934b6b18aa1f2028cf56a1063b7/cmake/projects/rocksdb/hunter.cmake#L19-L23>`__
+  * See `rocksdb/hunter.cmake <https://github.com/cpp-pm/hunter/blob/08a6cbcf06bb5934b6b18aa1f2028cf56a1063b7/cmake/projects/rocksdb/hunter.cmake#L19-L23>`__
   * Testing table: `Travis <https://travis-ci.org/ingenue/hunter/builds/326905326>`__
 
 * :ref:`pkg.nlohmann_json`
 
   * https://github.com/nlohmann/json
-  * See `nlohmann_json/hunter.cmake <https://github.com/ruslo/hunter/blob/08a6cbcf06bb5934b6b18aa1f2028cf56a1063b7/cmake/projects/nlohmann_json/hunter.cmake#L53-L58>`__
+  * See `nlohmann_json/hunter.cmake <https://github.com/cpp-pm/hunter/blob/08a6cbcf06bb5934b6b18aa1f2028cf56a1063b7/cmake/projects/nlohmann_json/hunter.cmake#L53-L58>`__
   * Testing table: `AppVeyor <https://ci.appveyor.com/project/ingenue/hunter/build/1.0.3217>`__, `Travis <https://travis-ci.org/ingenue/hunter/builds/326883658>`__
 
 Default behavior
@@ -241,7 +241,7 @@ Fork Hunter
 Hunter hosted on GitHub service where common way to add code is to fork
 project and create pull request.
 
-Fork `ruslo/hunter <https://github.com/ruslo/hunter>`__, clone
+Fork `cpp-pm/hunter <https://github.com/cpp-pm/hunter>`__, clone
 `your fork <https://github.com/hunterbox/hunter>`__ and initialize all
 submodules:
 
@@ -526,7 +526,7 @@ fastest way to check that everything is ready and working correctly.
 
 Script ``jenkins.py`` will package a temporary Hunter archive based on current
 state and build the specified example. This script uses
-`Polly <https://github.com/ruslo/polly>`__ toolchains.
+`Polly <https://github.com/cpp-pm/polly>`__ toolchains.
 
 Check you have Python 3 installed, clone Polly, add its ``bin`` folder to
 ``PATH`` environment variable, go back to Hunter repository and run test.
@@ -538,7 +538,7 @@ On Linux:
   > which python3
   /usr/bin/python3
 
-  > git clone https://github.com/ruslo/polly
+  > git clone https://github.com/cpp-pm/polly
   > cd polly
   [polly]> export PATH="`pwd`/bin:$PATH"
 
@@ -557,7 +557,7 @@ On Windows:
 
 .. code-block:: none
 
-  > git clone https://github.com/ruslo/polly
+  > git clone https://github.com/cpp-pm/polly
   > cd polly
   [polly]> set PATH=%CD%\bin;%PATH%
 
@@ -608,7 +608,7 @@ of branches.
 In branch ``master`` there is only the ``.travis.yml`` file which will only check
 if the documentation is building:
 
-* https://github.com/ruslo/hunter/blob/ea9de264d6c1b05484bdc16a9967c3cb8cca9048/.travis.yml#L57-L59
+* https://github.com/cpp-pm/hunter/blob/ea9de264d6c1b05484bdc16a9967c3cb8cca9048/.travis.yml#L57-L59
 
 When you open a pull request to ``ruslo/hunter`` this test will automatically run.
 
@@ -974,7 +974,7 @@ via Hunter:
   |hunter|
 
   .. |hunter| image:: https://img.shields.io/badge/hunter-hunter_box_1-blue.svg
-    :target: https://docs.hunter.sh/en/latest/packages/pkg/hunter_box_1.html
+    :target: https://cpp-pm-hunter.readthedocs.io/en/latest/packages/pkg/hunter_box_1.html
     :alt: Hunter
 
 Example:

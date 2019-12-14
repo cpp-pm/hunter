@@ -1,5 +1,5 @@
 Non-CMake projects can be added too. But sometimes it's not a trivial task (for example
-there are a 3 custom schemes for [OpenSSL](https://github.com/ruslo/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake)). In general it's better to apply patch with CMake build and use [regular](https://github.com/ruslo/hunter/wiki/usr.adding.new.package) add instruction. Anyway here is a guide how to add a project with custom build:
+there are a 3 custom schemes for [OpenSSL](https://github.com/cpp-pm/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake)). In general it's better to apply patch with CMake build and use [regular](https://github.com/ruslo/hunter/wiki/usr.adding.new.package) add instruction. Anyway here is a guide how to add a project with custom build:
 
 ### 01. Test it manually
 ```bash

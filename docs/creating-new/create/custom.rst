@@ -5,7 +5,7 @@ Non-CMake: custom scheme
 ------------------------
 
 Non-CMake projects can be added too. But sometimes it's not a trivial task
-(for example there are a 3 custom schemes for `OpenSSL <https://github.com/ruslo/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake>`_. In general it's better to
+(for example there are a 3 custom schemes for `OpenSSL <https://github.com/cpp-pm/hunter/blob/master/cmake/projects/OpenSSL/hunter.cmake>`_. In general it's better to
 apply a patch to an existing CMake build and use :ref:`cmake-simple` add
 instruction. Anyway here is a guide how to add a project with custom build:
 

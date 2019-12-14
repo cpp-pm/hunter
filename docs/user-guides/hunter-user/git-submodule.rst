@@ -33,7 +33,7 @@ and set the ``GIT_SUBMODULE`` flag:
 
   include("cmake/HunterGate.cmake")
   HunterGate(
-      URL "https://github.com/ruslo/hunter/archive/v0.18.58.tar.gz"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.18.58.tar.gz"
       SHA1 "3b39effc5ee1af4ef7487eabb1b0a7a7e10a7b3e"
       LOCAL # <----- load cmake/Hunter/config.cmake
   )
@@ -196,7 +196,7 @@ First let's remove ``LOCAL`` config and build standard TIFF with standard ZLIB:
 
   include("cmake/HunterGate.cmake")
   HunterGate(
-      URL "https://github.com/ruslo/hunter/archive/v0.18.58.tar.gz"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.18.58.tar.gz"
       SHA1 "3b39effc5ee1af4ef7487eabb1b0a7a7e10a7b3e"
   )
 
@@ -230,7 +230,7 @@ Now let's add ``LOCAL`` back and run build again:
 
   include("cmake/HunterGate.cmake")
   HunterGate(
-      URL "https://github.com/ruslo/hunter/archive/v0.18.58.tar.gz"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.18.58.tar.gz"
       SHA1 "3b39effc5ee1af4ef7487eabb1b0a7a7e10a7b3e"
       LOCAL
   )

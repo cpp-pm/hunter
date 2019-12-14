@@ -12,7 +12,7 @@
 Android-MIPS-System-Image
 =========================
 
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Android-MIPS-System-Image/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Android-MIPS-System-Image/CMakeLists.txt>`__
 
 .. literalinclude:: /../examples/Android-MIPS-System-Image/CMakeLists.txt
   :language: cmake

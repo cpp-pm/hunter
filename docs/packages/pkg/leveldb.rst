@@ -11,7 +11,7 @@ leveldb
 
 -  `Official <https://github.com/google/leveldb>`__
 -  `Hunterized <https://github.com/hunter-packages/leveldb>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/leveldb/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/leveldb/CMakeLists.txt>`__
 -  Added by `Isaac Hier <https://github.com/isaachier>`__ (`pr-1246 <https://github.com/ruslo/hunter/pull/1246>`__)
 
 .. code-block:: cmake

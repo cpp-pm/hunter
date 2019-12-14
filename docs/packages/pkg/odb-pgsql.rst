@@ -11,11 +11,11 @@ odb-pgsql
 =========
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.37-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.37
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.37
   :alt: Hunter v0.12.37
 
 -  `Official <http://www.codesynthesis.com/products/odb/download.xhtml>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/odb-pgsql/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/odb-pgsql/CMakeLists.txt>`__
 - Available since |hunter|
 -  Added by `Alexandre Pretyman <https://github.com/pretyman>`__
    (`pr-307 <https://github.com/ruslo/hunter/pull/307>`__)

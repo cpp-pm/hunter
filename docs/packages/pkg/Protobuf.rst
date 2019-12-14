@@ -10,12 +10,12 @@ Protobuf
 ========
 
 .. |hunter| image:: https://img.shields.io/badge/hunter-v0.12.54-blue.svg
-  :target: https://github.com/ruslo/hunter/releases/tag/v0.12.54
+  :target: https://github.com/cpp-pm/hunter/releases/tag/v0.12.54
   :alt: Hunter v0.12.54
 
 -  `Official <https://github.com/google/protobuf>`__
 -  `Hunterized <https://github.com/hunter-packages/protobuf>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/Protobuf/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Protobuf/CMakeLists.txt>`__
 -  Available since |hunter|
 -  Added by `Antal Tátrai <https://github.com/tatraian>`__
    (`pr-340 <https://github.com/ruslo/hunter/pull/340>`__)
