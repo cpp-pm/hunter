@@ -12,7 +12,7 @@ project(tiny-process-library)
 # DOCUMENTATION_START {
 find_package(Threads REQUIRED)
 hunter_add_package(tiny-process-library)
-find_package(tiny-process-library REQUIRED)
+find_package(tiny-process-library CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
 target_link_libraries(boo PUBLIC tiny-process-library::tiny-process-library ${CMAKE_THREAD_LIBS_INIT})

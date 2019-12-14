@@ -11,9 +11,9 @@ hunter_add_version(
     VERSION
     2.0.2
     URL
-    "https://gitlab.com/eidheim/tiny-process-library/-/archive/v2.0.2/tiny-process-library-v2.0.2.tar.gz"
+    "https://github.com/Bjoe/tiny-process-library/archive/1a4942fdb12d98c68b793f351ffb7f2664a818b1.zip"
     SHA1
-    380589052c93ca6815717d0fd62270c6dc867eef
+    d354522ed46bb7df0e129ba3e74a5cb027ed126b
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
