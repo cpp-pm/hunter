@@ -10,8 +10,8 @@ include("../common.cmake")
 project(immer)
 
 # DOCUMENTATION_START {
-hunter_add_package(immer)
-find_package(immer CONFIG REQUIRED)
+hunter_add_package(Immer)
+find_package(Immer CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
 target_link_libraries(boo PUBLIC immer)
