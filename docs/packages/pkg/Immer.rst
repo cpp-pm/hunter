@@ -8,10 +8,9 @@
 .. _pkg.immer:
 
 immer
-===
+=====
 
 -  `Official <https://github.com/arximboldi/immer>`__
--  `Hunterized <https://github.com/hunter-packages/foo>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/immer/CMakeLists.txt>`__
 -  Added by `Joerg-Christian Boehme <https://github.com/Bjoe>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
 
