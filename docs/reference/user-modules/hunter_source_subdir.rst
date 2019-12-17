@@ -23,7 +23,7 @@ It is meant to be used in the project definition at
 
 .. code-block:: cmake
 
-  hunter_config(
+  hunter_source_subdir(
       ${package}
       # SOURCE_SUBDIR will be forwarded to ExternalProject_Add command
       SOURCE_SUBDIR "cpp"
