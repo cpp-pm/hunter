@@ -1,20 +1,20 @@
 .. spelling::
 
-    immer
+    Immer
 
 .. index::
-  single: unsorted ; immer
+  single: unsorted ; Immer
 
 .. _pkg.immer:
 
-immer
+Immer
 =====
 
 -  `Official <https://github.com/arximboldi/immer>`__
--  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/immer/CMakeLists.txt>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Immer/CMakeLists.txt>`__
 -  Added by `Joerg-Christian Boehme <https://github.com/Bjoe>`__ (`pr-104 <https://github.com/cpp-pm/hunter/pull/104>`__)
 
-.. literalinclude:: /../examples/immer/CMakeLists.txt
+.. literalinclude:: /../examples/Immer/CMakeLists.txt
   :language: cmake
   :start-after: # DOCUMENTATION_START {
   :end-before: # DOCUMENTATION_END }
