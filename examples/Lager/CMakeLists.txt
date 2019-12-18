@@ -7,12 +7,14 @@ cmake_minimum_required(VERSION 3.2)
 # * https://github.com/cpp-pm/gate
 include("../common.cmake")
 
-project(lager)
+project(Lager)
 
 # DOCUMENTATION_START {
-hunter_add_package(lager)
-find_package(lager CONFIG REQUIRED)
+hunter_add_package(Lager)
+hunter_add_package(Boost)
+find_package(Boost CONFIG REQUIRED)
+find_package(Lager CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC PkgConfig::lager)
+target_link_libraries(boo PUBLIC lager Boost::boost)
 # DOCUMENTATION_END }
