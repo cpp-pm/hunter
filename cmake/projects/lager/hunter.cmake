@@ -11,11 +11,11 @@ hunter_add_version(
     PACKAGE_NAME
     lager
     VERSION
-    1.0.0
+    0.0.1-dbc1fde
     URL
-    "https://github.com/hunter-packages/foo/archive/v1.0.0.tar.gz"
+    "https://github.com/arximboldi/lager/archive/dbc1fde8b323537154e351a24da34a485e2ccfa0.zip"
     SHA1
-    1111111111111111111111111111111111111111
+    4279a8c519dc4f1852d1f28f7f6cd0fb563ed26a
 )
 
 #if (ANDROID OR IOS)
@@ -29,7 +29,7 @@ hunter_add_version(
 #endif()
 
 #hunter_configuration_types(lager CONFIGURATION_TYPES Release)
-hunter_pick_scheme(DEFAULT url_sha1_autotools)
+hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(lager)
 hunter_download(
     PACKAGE_NAME lager
