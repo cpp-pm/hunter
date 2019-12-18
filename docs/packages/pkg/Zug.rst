@@ -10,7 +10,7 @@
 Zug
 ===
 
--  `Official <https://official_foo>`__
+-  `Official <https://github.com/arximboldi/zug>`__
 -  `Hunterized <https://github.com/cpp-pm/foo>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Zug/CMakeLists.txt>`__
 -  Added by `Joerg-Christian Boehme <https://github.com/Bjoe>`__ (`pr-N <https://github.com/ruslo/hunter/pull/N>`__)

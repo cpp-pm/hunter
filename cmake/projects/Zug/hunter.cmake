@@ -11,11 +11,11 @@ hunter_add_version(
     PACKAGE_NAME
     Zug
     VERSION
-    1.0.0
+    0.0.1-be20cae
     URL
-    "https://github.com/hunter-packages/foo/archive/v1.0.0.tar.gz"
+    "https://github.com/arximboldi/zug/archive/be20cae36e7e5876bf5bfb08b2a0562e1db3b546.zip"
     SHA1
-    1111111111111111111111111111111111111111
+    2d129f233691e0abca99e039bbe66e46e0be74a1
 )
 
 #if (ANDROID OR IOS)
@@ -29,7 +29,7 @@ hunter_add_version(
 #endif()
 
 #hunter_configuration_types(Zug CONFIGURATION_TYPES Release)
-hunter_pick_scheme(DEFAULT url_sha1_autotools)
+hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(Zug)
 hunter_download(
     PACKAGE_NAME Zug

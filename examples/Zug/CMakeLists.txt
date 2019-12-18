@@ -11,8 +11,10 @@ project(Zug)
 
 # DOCUMENTATION_START {
 hunter_add_package(Zug)
+hunter_add_package(Boost)
+find_package(Boost CONFIG REQUIRED)
 find_package(Zug CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC PkgConfig::Zug)
+target_link_libraries(boo PUBLIC zug Boost::boost)
 # DOCUMENTATION_END }
