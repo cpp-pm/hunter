@@ -5,7 +5,7 @@
 .. index::
   single: unsorted ; Immer
 
-.. _pkg.immer:
+.. _pkg.Immer:
 
 Immer
 =====
