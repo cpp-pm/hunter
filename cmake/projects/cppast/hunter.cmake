@@ -11,11 +11,11 @@ hunter_add_version(
     PACKAGE_NAME
     cppast
     VERSION
-    0.0.1-b155d6a
+    0.0.1-RC
     URL
-    "https://github.com/foonathan/cppast/archive/b155d6abccdf97b6940a0543e93354cb05a2ed04.zip"
+    "https://github.com/Bjoe/cppast/archive/fd55d9650642ed0606555c3ff8bfd1c645a31097.zip"
     SHA1
-    9606fa6d8397d9d7cca0e9c8a2d99feecb9479c8
+    0f5767d55817eeac7b6618cca87058e74ad595e2
 )
 
 #if (ANDROID OR IOS)
