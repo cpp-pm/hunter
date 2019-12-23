@@ -13,9 +13,9 @@ hunter_add_version(
     VERSION
     0.0.1-RC
     URL
-    "https://github.com/Bjoe/cppast/archive/fd55d9650642ed0606555c3ff8bfd1c645a31097.zip"
+    "https://github.com/Bjoe/cppast/archive/dbbbe626e4cff9da83b1c0baba650fdd56df0cdc.zip"
     SHA1
-    0f5767d55817eeac7b6618cca87058e74ad595e2
+    ac1733bcbaaba1e46005e2219e1499bbdcbbbe17
 )
 
 #if (ANDROID OR IOS)

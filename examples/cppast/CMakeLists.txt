@@ -14,5 +14,5 @@ hunter_add_package(cppast)
 find_package(cppast CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC PkgConfig::cppast)
+target_link_libraries(boo PUBLIC cppast::cppast)
 # DOCUMENTATION_END }
