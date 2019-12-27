@@ -9,7 +9,7 @@ hunter_add_version(
     PACKAGE_NAME
     cppast
     VERSION
-    0.0.1-RC
+    0.0.1-dbbbe62
     URL
     "https://github.com/Bjoe/cppast/archive/dbbbe626e4cff9da83b1c0baba650fdd56df0cdc.zip"
     SHA1
