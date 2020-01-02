@@ -150,6 +150,27 @@ Example for Python 3:
       find_package(Boost CONFIG REQUIRED python36)
     endif()
 
+
+Python NumPy
+------------
+
+To build the NumPy plugin for Boost Python use option ``HUNTER_ENABLE_BOOST_PYTHON_NUMPY=True``.
+This will require ``pip_numpy`` and therefore ``hunter_venv``, see their docs for details and
+requirements.
+
+Example:
+
+.. code-block:: cmake
+
+    # config.cmake
+    hunter_config(
+      Boost
+      VERSION ${HUNTER_Boost_VERSION}
+      CMAKE_ARGS
+      PYTHON_VERSION=${PYTHON_VERSION}
+      HUNTER_ENABLE_BOOST_PYTHON_NUMPY=True
+    )
+
 Math
 ----
 

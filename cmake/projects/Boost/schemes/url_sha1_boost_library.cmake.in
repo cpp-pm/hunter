@@ -42,6 +42,13 @@ hunter_assert_not_empty_string("@HUNTER_Boost_VERSION@")
 hunter_assert_not_empty_string("@HUNTER_PACKAGE_SCRIPT_DIR@")
 hunter_assert_not_empty_string("@HUNTER_TLS_VERIFY@")
 
+# Add/enable NumPy if it is requested
+if (HUNTER_ENABLE_BOOST_PYTHON_NUMPY)
+  cmake_minimum_required(VERSION 3.12)
+  hunter_add_package(pip_numpy)
+  find_package(pip_numpy CONFIG REQUIRED)
+endif()
+
 # get list of boost components for given version
 hunter_get_boost_libs(VERSION "@HUNTER_Boost_VERSION@" LIBS boost_libs)
 
@@ -309,29 +316,62 @@ hunter_parse_cmake_args_for_keyword(
 
 # set up paths for python in boost.user.jam
 if(NOT python_version STREQUAL "")
-  find_package(PythonInterp ${python_version} EXACT QUIET)
-  if(NOT PYTHONINTERP_FOUND)
-    hunter_user_error("Python Interpreter for Python version ${python_version} not found.")
-  endif()
-  set(python_executable ${PYTHON_EXECUTABLE})
-  find_package(PythonLibs ${python_version} EXACT QUIET)
-  if(NOT PYTHONLIBS_FOUND)
-    hunter_user_error("Python runtime library directory for Python version ${python_version} not found.")
-  endif()
-  # get the main Python include directory containing pyconfig.h
-  list(LENGTH PYTHON_INCLUDE_DIRS python_include_dir_list_length)
-  if(python_include_dir_list_length EQUAL 1)
-    set(python_include_directory "${PYTHON_INCLUDE_DIRS}")
+  if(HUNTER_ENABLE_BOOST_PYTHON_NUMPY)
+    # Use the CMake >= 3.12 way (names are all a bit different)
+    find_package(Python REQUIRED COMPONENTS Interpreter Development NumPy)
+    if(NOT Python_Interpreter_FOUND)
+      hunter_user_error("Python Interpreter for Python version ${python_version} not found.")
+    endif()
+    set(python_executable ${Python_EXECUTABLE})
+    if(NOT Python_Development_FOUND)
+      hunter_user_error("Python development artifacts for Python version ${python_version} not found.")
+    endif()
+    if(NOT Python_NumPy_FOUND)
+      hunter_user_error("Python NumPy for Python version ${python_version} not found.")
+    endif()
+    set(python_maj_min "${Python_VERSION_MAJOR}.${Python_VERSION_MINOR}")
+    # get the main Python include directory containing pyconfig.h
+    list(LENGTH Python_INCLUDE_DIRS python_include_dir_list_length)
+    if(python_include_dir_list_length EQUAL 1)
+      set(python_include_directory "${Python_INCLUDE_DIRS}")
+    else()
+      list(GET Python_INCLUDE_DIRS 0 python_include_directory)
+    endif()
+    # get directory of optimized library
+    list(LENGTH Python_LIBRARIES python_libraries_list_length)
+    if(python_libraries_list_length EQUAL 1)
+      set(python_optimized_library_path "${Python_LIBRARIES}")
+    else()
+      list(GET Python_LIBRARIES 1 python_optimized_library_path)
+    endif()
   else()
-    list(GET PYTHON_INCLUDE_DIRS 0 python_include_directory)
+    # Use the CMake < 3.12 way
+    find_package(PythonInterp ${python_version} EXACT QUIET)
+    if(NOT PYTHONINTERP_FOUND)
+      hunter_user_error("Python Interpreter for Python version ${python_version} not found.")
+    endif()
+    set(python_executable ${PYTHON_EXECUTABLE})
+    find_package(PythonLibs ${python_version} EXACT QUIET)
+    if(NOT PYTHONLIBS_FOUND)
+      hunter_user_error("Python runtime library directory for Python version ${python_version} not found.")
+    endif()
+    set(python_maj_min "${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}")
+    # get the main Python include directory containing pyconfig.h
+    list(LENGTH PYTHON_INCLUDE_DIRS python_include_dir_list_length)
+    if(python_include_dir_list_length EQUAL 1)
+      set(python_include_directory "${PYTHON_INCLUDE_DIRS}")
+    else()
+      list(GET PYTHON_INCLUDE_DIRS 0 python_include_directory)
+    endif()
+    # get directory of optimized library
+    list(LENGTH PYTHON_LIBRARIES python_libraries_list_length)
+    if(python_libraries_list_length EQUAL 1)
+      set(python_optimized_library_path "${PYTHON_LIBRARIES}")
+    else()
+      list(GET PYTHON_LIBRARIES 1 python_optimized_library_path)
+    endif()
   endif()
-  # get directory of optimized library
-  list(LENGTH PYTHON_LIBRARIES python_libraries_list_length)
-  if(python_libraries_list_length EQUAL 1)
-    set(python_optimized_library_path "${PYTHON_LIBRARIES}")
-  else()
-    list(GET PYTHON_LIBRARIES 1 python_optimized_library_path)
-  endif()
+
   get_filename_component(python_library_directory "${python_optimized_library_path}" DIRECTORY)
   if("@MSVC@")
     string(REPLACE "/" "\\\\" python_executable "${python_executable}")
@@ -340,7 +380,7 @@ if(NOT python_version STREQUAL "")
   endif()
   file(
     APPEND ${boost_user_jam}
-    "using python  : ${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR} : \"${python_executable}\" : \"${python_include_directory}\" : \"${python_library_directory}\" ;\n"
+    "using python  : ${python_maj_min} : \"${python_executable}\" : \"${python_include_directory}\" : \"${python_library_directory}\" ;\n"
   )
 endif()
 
