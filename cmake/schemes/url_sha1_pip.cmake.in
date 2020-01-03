@@ -83,7 +83,10 @@ configure_package_config_file(
     INSTALL_DESTINATION "${config_install_dir}"
 )
 
-if(HUNTER_STATUS_DEBUG)
+# We don't support verbose when building in MSVC as some pip packages (pip_numpy)
+# run config test builds which are intended to fail, but cause MSVC to think the
+# whole build has failed.
+if(HUNTER_STATUS_DEBUG AND NOT MSVC)
   set(pip_verbose "-vvv")
 else()
   set(pip_verbose "")
