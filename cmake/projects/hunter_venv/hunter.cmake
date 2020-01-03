@@ -24,6 +24,8 @@ hunter_add_version(
 # DOCUMENTATION_START {
 if(APPLE)
   set(__hunter_venv_default_python "3.7.5")
+elseif(MSYS)
+  set(__hunter_venv_default_python "3.7.5")
 elseif(WIN32)
   set(__hunter_venv_default_python "3.6.8")
 else()
