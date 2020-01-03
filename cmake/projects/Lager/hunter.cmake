@@ -12,9 +12,9 @@ hunter_add_version(
     VERSION
     0.0.1-dbc1fde
     URL
-    "https://github.com/arximboldi/lager/archive/dbc1fde8b323537154e351a24da34a485e2ccfa0.zip"
+    "https://github.com/Bjoe/lager/archive/68e69c30667c12e01ef98a65e3ecef12c461f2e1.zip"
     SHA1
-    4279a8c519dc4f1852d1f28f7f6cd0fb563ed26a
+    0245b730277a4e4053215e90fd4dbd4fb43d3f5b
 )
 
 hunter_cmake_args(

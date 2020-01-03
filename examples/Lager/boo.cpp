@@ -14,7 +14,6 @@
 #include <lager/event_loop/manual.hpp>
 #include <lager/store.hpp>
 
-#include <lager/debug/cereal/struct.hpp>
 #include <lager/util.hpp>
 
 #include <variant>
@@ -46,11 +45,6 @@ inline model update(model c, action action)
                       },
                       action);
 }
-
-LAGER_CEREAL_STRUCT(model, (value));
-LAGER_CEREAL_STRUCT(increment_action);
-LAGER_CEREAL_STRUCT(decrement_action);
-LAGER_CEREAL_STRUCT(reset_action, (new_value));
 
 } // namespace counter
 void draw(counter::model prev, counter::model curr)

@@ -11,9 +11,9 @@ Lager
 =====
 
 -  `Official <https://github.com/arximboldi/lager>`__
--  `Hunterized <https://github.com/cpp-pm/foo>`__
+-  `Hunterized <https://github.com/cpp-pm/lager>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Lager/CMakeLists.txt>`__
--  Added by `Joerg-Christian Boehme <https://github.com/Bjoe>`__ (`pr-N <https://github.com/ruslo/hunter/pull/N>`__)
+-  Added by `Joerg-Christian Boehme <https://github.com/Bjoe>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
 
 .. literalinclude:: /../examples/Lager/CMakeLists.txt
   :language: cmake
