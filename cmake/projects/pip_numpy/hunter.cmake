@@ -19,6 +19,17 @@ hunter_add_version(
     2a5a60f2b49befaf01a12dc66bab33d519af0cba
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    pip_numpy
+    VERSION
+    1.17.5
+    URL
+    "https://github.com/numpy/numpy/releases/download/v1.17.5/numpy-1.17.5.tar.gz"
+    SHA1
+    b8bac799f4a1e715aea082482a42757daa5dcc29
+)
+
 hunter_pick_scheme(DEFAULT url_sha1_pip)
 hunter_cacheable(pip_numpy)
 hunter_download(PACKAGE_NAME pip_numpy)
