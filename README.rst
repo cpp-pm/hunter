@@ -6,13 +6,13 @@ Hunter
 CMake driven cross-platform package manager for C/C++.
 Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
 
-* Documentation: https://cpp-pm-hunter.readthedocs.io
-* Brief overview: https://cpp-pm-hunter.readthedocs.io/en/latest/overview.html (**Must-read!**)
-* Packages: https://cpp-pm-hunter.readthedocs.io/en/latest/packages.html
+* Documentation: https://hunter.readthedocs.io
+* Brief overview: https://hunter.readthedocs.io/en/latest/overview.html (**Must-read!**)
+* Packages: https://hunter.readthedocs.io/en/latest/packages.html
 * Sources: https://github.com/cpp-pm/hunter
 * Reporting issues: https://github.com/cpp-pm/hunter/issues/new
-* Contributing guide: https://cpp-pm-hunter.readthedocs.io/en/latest/contributing.html
-* Contacts: https://cpp-pm-hunter.readthedocs.io/en/latest/contacts.html
+* Contributing guide: https://hunter.readthedocs.io/en/latest/contributing.html
+* Contacts: https://hunter.readthedocs.io/en/latest/contacts.html
 * `Per package testing table <https://github.com/cpp-pm/hunter-testing/branches/all>`_
 
 .. |gitter| image:: https://badges.gitter.im/cpp-pm/community.svg
@@ -20,7 +20,7 @@ Linux, Windows, macOS, iOS, Android, Raspberry Pi, etc.
   :alt: Gitter public chat room
   
 .. |rtfd| image:: https://readthedocs.org/projects/hunter/badge/?version=latest
-  :target: http://cpp-pm-hunter.readthedocs.io/en/latest/?badge=latest
+  :target: http://hunter.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation status
   
 .. |travis| image:: https://img.shields.io/travis/cpp-pm/hunter-testing/pkg.gtest.svg?style=flat&logo=travis&label=Linux%20OSX%20Android%20iOS

@@ -17,7 +17,7 @@ hunter_add_package(Boost)
 # Then try to build Eigen.
 # Eigen calls 'find_package(Boost)' but doesn't call 'hunter_add_package(Boost)',
 # this leads to conflict similar to the one described in:
-# * https://cpp-pm-hunter.readthedocs.io/en/latest/creating-new/cmake-dependencies.html#conflict
+# * https://hunter.readthedocs.io/en/latest/creating-new/cmake-dependencies.html#conflict
 # Fix: exclude code with 'find_package(Boost)' (this code only for building tests)
 # or hunterize Eigen.
 hunter_add_package(Eigen)

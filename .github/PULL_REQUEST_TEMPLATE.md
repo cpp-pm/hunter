@@ -1,7 +1,7 @@
 <!--- Use this part of template if you're adding new package. Remove the rest. -->
 <!--- BEGIN -->
 
-* I've followed [this guide](https://cpp-pm-hunter.readthedocs.io/en/latest/creating-new/create/cmake.html)
+* I've followed [this guide](https://hunter.readthedocs.io/en/latest/creating-new/create/cmake.html)
   step by step carefully. **[Yes|No]**
 
 * I've tested this package remotely and have excluded all broken builds.
@@ -22,7 +22,7 @@
 <!--- Use this part of template if you're updating existing package. Remove the rest. -->
 <!--- BEGIN -->
 
-* I've followed [this guide](https://cpp-pm-hunter.readthedocs.io/en/latest/creating-new/update.html)
+* I've followed [this guide](https://hunter.readthedocs.io/en/latest/creating-new/update.html)
   step by step carefully. **[Yes|No]**
 
 * I've tested this package remotely and have excluded all broken builds.

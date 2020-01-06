@@ -10,4 +10,4 @@ What to do
 ----------
 
 Follow this guide to check for known issues and what information needed while filing bug report:
-- https://cpp-pm-hunter.readthedocs.io/en/latest/contributing.html#reporting-bugs
+- https://hunter.readthedocs.io/en/latest/contributing.html#reporting-bugs

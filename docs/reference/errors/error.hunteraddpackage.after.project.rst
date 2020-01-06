@@ -21,7 +21,7 @@ Explanation
 What to do
 ----------
 
-- In general sequence must looks like this (see also `error.huntergate.before.project <https://cpp-pm-hunter.readthedocs.io/en/latest/reference/errors/error.huntergate.before.project.html>`_):
+- In general sequence must looks like this (see also `error.huntergate.before.project <https://hunter.readthedocs.io/en/latest/reference/errors/error.huntergate.before.project.html>`_):
 
   .. code-block:: cmake
 

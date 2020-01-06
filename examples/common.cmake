@@ -22,7 +22,7 @@ set(
     error_message
     "Are you using jenkins.py script for testing?
     Please check:
-    - https://cpp-pm-hunter.readthedocs.io/en/latest/creating-new/create/cmake.html#testing-locally"
+    - https://hunter.readthedocs.io/en/latest/creating-new/create/cmake.html#testing-locally"
 )
 
 ### Check testing variables are set

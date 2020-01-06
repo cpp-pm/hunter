@@ -23,5 +23,5 @@ Explanation
 What to do
 ----------
 
-- Set another ``HUNTER_ROOT`` `location <https://cpp-pm-hunter.readthedocs.io/en/latest/reference/errors/error.detect.hunter.root.html>`_ (**recommended**)
+- Set another ``HUNTER_ROOT`` `location <https://hunter.readthedocs.io/en/latest/reference/errors/error.detect.hunter.root.html>`_ (**recommended**)
 - Set ``HUNTER_ALLOW_SPACES_IN_PATH=ON`` CMake variable to suppress this warning (**not** recommended)

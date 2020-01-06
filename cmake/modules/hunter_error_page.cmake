@@ -2,7 +2,7 @@
 # All rights reserved.
 
 # Do not move to master - build schemes use this module but they not use master
-set(HUNTER_ERROR_PAGE "https://cpp-pm-hunter.readthedocs.io/en/latest/reference/errors")
+set(HUNTER_ERROR_PAGE "https://hunter.readthedocs.io/en/latest/reference/errors")
 
 function(hunter_error_page error_page)
   message("------------------------------ ERROR -----------------------------")

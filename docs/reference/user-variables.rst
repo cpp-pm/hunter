@@ -424,7 +424,7 @@ HUNTER_BINARY_DIR
 
 * Use external directory ``HUNTER_BINARY_DIR`` for building external projects.
   This variable can be used to fix
-  `"path too long" <https://cpp-pm-hunter.readthedocs.io/en/latest/reference/errors/error.external.build.failed.html#windows>`__ error on windows
+  `"path too long" <https://hunter.readthedocs.io/en/latest/reference/errors/error.external.build.failed.html#windows>`__ error on windows
 
 .. _hunter disable install:
 

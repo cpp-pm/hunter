@@ -974,7 +974,7 @@ via Hunter:
   |hunter|
 
   .. |hunter| image:: https://img.shields.io/badge/hunter-hunter_box_1-blue.svg
-    :target: https://cpp-pm-hunter.readthedocs.io/en/latest/packages/pkg/hunter_box_1.html
+    :target: https://hunter.readthedocs.io/en/latest/packages/pkg/hunter_box_1.html
     :alt: Hunter
 
 Example:

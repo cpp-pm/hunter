@@ -151,7 +151,7 @@ macro(hunter_finalize)
   if(ANDROID AND CMAKE_VERSION VERSION_LESS "3.7.1")
     hunter_user_error(
         "CMake version 3.7.1+ required for Android platforms, see"
-        " https://cpp-pm-hunter.readthedocs.io/en/latest/quick-start/cmake.html"
+        " https://hunter.readthedocs.io/en/latest/quick-start/cmake.html"
     )
   endif()
 

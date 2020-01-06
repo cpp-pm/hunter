@@ -22,4 +22,4 @@ will convert
 
 to
 
-* https://cpp-pm-hunter.readthedocs.io/en/latest/reference/errors/error.hunteraddpackage.after.project.html
+* https://hunter.readthedocs.io/en/latest/reference/errors/error.hunteraddpackage.after.project.html

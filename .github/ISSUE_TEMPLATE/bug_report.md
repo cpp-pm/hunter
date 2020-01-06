@@ -7,11 +7,11 @@ assignees: ''
 
 ---
 
-* I've read [Brief overview section](https://cpp-pm-hunter.readthedocs.io/en/latest/overview.html) and do understand basic concepts. **[Yes|No]**
-* I've read [F.A.Q. section](https://cpp-pm-hunter.readthedocs.io/en/latest/faq.html) and there is no solution to my problem there. **[Yes|No]**
+* I've read [Brief overview section](https://hunter.readthedocs.io/en/latest/overview.html) and do understand basic concepts. **[Yes|No]**
+* I've read [F.A.Q. section](https://hunter.readthedocs.io/en/latest/faq.html) and there is no solution to my problem there. **[Yes|No]**
 * I've read [Code of Conduct](https://github.com/cpp-pm/hunter/blob/master/.github/CODE_OF_CONDUCT.md), I promise to be polite and will do my best at being constructive. **[Yes|No]**
-* I've read [Reporting bugs section](https://cpp-pm-hunter.readthedocs.io/en/latest/contributing.html#reporting-bugs) carefully. **[Yes|No]**
-* I've checked that all the `hunter_add_package`/`find_package` API used by me in the example is the same as in [documentation](https://cpp-pm-hunter.readthedocs.io/en/latest/packages.html). **[Yes|No]**
+* I've read [Reporting bugs section](https://hunter.readthedocs.io/en/latest/contributing.html#reporting-bugs) carefully. **[Yes|No]**
+* I've checked that all the `hunter_add_package`/`find_package` API used by me in the example is the same as in [documentation](https://hunter.readthedocs.io/en/latest/packages.html). **[Yes|No]**
 * I'm using [latest](https://github.com/cpp-pm/hunter/releases) Hunter `URL`/`SHA1`. **[Yes|No]**
 
 <!--- If you can reproduce an issue using just one small CMakeLists.txt, paste it here. -->
@@ -47,7 +47,7 @@ find_package(boo CONFIG REQUIRED)
 Here is the log until first error reported by Hunter, option `HUNTER_STATUS_DEBUG` is `ON`:
 * <link-to-log-file>
 
-<!--- Check this document: https://cpp-pm-hunter.readthedocs.io/en/latest/reference/errors/error.external.build.failed.html -->
+<!--- Check this document: https://hunter.readthedocs.io/en/latest/reference/errors/error.external.build.failed.html -->
 <!--- If you got `external.build.failed` -->
 I've checked that the first error in logs **IS NOT** `external.build.failed`. **[Yes|No]**
 

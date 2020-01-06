@@ -19,4 +19,4 @@ What to do
 - This may happens because of wrongly created/unsupported toolchain. Please open `new issue <https://github.com/cpp-pm/hunter/issues/new>`_ with information about toolchain you're using.
 
 .. |HUNTER_ENABLED=OFF| replace:: ``HUNTER_ENABLED=OFF``
-.. _HUNTER_ENABLED=OFF: https://cpp-pm-hunter.readthedocs.io/en/latest/reference/user-variables.html#hunter-enabled
+.. _HUNTER_ENABLED=OFF: https://hunter.readthedocs.io/en/latest/reference/user-variables.html#hunter-enabled

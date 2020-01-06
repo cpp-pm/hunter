@@ -21,7 +21,7 @@ Explanation
 What to do
 ----------
 
-- In general sequence must looks like this (see also `error.hunteraddpackage.after.project <https://cpp-pm-hunter.readthedocs.io/en/latest/reference/errors/error.hunteraddpackage.after.project.html>`_):
+- In general sequence must looks like this (see also `error.hunteraddpackage.after.project <https://hunter.readthedocs.io/en/latest/reference/errors/error.hunteraddpackage.after.project.html>`_):
 
   .. code-block:: cmake
 

@@ -87,7 +87,7 @@ If everything seems OK:
   and check that issue you have hit is not already fixed/reported
 * Check this document if the first error you see is ``external.build.failed``:
 
-  * https://cpp-pm-hunter.readthedocs.io/en/latest/reference/errors/error.external.build.failed.html
+  * https://hunter.readthedocs.io/en/latest/reference/errors/error.external.build.failed.html
 * Remove irrelevant code from your example and report one problem at a time.
   Try to construct `SSCCE <http://www.sscce.org/>`__. If you need more files
   than just ``CMakeLists.txt`` it's better to create separate GitHub repository

@@ -31,7 +31,7 @@ assignees: ''
 * This package has no dependencies
 * This package has next dependencies:
 
-  * `<dependency-1>` (required, available in Hunter: https://cpp-pm-hunter.readthedocs.io/en/latest/packages/pkg/<dependency-1>.html)
+  * `<dependency-1>` (required, available in Hunter: https://hunter.readthedocs.io/en/latest/packages/pkg/<dependency-1>.html)
   * `<dependency-2>` (required, not available in Hunter, corresponding "New package" request: https://github.com/cpp-pm/hunter/issues/<number>)
   * `<dependency-3>` (optional, not available in Hunter, corresponding "New package" request: https://github.com/cpp-pm/hunter/issues/<number>)
 
