@@ -11,7 +11,7 @@ hunter_add_version(
     VERSION
     0.0.1-dbbbe62
     URL
-    "https://github.com/Bjoe/cppast/archive/dbbbe626e4cff9da83b1c0baba650fdd56df0cdc.zip"
+    "https://github.com/cpp-pm/cppast/archive/dbbbe626e4cff9da83b1c0baba650fdd56df0cdc.zip"
     SHA1
     ac1733bcbaaba1e46005e2219e1499bbdcbbbe17
 )
