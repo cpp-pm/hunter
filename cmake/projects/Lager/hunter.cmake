@@ -10,11 +10,11 @@ hunter_add_version(
     PACKAGE_NAME
     Lager
     VERSION
-    0.0.1-dbc1fde
+    0.0.0-dbc1fde-p0
     URL
-    "https://github.com/Bjoe/lager/archive/68e69c30667c12e01ef98a65e3ecef12c461f2e1.zip"
+    "https://github.com/cpp-pm/lager/archive/v0.0.0-dbc1fde.tar.gz"
     SHA1
-    0245b730277a4e4053215e90fd4dbd4fb43d3f5b
+    1b20b2d29d7886eed48d57fefdcb322885b84ae9
 )
 
 hunter_cmake_args(
