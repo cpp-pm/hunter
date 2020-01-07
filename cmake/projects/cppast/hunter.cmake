@@ -9,11 +9,11 @@ hunter_add_version(
     PACKAGE_NAME
     cppast
     VERSION
-    0.0.1-dbbbe62
+    0.0.0-b155d6a-p0
     URL
-    "https://github.com/Bjoe/cppast/archive/dbbbe626e4cff9da83b1c0baba650fdd56df0cdc.zip"
+    "https://github.com/cpp-pm/cppast/archive/v0.0.0-b155d6a-p0.tar.gz"
     SHA1
-    ac1733bcbaaba1e46005e2219e1499bbdcbbbe17
+    aaa370f185fb5d14398622863a35b5ebe96ab4a2
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
