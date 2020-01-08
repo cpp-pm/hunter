@@ -10,9 +10,9 @@ hunter_add_version(
     VERSION
     1.3.3-p0
     URL
-    "https://github.com/drodin/flac/archive/1.3.3-p0.tar.gz"
+    "https://github.com/cpp-pm/flac/archive/1.3.3-p0.tar.gz"
     SHA1
-    a573e68951ee74568ba7c05c5e0f874313975932
+    712ff57b046ed00ebc2898989290c148cfda5c36
 )
 
 set(
