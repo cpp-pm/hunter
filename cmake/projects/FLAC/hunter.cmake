@@ -15,24 +15,24 @@ hunter_add_version(
     712ff57b046ed00ebc2898989290c148cfda5c36
 )
 
-set(
-    _hunter_flac_cmake_args
-    WITH_OGG=OFF
-)
-
+set(_hunter_flac_cmake_args)
 if(ANDROID OR IOS)
-  list(
-      APPEND
-      _hunter_flac_cmake_args
-      BUILD_EXECUTABLES=OFF
-      BUILD_EXAMPLES=OFF
-      BUILD_TESTING=OFF
-      BUILD_DOXYGEN=OFF
-      WITH_ASM=OFF
-  )
+    set(
+        _hunter_flac_cmake_args
+        WITH_ASM=OFF
+    )
 endif()
 
-hunter_cmake_args(FLAC CMAKE_ARGS ${_hunter_flac_cmake_args})
+hunter_cmake_args(
+    FLAC
+    CMAKE_ARGS
+        WITH_OGG=OFF
+        BUILD_EXECUTABLES=OFF
+        BUILD_EXAMPLES=OFF
+        BUILD_TESTING=OFF
+        BUILD_DOXYGEN=OFF
+        ${_hunter_flac_cmake_args}
+)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(FLAC)
