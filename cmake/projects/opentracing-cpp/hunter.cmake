@@ -50,6 +50,12 @@ hunter_add_version(
 
 hunter_add_version(
     PACKAGE_NAME opentracing-cpp
+    VERSION "1.5.1"
+    URL "https://github.com/opentracing/opentracing-cpp/archive/v1.5.1.tar.gz"
+    SHA1 "9ac4e4b9a6f75d8eda43f9af9e955fee24a7c68c")
+    
+hunter_add_version(
+    PACKAGE_NAME opentracing-cpp
     VERSION "1.6.0"
     URL "https://github.com/opentracing/opentracing-cpp/archive/v1.6.0.tar.gz"
     SHA1 "f5dccf21dc05cddb6205164a8fd3cf210926ef6c")
