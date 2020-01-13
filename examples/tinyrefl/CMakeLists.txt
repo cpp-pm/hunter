@@ -13,6 +13,9 @@ project(tinyrefl)
 hunter_add_package(tinyrefl)
 find_package(tinyrefl CONFIG REQUIRED)
 
+find_package(tinyrefl_tool CONFIG REQUIRED)
+
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC PkgConfig::tinyrefl)
+tinyrefl_tool(TARGET boo HEADERS example.hpp)
+target_link_libraries(boo PUBLIC tinyrefl::tinyrefl)
 # DOCUMENTATION_END }
