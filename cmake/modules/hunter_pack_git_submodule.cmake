@@ -9,6 +9,26 @@ function(hunter_pack_git_submodule)
   set(one PACKAGE GIT_SUBMODULE SUBMODULE_SOURCE_SUBDIR URL_OUT SHA1_OUT)
   set(multiple "")
 
+  # This function uses the following variable name convention.
+  #
+  # Suppose we have a super project with it's CMakeLists.txt
+  # in /some/repository/CMakeLists.txt and a git submodule
+  # in a subdirectory subdir:
+  #
+  # /some/repository/subdir/submodule  <-- submodule_root
+  # ^^^^^^^^^^^^^^^^^^^^^^^            <-- submodule_directory
+  # ^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^
+  #         /                  \
+  #     toplevel             sm_path
+  #
+  # submodule_root: the full path of the submodule repositories working directory.
+  # submodule_directory: the basedir of submodule_root (one directory name stripped).
+  # toplevel: the full path of the direct super project containing the submodule.
+  # sm_path: the relative path of the submodule, relative to the direct super project.
+  #
+  # Both, toplevel and sm_path have the same meaning here
+  # as in (the documentation of) git submodule foreach.
+
   # Introduce:
   # * x_PACKAGE
   # * x_GIT_SUBMODULE
@@ -26,10 +46,18 @@ function(hunter_pack_git_submodule)
 
   hunter_get_git_executable(git_executable)
 
+  set(submodule_root "${PROJECT_SOURCE_DIR}/${x_GIT_SUBMODULE}")
+  if(NOT EXISTS "${submodule_root}")
+    hunter_user_error(
+      "Requested GIT_SUBMODULE \"${submodule_root}\" does not exist."
+      "Please check the contents of your config.cmake (run with -DHUNTER_STATUS_DEBUG:BOOL=ON to see which config is being loaded)."
+    )
+  endif()
+  get_filename_component(submodule_directory "${submodule_root}" DIRECTORY)
   set(cmd "${git_executable}" rev-parse --show-toplevel)
   execute_process(
       COMMAND ${cmd}
-      WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}"
+      WORKING_DIRECTORY "${submodule_directory}"
       RESULT_VARIABLE result
       OUTPUT_VARIABLE output
       ERROR_VARIABLE error
@@ -43,12 +71,17 @@ function(hunter_pack_git_submodule)
     )
   endif()
 
-  set(top_git_directory "${output}")
+  set(toplevel "${output}")
 
-  set(cmd "${git_executable}" submodule status "${x_GIT_SUBMODULE}")
+  hunter_status_debug(
+      "Requesting GIT_SUBMODULE \"${x_GIT_SUBMODULE}\"; toplevel: \"${toplevel}\"."
+  )
+
+  file(RELATIVE_PATH sm_path "${toplevel}" "${submodule_root}")
+  set(cmd "${git_executable}" submodule status "${sm_path}")
   execute_process(
       COMMAND ${cmd}
-      WORKING_DIRECTORY "${top_git_directory}"
+      WORKING_DIRECTORY "${toplevel}"
       RESULT_VARIABLE result
       OUTPUT_VARIABLE output
       ERROR_VARIABLE error
@@ -60,12 +93,12 @@ function(hunter_pack_git_submodule)
     string(REPLACE ";" " " cmd "${cmd}")
     hunter_internal_error(
         "Command failed: '${cmd}' (${result}, ${output}, ${error})"
-        "To reproduce error go to '${top_git_directory}' and"
+        "To reproduce error go to '${toplevel}' and"
         "run command '${cmd}'"
     )
   endif()
 
-  set(submodule_file "${top_git_directory}/.gitmodules")
+  set(submodule_file "${toplevel}/.gitmodules")
   if(NOT EXISTS "${submodule_file}")
     hunter_internal_error("File not found: '${submodule_file}'")
   endif()
@@ -73,15 +106,14 @@ function(hunter_pack_git_submodule)
       DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${submodule_file}"
   )
 
-  set(submodule_dir "${top_git_directory}/${x_GIT_SUBMODULE}")
-  if(NOT EXISTS "${submodule_dir}")
-    hunter_internal_error("Directory not exist: '${submodule_dir}'")
+  if(NOT EXISTS "${submodule_root}")
+    hunter_internal_error("Directory not exist: '${submodule_root}'")
   endif()
 
   set(cmd "${git_executable}" status --porcelain)
   execute_process(
       COMMAND ${cmd}
-      WORKING_DIRECTORY "${submodule_dir}"
+      WORKING_DIRECTORY "${submodule_root}"
       RESULT_VARIABLE result
       OUTPUT_VARIABLE output
       ERROR_VARIABLE error
@@ -97,7 +129,7 @@ function(hunter_pack_git_submodule)
 
   if(NOT "${output}" STREQUAL "")
     hunter_user_error(
-        "Git directory '${submodule_dir}' is dirty."
+        "Git directory '${submodule_root}' is dirty."
         "Please commit or stash changes."
     )
   endif()
@@ -105,7 +137,7 @@ function(hunter_pack_git_submodule)
   set(cmd "${git_executable}" rev-parse --git-path HEAD)
   execute_process(
       COMMAND ${cmd}
-      WORKING_DIRECTORY "${submodule_dir}"
+      WORKING_DIRECTORY "${submodule_root}"
       RESULT_VARIABLE result
       OUTPUT_VARIABLE output
       ERROR_VARIABLE error
@@ -130,7 +162,7 @@ function(hunter_pack_git_submodule)
   set(cmd "${git_executable}" rev-parse --symbolic-full-name HEAD)
   execute_process(
       COMMAND ${cmd}
-      WORKING_DIRECTORY "${submodule_dir}"
+      WORKING_DIRECTORY "${submodule_root}"
       RESULT_VARIABLE result
       OUTPUT_VARIABLE output
       ERROR_VARIABLE error
@@ -148,7 +180,7 @@ function(hunter_pack_git_submodule)
   set(cmd "${git_executable}" rev-parse --git-path "${head_ref}")
   execute_process(
       COMMAND ${cmd}
-      WORKING_DIRECTORY "${submodule_dir}"
+      WORKING_DIRECTORY "${submodule_root}"
       RESULT_VARIABLE result
       OUTPUT_VARIABLE output
       ERROR_VARIABLE error
@@ -198,7 +230,7 @@ function(hunter_pack_git_submodule)
   set(cmd "${git_executable}" archive HEAD -o "${archive}")
   execute_process(
       COMMAND ${cmd}
-      WORKING_DIRECTORY "${submodule_dir}${source_flag}"
+      WORKING_DIRECTORY "${submodule_root}${source_flag}"
       RESULT_VARIABLE result
       OUTPUT_VARIABLE output
       ERROR_VARIABLE error
