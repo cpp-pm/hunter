@@ -128,12 +128,6 @@ macro(hunter_initialize)
     set(HUNTER_URL "${HUNTER_GATE_URL}" CACHE INTERNAL "")
   endif()
 
-
-  hunter_assert_not_empty_string("${HUNTER_CACHED_ROOT}")
-  hunter_assert_not_empty_string("${HUNTER_VERSION}")
-  hunter_assert_not_empty_string("${HUNTER_SHA1}")
-  hunter_assert_not_empty_string("${HUNTER_URL}")
-
   # All variables are ready so let's set HUNTER_SELF here. Usually it's not
   # needed before 'hunter_finalize' but it some cases may be useful
   # (see https://github.com/ruslo/hunter/pull/496#discussion_r75679671)
