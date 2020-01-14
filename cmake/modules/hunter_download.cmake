@@ -80,6 +80,11 @@ function(hunter_download)
   set(HUNTER_PACKAGE_VERSION "${HUNTER_${package}_VERSION}")
   set(ver "${HUNTER_PACKAGE_VERSION}")
 
+  if ("${ver}" STREQUAL "")
+    message( FATAL_ERROR "No such (hunter) package (or version) defined: \"${package}\". "
+                         "Specify a config with `hunter_config(${package} ...)` for this package if it is a custom one.")
+  endif ()
+
   hunter_get_package_sha1(
       PACKAGE "${package}"
       VERSION "${ver}"
