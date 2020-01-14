@@ -12,11 +12,11 @@ include(hunter_print_cmd)
 include(hunter_status_debug)
 include(hunter_user_error)
 
-function(hunter_calculate_config_sha1 hunter_self hunter_base user_config)
+function(hunter_calculate_config_sha1 hunter_self hunter_base abs_user_config)
   hunter_assert_not_empty_string("${HUNTER_GATE_SHA1}")
   hunter_assert_not_empty_string("${hunter_self}")
   hunter_assert_not_empty_string("${hunter_base}")
-  hunter_assert_not_empty_string("${user_config}")
+  hunter_assert_not_empty_string("${abs_user_config}")
   hunter_assert_not_empty_string("${CMAKE_BINARY_DIR}")
 
   hunter_status_print("Calculating Config-SHA1")
@@ -31,13 +31,11 @@ function(hunter_calculate_config_sha1 hunter_self hunter_base user_config)
   include("${default_config}")
   set(__HUNTER_ALLOW_DEFAULT_VERSION_LOADING NO)
 
-  if(NOT user_config STREQUAL default_config)
-    # Include user_config
-    if(NOT EXISTS "${user_config}")
-      hunter_internal_error("Hunter config not exists")
-    endif()
+  if(NOT abs_user_config STREQUAL default_config)
+    # Include abs_user_config
     set(__HUNTER_ALLOW_CONFIG_LOADING YES)
-    include("${user_config}") # Use 'hunter_config'
+    hunter_status_debug("Loading \"${abs_user_config}\"...")
+    include("${abs_user_config}") # Use 'hunter_config'
     set(__HUNTER_ALLOW_CONFIG_LOADING NO)
   endif()
 

@@ -46,9 +46,10 @@ function(hunter_set_config_location hunter_self result)
     endif()
   endif()
 
-  if(NOT EXISTS "${config_location}")
-    hunter_user_error("Config not found: ${config_location}")
+  get_filename_component( abs_config_location ${config_location} ABSOLUTE BASE_DIR "${HUNTER_GATE_LOCATION}")
+  if(NOT EXISTS "${abs_config_location}")
+    hunter_user_error("Config not found: ${abs_config_location}")
   endif()
 
-  set("${result}" "${config_location}" PARENT_SCOPE)
+  set("${result}" "${abs_config_location}" PARENT_SCOPE)
 endfunction()
