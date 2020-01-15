@@ -12,9 +12,9 @@ hunter_add_version(
     VERSION
     0.4.1-p0
     URL
-    "https://github.com/Bjoe/tinyrefl/archive/a91a16a92028c2dac7ec4ad4938d2b5b9891f94e.zip"
+    "https://github.com/cpp-pm/tinyrefl/archive/v0.4.1-p0.zip"
     SHA1
-    a1c00a757742dfa0bc7fc9f29eb3bc1156016db8
+    8aa103cf3d0064cacca3188ef259d82dc9e9fa67
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
