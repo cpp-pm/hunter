@@ -8,12 +8,12 @@
 .. _pkg.tinyrefl:
 
 tinyrefl
-===
+========
 
--  `Official <https://official_foo>`__
--  `Hunterized <https://github.com/hunter-packages/foo>`__
--  `Example <https://github.com/ruslo/hunter/blob/master/examples/tinyrefl/CMakeLists.txt>`__
--  Added by `foo_developer <https://github.com/foo_developer>`__ (`pr-N <https://github.com/ruslo/hunter/pull/N>`__)
+-  `Official <https://gitlab.com/Manu343726/tinyrefl/-/wikis/home>`__
+-  `Hunterized <https://github.com/cpp-pm/tinyrefl>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/tinyrefl/CMakeLists.txt>`__
+-  Added by `Joerg-Christian Boehme <https://github.com/Bjoe>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
 
 .. literalinclude:: /../examples/tinyrefl/CMakeLists.txt
   :language: cmake

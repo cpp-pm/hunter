@@ -12,7 +12,6 @@ project(tinyrefl)
 # DOCUMENTATION_START {
 hunter_add_package(tinyrefl)
 find_package(tinyrefl CONFIG REQUIRED)
-
 find_package(tinyrefl_tool CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
