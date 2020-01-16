@@ -21,6 +21,9 @@ function(hunter_pkgconfig_export_target PKG_CONFIG_MODULE PKG_GENERATE_SHARED)
   if(TARGET "${target_name}")
     return()
   endif()
+
+  set(${PKG_CONFIG_MODULE}_FOUND 0 CACHE INTERNAL "") # Force to read again xyz.pc file with pkg_check_modules()
+
   pkg_check_modules(${PKG_CONFIG_MODULE} ${PKG_CONFIG_MODULE})
   if(NOT ${PKG_CONFIG_MODULE}_FOUND)
     hunter_internal_error(
