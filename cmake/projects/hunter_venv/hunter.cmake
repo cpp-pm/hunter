@@ -21,6 +21,17 @@ hunter_add_version(
     e15dd948ab070960538ec6918bb4c64296174f14
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    hunter_venv
+    VERSION
+    1.0.2
+    URL
+    "https://github.com/cpp-pm/hunter_venv/archive/v1.0.2.tar.gz"
+    SHA1
+    130d66d80f162d9d5cd706a55f62fcdb9bbdbc9b
+)
+
 # DOCUMENTATION_START {
 if(APPLE)
   set(__hunter_venv_default_python "3.7.5")
