@@ -1,4 +1,6 @@
-#include <foo/foo.hpp>
+#include <scelta.hpp>
+#include <scelta/match.hpp>
 
 int main() {
+    scelta::match();
 }

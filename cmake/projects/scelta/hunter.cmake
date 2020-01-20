@@ -11,11 +11,11 @@ hunter_add_version(
     PACKAGE_NAME
     scelta
     VERSION
-    1.0.0
+    0.1.0-a0f4f70
     URL
-    "https://github.com/hunter-packages/foo/archive/v1.0.0.tar.gz"
+    "https://github.com/Bjoe/scelta/archive/594aed957f4c2867243c08b73af49ef4d4599520.tar.gz"
     SHA1
-    1111111111111111111111111111111111111111
+    5a0fc037df80027af09de094875af8cac9b8d19f
 )
 
 #if (ANDROID OR IOS)
@@ -29,7 +29,7 @@ hunter_add_version(
 #endif()
 
 #hunter_configuration_types(scelta CONFIGURATION_TYPES Release)
-hunter_pick_scheme(DEFAULT url_sha1_autotools)
+hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(scelta)
 hunter_download(
     PACKAGE_NAME scelta

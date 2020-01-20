@@ -14,5 +14,5 @@ hunter_add_package(scelta)
 find_package(scelta CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC PkgConfig::scelta)
+target_link_libraries(boo PUBLIC scelta::headers)
 # DOCUMENTATION_END }
