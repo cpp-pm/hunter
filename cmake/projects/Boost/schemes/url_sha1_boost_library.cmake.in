@@ -518,8 +518,8 @@ ExternalProject_Add(
     ${b2_cmd}
     -d0
     ${build_opts}
-    stage # install only libraries, headers installed in `url_sha1_boost`
-    "--stagedir=@HUNTER_PACKAGE_INSTALL_PREFIX@"
+    install
+    "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"
     --ignore-site-config # Ignore Gentoo specific optimization "none" in site config that only the patched bjam of Gentoo can understand.
     LOG_CONFIGURE ${log_build}
     LOG_BUILD ${log_build}
