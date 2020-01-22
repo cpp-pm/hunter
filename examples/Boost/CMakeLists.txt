@@ -10,10 +10,14 @@ include("../common.cmake")
 project(download-boost)
 
 hunter_add_package(Boost)
+
+# This is important because Hunter build only boost as a static library by default!
+set(Boost_USE_STATIC_LIBS ON)
+
 find_package(Boost CONFIG REQUIRED)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::boost)
+target_link_libraries(foo PUBLIC Boost::headers)
 
 set(project_license "${CMAKE_CURRENT_BINARY_DIR}/LICENSE.txt")
 file(
