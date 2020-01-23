@@ -218,6 +218,7 @@ if(has_toolset_version)
 endif()
 
 set(boost_user_jam "@HUNTER_PACKAGE_BUILD_DIR@/boost.user.jam")
+file(TO_NATIVE_PATH "${boost_user_jam}" boost_user_jam_native_path)
 set(
     build_opts
     -a
@@ -226,7 +227,7 @@ set(
     ${variants}
     --layout=tagged
     toolset=${toolset_full_name}
-    "--user-config=${boost_user_jam}"
+    "--user-config=${boost_user_jam_native_path}"
     --with-@HUNTER_PACKAGE_COMPONENT@
 )
 if("@MINGW@")
