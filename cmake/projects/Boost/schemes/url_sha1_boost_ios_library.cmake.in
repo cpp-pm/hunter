@@ -213,12 +213,14 @@ if(has_iphoneos)
       ./b2
       ${verbose_output}
       ${build_opts_iphoneos}
-      install
-      "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"  
       BUILD_IN_SOURCE
       1
       INSTALL_COMMAND
-      ""
+      ./b2
+      -d0
+      ${build_opts_iphoneos}
+      install
+      "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"  
   )
 else()
   # Add dummy target
@@ -268,12 +270,14 @@ if(has_isim)
       ./b2
       ${verbose_output}
       ${build_opts_iphonesimulator}
-      install
-      "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"  
       BUILD_IN_SOURCE
       1
       INSTALL_COMMAND
-      ""
+      ./b2
+      -d0
+      ${build_opts_iphonesimulator}
+      install
+      "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"  
   )
 else()
   # Add dummy target
