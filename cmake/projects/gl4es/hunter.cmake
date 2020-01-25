@@ -8,11 +8,11 @@ hunter_add_version(
     PACKAGE_NAME
     gl4es
     VERSION
-    1.1.2
+    1.1.2-p0
     URL
-    "https://github.com/drodin/gl4es/archive/hunter-1.1.2.zip"
+    "https://github.com/cpp-pm/gl4es/archive/1.1.2-p0.tar.gz"
     SHA1
-    50d006dd4614c3fd2a14b6f47cca566856d771f2
+    8dab8937c43a4c6de5e3fd474d9607175d1cebdf
 )
 
 set(_hunter_gl4es_cmake_args)
