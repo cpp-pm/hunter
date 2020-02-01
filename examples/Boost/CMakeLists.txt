@@ -19,7 +19,7 @@ set(Boost_USE_STATIC_LIBS ON)
 find_package(Boost CONFIG REQUIRED)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::headers)
+target_link_libraries(foo PUBLIC Boost::boost) # In since boost 1.70 you should use Boost::headers as target
 
 set(project_license "${CMAKE_CURRENT_BINARY_DIR}/LICENSE.txt")
 file(
