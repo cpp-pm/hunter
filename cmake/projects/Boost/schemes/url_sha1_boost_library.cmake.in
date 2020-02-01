@@ -218,7 +218,9 @@ if(has_toolset_version)
 endif()
 
 set(boost_user_jam "@HUNTER_PACKAGE_BUILD_DIR@/boost.user.jam")
-file(TO_NATIVE_PATH "${boost_user_jam}" boost_user_jam_native_path)
+# TODO file(TO_NATIVE_PATH "${boost_user_jam}" boost_user_jam_native_path)
+# Escape --user-config=C:\projects\hunter-tdmm2\_testing\Hunter\_Base\5398c9d\30f4075\2d24521\Build\Boost\__filesystem\Build\boost.user.jam
+# Error -> Invalid character escape '\p'.
 set(
     build_opts
     -a
@@ -227,7 +229,7 @@ set(
     ${variants}
     --layout=tagged
     toolset=${toolset_full_name}
-    "--user-config=${boost_user_jam_native_path}"
+    "--user-config=${boost_user_jam}"
     --with-@HUNTER_PACKAGE_COMPONENT@
 )
 if("@MINGW@")
