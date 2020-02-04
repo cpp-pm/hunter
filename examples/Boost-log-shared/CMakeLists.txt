@@ -3,26 +3,27 @@
 
 cmake_minimum_required(VERSION 3.0)
 
+set(Boost_DEBUG ON CACHE BOOLEAN "")
+
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
 set(TESTING_CONFIG_OPT FILEPATH ${CMAKE_CURRENT_LIST_DIR}/config.cmake) #set BUILD_SHARED_LIBS=ON
 include("../common.cmake")
 
 project(download-boost)
+include(CMakePrintHelpers)
 
-hunter_add_package(Boost COMPONENTS log filesystem system chrono thread regex date_time atomic)
-find_package(Boost CONFIG REQUIRED log filesystem system chrono thread regex date_time atomic)
+hunter_add_package(Boost COMPONENTS log)
+find_package(Boost CONFIG REQUIRED log)
 
 add_executable(foo foo.cpp)
 target_link_libraries(foo
   PUBLIC
   Boost::log
-  Boost::filesystem
-  Boost::system
-  Boost::chrono
-  Boost::thread
-  Boost::regex
-  Boost::date_time
-  Boost::atomic
-  Boost::boost
+)
+
+cmake_print_variables(Boost_VERSION_STRING)
+cmake_print_properties(
+        TARGETS Boost::log
+        PROPERTIES INTERFACE_LINK_LIBRARIES
 )
