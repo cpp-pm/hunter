@@ -434,6 +434,15 @@ if(CMAKE_HOST_WIN32)
     set(patch_cmd "@CMAKE_COMMAND@" -E echo "Dummy patch command")
     set(bootstrap_cmd "bootstrap.bat")
   endif()
+elseif(APPLE)
+  set(b2_cmd "./b2")
+  set(bootstrap_cmd
+      . "@HUNTER_GLOBAL_SCRIPT_DIR@/clear-all.sh" &&
+      ./bootstrap.sh
+      "--with-libraries=@HUNTER_PACKAGE_COMPONENT@"
+      "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"
+  )
+  set(patch_cmd "@CMAKE_COMMAND@" -E echo "Dummy patch command")
 else()
   set(b2_cmd "./b2")
   set(bootstrap_cmd "./bootstrap.sh")
