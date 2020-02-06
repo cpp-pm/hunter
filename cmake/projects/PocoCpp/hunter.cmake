@@ -96,6 +96,14 @@ if(HUNTER_PocoCpp_VERSION VERSION_LESS "1.10.0")
             ENABLE_PAGECOMPILER_FILE2PAGE=OFF
             ENABLE_REDIS=OFF
     )
+else()
+    hunter_cmake_args(
+        PocoCpp
+        CMAKE_ARGS
+            ENABLE_CPPUNIT=OFF
+            ENABLE_PAGECOMPILER=OFF
+            ENABLE_PAGECOMPILER_FILE2PAGE=OFF
+    )
 endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
