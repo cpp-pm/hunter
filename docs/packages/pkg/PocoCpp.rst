@@ -12,8 +12,9 @@ PocoCpp
 
 POCO C++ Libraries
 
+-  `Official <https://https://pocoproject.org>`__
 -  `Official Repository <https://github.com/pocoproject/poco>`__
--  `Hunterized Repository <https://github.com/hunter-packages/poco>`__
+-  `Hunterized Repository <https://github.com/cpp-pm/poco>`__
 
 .. code-block:: cmake
 
@@ -33,7 +34,16 @@ Components are as follows:
 - XML (``Poco::XML``)
 - Zip (``Poco::Zip``)
 
-**Note**: Components can be enabled or disabled by using
-`CMAKE_ARGS <https://github.com/cpp-pm/hunter/blob/master/cmake/projects/PocoCpp/hunter.cmake>`__.
+
+**Note**: Components can be enabled or disabled by using following:
+
+.. code-block:: cmake
+
+  hunter_config(PocoCpp VERSION 1.10.0
+    CMAKE_ARGS
+      ENABLE_DATA=OFF
+      ....
+  )
+
 The map between ``CMAKE_ARGS`` and PocoCpp components can be found
-`here <https://github.com/pocoproject/poco/blob/develop/CMakeLists.txt>`__.
+`here <https://pocoproject.org/docs/00200-GettingStarted.html#9>`__.
