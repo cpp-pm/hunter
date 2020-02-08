@@ -17,7 +17,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/glbinding/archive/v3.1.0-p0.tar.gz"
     SHA1
-    0914870b8375539bdd3e02d8e349c53b9bf8da71
+    cedf73b1beadb93475e8b05647bd9c7a149bd3a3
 )
 
 hunter_add_version(
