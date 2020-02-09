@@ -5,6 +5,8 @@
 cmake_minimum_required(VERSION 3.12)
 option(HUNTER_BUILD_SHARED_LIBS "..." ON)
 
+set(Boost_DEBUG ON CACHE BOOLEAN "")
+
 # Configure:
 set(PYTHON_VERSION 3.5)
 set(TESTING_CONFIG_OPT FILEPATH "${CMAKE_CURRENT_LIST_DIR}/config.cmake")
@@ -17,9 +19,6 @@ project(download-boost)
 
 # Requires python version 3.5. Change this in config.cmake if necessary.
 hunter_add_package(Boost COMPONENTS python)
-
-# default on Windows is static, set Boost_USE_STATIC_LIBS=OFF to override
-set(Boost_USE_STATIC_LIBS OFF)
 find_package(Boost CONFIG REQUIRED python35 numpy35)
 
 # pip_numpy must come before we find Python as it enables the virtualenv

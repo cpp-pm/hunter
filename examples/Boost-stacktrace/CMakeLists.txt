@@ -12,10 +12,6 @@ include("../common.cmake")
 project(download-boost)
 
 hunter_add_package(Boost COMPONENTS stacktrace)
-
-# This is important because Hunter build only boost as a static library by default!
-set(Boost_USE_STATIC_LIBS ON)
-
 find_package(Boost CONFIG REQUIRED stacktrace_backtrace)
 
 add_executable(foo foo.cpp)

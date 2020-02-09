@@ -12,21 +12,6 @@ include("../common.cmake")
 project(download-boost)
 
 hunter_add_package(Boost COMPONENTS system)
-
-# This is important because Hunter build only boost as a static library by default!
-set(Boost_USE_STATIC_LIBS ON)
-
-if(MSVC)
-  # See cmake/projects/Boost/schemes/url_sha1_boost_library.cmake.in line 205. If BOOST_BUILD_DYNAMIC_VSRUNTIME is true, boost is build with runtime-link=static
-  # It is set when see cmake/projects/Boost/hunter.cmake line 415
-  hunter_check_toolchain_definition(NAME "_DLL" DEFINED _hunter_vs_md)
-  if(_hunter_vs_md)
-    set(Boost_USE_STATIC_RUNTIME OFF)
-  else()
-    set(Boost_USE_STATIC_RUNTIME ON)
-  endif()
-endif()
-
 find_package(Boost CONFIG REQUIRED system)
 
 add_executable(foo foo.cpp)

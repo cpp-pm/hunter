@@ -13,10 +13,6 @@ project(download-boost)
 
 # download boost
 hunter_add_package(Boost COMPONENTS math)
-
-# This is important because Hunter build only boost as a static library by default!
-set(Boost_USE_STATIC_LIBS ON)
-
 # now boost::math_* targets
 # link in all the parts of boost math, or leave out unneeded parts
 find_package(Boost CONFIG REQUIRED math_c99 math_c99f math_c99l math_tr1 math_tr1f math_tr1l)

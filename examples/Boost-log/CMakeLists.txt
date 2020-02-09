@@ -13,10 +13,6 @@ project(download-boost)
 include(CMakePrintHelpers)
 
 hunter_add_package(Boost COMPONENTS log)
-
-# This is important because Hunter build only boost as a static library by default!
-set(Boost_USE_STATIC_LIBS ON)
-
 find_package(Boost CONFIG REQUIRED log)
 
 add_executable(foo foo.cpp)

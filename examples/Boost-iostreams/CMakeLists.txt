@@ -12,12 +12,10 @@ include("../common.cmake")
 project(boost_iostreams)
 
 hunter_add_package(Boost COMPONENTS iostreams serialization)
-
-# This is important because Hunter build only boost as a static library by default!
-set(Boost_USE_STATIC_LIBS ON)
-
-find_package(ZLIB CONFIG REQUIRED) # TODO(BJoe) Should required/include by boost::iostreams
-find_package(BZip2 CONFIG REQUIRED) # TODO(BJoe) Should required/include by boost::iostreams
+# If you use boost/iostreams/filter/gzip.hpp then you should add ZLIB
+find_package(ZLIB CONFIG REQUIRED)
+# If you use boost/iostreams/filter/bzip2.hpp then you should add BZip2
+find_package(BZip2 CONFIG REQUIRED)
 find_package(Boost CONFIG REQUIRED iostreams serialization)
 
 add_executable(foo foo.cpp)

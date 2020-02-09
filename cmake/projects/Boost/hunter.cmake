@@ -418,8 +418,19 @@ if(MSVC)
     CMAKE_ARGS
       BOOST_BUILD_DYNAMIC_VSRUNTIME=${_hunter_vs_md}
   )
+  if(_hunter_vs_md)
+    option(Boost_USE_STATIC_RUNTIME "Use libraries linked statically to the C++ runtime" OFF)
+  else()
+    option(Boost_USE_STATIC_RUNTIME "Use libraries linked statically to the C++ runtime" ON)
+  endif()
 endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_boost)
 hunter_cacheable(Boost)
 hunter_download(PACKAGE_NAME Boost PACKAGE_INTERNAL_DEPS_ID "46")
+
+if(HUNTER_BUILD_SHARED_LIBS)
+  option(Boost_USE_STATIC_LIBS "Use of the static libraries" OFF)
+else()
+  option(Boost_USE_STATIC_LIBS "Use of the static libraries" ON)
+endif()
