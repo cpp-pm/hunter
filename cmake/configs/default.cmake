@@ -113,7 +113,7 @@ hunter_default_version(OpenSceneGraph VERSION 3.6.3-p0)
 hunter_default_version(PNG VERSION 1.6.26-p6)
 hunter_default_version(PROJ4 VERSION 5.0.0)
 hunter_default_version(PhysUnits VERSION 1.1.0-p0)
-hunter_default_version(PocoCpp VERSION 1.10.0-p0)
+hunter_default_version(PocoCpp VERSION 1.10.1-p0)
 hunter_default_version(PostgreSQL VERSION 10.0.0)
 hunter_default_version(Protobuf VERSION 3.10.0-p0)
 
