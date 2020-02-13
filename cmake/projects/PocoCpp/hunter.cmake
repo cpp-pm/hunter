@@ -8,6 +8,17 @@ hunter_add_version(
     PACKAGE_NAME
     PocoCpp
     VERSION
+    1.10.0-p0
+    URL
+    "https://github.com/cpp-pm/poco/archive/v1.10.0-p0.zip"
+    SHA1
+    5628e07d21d31802405ef4a37e7de22db69177e3
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    PocoCpp
+    VERSION
     1.7.9-p1
     URL
     "https://github.com/hunter-packages/poco/archive/v1.7.9-p1.zip"
@@ -70,20 +81,30 @@ hunter_add_version(
     f392b87edb5bbc2b44aa08cfd72d87da8cc8661f
 )
 
-hunter_cmake_args(
-    PocoCpp
-    CMAKE_ARGS
-        CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=TRUE
-        POCO_STATIC=ON
-        ENABLE_CPPUNIT=OFF
-        ENABLE_MONGODB=OFF
-        ENABLE_NETSSL=OFF
-        ENABLE_CRYPTO=OFF
-        ENABLE_DATA=OFF
-        ENABLE_PAGECOMPILER=OFF
-        ENABLE_PAGECOMPILER_FILE2PAGE=OFF
-        ENABLE_REDIS=OFF
-)
+if(HUNTER_PocoCpp_VERSION VERSION_LESS "1.10.0")
+    hunter_cmake_args(
+        PocoCpp
+        CMAKE_ARGS
+            CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=TRUE
+            POCO_STATIC=ON
+            ENABLE_CPPUNIT=OFF
+            ENABLE_MONGODB=OFF
+            ENABLE_NETSSL=OFF
+            ENABLE_CRYPTO=OFF
+            ENABLE_DATA=OFF
+            ENABLE_PAGECOMPILER=OFF
+            ENABLE_PAGECOMPILER_FILE2PAGE=OFF
+            ENABLE_REDIS=OFF
+    )
+else()
+    hunter_cmake_args(
+        PocoCpp
+        CMAKE_ARGS
+            ENABLE_CPPUNIT=OFF
+            ENABLE_PAGECOMPILER=OFF
+            ENABLE_PAGECOMPILER_FILE2PAGE=OFF
+    )
+endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(PocoCpp)
