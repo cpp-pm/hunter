@@ -133,6 +133,10 @@ set(
     --user-config="${boost_user_jam}"
 )
 
+if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0)
+  list(APPEND build_opts --no-cmake-config )
+endif()
+
 set(BOOST_VERSION "@HUNTER_Boost_VERSION@")
 
 # Use:

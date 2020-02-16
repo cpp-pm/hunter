@@ -103,6 +103,12 @@ configure_file(
   @ONLY
 )
 
+
+set(pass_boost_no_cmake_config )
+if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0)
+  set(pass_boost_no_cmake_config --no-cmake-config)
+endif()
+
 ExternalProject_Add(
     "@HUNTER_EP_NAME@"
     URL
@@ -131,12 +137,14 @@ ExternalProject_Add(
     1
     INSTALL_COMMAND
     ${install_cmd}
+
     --layout=tagged
     -d0
     install
     ${boost_list}
     "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"
     --ignore-site-config # Ignore Gentoo specific optimization "none" in site config that only the patched bjam of Gentoo can understand.
+    ${pass_boost_no_cmake_config}
     COMMAND # Copy license files
     "@CMAKE_COMMAND@"
     "-C@HUNTER_ARGS_FILE@" # for 'HUNTER_INSTALL_LICENSE_FILES'
@@ -144,6 +152,9 @@ ExternalProject_Add(
     "-Ddstdir=@HUNTER_PACKAGE_LICENSE_DIR@"
     -P
     "@HUNTER_SELF@/scripts/try-copy-license.cmake"
+
+    # ineffective on older Boost than 1.72.0 as we resort on --no-cmake-config
+
     LOG_CONFIGURE ${log_build}
     LOG_BUILD ${log_build}
     LOG_INSTALL ${log_install}

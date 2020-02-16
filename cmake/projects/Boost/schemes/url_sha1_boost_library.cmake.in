@@ -232,6 +232,11 @@ set(
     "--user-config=${boost_user_jam}"
     --with-@HUNTER_PACKAGE_COMPONENT@
 )
+
+if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0)
+  list(APPEND build_opts --no-cmake-config )
+endif()
+
 if("@MINGW@")
   # cross compile from "linux" to "windows" using mingw
   set(build_opts target-os=windows ${build_opts})
@@ -524,6 +529,7 @@ ExternalProject_Add(
     ${verbose_output}
     ${build_opts}
     --ignore-site-config # Ignore Gentoo specific optimization "none" in site config that only the patched bjam of Gentoo can understand.
+
     BUILD_IN_SOURCE
     1
     INSTALL_COMMAND
