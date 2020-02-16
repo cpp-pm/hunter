@@ -105,7 +105,7 @@ configure_file(
 
 
 set(pass_boost_no_cmake_config )
-if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0)
+if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0 AND NOT USE_CONFIG_FROM_BOOST)
   set(pass_boost_no_cmake_config --no-cmake-config)
 endif()
 

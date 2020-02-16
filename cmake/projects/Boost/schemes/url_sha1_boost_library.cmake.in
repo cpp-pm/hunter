@@ -233,7 +233,7 @@ set(
     --with-@HUNTER_PACKAGE_COMPONENT@
 )
 
-if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0)
+if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0 AND NOT USE_CONFIG_FROM_BOOST)
   list(APPEND build_opts --no-cmake-config )
 endif()
 
