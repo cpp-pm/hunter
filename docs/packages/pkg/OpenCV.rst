@@ -24,7 +24,7 @@ Qt back-end
 -----------
 
 Qt back-end support for desktop can be enabled by `creating a custom
-config <https://github.com/hunter-packages/gate#usage-custom-config>`__
+config <https://github.com/cpp-pm/gate#usage-custom-config>`__
 with:
 
 .. code-block:: cmake

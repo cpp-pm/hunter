@@ -13,7 +13,7 @@ yourself.
 
 .. admonition:: Examples on GitHub
 
-  * `HunterGate <https://github.com/hunter-packages/gate>`_
+  * `HunterGate <https://github.com/cpp-pm/gate>`_
   * `Weather <https://github.com/ruslo/weather>`_
 
 .. toctree::

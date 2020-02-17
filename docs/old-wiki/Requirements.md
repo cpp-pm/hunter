@@ -8,7 +8,7 @@ cmake version
 
 This environment variable will point to working directory of hunter package manager. This is where all
 downloaded archives and installed libraries will reside. It's recommended to use environment variable, but
-also see [alternatives](https://github.com/hunter-packages/gate#effects).
+also see [alternatives](https://github.com/cpp-pm/gate#effects).
 For UNIX-family (Linux, Mac, Cygwin) users it propably
 will be `export HUNTER_ROOT=/path/to/hunter/root` in `.bashrc` file, for Windows users:
 `Control Panel` -> `System` -> `Advanced System Settings` -> `Environment Variables`. Do not forget to restart
@@ -83,4 +83,3 @@ clang++ -std=c++11 -fsanitize=address ...
 ```
 
 * https://github.com/cpp-pm/polly
-

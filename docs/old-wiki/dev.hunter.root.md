@@ -84,8 +84,8 @@ See `jenkins.py --help` for more options:
 * `--clear-except-download` remove `_Base/<hunter-id>` and `_Base/Cache` directories but keep `_Base/Download`. This may be helpful for doing cleanup but will save archives with sources for future testing. Note that there is no need to enter full option name, i.e. `./jenkins.py --clear-except` will work fine too
 
 [1]: https://github.com/ruslo/hunter#first-step
-[2]: https://github.com/hunter-packages/gate
+[2]: https://github.com/cpp-pm/gate
 [3]: https://github.com/ruslo/hunter
 [4]: https://github.com/ruslo/hunter/wiki/usr.adding.new.package
-[5]: https://github.com/hunter-packages/gate#effects
+[5]: https://github.com/cpp-pm/gate#effects
 [6]: https://github.com/ruslo/hunter/wiki/dev.modules#hunter_cacheable

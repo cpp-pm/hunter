@@ -24,7 +24,7 @@ Copy `HunterGate`_ module to your project and include it:
 .. code-block:: none
 
   > mkdir cmake
-  > wget https://raw.githubusercontent.com/hunter-packages/gate/master/cmake/HunterGate.cmake -O cmake/HunterGate.cmake
+  > wget https://raw.githubusercontent.com/cpp-pm/gate/master/cmake/HunterGate.cmake -O cmake/HunterGate.cmake
 
 .. code-block:: cmake
 
@@ -92,6 +92,6 @@ Build it:
   > cmake --build _builds --config Release
 
 .. _HUNTER_ROOT: https://github.com/ruslo/hunter/wiki/usr.variables#hunter_root
-.. _other options: https://github.com/hunter-packages/gate#effects
-.. _HunterGate: https://github.com/hunter-packages/gate
-.. _notes: https://github.com/hunter-packages/gate#notes
+.. _other options: https://github.com/cpp-pm/gate#effects
+.. _HunterGate: https://github.com/cpp-pm/gate
+.. _notes: https://github.com/cpp-pm/gate#notes

@@ -57,4 +57,4 @@ Message in logs:
   * :ref:`HUNTER_BUILD_SHARED_LIBS <hunter build shared libs>`
   * :ref:`HUNTER_CONFIGURATION_TYPES <hunter configuration types>`
 
-.. _HunterGate options: https://github.com/hunter-packages/gate#usage-custom-config
+.. _HunterGate options: https://github.com/cpp-pm/gate#usage-custom-config
