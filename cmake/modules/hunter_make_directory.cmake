@@ -27,7 +27,9 @@ function(hunter_make_directory parent sha1 result)
       hunter_internal_error("Not found: ${sha1_path}")
     endif()
     file(READ "${sha1_path}" sha1_value)
-    string(COMPARE EQUAL "${sha1_value}" "${sha1}" is_equal)
+    string(TOLOWER "${sha1_value}" sha1_value_lower)
+    string(TOLOWER "${sha1}" sha1_lower)
+    string(COMPARE EQUAL "${sha1_value_lower}" "${sha1_lower}" is_equal)
     if(NOT is_equal)
       hunter_internal_error(
           "Short SHA1 collision:"
