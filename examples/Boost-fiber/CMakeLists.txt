@@ -4,7 +4,6 @@
 cmake_minimum_required(VERSION 3.0)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")
-set(TESTING_CONFIG_OPT FILEPATH ${CMAKE_CURRENT_LIST_DIR}/config.cmake)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -12,8 +11,8 @@ include("../common.cmake")
 
 project(download-boost)
 
-hunter_add_package(Boost COMPONENTS fiber)
-find_package(Boost CONFIG REQUIRED fiber)
+hunter_add_package(Boost COMPONENTS context fiber)
+find_package(Boost CONFIG REQUIRED context fiber)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::fiber)
+target_link_libraries(foo PUBLIC Boost::context Boost::fiber)

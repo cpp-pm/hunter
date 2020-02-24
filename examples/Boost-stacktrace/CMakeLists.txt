@@ -4,7 +4,6 @@
 cmake_minimum_required(VERSION 3.2)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")
-set(TESTING_CONFIG_OPT FILEPATH ${CMAKE_CURRENT_LIST_DIR}/config.cmake)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate

@@ -4,7 +4,6 @@
 cmake_minimum_required(VERSION 3.0)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")
-set(TESTING_CONFIG_OPT FILEPATH ${CMAKE_CURRENT_LIST_DIR}/config.cmake)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -16,4 +15,4 @@ hunter_add_package(Boost COMPONENTS system contract)
 find_package(Boost CONFIG REQUIRED system contract)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::contract)
+target_link_libraries(foo PUBLIC Boost::system Boost::contract)
