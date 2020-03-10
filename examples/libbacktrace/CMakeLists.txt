@@ -11,8 +11,8 @@ project(libbacktrace)
 
 # DOCUMENTATION_START {
 hunter_add_package(libbacktrace)
-find_package(libbacktrace CONFIG REQUIRED)
+find_package(libbacktrace REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC PkgConfig::libbacktrace)
+target_link_libraries(boo PUBLIC libbacktrace::libbacktrace)
 # DOCUMENTATION_END }

@@ -8,9 +8,9 @@
 .. _pkg.libbacktrace:
 
 libbacktrace
-===
+============
 
--  `Official <https://official_foo>`__
+-  `Official <https://github.com/ianlancetaylor/libbacktrace>`__
 -  `Hunterized <https://github.com/cpp-pm/libbacktrace>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/libbacktrace/CMakeLists.txt>`__
 -  Added by `Joerg-Christian Boehme <https://github.com/Bjoe>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
