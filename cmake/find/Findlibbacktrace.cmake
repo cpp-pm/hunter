@@ -16,6 +16,11 @@
 #
 #   libbacktrace::libbacktrace   - The libbacktrace library
 
+file(GLOB_RECURSE _OUT LIST_DIRECTORIES true "${libbacktrace_ROOT}/*")
+foreach(_O ${_OUT})
+  message(STATUS "_OUT ${_O}")
+endforeach()
+
 find_path(libbacktrace_INCLUDE_DIR
   NAMES backtrace.h
   PATHS ${libbacktrace_ROOT}/include
