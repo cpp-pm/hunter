@@ -25,10 +25,20 @@ find_path(libbacktrace_INCLUDE_DIR
   NAMES backtrace.h
   PATHS "${libbacktrace_ROOT}/include"
 )
+
+if(WIN32)
+  set(_libbacktrace_ORIG_CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_FIND_LIBRARY_SUFFIXES})
+  set(CMAKE_FIND_LIBRARY_SUFFIXES .so .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
+endif()
+
 find_library(libbacktrace_LIBRARY
   NAMES backtrace
   PATHS "${libbacktrace_ROOT}/lib"
 )
+
+if(WIN32)
+  set(CMAKE_FIND_LIBRARY_SUFFIXES ${_libbacktrace_ORIG_CMAKE_FIND_LIBRARY_SUFFIXES})
+endif()
 
 set(libbacktrace_VERSION ${PC_libbacktrace_VERSION})
 
