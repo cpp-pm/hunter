@@ -31,6 +31,9 @@ if(WIN32)
   set(CMAKE_FIND_LIBRARY_SUFFIXES .so .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
 endif()
 
+include(CMakePrintHelpers)
+cmake_print_variables(CMAKE_FIND_LIBRARY_SUFFIXES)
+
 find_library(libbacktrace_LIBRARY
   NAMES backtrace
   PATHS "${libbacktrace_ROOT}/lib"
