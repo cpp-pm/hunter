@@ -23,11 +23,11 @@ message(STATUS "\n${THIRD_PARTY_LIBRARIES_OUT}\n")
 
 find_path(libbacktrace_INCLUDE_DIR
   NAMES backtrace.h
-  PATHS ${libbacktrace_ROOT}/include
+  PATHS "${libbacktrace_ROOT}/include"
 )
 find_library(libbacktrace_LIBRARY
   NAMES backtrace
-  PATHS ${libbacktrace_ROOT}/lib
+  PATHS "${libbacktrace_ROOT}/lib"
 )
 
 set(libbacktrace_VERSION ${PC_libbacktrace_VERSION})
