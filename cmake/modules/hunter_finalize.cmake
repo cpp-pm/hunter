@@ -112,6 +112,11 @@ macro(hunter_finalize)
   set(HUNTER_CACHE_FILE "${HUNTER_CONFIG_ID_PATH}/cache.cmake")
   hunter_create_cache_file("${HUNTER_CACHE_FILE}")
 
+  find_file(PREV_HUNTER_CACHE_FILE cache.cmake PATHS "${HUNTER_CONFIG_ID_PATH}")
+  if(NOT "${HUNTER_CACHE_FILE}" STREQUAL "${PREV_HUNTER_CACHE_FILE}")
+    hunter_user_error("Your previously Hunter/Toolchain/Config ID are changed. You should remove your CMakeCache.txt in your build directory!")
+  endif()
+
   if(MSVC)
     include(hunter_setup_msvc)
     hunter_setup_msvc()
