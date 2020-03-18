@@ -34,7 +34,7 @@ if(WIN32)
 endif()
 
 include(CMakePrintHelpers)
-cmake_print_variables(CMAKE_FIND_LIBRARY_SUFFIXES)
+cmake_print_variables(CMAKE_FIND_LIBRARY_SUFFIXES CMAKE_FIND_LIBRARY_PREFIXES)
 
 find_library(libbacktrace_LIBRARY
   NAMES backtrace
