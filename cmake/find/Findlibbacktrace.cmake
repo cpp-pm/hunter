@@ -16,11 +16,6 @@
 #
 #   libbacktrace::libbacktrace   - The libbacktrace library
 
-file(READ "${CMAKE_BINARY_DIR}/_3rdParty/Hunter/install-root-dir" THIRDPARTY_INSTALL_ROOT_DIR)
-file(GLOB_RECURSE THIRD_PARTY_LIBRARIES "${THIRDPARTY_INSTALL_ROOT_DIR}/*")
-string(REPLACE ";" "\n" THIRD_PARTY_LIBRARIES_OUT "${THIRD_PARTY_LIBRARIES}")
-message(STATUS "\n${THIRD_PARTY_LIBRARIES_OUT}\n")
-
 find_path(libbacktrace_INCLUDE_DIR
   NAMES backtrace.h
   PATHS "${libbacktrace_ROOT}/include"
@@ -32,9 +27,6 @@ if(WIN32)
   set(CMAKE_FIND_LIBRARY_SUFFIXES .so .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
   set(CMAKE_FIND_LIBRARY_PREFIXES lib ${CMAKE_FIND_LIBRARY_PREFIXES})
 endif()
-
-include(CMakePrintHelpers)
-cmake_print_variables(CMAKE_FIND_LIBRARY_SUFFIXES CMAKE_FIND_LIBRARY_PREFIXES)
 
 find_library(libbacktrace_LIBRARY
   NAMES backtrace
