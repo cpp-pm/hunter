@@ -13,6 +13,17 @@ hunter_add_version(
     PACKAGE_NAME
     magnum
     VERSION
+    2019.10
+    URL
+    "https://github.com/mosra/magnum/archive/v2019.10.tar.gz"
+    SHA1
+    950c266e5eeea6722a6789f8cd5065d19387a738
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    magnum
+    VERSION
     2019.01
     URL
     "https://github.com/mosra/magnum/archive/v2019.01.tar.gz"
