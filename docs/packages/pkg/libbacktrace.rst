@@ -3,7 +3,7 @@
     libbacktrace
 
 .. index::
-  single: unsorted ; libbacktrace
+  single: Logging ; libbacktrace
 
 .. _pkg.libbacktrace:
 

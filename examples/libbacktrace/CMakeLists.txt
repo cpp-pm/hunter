@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.2)
 # * https://github.com/cpp-pm/gate
 include("../common.cmake")
 
-project(libbacktrace)
+project(download-libbacktrace)
 
 # DOCUMENTATION_START {
 hunter_add_package(libbacktrace)
