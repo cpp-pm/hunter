@@ -34,6 +34,7 @@ find_library(libbacktrace_LIBRARY
 )
 
 if(WIN32)
+  # Restore the original find library ordering
   set(CMAKE_FIND_LIBRARY_SUFFIXES ${_libbacktrace_ORIG_CMAKE_FIND_LIBRARY_SUFFIXES})
   set(CMAKE_FIND_LIBRARY_PREFIXES ${_libbacktrace_ORIG_CMAKE_FIND_LIBRARY_PREFIXES})
 endif()
