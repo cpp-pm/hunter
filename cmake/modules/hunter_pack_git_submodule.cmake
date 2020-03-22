@@ -120,7 +120,10 @@ function(hunter_pack_git_submodule)
   endif()
 
   set(head_file "${output}")
-  if(NOT EXISTS "${submodule_dir}/${head_file}")
+  if(NOT IS_ABSOLUTE "${head_file}")
+    set(head_file "${submodule_dir}/${head_file}")
+  endif()
+  if(NOT EXISTS "${head_file}")
     hunter_internal_error("File not found: '${head_file}'")
   endif()
   set_property(
@@ -163,7 +166,10 @@ function(hunter_pack_git_submodule)
   endif()
 
   set(ref_file "${output}")
-  if(NOT EXISTS "${submodule_dir}/${ref_file}")
+  if(NOT IS_ABSOLUTE "${ref_file}")
+    set(ref_file "${submodule_dir}/${ref_file}")
+  endif()
+  if(NOT EXISTS "${ref_file}")
     hunter_internal_error("File not found: ${ref_file}")
   endif()
 
