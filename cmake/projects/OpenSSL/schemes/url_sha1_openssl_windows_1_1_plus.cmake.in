@@ -66,6 +66,10 @@ else()
   set(arch "VC-WIN32")
 endif()
 
+if(DEBUG_RUNTIME)
+  set(arch "debug-${arch}")
+endif()
+
 if(ASM_SUPPORT)
   hunter_add_package(NASM) # set NASM_ROOT
   set(opt "")
