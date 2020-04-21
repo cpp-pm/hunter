@@ -7,4 +7,5 @@ int main() {
 
   auto today = floor<days>(system_clock::now());
   std::cout << today << '\n';
+  return 0;
 }
