@@ -11,6 +11,7 @@
 Networking
 ----------
 
+ - :ref:`pkg.asio` - C++ 11 compatible implementation of the future `<networking>` standard library.
  - :ref:`pkg.autobahn-cpp` -  open-source implementations of the The WebSocket Protocol and The Web Application Messaging Protocol (WAMP>`_ network protocols.
  - :ref:`pkg.Avahi` - Service Discovery for Linux using mDNS/DNS-SD -- compatible with Bonjour
  - :ref:`pkg.Beast` - HTTP and WebSocket built on Boost.Asio in C++11

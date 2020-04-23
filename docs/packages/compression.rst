@@ -7,3 +7,4 @@ Compression
  - :ref:`pkg.minizip` - enables to extract files from a .zip archive file.
  - :ref:`pkg.szip`
  - :ref:`pkg.ZLIB` - A massively spiffy yet delicately unobtrusive compression library.
+ - :ref:`pkg.zstd` - Very flexible very fast compression and decompression.
