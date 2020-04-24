@@ -10,6 +10,7 @@ Database
  - :ref:`pkg.leveldb` - a fast key-value storage library
  - :ref:`pkg.lmdb` - Lightning Memory-Mapped Database Manager
  - :ref:`pkg.lmdbxx` - C++11 wrapper for the LMDB embedded B+ tree database library
+ - :ref:`pkg.sqlite3` - Popular C lib implementing a small, fast & self-contained SQL database engine
  - :ref:`pkg.MySQL-client`
  - :ref:`pkg.odb-mysql`
  - :ref:`pkg.odb-pgsql`

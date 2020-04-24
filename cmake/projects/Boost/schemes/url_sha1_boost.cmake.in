@@ -105,7 +105,7 @@ configure_file(
 
 
 set(pass_boost_no_cmake_config )
-if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0)
+if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0 AND NOT USE_CONFIG_FROM_BOOST)
   set(pass_boost_no_cmake_config --no-cmake-config)
 endif()
 
@@ -154,11 +154,6 @@ ExternalProject_Add(
     "@HUNTER_SELF@/scripts/try-copy-license.cmake"
 
     # ineffective on older Boost than 1.72.0 as we resort on --no-cmake-config
-    COMMAND
-    "@CMAKE_COMMAND@"
-    "-Dinstalldir=@HUNTER_PACKAGE_INSTALL_PREFIX@"
-    -P
-    "@HUNTER_SELF@/scripts/clean-boost-configs.cmake"
 
     LOG_CONFIGURE ${log_build}
     LOG_BUILD ${log_build}
@@ -170,4 +165,6 @@ set(HUNTER_SELF "@HUNTER_SELF@")
 set(HUNTER_PACKAGE_INSTALL_PREFIX "@HUNTER_PACKAGE_INSTALL_PREFIX@")
 set(HUNTER_Boost_VERSION "@HUNTER_Boost_VERSION@")
 
-hunter_install_boost_config()
+if(NOT USE_CONFIG_FROM_BOOST OR HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
+  hunter_install_boost_config()
+endif()

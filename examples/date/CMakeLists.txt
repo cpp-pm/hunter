@@ -14,5 +14,5 @@ hunter_add_package(date)
 find_package(date CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC date_interface)
+target_link_libraries(boo PUBLIC date::date)
 # DOCUMENTATION_END }

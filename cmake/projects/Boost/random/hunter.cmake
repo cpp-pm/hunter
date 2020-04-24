@@ -18,5 +18,5 @@ hunter_download(
     Boost
     PACKAGE_COMPONENT
     random
-    PACKAGE_INTERNAL_DEPS_ID "47"
+    PACKAGE_INTERNAL_DEPS_ID "48"
 )

@@ -14,11 +14,22 @@ hunter_add_version(
     PACKAGE_NAME
     IlmBase
     VERSION
-    2.4.0
+    2.4.0-p0
     URL
     "https://github.com/cpp-pm/openexr/archive/v2.4.0-p0.tar.gz"
     SHA1
     a99fb3c35b9d9c2e4aeb2cd38e7cb1149619ca0e
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    IlmBase
+    VERSION
+    2.4.0-p1
+    URL
+    "https://github.com/cpp-pm/openexr/archive/v2.4.0-p1.tar.gz"
+    SHA1
+    844f501f28b59caa3bcdf093dacae7a067429694
 )
 
 hunter_cmake_args(

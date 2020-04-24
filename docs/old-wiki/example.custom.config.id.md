@@ -1,4 +1,4 @@
-Package version and extra CMake options can be set in user's `config.cmake` file (see also [how to specify custom config location](https://github.com/hunter-packages/gate#usage-custom-config)).
+Package version and extra CMake options can be set in user's `config.cmake` file (see also [how to specify custom config location](https://github.com/cpp-pm/gate#usage-custom-config)).
 
 ### Custom package version
 
@@ -196,6 +196,6 @@ endif()
 
 ### Links
 
-* [HunterGate](https://github.com/hunter-packages/gate#usage-custom-config)
+* [HunterGate](https://github.com/cpp-pm/gate#usage-custom-config)
 * [hunter_config](https://github.com/ruslo/hunter/wiki/dev.modules#hunter_config)
 * [Custom build types](https://github.com/ruslo/hunter/wiki/example.hunter_configuration_types) (e.g. Release/Debug)

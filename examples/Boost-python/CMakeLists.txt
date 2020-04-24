@@ -5,6 +5,8 @@
 cmake_minimum_required(VERSION 3.2)
 option(HUNTER_BUILD_SHARED_LIBS "..." ON)
 
+set(Boost_DEBUG ON CACHE BOOLEAN "")
+
 # Configure:
 set(PYTHON_VERSION 3.5)
 set(TESTING_CONFIG_OPT FILEPATH "${CMAKE_CURRENT_LIST_DIR}/config.cmake")

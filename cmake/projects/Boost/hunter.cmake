@@ -170,6 +170,17 @@ hunter_add_version(
     6022cd8eea0f04cbfb78df8064fcd134e40a7735
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    Boost
+    VERSION
+    "1.72.0-p1"
+    URL
+    "https://github.com/cpp-pm/boost/archive/v1.72.0-p1.tar.gz"
+    SHA1
+    04f570acbe0beb762e588ad3de292d0328a79c64
+)
+
 # up until 1.63 sourcefourge was used
 set(_hunter_boost_base_url "https://downloads.sourceforge.net/project/boost/boost/")
 hunter_add_version(
@@ -422,4 +433,27 @@ endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_boost)
 hunter_cacheable(Boost)
-hunter_download(PACKAGE_NAME Boost PACKAGE_INTERNAL_DEPS_ID "47")
+hunter_download(PACKAGE_NAME Boost PACKAGE_INTERNAL_DEPS_ID "48")
+
+
+if(NOT HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
+    hunter_get_cmake_args(PACKAGE Boost OUT boost_cmake_args)
+    string(FIND "${boost_cmake_args}" "BUILD_SHARED_LIBS=ON" boost_shared)
+    string(FIND "${boost_cmake_args}" "USE_CONFIG_FROM_BOOST=ON" use_boost_config)
+    string(FIND "${boost_cmake_args}" "BOOST_BUILD_DYNAMIC_VSRUNTIME=NO" boost_static_runtime)
+    if(use_boost_config GREATER -1)
+    if(boost_shared LESS 0)
+        option(Boost_USE_STATIC_LIBS "Use of the static libraries" ON)
+    else()
+        option(Boost_USE_STATIC_LIBS "Use of the static libraries" OFF)
+    endif()
+    
+    if(MSVC)
+        if(boost_static_runtime LESS 0)
+            option(Boost_USE_STATIC_RUNTIME "Use libraries linked statically to the C++ runtime" OFF)
+        else()
+            option(Boost_USE_STATIC_RUNTIME "Use libraries linked statically to the C++ runtime" ON)
+        endif()
+    endif()
+    endif()
+endif()

@@ -218,6 +218,9 @@ if(has_toolset_version)
 endif()
 
 set(boost_user_jam "@HUNTER_PACKAGE_BUILD_DIR@/boost.user.jam")
+# TODO file(TO_NATIVE_PATH "${boost_user_jam}" boost_user_jam_native_path)
+# Escape --user-config=C:\projects\hunter-tdmm2\_testing\Hunter\_Base\5398c9d\30f4075\2d24521\Build\Boost\__filesystem\Build\boost.user.jam
+# Error -> Invalid character escape '\p'.
 set(
     build_opts
     -a
@@ -230,7 +233,7 @@ set(
     --with-@HUNTER_PACKAGE_COMPONENT@
 )
 
-if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0)
+if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0 AND NOT USE_CONFIG_FROM_BOOST)
   list(APPEND build_opts --no-cmake-config )
 endif()
 
@@ -533,8 +536,8 @@ ExternalProject_Add(
     ${b2_cmd}
     -d0
     ${build_opts}
-    stage # install only libraries, headers installed in `url_sha1_boost`
-    "--stagedir=@HUNTER_PACKAGE_INSTALL_PREFIX@"
+    install
+    "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"
     --ignore-site-config # Ignore Gentoo specific optimization "none" in site config that only the patched bjam of Gentoo can understand.
     LOG_CONFIGURE ${log_build}
     LOG_BUILD ${log_build}
@@ -546,4 +549,6 @@ set(HUNTER_SELF "@HUNTER_SELF@")
 set(HUNTER_PACKAGE_INSTALL_PREFIX "@HUNTER_PACKAGE_INSTALL_PREFIX@")
 set(HUNTER_Boost_VERSION "@HUNTER_Boost_VERSION@")
 
-hunter_install_boost_config()
+if(NOT USE_CONFIG_FROM_BOOST OR HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
+  hunter_install_boost_config()
+endif()

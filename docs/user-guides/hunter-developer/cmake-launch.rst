@@ -12,14 +12,14 @@ CMAKE_TOOLCHAIN_FILE
 
 * `hunter_download <https://github.com/cpp-pm/hunter/blob/90f1c32fbb04a246ff4aba4a66750ab817ac1e2f/cmake/modules/hunter_download.cmake#L375-L380>`__
 * `url_sha1_cmake <https://github.com/cpp-pm/hunter/blob/90f1c32fbb04a246ff4aba4a66750ab817ac1e2f/cmake/schemes/url_sha1_cmake.cmake.in#L155>`__
-* `HunterGate <https://github.com/hunter-packages/gate/blob/master/cmake/HunterGate.cmake#L293-L302>`__
+* `HunterGate <https://github.com/cpp-pm/gate/blob/master/cmake/HunterGate.cmake#L293-L302>`__
 
 CMAKE_MAKE_PROGRAM
 ==================
 
 * `hunter_download <https://github.com/cpp-pm/hunter/blob/90f1c32fbb04a246ff4aba4a66750ab817ac1e2f/cmake/modules/hunter_download.cmake#L553-L555>`__
 * `url_sha1_cmake <https://github.com/cpp-pm/hunter/blob/90f1c32fbb04a246ff4aba4a66750ab817ac1e2f/cmake/schemes/url_sha1_cmake.cmake.in#L94-L99>`__
-* `HunterGate <https://github.com/hunter-packages/gate/blob/master/cmake/HunterGate.cmake#L304-L310>`__
+* `HunterGate <https://github.com/cpp-pm/gate/blob/master/cmake/HunterGate.cmake#L304-L310>`__
 
 .. note::
 
@@ -36,7 +36,7 @@ CMAKE_GENERATOR
 
 * `hunter_download <https://github.com/cpp-pm/hunter/blob/90f1c32fbb04a246ff4aba4a66750ab817ac1e2f/cmake/modules/hunter_download.cmake#L546>`__
 * `hunter_url_sha1 <https://github.com/cpp-pm/hunter/blob/90f1c32fbb04a246ff4aba4a66750ab817ac1e2f/cmake/schemes/url_sha1_cmake.cmake.in#L149>`__
-* `HunterGate <https://github.com/hunter-packages/gate/blob/master/cmake/HunterGate.cmake#L317>`__
+* `HunterGate <https://github.com/cpp-pm/gate/blob/master/cmake/HunterGate.cmake#L317>`__
 
 CMAKE_GENERATOR_TOOLSET
 =======================

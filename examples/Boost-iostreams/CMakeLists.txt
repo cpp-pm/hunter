@@ -3,6 +3,8 @@
 
 cmake_minimum_required(VERSION 3.0)
 
+set(Boost_DEBUG ON CACHE BOOLEAN "")
+
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
 include("../common.cmake")

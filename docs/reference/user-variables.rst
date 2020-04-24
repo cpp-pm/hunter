@@ -76,13 +76,13 @@ HUNTER_ROOT
   Hunter packages to default location
 * You can set :ref:`environment variable <env hunter root>`
   with the same name to avoid specifying it for every project
-* See `HunterGate <https://github.com/hunter-packages/gate#effects>`__
+* See `HunterGate <https://github.com/cpp-pm/gate#effects>`__
 
 .. warning::
 
   If you manually cloned Hunter repository for development purposes the values
   of ``URL`` and ``SHA1`` of ``HunterGate`` will be ignored, see
-  `notes <https://github.com/hunter-packages/gate#notes>`__ and
+  `notes <https://github.com/cpp-pm/gate#notes>`__ and
   `testing <https://github.com/ruslo/hunter/wiki/dev.hunter.root>`__ hints.
 
 HUNTER_STATUS_PRINT
