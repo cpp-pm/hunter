@@ -10,9 +10,9 @@ hunter_add_version(
     VERSION
     1.10.1-p0
     URL
-    "https://github.com/Bjoe/poco/archive/c8bd0f7a10f2580a706ed93d7ac1cf9ce5872bca.zip"
+    "https://github.com/cpp-pm/poco/archive/v1.10.1-p0.zip"
     SHA1
-    87d89841f25e2c14d63f6432dcc56278aec5cc85
+    3922c320158ec4c1bc37c10be76ff788d253d64f
 )
 
 hunter_add_version(
