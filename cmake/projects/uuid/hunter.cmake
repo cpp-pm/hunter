@@ -2,8 +2,8 @@
 
 include(hunter_add_version)
 include(hunter_cacheable)
-#include(hunter_cmake_args)
-#include(hunter_configuration_types)
+include(hunter_cmake_args)
+include(hunter_configuration_types)
 include(hunter_download)
 include(hunter_pick_scheme)
 
@@ -11,32 +11,26 @@ hunter_add_version(
     PACKAGE_NAME
     uuid
     VERSION
-    1.0.0
+    1.0.3
     URL
-    "https://github.com/hunter-packages/foo/archive/v1.0.0.tar.gz"
+    "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz/download"
     SHA1
-    1111111111111111111111111111111111111111
+    46eaedb875ae6e63677b51ec583656199241d597
 )
 
-#if (ANDROID OR IOS)
-# hunter_cmake_args(
-#    uuid
-#    CMAKE_ARGS
-#    PKGCONFIG_EXPORT_TARGETS=libfoo;libbar
-#    DEPENDS_ON_PACKAGES=foo;bar
-#    EXTRA_FLAGS=--enable-bots
-# )
-#endif()
+hunter_cmake_args(
+    uuid
+    CMAKE_ARGS
+       PKGCONFIG_EXPORT_TARGETS=uuid
+)
 
-#hunter_configuration_types(uuid CONFIGURATION_TYPES Release)
-hunter_pick_scheme(DEFAULT url_sha1_cmake)
+hunter_configuration_types(uuid CONFIGURATION_TYPES Release)
+hunter_pick_scheme(DEFAULT url_sha1_autotools)
 hunter_cacheable(uuid)
 hunter_download(
     PACKAGE_NAME uuid
     PACKAGE_INTERNAL_DEPS_ID "1"
-#     PACKAGE_UNRELOCATABLE_TEXT_FILES
-#     "lib/libfoo.la"
-#     "lib/libpbar.la"
-#     "lib/pkgconfig/libfoo.pc"
-#     "lib/pkgconfig/libpbar.pc"
+    PACKAGE_UNRELOCATABLE_TEXT_FILES
+     "lib/libuuid.la"
+     "lib/pkgconfig/uuid.pc"
 )
