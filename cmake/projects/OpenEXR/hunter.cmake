@@ -21,6 +21,17 @@ hunter_add_version(
     844f501f28b59caa3bcdf093dacae7a067429694
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    OpenEXR
+    VERSION
+    2.5.1-p0
+    URL
+    "https://github.com/cpp-pm/openexr/archive/v2.5.1-p0.tar.gz"
+    SHA1
+    9a04f614f5fe7f3c916f0af59438c25cc9d59016
+)
+
 hunter_cmake_args(
     OpenEXR
     CMAKE_ARGS
