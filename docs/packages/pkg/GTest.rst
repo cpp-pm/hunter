@@ -24,7 +24,7 @@ GTest
     hunter_add_package(GTest)
     find_package(GTest CONFIG REQUIRED)
 
-    target_link_libraries(foo GTest::main) # GTest::gtest will be linked automatically
+    target_link_libraries(foo GTest::gtest_main) # GTest::gtest will be linked automatically
     target_link_libraries(boo GTest::gtest)
 
 Bugs
@@ -54,7 +54,7 @@ available in these cases.
 .. code-block:: cmake
 
     hunter_add_package(GTest)
-    find_package(GMock CONFIG REQUIRED)
+    find_package(GTest CONFIG REQUIRED)
 
-    # GMock::gmock and GTest::main will be linked automatically
-    target_link_libraries(foo GMock::main)
+    # GMock::gmock and GTest::gtest will be linked automatically
+    target_link_libraries(foo GTest::gmock_main)
