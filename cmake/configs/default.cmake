@@ -548,7 +548,7 @@ hunter_default_version(xxhash VERSION 0.6.5-p0)
 hunter_default_version(yaml-cpp VERSION 0.6.2-0f9a586-p1)
 hunter_default_version(zip VERSION 0.1.15)
 hunter_default_version(zookeeper VERSION 3.4.9-p2)
-hunter_default_version(zstd VERSION 1.4.5-d73e2fb-p0)
+hunter_default_version(zstd VERSION 1.4.5)
 
 if(ANDROID)
   string(COMPARE EQUAL "${CMAKE_SYSTEM_VERSION}" "" _is_empty)

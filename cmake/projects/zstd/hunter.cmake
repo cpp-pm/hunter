@@ -21,6 +21,17 @@ hunter_add_version(
     e770f4ff39ca7b40790e2fe61339cc84b63c0a8d
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    zstd
+    VERSION
+    1.4.5
+    URL
+    "https://github.com/facebook/zstd/releases/download/v1.4.5/zstd-1.4.5.tar.gz"
+    SHA1
+    8059ef26c3d7dffa4d6dad64511c0675e46c0da6
+)
+
 hunter_source_subdir(zstd SOURCE_SUBDIR "build/cmake")
 
 hunter_cmake_args(zstd CMAKE_ARGS
@@ -30,4 +41,3 @@ hunter_cmake_args(zstd CMAKE_ARGS
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(zstd)
 hunter_download(PACKAGE_NAME zstd)
-
