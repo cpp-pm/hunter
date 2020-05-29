@@ -1,4 +1,4 @@
-#include <zlog/zlog.h>
+#include <zlog.h>
 
 int main() {
 }

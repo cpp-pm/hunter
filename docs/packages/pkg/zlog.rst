@@ -2,7 +2,7 @@
 
     zlog
 
-.. index:: unsorted ; zlog
+.. index:: Logging ; zlog
 
 .. _pkg.zlog:
 
