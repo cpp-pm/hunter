@@ -16,6 +16,6 @@ hunter_add_version(
 	94e5e7f431093036e1529dcadf11c2d779954886
 )
 
-hunter_pick_scheme(DEFAULT url_sha1_zlog)
+hunter_pick_scheme(DEFAULT url_sha1_make_only)
 hunter_cacheable(zlog)
 hunter_download(PACKAGE_NAME zlog)
