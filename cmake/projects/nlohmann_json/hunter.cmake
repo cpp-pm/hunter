@@ -127,6 +127,34 @@ hunter_add_version(
     SHA1 d40e66b98392d0cfbd348de029b7822ab5b74e25
 )
 
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.7.1"
+    URL "https://github.com/nlohmann/json/archive/v3.7.1.tar.gz"
+    SHA1 a9c7ed5d9a3a514636cec6287a8aebd89502a5f0
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.7.2"
+    URL "https://github.com/nlohmann/json/archive/v3.7.2.tar.gz"
+    SHA1 2909fb5aa4cd9766eb8a49fdf911116c5c65d68b
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.7.3"
+    URL "https://github.com/nlohmann/json/archive/v3.7.3.tar.gz"
+    SHA1 2edc54d0cec46549c3bf9983541813f1b64bd26c
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.8.0"
+    URL "https://github.com/nlohmann/json/archive/v3.8.0.tar.gz"
+    SHA1 70a16819777672d3771a2754eccee95e4249b3b4
+)
+
 hunter_cmake_args(nlohmann_json CMAKE_ARGS JSON_BuildTests=OFF)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
