@@ -30,6 +30,28 @@ hunter_add_version(
     50c4d8ec601114755be9fd5bf5b288ee4eeacd54
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    intx
+    VERSION
+    0.3.0
+    URL
+    https://github.com/chfast/intx/archive/v0.3.0.tar.gz
+    SHA1
+    a8caffec14acbfead56edce78f360611aa4d252f
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    intx
+    VERSION
+    0.4.0
+    URL
+    https://github.com/chfast/intx/archive/v0.4.0.tar.gz
+    SHA1
+    8a2a0b0efa64899db972166a9b3568a6984c61bc
+)
+
 hunter_cmake_args(
     intx
     CMAKE_ARGS
