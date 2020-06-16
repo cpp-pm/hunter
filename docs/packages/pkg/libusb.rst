@@ -1,6 +1,7 @@
 .. spelling::
 
     libusb
+    udev
 
 .. index::
   single: development ; libusb
@@ -28,3 +29,10 @@ Pitfalls
 .. code::
 
     sudo apt-get install libudev-dev
+
+- Or configure without udev support
+
+.. code::
+
+    # Hunter configuration file, for example 'cmake/Hunter/config.cmake'
+    hunter_config(libusb VERSION [version] CMAKE_ARGS EXTRA_FLAGS=--disable-udev)
