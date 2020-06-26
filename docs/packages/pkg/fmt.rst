@@ -19,7 +19,7 @@ fmt
 -  Added by `Dmitry Panteleev <https://github.com/dpantele>`__
    (`pr-413 <https://github.com/ruslo/hunter/pull/413>`__)
 -  `Testing
-   branch <https://github.com/ingenue/hunter/branches/all?utf8=%E2%9C%93&query=fmt>`__
+   branch <https://github.com/cpp-pm/hunter-testing/branches/all?utf8=%E2%9C%93&query=fmt>`__
 
 .. code-block:: cmake
 

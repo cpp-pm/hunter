@@ -12,7 +12,7 @@ libuv
 =====
 
 -  `Official <http://libuv.org/>`__
--  `Testing branch <https://github.com/ingenue/hunter/tree/pkg.libuv>`__
+-  `Testing branch <https://github.com/cpp-pm/hunter-testing/tree/pkg.libuv>`__
 -  `Example
    CMakeLists.txt <https://github.com/cpp-pm/hunter/blob/master/examples/libuv/CMakeLists.txt>`__
 -  `Example C

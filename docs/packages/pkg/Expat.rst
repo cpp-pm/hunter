@@ -25,4 +25,4 @@ Expat
 CI
 --
 
--  https://github.com/ingenue/hunter/tree/pkg.expat
+-  https://github.com/cpp-pm/hunter-testing/tree/pkg.expat

@@ -25,13 +25,13 @@ What to do
   :ref:`HUNTER_STATUS_DEBUG=ON <hunter_status_debug>`
   to see a lot of info about build
 - Take a look at
-  `pkg.NAME <https://github.com/ingenue/hunter/branches/all?utf8=%E2%9C%93&query=pkg>`_
+  `pkg.NAME <https://github.com/cpp-pm/hunter-testing/branches/all?utf8=%E2%9C%93&query=pkg>`_
   CI testing table. If similar toolchain is excluded (or not present at all)
   then the problem is known, hence **there is no need to report bug if you're
   not planning to fix it yourself**.
   For example if you check the OpenSSL testing:
 
-    - https://github.com/ingenue/hunter/tree/pkg.openssl
+    - https://github.com/cpp-pm/hunter-testing/tree/pkg.openssl
 
   You can see that toolchain ``nmake-vs-12-2013-win64`` is excluded already:
 

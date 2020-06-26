@@ -19,7 +19,7 @@ ZeroMQ
 -  Added by `Antal Tátrai <https://github.com/tatraian>`__
    (`pr-334 <https://github.com/ruslo/hunter/pull/334>`__)
 -  `Testing
-   branch <https://github.com/ingenue/hunter/branches/all?utf8=%E2%9C%93&query=zeromq>`__
+   branch <https://github.com/cpp-pm/hunter-testing/branches/all?utf8=%E2%9C%93&query=zeromq>`__
 
 .. code-block:: cmake
 
