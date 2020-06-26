@@ -8,6 +8,17 @@ hunter_add_version(
     PACKAGE_NAME
     gl4es
     VERSION
+    1.1.4-p0
+    URL
+    "https://github.com/cpp-pm/gl4es/archive/1.1.4-p0.tar.gz"
+    SHA1
+    fcb75a97d261bf7910a5bbfbd60a95a36a216295
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    gl4es
+    VERSION
     1.1.2-p0
     URL
     "https://github.com/cpp-pm/gl4es/archive/1.1.2-p0.tar.gz"

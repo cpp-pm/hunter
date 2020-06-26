@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-<!--- If you have a trivial question, you can ask it in Gitter room: https://gitter.im/ruslo/hunter -->
+<!--- If you have a trivial question, you can ask it in Gitter room: https://gitter.im/cpp-pm/community -->
 
 * I've read [Brief overview section](https://hunter.readthedocs.io/en/latest/overview.html) and do understand basic concepts. **[Yes|No]**
 * I've read [F.A.Q. section](https://hunter.readthedocs.io/en/latest/faq.html) and haven't found an answer to my question. **[Yes|No]**
