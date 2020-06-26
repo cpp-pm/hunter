@@ -32,7 +32,7 @@ build issue, the next workaround should be applied:
 
 By default CUDA used on Linux. Example of the ``travis.yml`` configuration:
 
-- https://github.com/ingenue/hunter/blob/81c936a1e04df8f46b84c7eb22b931da5dcf4d7c/.travis.yml#L155-L163
+- https://github.com/cpp-pm/hunter-testing/blob/81c936a1e04df8f46b84c7eb22b931da5dcf4d7c/.travis.yml#L155-L163
 
 On Android, iOS and Windows only ``tvm::tvm_runtime`` will be built.
 

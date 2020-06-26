@@ -35,7 +35,7 @@ What to do
 
   You can see that toolchain ``nmake-vs-12-2013-win64`` is excluded already:
 
-    - https://github.com/ingenue/hunter/blob/2bdb775aa312e1634c545aa772f09730f61e2e7b/appveyor.yml#L17-L20
+    - https://github.com/cpp-pm/hunter-testing/blob/2bdb775aa312e1634c545aa772f09730f61e2e7b/appveyor.yml#L17-L20
 
   So there is no need to report "OpenSSL is not working with NMake" issue.
 
