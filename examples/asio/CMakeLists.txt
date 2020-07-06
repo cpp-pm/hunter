@@ -14,10 +14,10 @@ hunter_add_package(asio)
 find_package(asio CONFIG REQUIRED)
 
 add_executable(foo-headeronly foo.cpp)
-target_link_libraries(foo-headeronly PUBLIC asio::asio_headeronly)
+target_link_libraries(foo-headeronly PUBLIC asio::asio_headeronly Threads::Threads)
 
 add_executable(foo-static foo.cpp)
-target_link_libraries(foo-static PUBLIC asio::asio_static)
+target_link_libraries(foo-static PUBLIC asio::asio_static Threads::Threads)
 
 add_executable(foo-shared foo.cpp)
-target_link_libraries(foo-shared PUBLIC asio::asio_shared)
+target_link_libraries(foo-shared PUBLIC asio::asio_shared Threads::Threads)
