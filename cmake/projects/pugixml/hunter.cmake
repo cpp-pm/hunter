@@ -8,9 +8,9 @@ include(hunter_pick_scheme)
 
 hunter_add_version(
     PACKAGE_NAME pugixml
-    VERSION "1.8.1"
-    URL "https://github.com/rusdevops/pugixml/archive/v1.8.1-hunter.tar.gz"
-    SHA1 005b1c8830e6f81f559d0b72f9f7ff320895847f
+    VERSION "1.10-p0"
+    URL "https://github.com/cpp-pm/pugixml/archive/v1.10-p0.tar.gz"
+    SHA1 a007db95cbb6b49cb8d2d247e60a82912c435484
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
