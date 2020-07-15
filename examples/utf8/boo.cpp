@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <utf8/utf8.h>
+#include <utf8.h>
 using namespace std;
 int main(int argc, char** argv)
 {

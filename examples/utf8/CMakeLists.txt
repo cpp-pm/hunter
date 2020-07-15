@@ -11,8 +11,8 @@ project(download-utf8)
 
 # DOCUMENTATION_START {
 hunter_add_package(utf8)
-find_package(utf8 CONFIG REQUIRED)
+find_package(utf8cpp CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC utf8::utf8)
+target_link_libraries(boo PUBLIC utf8cpp)
 # DOCUMENTATION_END }
