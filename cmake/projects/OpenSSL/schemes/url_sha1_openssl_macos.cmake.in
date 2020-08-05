@@ -31,7 +31,7 @@ hunter_assert_not_empty_string("@HUNTER_GLOBAL_SCRIPT_DIR@")
 hunter_assert_not_empty_string("@HUNTER_TLS_VERIFY@")
 
 # Supported macOS architectures:
-# i386, x86_64, ppc, ppc64
+# i386, x86_64, ppc, ppc64, arm64
 set(configure_command "./Configure")
 set(configure_architectures @CMAKE_OSX_ARCHITECTURES@)
 
@@ -168,6 +168,8 @@ foreach(arch ${configure_architectures})
     set(configure_arch "darwin-i386-cc")
   elseif("${arch}" STREQUAL "ppc")
     set(configure_arch "darwin-ppc-cc")
+  elseif("${arch}" STREQUAL "arm64")
+    set(configure_arch "darwin64-arm64-cc")
   else()
     hunter_user_error("Could not find the macOS architecture ${arch}. Please update the CMAKE_OSX_ARCHITECTURES option in your toolchain.")
   endif()

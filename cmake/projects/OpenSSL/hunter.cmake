@@ -69,6 +69,29 @@ hunter_add_version(
     PACKAGE_NAME
     OpenSSL
     VERSION
+    "1.1.1g"
+    URL
+    "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1g.tar.gz"
+    SHA1
+    33324ff957edaae8ae575817b456320378da46ff
+)
+
+# NB: Only use this version if you need arm64 support before official release!
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "1.1.1g-p0"
+    URL
+    "https://github.com/cpp-pm/openssl/archive/v1.1.1g-p0.tar.gz"
+    SHA1
+    fb3bc6467d37f7536f5ff7a1ea25552cee899275
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
     "1.1.0"
     URL
     "https://github.com/openssl/openssl/archive/OpenSSL_1_1_0.tar.gz"
