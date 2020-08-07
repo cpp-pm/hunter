@@ -12,6 +12,17 @@ hunter_add_version(
     PACKAGE_NAME
     s3
     VERSION
+    4.1.0-287e4be-p0
+    URL
+    "https://github.com/cpp-pm/libs3/archive/v4.1.0-287e4be-p0.tar.gz"
+    SHA1
+    e79af37884e619141f94e9a102218d824f851e95
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    s3
+    VERSION
     0.0.0-287e4be-p0
     URL
     "https://github.com/hunter-packages/libs3/archive/v0.0.0-287e4be-p0.tar.gz"
