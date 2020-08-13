@@ -12,6 +12,17 @@ hunter_add_version(
     PACKAGE_NAME
     freetype
     VERSION
+    "2.9.1-p3"
+    URL
+    "https://github.com/cpp-pm/freetype/archive/v2.9.1-p3.tar.gz"
+    SHA1
+    310198f66076d88da89428b6db04fc4fd8d19419
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    freetype
+    VERSION
     "2.9.1-p1"
     URL
     "https://github.com/hunter-packages/freetype/archive/v2.9.1-p1.tar.gz"
