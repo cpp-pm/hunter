@@ -12,7 +12,7 @@ abseil
 
 -  `Official <https://github.com/abseil/abseil-cpp>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/abseil/CMakeLists.txt>`__
--  Added by `Rahul Sheth <https://github.com/rbsheth>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
+-  Added by `Rahul Sheth <https://github.com/rbsheth>`__ (`pr-242 <https://github.com/cpp-pm/hunter/pull/242>`__)
 
 .. literalinclude:: /../examples/abseil/CMakeLists.txt
   :language: cmake
