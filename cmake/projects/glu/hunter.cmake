@@ -8,6 +8,17 @@ hunter_add_version(
     PACKAGE_NAME
     glu
     VERSION
+    9.0.1-p1
+    URL
+    "https://github.com/cpp-pm/glu/archive/v9.0.1-p1.tar.gz"
+    SHA1
+    eff93afef33dfc1acd158017f59e37d45ee1a9fc
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    glu
+    VERSION
     9.0.1-p0
     URL
     "https://github.com/cpp-pm/glu/archive/9.0.1-p0.tar.gz"
