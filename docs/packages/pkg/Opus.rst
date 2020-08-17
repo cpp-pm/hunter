@@ -12,7 +12,7 @@ Opus
 
 -  `Official <https://github.com/xiph/opus>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Opus/CMakeLists.txt>`__
--  Added by `drodin <https://github.com/drodin>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
+-  Added by `drodin <https://github.com/drodin>`__ (`pr-245 <https://github.com/cpp-pm/hunter/pull/245>`__)
 
 .. literalinclude:: /../examples/Opus/CMakeLists.txt
   :language: cmake
