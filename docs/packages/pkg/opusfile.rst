@@ -13,7 +13,7 @@ opusfile
 -  `Official <https://github.com/xiph/opusfile>`__
 -  `Hunterized <https://github.com/cpp-pm/opusfile>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/opusfile/CMakeLists.txt>`__
--  Added by `drodin <https://github.com/drodin>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
+-  Added by `drodin <https://github.com/drodin>`__ (`pr-246 <https://github.com/cpp-pm/hunter/pull/246>`__)
 
 .. literalinclude:: /../examples/opusfile/CMakeLists.txt
   :language: cmake
