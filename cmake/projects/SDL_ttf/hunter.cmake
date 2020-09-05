@@ -10,11 +10,22 @@ hunter_add_version(
     PACKAGE_NAME
     SDL_ttf
     VERSION
+    "2.0.15-p0"
+    URL
+    "https://github.com/cpp-pm/SDL_ttf/archive/v2.0.15-p0.tar.gz"
+    SHA1
+    a3342fac71e73f140da6bffc5a30c67ba9cfb826
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    SDL_ttf
+    VERSION
     "2.0.14-p0"
     URL
-    "https://github.com/hunter-packages/SDL_ttf/archive/v2.0.14-p0.tar.gz"
+    "https://github.com/cpp-pm/SDL_ttf_legacy/archive/v2.0.14-p0.tar.gz"
     SHA1
-    cd7f7806b5de657081d558ef1c12033c43522efe
+    be9de6d9eb411e9e0910a26a13cd29d234e51906
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)

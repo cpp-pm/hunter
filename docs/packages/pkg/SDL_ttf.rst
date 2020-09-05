@@ -14,7 +14,7 @@ SDL_ttf
   :alt: Hunter v0.12.35
 
 -  `Official <https://www.libsdl.org/projects/SDL_ttf/>`__
--  `Hunterized <https://github.com/hunter-packages/SDL_ttf>`__
+-  `Hunterized <https://github.com/cpp-pm/SDL_ttf>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/SDL_ttf/CMakeLists.txt>`__
 -  Added by `Dennis Biber <https://github.com/db-tech>`__ (`pr-1251 <https://github.com/ruslo/hunter/pull/1251>`__)
 
