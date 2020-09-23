@@ -21,10 +21,12 @@ include(hunter_status_debug)
 #       Visual Studio 12 2013 -> x86
 #       Visual Studio 12 2013 Win64 -> amd64
 #       Visual Studio 12 2013 ARM -> x86_arm
+#       Visual Studio 15 2017 ARM64 -> x86_arm64
 #     CMake's MSVC_CXX_ARCHITECTURE_ID:
 #       X86 -> x86
 #       x64 -> amd64
 #       ARMV7 -> x86_arm
+#       ARM64 -> x86_arm64
 # * HUNTER_MSVC_VCVARSALL - full path to the 'vcvarsall.bat' script
 
 # This function should work with all generators that provide MSVC compiler:
@@ -90,6 +92,7 @@ macro(hunter_setup_msvc)
     string(COMPARE EQUAL "${_architecture_id}" "X86" _is_x86)
     string(COMPARE EQUAL "${_architecture_id}" "x64" _is_x64)
     string(COMPARE EQUAL "${_architecture_id}" "ARMV7" _is_arm)
+    string(COMPARE EQUAL "${_architecture_id}" "ARM64" _is_arm64)
 
     if(_is_x86)
       set(HUNTER_MSVC_ARCH "x86")
@@ -97,6 +100,8 @@ macro(hunter_setup_msvc)
       set(HUNTER_MSVC_ARCH "amd64")
     elseif(_is_arm)
       set(HUNTER_MSVC_ARCH "x86_arm")
+    elseif(_is_arm64)
+      set(HUNTER_MSVC_ARCH "x86_arm64")
     else()
       hunter_internal_error(
           "Unexpected MSVC_*_ARCHITECTURE_ID: '${_architecture_id}'"
