@@ -28,6 +28,7 @@ hunter_assert_not_empty_string("@HUNTER_PACKAGE_SOURCE_DIR@")
 hunter_assert_not_empty_string("@HUNTER_PACKAGE_INSTALL_PREFIX@")
 # TODO These properties are not set in msys-cxx17 build
 #hunter_assert_not_empty_string("@HUNTER_MSVC_ARCH@")
+#hunter_assert_not_empty_string("@HUNTER_MSVC_ARCH_TARGET@")
 #hunter_assert_not_empty_string("@HUNTER_MSVC_VCVARSALL@")
 hunter_assert_not_empty_string("@HUNTER_INSTALL_PREFIX@")
 hunter_assert_not_empty_string("@HUNTER_TLS_VERIFY@")
@@ -77,13 +78,13 @@ hunter_get_build_flags(
 hunter_setup_msvc()
 
 # Usage: configure.py [options]
-# 
+#
 # Options:
 #   --version                         show program's version number and exit
 #   -h, --help                        show this help message and exit
 #   --verbose                         Show debug messages
 #   --quiet                           Show only warnings and errors
-# 
+#
 #   Target options:
 #     --cpu=CPU                       set the target CPU architecture
 #     --os=OS                         set the target operating system
@@ -116,7 +117,7 @@ hunter_setup_msvc()
 #     --disable-altivec               disable AltiVec intrinsics
 #     --disable-neon                  disable NEON intrinsics
 #     --disable-armv8crypto           disable ARMv8Crypto intrinsics
-# 
+#
 #   Build options:
 #     --with-debug-info               include debug symbols
 #     --with-sanitizers               enable ASan/UBSan checks
@@ -148,14 +149,14 @@ hunter_setup_msvc()
 #     --unsafe-fuzzer-mode            Disable essential checks for testing
 #     --build-fuzzers=TYPE            Build fuzzers (afl, libfuzzer, klee, test)
 #     --with-fuzzer-lib=LIB           additionally link in LIB
-# 
+#
 #   Documentation Options:
 #     --without-documentation         Skip building/installing documentation
 #     --with-sphinx                   Use Sphinx
 #     --with-pdf                      Use Sphinx to generate PDF doc
 #     --with-rst2man                  Use rst2man to generate man page
 #     --with-doxygen                  Use Doxygen
-# 
+#
 #   Module selection:
 #     --module-policy=POL             module policy file (see src/build-
 #                                     data/policy)
@@ -171,7 +172,7 @@ hunter_setup_msvc()
 #     --with-sqlite3                  use sqlite3
 #     --with-zlib                     use zlib
 #     --with-tpm                      use tpm
-# 
+#
 #   Installation options:
 #     --program-suffix=SUFFIX         append string to program names
 #     --library-suffix=SUFFIX         append string to library names
@@ -181,7 +182,7 @@ hunter_setup_msvc()
 #     --libdir=DIR                    set the library install dir
 #     --mandir=DIR                    set the install dir for man pages
 #     --includedir=DIR                set the include file install dir
-# 
+#
 #   Informational:
 #     --list-modules                  list available modules and exit
 #     --list-os-features              list available OS features and exit
@@ -214,7 +215,8 @@ if(ENABLE_MODULES)
   list(APPEND configure_opts --enable-modules=${ENABLE_MODULES})
 endif()
 
-if("${HUNTER_MSVC_ARCH}" STREQUAL "amd64")
+# TODO: Support MSVC ARM / ARM64 here
+if("${HUNTER_MSVC_ARCH_TARGET}" STREQUAL "amd64")
   list(APPEND configure_opts --cpu=x64)
 else()
   list(APPEND configure_opts --cpu=x86)
@@ -235,10 +237,10 @@ if(NOT "${ar}" STREQUAL "")
 endif()
 
 # MSVS="2015" PLATFORM="x86_amd64" TARGET="shared"
-#.\configure.py 
-#--prefix=c:\users\appveyor\appdata\local\temp\1\botan-install 
-#--cc=msvc 
-#--os=windows 
+#.\configure.py
+#--prefix=c:\users\appveyor\appdata\local\temp\1\botan-install
+#--cc=msvc
+#--os=windows
 #--cpu=x64 or --cpu=x86
 #--cc-bin=sccache cl --no-store-vc-rev
 
