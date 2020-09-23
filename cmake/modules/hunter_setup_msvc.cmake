@@ -17,16 +17,32 @@ include(hunter_status_debug)
 #     Command Prompt. See section "Vcvarsall.bat argument":
 #     - http://msdn.microsoft.com/en-us/library/x4d2c09s.aspx
 #     - http://msdn.microsoft.com/library/x4d2c09s%28v=vs.110%29.aspx
+#     First part it host toolset, second is target platform, if they are
+#       the same it is condensed to one part. Chosen based on cmake default
+#       behaviour. See cmake docs:
+#     - https://cmake.org/cmake/help/latest/generator/Visual%20Studio%2015%202017.html#toolset-selection
+#     - https://cmake.org/cmake/help/latest/generator/Visual%20Studio%2016%202019.html#toolset-selection
 #     CMake generator -> HUNTER_MSVC_ARCH example:
-#       Visual Studio 12 2013 -> x86
-#       Visual Studio 12 2013 Win64 -> amd64
-#       Visual Studio 12 2013 ARM -> x86_arm
-#       Visual Studio 15 2017 ARM64 -> x86_arm64
+#       -G "Visual Studio 12 2013" -> x86
+#       -G "Visual Studio 16 2019" -> x86/x64 depending on host platform
+#       -G "Visual Studio 12 2013" -A x64 -> x86_amd64
+#       -G "Visual Studio 12 2013" -A x64 -T "host=x64" -> amd64
+#       -G "Visual Studio 15 2017" -A ARM64 -> x86_arm64
+#       -G "Visual Studio 15 2017" -A ARM64 -T "host=x64" -> amd64_arm64
+#       Note: These last ones are a deprecated style from cmake < v3.1
+#       -G "Visual Studio 12 2013 Win64" -> x86_amd64
+#       -G "Visual Studio 12 2013 ARM" -> x86_arm
 #     CMake's MSVC_CXX_ARCHITECTURE_ID:
 #       X86 -> x86
-#       x64 -> amd64
+#       x64 -> x86_amd64
+#       x64 (with x64 toolset selected) -> amd64
 #       ARMV7 -> x86_arm
 #       ARM64 -> x86_arm64
+# * HUNTER_MSVC_ARCH_HOST - architecture specifier for running on host
+#     Used for building tools which are needed for building, e.g. Boost's
+#     b2 build tool.
+# * HUNTER_MSVC_ARCH_TARGET - architecture specifier for target. Cannot
+#     be used directly, but can be useful for querying target architecture.
 # * HUNTER_MSVC_VCVARSALL - full path to the 'vcvarsall.bat' script
 
 # This function should work with all generators that provide MSVC compiler:
@@ -95,20 +111,43 @@ macro(hunter_setup_msvc)
     string(COMPARE EQUAL "${_architecture_id}" "ARM64" _is_arm64)
 
     if(_is_x86)
-      set(HUNTER_MSVC_ARCH "x86")
+      set(HUNTER_MSVC_ARCH_TARGET "x86")
     elseif(_is_x64)
-      set(HUNTER_MSVC_ARCH "amd64")
+      set(HUNTER_MSVC_ARCH_TARGET "amd64")
     elseif(_is_arm)
-      set(HUNTER_MSVC_ARCH "x86_arm")
+      set(HUNTER_MSVC_ARCH_TARGET "arm")
     elseif(_is_arm64)
-      set(HUNTER_MSVC_ARCH "x86_arm64")
+      set(HUNTER_MSVC_ARCH_TARGET "arm64")
     else()
       hunter_internal_error(
           "Unexpected MSVC_*_ARCHITECTURE_ID: '${_architecture_id}'"
       )
     endif()
 
+    # These strings do not match the MSVC_*_ARCHITECTURE_ID ones (empty string indicates original x86 default)
+    string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "" _host_is_default_x86)
+    string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "x86" _host_is_x86)
+    string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "x64" _host_is_x64)
+
+    if(_host_is_x86 OR _host_is_default_x86)
+      set(HUNTER_MSVC_ARCH_HOST "x86")
+    elseif(_host_is_x64)
+      set(HUNTER_MSVC_ARCH_HOST "amd64")
+    else()
+      hunter_internal_error(
+          "Unexpected CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE: '${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}'"
+      )
+    endif()
+
+    if(HUNTER_MSVC_ARCH_HOST STREQUAL HUNTER_MSVC_ARCH_TARGET)
+      set(HUNTER_MSVC_ARCH "${HUNTER_MSVC_ARCH_HOST}")
+    else()
+      set(HUNTER_MSVC_ARCH "${HUNTER_MSVC_ARCH_HOST}_${HUNTER_MSVC_ARCH_TARGET}")
+    endif()
+
     hunter_status_debug("HUNTER_MSVC_ARCH: ${HUNTER_MSVC_ARCH}")
+    hunter_status_debug("HUNTER_MSVC_ARCH_HOST: ${HUNTER_MSVC_ARCH_HOST}")
+    hunter_status_debug("HUNTER_MSVC_ARCH_TARGET: ${HUNTER_MSVC_ARCH_TARGET}")
 
     set(_hunter_vcvarsall_env "${HUNTER_MSVC_VERSION}0")
     set(_hunter_vcvarsall_env "VS${_hunter_vcvarsall_env}COMNTOOLS")
