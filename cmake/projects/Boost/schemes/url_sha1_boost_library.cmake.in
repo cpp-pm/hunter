@@ -231,6 +231,7 @@ set(
     toolset=${toolset_full_name}
     "--user-config=${boost_user_jam}"
     --with-@HUNTER_PACKAGE_COMPONENT@
+    --abbreviate-paths
 )
 
 if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0 AND NOT USE_CONFIG_FROM_BOOST)
