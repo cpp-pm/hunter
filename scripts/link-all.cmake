@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.12)
 
 string(COMPARE EQUAL "${HUNTER_INSTALL_PREFIX}" "" is_empty)
 if(is_empty)
@@ -45,12 +45,19 @@ if(NOT EXISTS "${PYTHON_LINK_SCRIPT}")
   message(FATAL_ERROR "File not exists: ${PYTHON_LINK_SCRIPT}")
 endif()
 
-find_package(PythonInterp 3 QUIET)
-if(PYTHONINTERP_FOUND)
-  message("Link files using Python: ${PYTHON_EXECUTABLE}")
+execute_process(
+    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_LIST_DIR}/find_python.cmake
+    RESULT_VARIABLE python_found_result
+    OUTPUT_VARIABLE python_path
+    ERROR_VARIABLE python_path
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+if(python_found_result EQUAL "0")
+  message("Link files using Python: ${python_path}")
   set(
       cmd
-      "${PYTHON_EXECUTABLE}"
+      "${python_path}"
       "${PYTHON_LINK_SCRIPT}"
       "--list"
       "${LIST_OF_FILES}"

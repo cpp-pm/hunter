@@ -11,7 +11,7 @@ This module helps to set uploading parameters for
 
 If you want to use GitHub repository
 ``https://github.com/forexample/hunter-cache``
-as a cache server and do uploads using bot ``ingenue`` this can be expressed by
+as a cache server and do uploads using bot ``cpp-pm-bot`` this can be expressed by
 code:
 
 .. code-block:: cmake
@@ -21,7 +21,7 @@ code:
   hunter_upload_password(
       REPO_OWNER "forexample"
       REPO "hunter-cache"
-      USERNAME "ingenue"
+      USERNAME "cpp-pm-bot"
       PASSWORD "very-secured-github-token-here"
   )
 
@@ -35,6 +35,6 @@ E.g. you can read password from environment variable:
   hunter_upload_password(
       REPO_OWNER "forexample"
       REPO "hunter-cache"
-      USERNAME "ingenue"
+      USERNAME "cpp-pm-bot"
       PASSWORD "$ENV{GITHUB_USER_PASSWORD}"
   )

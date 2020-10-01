@@ -1,6 +1,5 @@
 :: Install Python package 'requests'
-pip install requests
-pip install gitpython
+pip install requests gitpython
 
 :: Install latest Polly toolchains and scripts
 C:\msys64\usr\bin\wget.exe https://github.com/cpp-pm/polly/archive/master.zip
@@ -33,10 +32,17 @@ set MSYS_PATH=C:\msys64\usr\bin
 :: Visual Studio 15 2017: Mimic behavior of older versions
 set VS150COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools
 
+:: Visual Studio 16 2019: Mimic behavior of older versions
+set VS160COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools
+
 :: To fix "path too long" error
 if "%TOOLCHAIN:~0,3%"=="vs-" set HUNTER_BINARY_DIR=C:\__BIN
 
 :: Add msbuild to PATH (for vs-14 toolchain, GitHub windows-2016 runner doesn't have VS 2015)
 if "%TOOLCHAIN:~0,5%"=="vs-14" set PATH=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin;%PATH%
 
-python jenkins.py
+if "%BRANCH_NAME%" == "master" (
+    python jenkins.py --upload
+) else (
+    python jenkins.py
+)

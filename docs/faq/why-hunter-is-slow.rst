@@ -51,7 +51,7 @@ reduce the size from 70.7 MB to 17.7 MB, the unpack time dropped to 8 seconds.
 As usual downloading from cache is the best option, e.g.  Boost.system Release
 + Debug archive has 154 KB size:
 
-* https://github.com/ingenue/hunter-cache/releases/download/cache-234d975/234d9755a85b09bcd2f266d2620707ccd514020e.tar.bz2
+* https://github.com/cpp-pm/hunter-cache/releases/download/cache-234d975/234d9755a85b09bcd2f266d2620707ccd514020e.tar.bz2
 
 .. _id calculation:
 

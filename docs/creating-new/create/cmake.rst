@@ -16,19 +16,19 @@ Examples of such packages:
 
   * https://github.com/google/flatbuffers
   * See `flatbuffers/hunter.cmake <https://github.com/cpp-pm/hunter/blob/08a6cbcf06bb5934b6b18aa1f2028cf56a1063b7/cmake/projects/flatbuffers/hunter.cmake#L23-L32>`__
-  * Testing table: `AppVeyor <https://ci.appveyor.com/project/ingenue/hunter/build/1.0.3215>`__, `Travis <https://travis-ci.org/ingenue/hunter/builds/326881125>`__
+  * Testing table: `AppVeyor <https://ci.appveyor.com/project/cpp-pm/hunter/build/1.0.3215>`__, `Travis <https://travis-ci.org/cpp-pm/hunter/builds/326881125>`__
 
 * :ref:`pkg.rocksdb`
 
   * https://github.com/facebook/rocksdb
   * See `rocksdb/hunter.cmake <https://github.com/cpp-pm/hunter/blob/08a6cbcf06bb5934b6b18aa1f2028cf56a1063b7/cmake/projects/rocksdb/hunter.cmake#L19-L23>`__
-  * Testing table: `Travis <https://travis-ci.org/ingenue/hunter/builds/326905326>`__
+  * Testing table: `Travis <https://travis-ci.org/cpp-pm/hunter/builds/326905326>`__
 
 * :ref:`pkg.nlohmann_json`
 
   * https://github.com/nlohmann/json
   * See `nlohmann_json/hunter.cmake <https://github.com/cpp-pm/hunter/blob/08a6cbcf06bb5934b6b18aa1f2028cf56a1063b7/cmake/projects/nlohmann_json/hunter.cmake#L53-L58>`__
-  * Testing table: `AppVeyor <https://ci.appveyor.com/project/ingenue/hunter/build/1.0.3217>`__, `Travis <https://travis-ci.org/ingenue/hunter/builds/326883658>`__
+  * Testing table: `AppVeyor <https://ci.appveyor.com/project/cpp-pm/hunter/build/1.0.3217>`__, `Travis <https://travis-ci.org/cpp-pm/hunter/builds/326883658>`__
 
 Default behavior
 ================

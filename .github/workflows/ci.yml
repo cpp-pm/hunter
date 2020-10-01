@@ -55,6 +55,7 @@ jobs:
     env:
       TOOLCHAIN: ${{ matrix.toolchain }}
       PROJECT_DIR: examples/${{ matrix.example }}
+      GITHUB_USER_PASSWORD: ${{ secrets.CPP_PM_BOT_TOKEN }}
 
     steps:
 
@@ -68,17 +69,34 @@ jobs:
       with:
         python-version: ${{ matrix.python }}
 
+    - name: Set up Python environment variable (Unix)
+      if: runner.os != 'Windows'
+      run: echo "HUNTER_PYTHON_LOCATION=$pythonLocation" >> $GITHUB_ENV
+
+    - name: Set up Python environment variable (Windows)
+      if: runner.os == 'Windows'
+      run: echo "HUNTER_PYTHON_LOCATION=$env:pythonLocation" | Out-File -Append -FilePath $env:GITHUB_ENV -Encoding utf8
+
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]${GITHUB_REF#refs/heads/}"
+      id: extract_branch
+
     - name: Upgrade pip
       run: |
         python -m pip install --upgrade pip
 
     - name: Build on Unix
       if: runner.os != 'Windows'
+      env:
+        BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
       run: |
         bash ${{ matrix.script }}
 
     - name: Build on Windows
       if: runner.os == 'Windows'
+      env:
+        BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
       run: |
         ${{ matrix.script }}
 

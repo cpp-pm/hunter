@@ -175,7 +175,7 @@ def run():
       'HUNTER_SUPPRESS_LIST_OF_FILES=ON',
       'HUNTER_ROOT={}'.format(hunter_root),
       'TESTING_URL={}'.format(hunter_url),
-      'TESTING_SHA1={}'.format(hunter_sha1)
+      'TESTING_SHA1={}'.format(hunter_sha1),
   ]
 
   if not parsed_args.nocreate:
@@ -205,6 +205,9 @@ def run():
   print(']')
 
   subprocess.check_call(args)
+
+  cache_retry_count = 0
+  max_cache_retry_count = 5
 
   if parsed_args.upload:
     seconds = 60
@@ -236,7 +239,7 @@ def run():
         'HUNTER_SUPPRESS_LIST_OF_FILES=ON',
         'HUNTER_ROOT={}'.format(hunter_root),
         'TESTING_URL={}'.format(hunter_url),
-        'TESTING_SHA1={}'.format(hunter_sha1)
+        'TESTING_SHA1={}'.format(hunter_sha1),
     ]
     if not verbose:
       args += ['--discard', '10']
@@ -247,7 +250,13 @@ def run():
       print('  `{}`'.format(i))
     print(']')
 
-    subprocess.check_call(args)
+    while subprocess.call(args) and cache_retry_count < max_cache_retry_count:
+      print('Cache-only sanity check attempt {} failed...'.format(cache_retry_count))
+      time.sleep(seconds)
+      cache_retry_count += 1
+
+    if cache_retry_count >= max_cache_retry_count:
+      exit(1)
 
 if __name__ == "__main__":
   run()

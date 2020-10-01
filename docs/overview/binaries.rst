@@ -25,18 +25,18 @@ Details
 =======
 
 The default server with cached binaries is
-`ingenue/hunter-cache <https://github.com/ingenue/hunter-cache>`__.
-Archives are saved as GitHub `release assets <https://github.com/ingenue/hunter-cache/releases>`__
-and each is associated with a git `tag <https://github.com/ingenue/hunter-cache/tags>`__.
+`cpp-pm/hunter-cache <https://github.com/cpp-pm/hunter-cache>`__.
+Archives are saved as GitHub `release assets <https://github.com/cpp-pm/hunter-cache/releases>`__
+and each is associated with a git `tag <https://github.com/cpp-pm/hunter-cache/tags>`__.
 Available packages can be queried using an ``upload.*`` HTTP query from the GitHub branches URL:
 
-* `ingenue/hunter@upload. <https://github.com/ingenue/hunter/branches/all?utf8=%E2%9C%93&query=upload.>`__
+* `cpp-pm/hunter@upload. <https://github.com/cpp-pm/hunter/branches/all?utf8=%E2%9C%93&query=upload.>`__
 
 Note that some toolchains may not work for specific packages. Check the
 status in the Travis CI job details. For example, Qt is broken for the iOS armv7s architecture, so
 we have to use the ``ios-*-wo-armv7s`` toolchains:
 
-* https://travis-ci.org/ingenue/hunter/builds/140158080
+* https://travis-ci.org/cpp-pm/hunter/builds/140158080
 
 Binaries/headers are stored in archives and archives are the result of packing the
 ``CMAKE_INSTALL_PREFIX`` directory produced by the
@@ -48,7 +48,7 @@ functionality but is extended for non-CMake packages too.
 
   > mkdir temp-dir
   > cd temp-dir
-  [temp-dir]> wget https://github.com/ingenue/hunter-cache/releases/download/cache/aaee852f00aa3a2a884281e8920315a77fb14465.tar.bz2
+  [temp-dir]> wget https://github.com/cpp-pm/hunter-cache/releases/download/cache/aaee852f00aa3a2a884281e8920315a77fb14465.tar.bz2
   [temp-dir]> tar xf aaee852f00aa3a2a884281e8920315a77fb14465.tar.bz2
   [temp-dir]> ls include/gtest/gtest.h
   include/gtest/gtest.h

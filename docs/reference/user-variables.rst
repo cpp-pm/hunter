@@ -200,14 +200,14 @@ Using two servers:
 
   set(
       HUNTER_CACHE_SERVERS
-      "https://github.com/elucideye/hunter-cache;https://github.com/ingenue/hunter-cache"
+      "https://github.com/elucideye/hunter-cache;https://github.com/cpp-pm/hunter-cache"
       CACHE
       STRING
       "Hunter cache servers"
   )
   HunterGate(URL "..." SHA1 "...")
 
-* Default: https://github.com/ingenue/hunter-cache
+* Default: https://github.com/cpp-pm/hunter-cache
 
 .. seealso::
 

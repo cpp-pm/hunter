@@ -8,7 +8,7 @@ project(TestModuleHunterDownloadCacheMetaFile)
 
 include(hunter_download_cache_meta_file)
 
-set(HUNTER_CACHE_SERVERS "https://github.com/ingenue/hunter-cache")
+set(HUNTER_CACHE_SERVERS "https://github.com/cpp-pm/hunter-cache")
 set(HUNTER_CACHED_ROOT "${CMAKE_CURRENT_BINARY_DIR}/_HUNTER")
 
 set(local_done_good "${HUNTER_CACHED_ROOT}/_Base/Cache/meta/db260dd/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/da39a3e/CACHE.DONE")
@@ -42,7 +42,7 @@ endif()
 
 ### File already downloaded, ok even server is bad
 
-set(HUNTER_CACHE_SERVERS "https://github.com/ingenue/bad-hunter-cache")
+set(HUNTER_CACHE_SERVERS "https://github.com/cpp-pm/bad-hunter-cache")
 
 hunter_download_cache_meta_file(LOCAL "${local_sha1_good}" DONE "${local_done_good}")
 
@@ -59,7 +59,7 @@ endif()
 file(REMOVE "${local_done_good}")
 file(REMOVE "${local_sha1_good}")
 
-set(HUNTER_CACHE_SERVERS "https://github.com/ingenue/bad-hunter-cache")
+set(HUNTER_CACHE_SERVERS "https://github.com/cpp-pm/bad-hunter-cache")
 
 hunter_download_cache_meta_file(LOCAL "${local_sha1_good}" DONE "${local_done_good}")
 

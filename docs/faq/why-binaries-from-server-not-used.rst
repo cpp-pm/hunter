@@ -16,7 +16,7 @@ you will see ``Cache miss`` message and package will be build locally:
   :emphasize-lines: 5
 
   -- [hunter *** DEBUG *** ...] Downloading file (try #1 of 10):
-  -- [hunter *** DEBUG *** ...]   https://raw.githubusercontent.com/ingenue/hunter-cache/master/aa85dd8/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.DONE
+  -- [hunter *** DEBUG *** ...]   https://raw.githubusercontent.com/cpp-pm/hunter-cache/master/aa85dd8/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.DONE
   -- [hunter *** DEBUG *** ...]   -> /.../_Base/Cache/meta/aa85dd8/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.DONE
   -- [hunter *** DEBUG *** ...] File not found
   -- [hunter *** DEBUG *** ...] Cache miss (no basic dependencies info found: /.../_Base/Cache/meta/aa85dd8/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.DONE)
@@ -74,7 +74,7 @@ List of servers used (`HUNTER_CACHE_SERVERS <https://github.com/ruslo/hunter/wik
 .. code-block:: none
 
   -- [hunter *** DEBUG *** ...] List of cache servers:
-  -- [hunter *** DEBUG *** ...]   * https://github.com/ingenue/hunter-cache
+  -- [hunter *** DEBUG *** ...]   * https://github.com/cpp-pm/hunter-cache
 
 Meta information not found on server (cache miss):
 
@@ -82,7 +82,7 @@ Meta information not found on server (cache miss):
   :emphasize-lines: 5
 
   -- [hunter *** DEBUG *** ...] Try to download file (try #0 of 3):
-  -- [hunter *** DEBUG *** ...]   https://raw.githubusercontent.com/ingenue/hunter-cache/master/2695528/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.info
+  -- [hunter *** DEBUG *** ...]   https://raw.githubusercontent.com/cpp-pm/hunter-cache/master/2695528/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.info
   -- [hunter *** DEBUG *** ...]   -> /.../_Base/Cache/meta/2695528/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.info
   -- [hunter *** DEBUG *** ...] File not found
   -- [hunter *** DEBUG *** ...] Cache miss (no basic dependencies info found: /.../_Base/Cache/meta/2695528/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.DONE)
@@ -93,7 +93,7 @@ Meta information found on server (cache hit):
   :emphasize-lines: 4
 
   -- [hunter *** DEBUG *** ...] Try to download file (try #0 of 3):
-  -- [hunter *** DEBUG *** ...]   https://raw.githubusercontent.com/ingenue/hunter-cache/master/2695528/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/da39a3e/cache.sha1
+  -- [hunter *** DEBUG *** ...]   https://raw.githubusercontent.com/cpp-pm/hunter-cache/master/2695528/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/da39a3e/cache.sha1
   -- [hunter *** DEBUG *** ...]   -> /.../_Base/Cache/meta/2695528/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/da39a3e/cache.sha1
   -- [hunter] Cache HIT: GTest
   -- [hunter] Cache info: /.../_Base/Cache/meta/2695528/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/da39a3e/cache.sha1
@@ -104,7 +104,7 @@ Downloading archive with binaries:
   :emphasize-lines: 2, 5
 
   -- [hunter *** DEBUG *** ...] Try to download file (try #0 of 3):
-  -- [hunter *** DEBUG *** ...]   https://github.com/ingenue/hunter-cache/releases/download/cache/da62fc35901e07d30db7a1c19b7358855978e11f.tar.bz2
+  -- [hunter *** DEBUG *** ...]   https://github.com/cpp-pm/hunter-cache/releases/download/cache/da62fc35901e07d30db7a1c19b7358855978e11f.tar.bz2
   -- [hunter *** DEBUG *** ...]   -> /.../_Base/Cache/raw/da62fc35901e07d30db7a1c19b7358855978e11f.tar.bz2
   -- [hunter *** DEBUG *** ...] Unpacking:
   -- [hunter *** DEBUG *** ...]   /.../_Base/Cache/raw/da62fc35901e07d30db7a1c19b7358855978e11f.tar.bz2
@@ -123,14 +123,14 @@ investigate problem:
 
 .. code-block:: shell
 
-  > git clone https://github.com/ingenue/hunter-cache
+  > git clone https://github.com/cpp-pm/hunter-cache
 
 Information about missing cache entry:
 
 .. code-block:: none
 
   -- [hunter *** DEBUG *** ...] Downloading file (try #1 of 10):
-  -- [hunter *** DEBUG *** ...]   https://raw.githubusercontent.com/ingenue/hunter-cache/master/aa85dd8/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.DONE
+  -- [hunter *** DEBUG *** ...]   https://raw.githubusercontent.com/cpp-pm/hunter-cache/master/aa85dd8/GTest/1.8.0-hunter-p2/93148cb/da39a3e/a49b0e5/356a192/basic-deps.DONE
 
 First ``aa85dd8`` id is about toolchain. You can find the path to toolchain info
 in logs:
@@ -151,7 +151,7 @@ You can see that there is no ``aa85dd8`` entry in cache:
   > ls hunter-cache/aa85dd8
   ls: cannot access 'hunter-cache/aa85dd8': No such file or directory
 
-However in `Travis build log <https://travis-ci.org/ingenue/hunter/jobs/154160109>`__
+However in `Travis build log <https://travis-ci.org/cpp-pm/hunter/jobs/154160109>`__
 ``toolchain-id`` is ``8928885``:
 
 .. code-block:: shell

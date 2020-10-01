@@ -8,7 +8,7 @@ project(TestModuleHunterDownloadCacheRawFile)
 
 include(hunter_download_cache_raw_file)
 
-set(HUNTER_CACHE_SERVERS "https://github.com/ingenue/hunter-cache")
+set(HUNTER_CACHE_SERVERS "https://github.com/cpp-pm/hunter-cache")
 set(HUNTER_CACHED_ROOT "${CMAKE_CURRENT_BINARY_DIR}/_HUNTER")
 
 set(fromserver "${HUNTER_CACHED_ROOT}/from.server")
@@ -34,7 +34,7 @@ endif()
 
 ### File already downloaded, ok even server is bad
 
-set(HUNTER_CACHE_SERVERS "https://github.com/ingenue/bad-hunter-cache")
+set(HUNTER_CACHE_SERVERS "https://github.com/cpp-pm/bad-hunter-cache")
 
 hunter_download_cache_raw_file(LOCAL "${local_good}" SHA1 "${sha1_good}" FROMSERVER "${fromserver}")
 
@@ -46,7 +46,7 @@ endif()
 
 file(REMOVE "${local_good}")
 
-set(HUNTER_CACHE_SERVERS "https://github.com/ingenue/bad-hunter-cache")
+set(HUNTER_CACHE_SERVERS "https://github.com/cpp-pm/bad-hunter-cache")
 
 hunter_download_cache_raw_file(LOCAL "${local_good}" SHA1 "${sha1_good}" FROMSERVER "${fromserver}")
 

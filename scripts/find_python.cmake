@@ -1,9 +1,13 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.12)
 
-find_package(PythonInterp 3 QUIET)
+if(DEFINED ENV{HUNTER_PYTHON_LOCATION})
+  set(Python_ROOT_DIR $ENV{HUNTER_PYTHON_LOCATION})
+endif()
 
-if(NOT PYTHONINTERP_FOUND)
+find_package(Python COMPONENTS Interpreter QUIET)
+
+if(NOT Python_Interpreter_FOUND)
   message(FATAL_ERROR "Python not found")
 endif()
 
-message(${PYTHON_EXECUTABLE})
+message(${Python_EXECUTABLE})

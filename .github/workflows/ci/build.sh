@@ -1,6 +1,5 @@
 # Install Python package 'requests'
-pip install requests
-pip install gitpython
+pip install requests gitpython
 
 # Install latest Polly toolchains and scripts
 wget https://github.com/cpp-pm/polly/archive/master.zip
@@ -27,4 +26,8 @@ if [[ "$TOOLCHAIN" =~ "ios-nocodesign-13-2" ]]; then
 fi
 
 # Run build script
-python jenkins.py
+if [[ "$BRANCH_NAME" == "master" ]]; then
+    python jenkins.py --upload
+else
+    python jenkins.py
+fi

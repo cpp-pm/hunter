@@ -1,6 +1,6 @@
 hunter_upload_password(
-    REPO_OWNER "ingenue"
+    REPO_OWNER "cpp-pm"
     REPO "hunter-cache"
-    USERNAME "ingenue"
+    USERNAME "cpp-pm-bot"
     PASSWORD "$ENV{GITHUB_USER_PASSWORD}"
 )
