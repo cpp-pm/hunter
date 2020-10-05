@@ -4,15 +4,6 @@
 * I've followed [this guide](https://hunter.readthedocs.io/en/latest/creating-new/create/cmake.html)
   step by step carefully. **[Yes|No]**
 
-* I've tested this package remotely and have excluded all broken builds.
-  Here is the links to the Travis/AppVeyor with status "All passed":
-
-  * https://ci.appveyor.com/project/<username>/hunter/build/<build-number>
-  * https://travis-ci.org/<username>/hunter/builds/<build-number>
-
-* I have submitted CI configs to https://github.com/cpp-pm/hunter-testing targeting `pkg.template` branch,
-  see this merged pull request https://github.com/cpp-pm/hunter-testing/pull/<number>
-
 <!--- Remove next line if there is no corresponding "New package" issue. -->
 * My change will resolve this "New package" request: https://github.com/cpp-pm/hunter/issues/<number>
 
@@ -25,15 +16,15 @@
 * I've followed [this guide](https://hunter.readthedocs.io/en/latest/creating-new/update.html)
   step by step carefully. **[Yes|No]**
 
-* I've tested this package remotely and have excluded all broken builds.
-  Here is the links to the Travis/AppVeyor with status "All passed":
+<!--- Remove next line if this update doesn't break toolchains -->
+* This update will break a few toolchains.
+- Toolchain 1
+- Toolchain 2
 
-  * https://ci.appveyor.com/project/<username>/hunter/build/<build-number>
-  * https://travis-ci.org/<username>/hunter/builds/<build-number>
-
-<!--- Remove next line if this update doesn't break old toolchains -->
-* This update will break few old toolchains.
-  They are excluded in this pull request: https://github.com/cpp-pm/hunter-testing/pull/<number>
+<!--- Remove next line if this update doesn't fix toolchains -->
+* This update will fix a few toolchains.
+- Toolchain 1
+- Toolchain 2
 
 ---
 <!--- END -->

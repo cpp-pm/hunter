@@ -175,7 +175,7 @@ def run():
       'HUNTER_SUPPRESS_LIST_OF_FILES=ON',
       'HUNTER_ROOT={}'.format(hunter_root),
       'TESTING_URL={}'.format(hunter_url),
-      'TESTING_SHA1={}'.format(hunter_sha1),
+      'TESTING_SHA1={}'.format(hunter_sha1)
   ]
 
   if not parsed_args.nocreate:
@@ -239,7 +239,7 @@ def run():
         'HUNTER_SUPPRESS_LIST_OF_FILES=ON',
         'HUNTER_ROOT={}'.format(hunter_root),
         'TESTING_URL={}'.format(hunter_url),
-        'TESTING_SHA1={}'.format(hunter_sha1),
+        'TESTING_SHA1={}'.format(hunter_sha1)
     ]
     if not verbose:
       args += ['--discard', '10']
