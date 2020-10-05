@@ -18,13 +18,13 @@
 
 <!--- Remove next line if this update doesn't break toolchains -->
 * This update will break a few toolchains.
-- Toolchain 1
-- Toolchain 2
+  - Toolchain 1
+  - Toolchain 2
 
 <!--- Remove next line if this update doesn't fix toolchains -->
 * This update will fix a few toolchains.
-- Toolchain 1
-- Toolchain 2
+  - Toolchain 1
+  - Toolchain 2
 
 ---
 <!--- END -->
