@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2018, Ruslan Baratov
+# Copyright (c) 2013-2020, Ruslan Baratov, Rahul Sheth
 # All rights reserved.
 
 # Do not place header guards here
@@ -315,6 +315,7 @@ hunter_default_version(jaegertracing VERSION 0.4.1)
 hunter_default_version(jansson VERSION 2.11.0)
 hunter_default_version(jasper VERSION 2.0.14-p3)
 hunter_default_version(jo_jpeg VERSION 0.0.1)
+hunter_default_version(jpeg-compressor VERSION 0.0.0-aeb7d3b-p0)
 
 if(MSVC_VERSION LESS 1600)
   # for VS10 - version without support C++11
