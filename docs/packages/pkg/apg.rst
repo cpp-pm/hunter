@@ -13,7 +13,7 @@ apg
 -  `Official <https://github.com/capnramses/apg>`__
 -  `Hunterized <https://github.com/cpp-pm/apg>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/apg/CMakeLists.txt>`__
--  Added by `Rahul Sheth <https://github.com/rbsheth>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/268>`__)
+-  Added by `Rahul Sheth <https://github.com/rbsheth>`__ (`pr-268 <https://github.com/cpp-pm/hunter/pull/268>`__)
 
 .. literalinclude:: /../examples/apg/CMakeLists.txt
   :language: cmake
