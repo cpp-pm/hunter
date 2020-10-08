@@ -15,7 +15,7 @@ basis_universal
 -  `Official <https://github.com/BinomialLLC/basis_universal>`__
 -  `Hunterized <https://github.com/cpp-pm/basis_universal>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/basis_universal/CMakeLists.txt>`__
--  Added by `Rahul Sheth <https://github.com/rbsheth>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
+-  Added by `Rahul Sheth <https://github.com/rbsheth>`__ (`pr-273 <https://github.com/cpp-pm/hunter/pull/273>`__)
 
 .. literalinclude:: /../examples/basis_universal/CMakeLists.txt
   :language: cmake
