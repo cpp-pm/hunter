@@ -7,6 +7,7 @@ include(hunter_add_version)
 include(hunter_cacheable)
 include(hunter_download)
 include(hunter_pick_scheme)
+include(hunter_cmake_args)
 
 hunter_add_version(
     PACKAGE_NAME
@@ -18,6 +19,14 @@ hunter_add_version(
     SHA1
     36971ba52c51ba42d65c6fff6a93b52a00bfdba3
 )
+
+if(ANDROID OR IOS OR _hunter_windows_store)
+  hunter_cmake_args(
+      basis_universal
+      CMAKE_ARGS
+        BASISU_BUILD_TOOL=OFF
+  )
+endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(basis_universal)
