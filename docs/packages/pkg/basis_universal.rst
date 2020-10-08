@@ -10,7 +10,7 @@
 .. _pkg.basis_universal:
 
 basis_universal
-===
+===============
 
 -  `Official <https://github.com/BinomialLLC/basis_universal>`__
 -  `Hunterized <https://github.com/cpp-pm/basis_universal>`__
