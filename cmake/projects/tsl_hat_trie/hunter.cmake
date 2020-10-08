@@ -16,7 +16,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/hat-trie/archive/v0.6.0-1739fa1-p0.tar.gz"
     SHA1
-    2c1710a3e2fa46b9ff97ac92cad7da7da00cff56
+    ef3f4518d5463779088c1a6ae4772630e6e47b53
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
