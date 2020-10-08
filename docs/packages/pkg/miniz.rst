@@ -8,12 +8,11 @@
 .. _pkg.miniz:
 
 miniz
-===
+=====
 
 -  `Official <https://github.com/richgel999/miniz>`__
--  `Hunterized <https://github.com/cpp-pm/miniz>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/miniz/CMakeLists.txt>`__
--  Added by `Rahul Sheth <https://github.com/rbsheth>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
+-  Added by `Rahul Sheth <https://github.com/rbsheth>`__ (`pr-271 <https://github.com/cpp-pm/hunter/pull/271>`__)
 
 .. literalinclude:: /../examples/miniz/CMakeLists.txt
   :language: cmake
