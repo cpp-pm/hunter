@@ -13,11 +13,11 @@ hunter_add_version(
     PACKAGE_NAME
     basis_universal
     VERSION
-    1.12-f80f8dd-p1
+    1.12-f80f8dd-p2
     URL
-    "https://github.com/cpp-pm/basis_universal/archive/v1.12-f80f8dd-p1.tar.gz"
+    "https://github.com/cpp-pm/basis_universal/archive/v1.12-f80f8dd-p2.tar.gz"
     SHA1
-    c0ba00a6ba8db4a898281c3d7374afb7fdb150ca
+    e2ec4b09138a18b5f4c475fdcff39175b2077c05
 )
 
 if(ANDROID OR IOS OR _hunter_windows_store)
