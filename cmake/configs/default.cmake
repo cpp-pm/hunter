@@ -318,6 +318,7 @@ hunter_default_version(jansson VERSION 2.11.0)
 hunter_default_version(jasper VERSION 2.0.14-p3)
 hunter_default_version(jo_jpeg VERSION 0.0.1)
 hunter_default_version(jpeg-compressor VERSION 0.0.0-aeb7d3b-p0)
+hunter_default_version(jsmn VERSION 1.1.0-053d3cd-p0)
 
 if(MSVC_VERSION LESS 1600)
   # for VS10 - version without support C++11
