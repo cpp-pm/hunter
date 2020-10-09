@@ -22,5 +22,5 @@ find_package(meshoptimizer CONFIG REQUIRED)
 #   meshoptimizer::demo (if MESHOPT_BUILD_DEMO=ON)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC meshoptimizer::libgltfpack)
+target_link_libraries(boo PUBLIC meshoptimizer::meshoptimizer)
 # DOCUMENTATION_END }
