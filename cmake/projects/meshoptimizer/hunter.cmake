@@ -20,13 +20,23 @@ hunter_add_version(
     d8e23cf64352a62a85ff10c7b4a0638231643a24
 )
 
-hunter_cmake_args(
+if(ANDROID OR IOS)
+  hunter_cmake_args(
     meshoptimizer
     CMAKE_ARGS
-        MESHOPT_BUILD_DEMO=OFF
-        MESHOPT_BUILD_GLTFPACK=ON
-        MESHOPT_BUILD_SHARED_LIBS=OFF
-)
+      MESHOPT_BUILD_DEMO=OFF
+      MESHOPT_BUILD_GLTFPACK=ON
+      MESHOPT_BUILD_SHARED_LIBS=OFF
+  )
+else()
+  hunter_cmake_args(
+    meshoptimizer
+    CMAKE_ARGS
+      MESHOPT_BUILD_DEMO=OFF
+      MESHOPT_BUILD_GLTFPACK=OFF
+      MESHOPT_BUILD_SHARED_LIBS=OFF
+  )
+endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(meshoptimizer)
