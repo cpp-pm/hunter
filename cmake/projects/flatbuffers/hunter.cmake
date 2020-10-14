@@ -36,16 +36,28 @@ hunter_add_version(
     flatbuffers
     VERSION
     1.10.0
-    URL 
+    URL
     "https://github.com/google/flatbuffers/archive/v1.10.0.tar.gz"
     SHA1
     93b922687fe19cff6221e0d35a00879d668b45ab
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    flatbuffers
+    VERSION
+    1.12.0
+    URL
+    "https://github.com/google/flatbuffers/archive/v1.12.0.tar.gz"
+    SHA1
+    8c047d1d843a29072702ee09ec7ecbce00636433
+)
+
 hunter_cmake_args(
     flatbuffers
     CMAKE_ARGS
-        FLATBUFFERS_BUILD_FLATC=OFF
+        FLATBUFFERS_BUILD_FLATC=ON
+        FLATBUFFERS_STATIC_FLATC=ON
         FLATBUFFERS_BUILD_FLATHASH=OFF
         FLATBUFFERS_BUILD_TESTS=OFF
 )
