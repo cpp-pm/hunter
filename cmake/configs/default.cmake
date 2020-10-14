@@ -498,7 +498,7 @@ else()
   hunter_default_version(spdlog VERSION 1.8.0-p1)
 endif()
 
-hunter_default_version(spirv-cross VERSION 20190906)
+hunter_default_version(spirv-cross VERSION 20200917)
 hunter_default_version(sqlite3 VERSION 3.30.1-p0)
 hunter_default_version(sse2neon VERSION 1.0.0-p0)
 hunter_default_version(stanhull VERSION 0.0.1)
