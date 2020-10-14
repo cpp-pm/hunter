@@ -17,6 +17,17 @@ hunter_add_version(
     PACKAGE_NAME
     Eigen
     VERSION
+    "3.3.8"
+    URL
+    "https://gitlab.com/libeigen/eigen/-/archive/3.3.8/eigen-3.3.8.tar.gz"
+    SHA1
+    aba0afb30cfbc4a4b0ce03fb2ee658ff7f674301
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Eigen
+    VERSION
     "3.3.8-b11f817"
     URL
     "https://gitlab.com/libeigen/eigen/-/archive/b11f817bcff04276f3024d6780f56a137968b81a/eigen-b11f817bcff04276f3024d6780f56a137968b81a.tar.gz"
