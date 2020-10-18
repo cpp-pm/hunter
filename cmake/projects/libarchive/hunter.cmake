@@ -25,12 +25,13 @@ hunter_cmake_args(
     libarchive
     CMAKE_ARGS
     PKGCONFIG_EXPORT_TARGETS=libarchive
+    EXTRA_FLAGS=--without-iconv
 )
 
 hunter_cacheable(libarchive)
 hunter_download(
     PACKAGE_NAME libarchive
-    PACKAGE_INTERNAL_DEPS_ID "2"
+    PACKAGE_INTERNAL_DEPS_ID "1"
     PACKAGE_UNRELOCATABLE_TEXT_FILES
     "lib/libarchive.la"
     "lib/pkgconfig/libarchive.pc"

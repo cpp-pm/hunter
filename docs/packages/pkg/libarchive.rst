@@ -5,7 +5,7 @@
 .. index::
    single: compression ; libarchive
 
-  .. _pkg.libarchive:
+.. _pkg.libarchive:
 
 libarchive
 ==========
