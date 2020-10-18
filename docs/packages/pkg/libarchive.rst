@@ -1,6 +1,7 @@
 .. spelling::
 
     cpp
+    libarchive
 
 .. index::
    single: compression ; libarchive
