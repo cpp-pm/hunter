@@ -1,0 +1,20 @@
+.. spelling::
+
+    cpp
+
+.. index::
+   single: compression ; libarchive
+
+  .. _pkg.libarchive:
+
+libarchive
+==========
+
+-  `Official <https://github.com/libarchive/libarchive>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/libarchive/CMakeLists.txt>`__
+-  Added by `Timothy Stack <https://github.com/tstack>`__ (`pr-NNN <https://github.com/cpp-pm/hunter/pull/NNN>`__)
+
+.. literalinclude:: /../examples/libarchive/CMakeLists.txt
+  :language: cmake
+  :start-after: # DOCUMENTATION_START {
+  :end-before: # DOCUMENTATION_END }
