@@ -1,6 +1,7 @@
 .. spelling::
 
   freetype
+  opengl
   shaders
 
 Graphics 2D/3D
@@ -9,6 +10,7 @@ Graphics 2D/3D
  - :ref:`pkg.aglet` - Tiny cross platform (headless) OpenGL context creation
  - :ref:`pkg.Assimp` - portable Open Source library to import various well-known 3D model formats in a uniform manner
  - :ref:`pkg.freetype` - render freetype fonts
+ - :ref:`pkg.freetype-gl` - render freetype fonts in opengl
  - :ref:`pkg.glew` - The OpenGL Extension Wrangler Library
  - :ref:`pkg.imgui` - Immediate-mode, bloat-free graphical user interface library for C++ 
  - :ref:`pkg.mojoshader` - MojoShader is a library to work with Direct3D shaders on alternate 3D APIs and non-Windows platforms
