@@ -27,7 +27,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/tinyexr/archive/v1.0.0-297e645-p1.tar.gz"
     SHA1
-    0dc5f85ffc07120c46227c74a32118663a26e25f
+    d977a698aadc7f48a9e6f7b1a798ae58ef85428a
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
