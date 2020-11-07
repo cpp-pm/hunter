@@ -19,6 +19,17 @@ hunter_add_version(
     7d17e84ddd7ba48b11ab27104bcb92222bb2ef9f
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    tinyexr
+    VERSION
+    1.0.0-297e645-p1
+    URL
+    "https://github.com/cpp-pm/tinyexr/archive/v1.0.0-297e645-p1.tar.gz"
+    SHA1
+    0dc5f85ffc07120c46227c74a32118663a26e25f
+)
+
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(tinyexr)
 hunter_download(PACKAGE_NAME tinyexr)
