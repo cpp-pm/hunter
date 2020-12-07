@@ -164,11 +164,11 @@ hunter_add_version(
     PACKAGE_NAME
     Protobuf
     VERSION
-    "3.14.0-p0"
+    "3.14.0-4a09d77-p0"
     URL
-    "https://github.com/cpp-pm/protobuf/archive/v3.14.0-p0.tar.gz"
+    "https://github.com/cpp-pm/protobuf/archive/v3.14.0-4a09d77-p0.tar.gz"
     SHA1
-    34c89ccaf0e74f2677d551068ca25cea50055f59
+    1fc88a52c9c37a22dff31e8f4ef399bc540633d2
 )
 
 string(
@@ -209,3 +209,4 @@ endif()
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(Protobuf)
 hunter_download(PACKAGE_NAME Protobuf)
+
