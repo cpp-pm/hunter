@@ -118,7 +118,7 @@ hunter_default_version(PROJ4 VERSION 5.0.0)
 hunter_default_version(PhysUnits VERSION 1.1.0-p0)
 hunter_default_version(PocoCpp VERSION 1.10.1-p0)
 hunter_default_version(PostgreSQL VERSION 10.0.0)
-hunter_default_version(Protobuf VERSION 3.12.4-p1)
+hunter_default_version(Protobuf VERSION 3.14.0-p0)
 
 string(COMPARE EQUAL "${CMAKE_SYSTEM_NAME}" "Linux" _is_linux)
 if(_is_linux OR MINGW)
