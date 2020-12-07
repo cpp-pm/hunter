@@ -168,7 +168,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/protobuf/archive/v3.14.0-4a09d77-p0.tar.gz"
     SHA1
-    1fc88a52c9c37a22dff31e8f4ef399bc540633d2
+    3553ff3bfd7d0c4c1413b1552064b3dca6fa213e
 )
 
 string(
