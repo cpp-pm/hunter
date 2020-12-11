@@ -3,6 +3,19 @@ import sys
 import json
 import re
 
+# simple helper to allow single-line-comments with `//` in json files
+# https://stackoverflow.com/a/57814048
+def json_from_file_ignore_comments(filePath):
+    contents = ""
+    with open(filePath, "r") as fh:
+        for line in fh:
+            cleanedLine = line.split("//", 1)[0]
+            if len(cleanedLine) > 0 and line.endswith("\n") and "\n" not in cleanedLine:
+                cleanedLine += "\n"
+            contents += cleanedLine
+    json_data = json.loads(contents)
+    return json_data
+
 try:
   with open(os.environ.get('HOME') + '/files.json') as json_files:
     files = json.load(json_files)
@@ -21,8 +34,7 @@ for file in files:
 if projects:
   dafault_dir = '.github/workflows/ci/'
 
-  with open(dafault_dir + 'matrix.json') as json_matrix:
-    default_matrix = json.load(json_matrix)
+  default_matrix = json_from_file_ignore_comments(dafault_dir + 'matrix.json')
 
   include = []
   for project in projects:
@@ -30,8 +42,7 @@ if projects:
 
     matrix_override = project_dir + 'matrix.json';
     if os.path.isfile(matrix_override):
-      with open(matrix_override) as json_matrix_override:
-        project_matrix = json.load(json_matrix_override)
+      project_matrix = json_from_file_ignore_comments(matrix_override)
     else:
       project_matrix = [ dict(leg, example = project) for leg in default_matrix ]
 
