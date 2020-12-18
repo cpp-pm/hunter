@@ -73,6 +73,17 @@ hunter_add_version(
     86ac27949abbd6654a74c3530ec4fe900768fb84
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    glm
+    VERSION
+    "0.9.9.8"
+    URL
+    "https://github.com/cpp-pm/glm/archive/v0.9.9.8-p0.tar.gz"
+    SHA1
+    1a910ec1df1c5992f8d7c562850dd094584f1a25
+)
+
 include(GNUInstallDirs)
 
 # glm use custom bundled GNUInstallDirs module so we have to
