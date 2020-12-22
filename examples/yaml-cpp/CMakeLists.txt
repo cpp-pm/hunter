@@ -13,7 +13,7 @@ find_package(yaml-cpp CONFIG REQUIRED)
 
 add_executable(parse parse.cpp)
 
-if (YAML_CPP VERSION_GREATER_EQUAL 0.6.3)
+if (yaml-cpp VERSION_GREATER_EQUAL 0.6.3)
   target_link_libraries(parse yaml-cpp)
 else()
   target_link_libraries(parse yaml-cpp::yaml-cpp)
