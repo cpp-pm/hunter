@@ -94,9 +94,9 @@ hunter_add_version(
     VERSION
     "1.1.1h"
     URL
-    "https://www.openssl.org/source/old/1.1.1/openssl-1.1.1h.tar.gz"
+    "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1h.tar.gz"
     SHA1
-    8d0d099e8973ec851368c8c775e05e1eadca1794
+    e581875cc63a29a2e9ae6924f5e65fd79dd3fc2e
 )
 
 hunter_add_version(
@@ -105,9 +105,9 @@ hunter_add_version(
     VERSION
     "1.1.1i"
     URL
-    "https://www.openssl.org/source/openssl-1.1.1i.tar.gz"
+    "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1i.tar.gz"
     SHA1
-    eb684ba4ed31fe2c48062aead75233ecd36882a6
+    b1fcae20e23561f3ad02c61c80ba10d8790e3034
 )
 
 hunter_add_version(
