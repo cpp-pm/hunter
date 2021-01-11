@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.3)
+# Copyright (c) 2013-2015, Ruslan Baratov
+# All rights reserved.
+
+cmake_minimum_required(VERSION 3.0)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -7,8 +10,8 @@ include("../common.cmake")
 
 project(download-boost)
 
-hunter_add_package(Boost COMPONENTS filesystem)
-find_package(Boost CONFIG REQUIRED filesystem)
+hunter_add_package(Boost COMPONENTS system filesystem)
+find_package(Boost CONFIG REQUIRED system filesystem)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::filesystem)
+target_link_libraries(foo PUBLIC Boost::system Boost::filesystem)

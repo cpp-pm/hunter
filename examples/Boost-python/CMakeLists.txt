@@ -1,4 +1,8 @@
-cmake_minimum_required(VERSION 3.3)
+# Copyright (c) 2013, Ruslan Baratov
+# Modified work: Copyright (c) 2018, Gregory Kramida
+# All rights reserved.
+
+cmake_minimum_required(VERSION 3.2)
 option(HUNTER_BUILD_SHARED_LIBS "..." ON)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")

@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.3)
+# Copyright (c) 2013, Ruslan Baratov
+# All rights reserved.
+
+cmake_minimum_required(VERSION 3.0)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")
 
@@ -16,4 +19,7 @@ target_link_libraries(
     foo
     PUBLIC
     Boost::chrono
+    Boost::system # Should be last
+        # Boost 1.66.0, Linux, Clang with -stdlib=libstdc++:
+        # * https://travis-ci.org/ingenue/hunter/jobs/318140468#L2651
 )

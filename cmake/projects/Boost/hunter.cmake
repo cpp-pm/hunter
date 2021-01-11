@@ -435,18 +435,11 @@ hunter_add_version(
 
 if(MSVC)
   hunter_check_toolchain_definition(NAME "_DLL" DEFINED _hunter_vs_md)
-  set(ADDITIONAL_MSVC_CMAKE_ARGS
-      "BOOST_BUILD_DYNAMIC_VSRUNTIME=${_hunter_vs_md}"
-  )
-endif()
-
-if( (NOT HUNTER_Boost_VERSION VERSION_LESS 1.72.0) AND (CMAKE_VERSION VERSION_GREATER_EQUAL 3.3) )
   hunter_cmake_args(
     Boost
     CMAKE_ARGS
-        USE_CONFIG_FROM_BOOST=ON
-        ${ADDITIONAL_MSVC_CMAKE_ARGS}
-    )
+      BOOST_BUILD_DYNAMIC_VSRUNTIME=${_hunter_vs_md}
+  )
 endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_boost)
@@ -460,9 +453,6 @@ if(NOT HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
     string(FIND "${boost_cmake_args}" "USE_CONFIG_FROM_BOOST=ON" use_boost_config)
     string(FIND "${boost_cmake_args}" "BOOST_BUILD_DYNAMIC_VSRUNTIME=NO" boost_static_runtime)
     if(use_boost_config GREATER -1)
-        if(CMAKE_VERSION VERSION_LESS 3.3)
-            message(FATAL_ERROR "You need at least a cmake version 3.3 to use BoostConfig from Boost otherwise set USE_CONFIG_FROM_BOOST to OFF")
-        endif()
         if(boost_shared LESS 0)
             option(Boost_USE_STATIC_LIBS "Use of the static libraries" ON)
         else()

@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.3)
+# Copyright (c) 2017, Pawel Bylica
+# All rights reserved.
+
+cmake_minimum_required(VERSION 3.0)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")
 

@@ -1,3 +1,7 @@
+# Copyright (c) 2013, Ruslan Baratov
+# Modified work: Copyright (c) 2018, Gregory Kramida
+# All rights reserved.
+
 cmake_minimum_required(VERSION 3.12)
 option(HUNTER_BUILD_SHARED_LIBS "..." ON)
 

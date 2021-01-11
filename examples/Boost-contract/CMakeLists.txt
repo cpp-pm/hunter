@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.3)
+# Copyright (c) 2013, Ruslan Baratov
+# All rights reserved.
+
+cmake_minimum_required(VERSION 3.0)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")
 
@@ -8,8 +11,8 @@ include("../common.cmake")
 
 project(download-boost)
 
-hunter_add_package(Boost COMPONENTS contract)
-find_package(Boost CONFIG REQUIRED contract)
+hunter_add_package(Boost COMPONENTS system contract)
+find_package(Boost CONFIG REQUIRED system contract)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::contract)
+target_link_libraries(foo PUBLIC Boost::system Boost::contract)

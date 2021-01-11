@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.3)
+# Copyright (c) 2013, Ruslan Baratov
+# All rights reserved.
+
+cmake_minimum_required(VERSION 3.0)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")
 
@@ -17,7 +20,6 @@ find_package(Boost CONFIG REQUIRED math_c99 math_c99f math_c99l math_tr1 math_tr
 add_executable(foo foo.cpp)
 # link in the libraries as well for whatever is found above in find_package
 target_link_libraries(foo
-  PUBLIC
   Boost::math_c99
   Boost::math_c99f
   Boost::math_c99l

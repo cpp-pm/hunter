@@ -1,4 +1,7 @@
-cmake_minimum_required(VERSION 3.3)
+# Copyright (c) 2013-2015, Ruslan Baratov
+# All rights reserved.
+
+cmake_minimum_required(VERSION 3.0)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")
 
@@ -12,4 +15,4 @@ hunter_add_package(Boost)
 find_package(Boost CONFIG REQUIRED)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::headers)
+target_link_libraries(foo PUBLIC Boost::boost)
