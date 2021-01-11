@@ -61,6 +61,17 @@ hunter_add_version(
   956c2b5fbf5aa0eb8ef5ef890c0328b3aa357a13
   )
 
+hunter_add_version(
+  PACKAGE_NAME
+  yaml-cpp
+  VERSION
+  "0.6.3"
+  URL
+  "https://github.com/jbeder/yaml-cpp/archive/yaml-cpp-0.6.3.zip"
+  SHA1
+  f1025e31d9e182d455431c9e09d82cf35769484e
+  )
+
 hunter_cmake_args(
   yaml-cpp
   CMAKE_ARGS
