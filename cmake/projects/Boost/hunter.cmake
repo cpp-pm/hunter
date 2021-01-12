@@ -187,9 +187,9 @@ hunter_add_version(
     VERSION
     "1.74.0-p0"
     URL
-    "https://github.com/Bjoe/hunter-boost/archive/hunter-1.74.0.zip"
+    "https://github.com/cpp-pm/boost/archive/v1.74.0-p0.tar.gz"
     SHA1
-    1c452c093b183c556f2b41a0b056c2097f080cbc
+    c7ba15bb52950ac1b1912e0794ad77f66a343a17
 )
 
 hunter_add_version(
