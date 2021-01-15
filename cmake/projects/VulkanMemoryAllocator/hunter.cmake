@@ -9,6 +9,17 @@ include(hunter_download)
 include(hunter_pick_scheme)
 
 hunter_add_version(
+  PACKAGE_NAME
+  VulkanMemoryAllocator
+  VERSION
+  2.3.0-p0
+  URL
+  "https://github.com/cpp-pm/VulkanMemoryAllocator/archive/v2.3.0-p0.tar.gz"
+  SHA1
+  85d9987582a4cebe5bf7c29bcebd0c844a7b1848
+)
+
+hunter_add_version(
     PACKAGE_NAME
     VulkanMemoryAllocator
     VERSION
