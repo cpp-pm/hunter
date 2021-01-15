@@ -13,6 +13,17 @@ hunter_add_version(
     PACKAGE_NAME
     filament
     VERSION
+    1.9.8-p1
+    URL
+    "https://github.com/cpp-pm/filament/archive/v1.9.8-p1.tar.gz"
+    SHA1
+    1f86ae7536204d12b91bef1fc7741d846955644a
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    filament
+    VERSION
     1.9.8
     URL
     "https://github.com/cpp-pm/filament/archive/v1.9.8-p0.tar.gz"
