@@ -217,7 +217,7 @@ if(has_toolset_version)
   set(toolset_full_name ${toolset_name}-${toolset_version})
 endif()
 
-set(boost_user_jam "@HUNTER_PACKAGE_BUILD_DIR@/boost.user.jam")
+set(boost_user_jam "@HUNTER_PACKAGE_BUILD_DIR@/boost-user.jam")
 # TODO file(TO_NATIVE_PATH "${boost_user_jam}" boost_user_jam_native_path)
 # Escape --user-config=C:\projects\hunter-tdmm2\_testing\Hunter\_Base\5398c9d\30f4075\2d24521\Build\Boost\__filesystem\Build\boost.user.jam
 # Error -> Invalid character escape '\p'.
@@ -253,27 +253,28 @@ hunter_boost_component_b2_args(
     b2_component_opts
 )
 
-string(REPLACE " " ";" cxx_flags_list "${CMAKE_CXX_FLAGS}")
-
+# For Configuration boost-user.jam see https://boostorg.github.io/build/manual/develop/index.html#bbv2.overview.configuration
 file(
     WRITE
     ${boost_user_jam}
-    "using ${toolset_name}\n"
-    "  : ${toolset_version}\n"
-)
+    "using ${toolset_name} : ${toolset_version} : \"${boost_compiler}\" : ")
 
 if(MSVC)
-  # For Visual Studio C++ flags must not be set in compiler section.
-  # Section <compileflags> should be used.
-  #   * https://github.com/ruslo/hunter/issues/179
-  file(APPEND ${boost_user_jam} "  : \"${boost_compiler}\"\n")
+  # See 'boost_compiler' section
+
+  # Note: Flags should be quoted:
+  # - https://github.com/boostorg/build/issues/426#issuecomment-482564740
+  string(REPLACE " " ";" cxx_flags_list "${CMAKE_CXX_FLAGS}")
+  foreach(cxx_flag ${cxx_flags_list})
+    file(
+        APPEND
+        ${boost_user_jam}
+        "  <compileflags>\"${cxx_flag}\"\n"
+    )
+  endforeach()
 else()
-  # For Android C++ flags must be part of the compiler section:
-  #   * https://github.com/ruslo/hunter/issues/174
-  # For 'sanitize-address' toolchain flags must be part of the compiler section:
-  #   * https://github.com/ruslo/hunter/issues/269
   file(
-      APPEND ${boost_user_jam} "  : \"${boost_compiler}\" ${CMAKE_CXX_FLAGS}\n"
+      APPEND ${boost_user_jam} "  <cxxflags>\"${CMAKE_CXX_FLAGS}\" <cflags>\"${CMAKE_C_FLAGS}\" "
   )
 endif()
 
@@ -289,24 +290,8 @@ if(use_cmake_archiver)
   file(
       APPEND
       ${boost_user_jam}
-      "  : <archiver>\"${CMAKE_AR}\"\n"
-      " <ranlib>\"${CMAKE_RANLIB}\"\n"
+      " <archiver>\"${CMAKE_AR}\" <ranlib>\"${CMAKE_RANLIB}\" "
   )
-endif()
-
-if(MSVC)
-  # See 'boost_compiler' section
-
-  # Note: Flags should be quoted:
-  # - https://github.com/boostorg/build/issues/426#issuecomment-482564740
-
-  foreach(cxx_flag ${cxx_flags_list})
-    file(
-        APPEND
-        ${boost_user_jam}
-        "  <compileflags>\"${cxx_flag}\"\n"
-    )
-  endforeach()
 endif()
 
 file(
@@ -445,6 +430,10 @@ if(CMAKE_HOST_WIN32)
     configure_file("@HUNTER_PACKAGE_SCRIPT_DIR@/patched_boostrap.bat.in" "@HUNTER_PACKAGE_DOWNLOAD_DIR@/patched_boostrap.bat")
     set(patch_cmd "@CMAKE_COMMAND@" -E copy "@HUNTER_PACKAGE_DOWNLOAD_DIR@/patched_boostrap.bat" "@HUNTER_PACKAGE_SOURCE_DIR@/patched_boostrap.bat")
     set(bootstrap_cmd "patched_boostrap.bat")
+  elseif("@MSYS@")
+    set(b2_cmd "./b2")
+    set(patch_cmd "@CMAKE_COMMAND@" -E echo "Dummy patch command")
+    set(bootstrap_cmd "./bootstrap.sh")
   else()
     set(patch_cmd "@CMAKE_COMMAND@" -E echo "Dummy patch command")
     set(bootstrap_cmd "bootstrap.bat")

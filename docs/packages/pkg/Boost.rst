@@ -14,6 +14,12 @@ Boost
 
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Boost/CMakeLists.txt>`__
 
+Since boost 1.70 you should use for header only libraries as target:
+
+.. code-block:: cmake
+
+    target_link_libraries(... Boost::headers)
+
 .. code-block:: cmake
 
     # Boost components (see list below)
@@ -88,13 +94,18 @@ config file (``boost/config/user.hpp``):
     #define BOOST_MPL_CFG_NO_PREPROCESSED_HEADERS
     #define BOOST_MPL_LIMIT_LIST_SIZE 3
 
-  - Option ``USE_CONFIG_FROM_BOOST=ON`` use the package configuration file provided 
-    by the boost project.
-    Since boost version 1.70.0, the boost project provide a well maintained package 
-    configuration file for use with find_package's config mode.
-    See the difference between following example:
-    - `Boost-log <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log/CMakeLists.txt>`__
-    - `Boost-log-usingBoostConfig <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log-usingBoostConfig/CMakeLists.txt>`__
+- Option ``USE_CONFIG_FROM_BOOST=ON`` use the package configuration file provided 
+  by the boost project.
+
+  Since boost version 1.70.0, the boost project provide a well maintained package 
+  configuration file for use with find_package's config mode. As minimum required CMake 
+  version you need 3.3.
+
+  See the difference between following example:
+  
+  - `Boost-log <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log/CMakeLists.txt>`__
+  
+  - `Boost-log-usingBoostConfig <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log-usingBoostConfig/CMakeLists.txt>`__
 
 
 Python

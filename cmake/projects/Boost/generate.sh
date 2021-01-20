@@ -7,6 +7,7 @@ BOOST_LIBS="
     atomic
     chrono
     context
+    container
     coroutine
     contract
     date_time

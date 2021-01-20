@@ -185,13 +185,23 @@ hunter_add_version(
     PACKAGE_NAME
     Boost
     VERSION
+    "1.74.0-p0"
+    URL
+    "https://github.com/cpp-pm/boost/archive/v1.74.0-p0.tar.gz"
+    SHA1
+    c7ba15bb52950ac1b1912e0794ad77f66a343a17
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Boost
+    VERSION
     "1.75.0"
     URL
     "${_hunter_boost_base_url}/1.75.0/source/boost_1_75_0.tar.bz2"
     SHA1
     6109efd3bdd8b9220d7d85b5e125f7f28721b9a9
 )
-
 # up until 1.63 sourcefourge was used
 set(_hunter_boost_base_url "https://downloads.sourceforge.net/project/boost/boost/")
 hunter_add_version(
@@ -446,25 +456,25 @@ hunter_pick_scheme(DEFAULT url_sha1_boost)
 hunter_cacheable(Boost)
 hunter_download(PACKAGE_NAME Boost PACKAGE_INTERNAL_DEPS_ID "48")
 
-
+# This settings Boost_USE_STATIC_LIBS and Boost_USE_STATIC_RUNTIME are needed to configure via find_package(Boost ....) for BoostConfig from boost
 if(NOT HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
     hunter_get_cmake_args(PACKAGE Boost OUT boost_cmake_args)
     string(FIND "${boost_cmake_args}" "BUILD_SHARED_LIBS=ON" boost_shared)
     string(FIND "${boost_cmake_args}" "USE_CONFIG_FROM_BOOST=ON" use_boost_config)
     string(FIND "${boost_cmake_args}" "BOOST_BUILD_DYNAMIC_VSRUNTIME=NO" boost_static_runtime)
     if(use_boost_config GREATER -1)
-    if(boost_shared LESS 0)
-        option(Boost_USE_STATIC_LIBS "Use of the static libraries" ON)
-    else()
-        option(Boost_USE_STATIC_LIBS "Use of the static libraries" OFF)
-    endif()
-    
-    if(MSVC)
-        if(boost_static_runtime LESS 0)
-            option(Boost_USE_STATIC_RUNTIME "Use libraries linked statically to the C++ runtime" OFF)
+        if(boost_shared LESS 0)
+            option(Boost_USE_STATIC_LIBS "Use of the static libraries" ON)
         else()
-            option(Boost_USE_STATIC_RUNTIME "Use libraries linked statically to the C++ runtime" ON)
+            option(Boost_USE_STATIC_LIBS "Use of the static libraries" OFF)
         endif()
-    endif()
+        
+        if(MSVC)
+            if(boost_static_runtime LESS 0)
+                option(Boost_USE_STATIC_RUNTIME "Use libraries linked statically to the C++ runtime" OFF)
+            else()
+                option(Boost_USE_STATIC_RUNTIME "Use libraries linked statically to the C++ runtime" ON)
+            endif()
+        endif()
     endif()
 endif()
