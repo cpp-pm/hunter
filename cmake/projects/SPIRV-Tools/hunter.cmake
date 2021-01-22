@@ -43,17 +43,6 @@ hunter_add_version(
     e408dd86040ba66dbd7cdd386af96cdb11484c44
 )
 
-hunter_add_version(
-    PACKAGE_NAME
-    SPIRV-Tools
-    VERSION
-    2020.6-p0
-    URL 
-    https://github.com/cpp-pm/SPIRV-Tools/archive/v2020.6-p0.tar.gz
-    SHA1 
-    16204713db0fc98689d86610c3d7dc29f579b17e
-)
-
 hunter_cmake_args(
     SPIRV-Tools
     CMAKE_ARGS
@@ -61,7 +50,6 @@ hunter_cmake_args(
       SPIRV_SKIP_EXECUTABLES=ON
       SPIRV_SKIP_TESTS=ON
       SPIRV_WERROR=OFF
-      SPIRV_TOOLS_BUILD_STATIC=OFF
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
