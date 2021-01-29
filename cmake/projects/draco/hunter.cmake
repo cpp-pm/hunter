@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2018, Ruslan Baratov
+# Copyright (c) 2016-2021, Ruslan Baratov, Rahul Sheth
 # All rights reserved.
 
 # !!! DO NOT PLACE HEADER GUARDS HERE !!!
@@ -17,6 +17,17 @@ hunter_add_version(
     "https://github.com/hunter-packages/draco/archive/v1.3.4-p0.tar.gz"
     SHA1
     64cd8ac43fc213ad4cb088aa7bba190adb87bb5d
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    draco
+    VERSION
+    1.4.1-p0
+    URL
+    "https://github.com/cpp-pm/draco/archive/v1.4.1-p0.tar.gz"
+    SHA1
+    8df0d728a77fdde921cad06ee08a67cc434a95da
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
