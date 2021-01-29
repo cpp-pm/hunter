@@ -27,7 +27,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/draco/archive/v1.4.1-p0.tar.gz"
     SHA1
-    03581af26f4f3bcf0141280a7c1ce2f6b79fb2cc
+    1c37aba7278d7b8c729a98cc429d867626fa085c
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
