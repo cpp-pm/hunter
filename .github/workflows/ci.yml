@@ -82,10 +82,6 @@ jobs:
       run: echo "##[set-output name=branch;]${GITHUB_REF#refs/heads/}"
       id: extract_branch
 
-    - name: Upgrade pip
-      run: |
-        python -m pip install --upgrade pip
-
     - name: Build on Unix
       if: runner.os != 'Windows'
       env:

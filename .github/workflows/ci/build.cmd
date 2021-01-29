@@ -1,5 +1,9 @@
+:: Set the correct Python PATH
+set PATH=%HUNTER_PYTHON_LOCATION%;%PATH%
+
 :: Install Python package 'requests'
-pip install requests gitpython
+python -m pip install --upgrade pip
+python -m pip install requests gitpython
 
 :: Install latest Polly toolchains and scripts
 C:\msys64\usr\bin\wget.exe https://github.com/cpp-pm/polly/archive/master.zip
