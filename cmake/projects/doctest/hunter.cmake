@@ -54,6 +54,17 @@ hunter_add_version(
     0e64a63de97ec1a8f592563791904e995e80e122
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    doctest
+    VERSION
+    "2.4.4"
+    URL
+    "https://github.com/onqtam/doctest/archive/2.4.4.tar.gz"
+    SHA1
+    d1baae099a165b231bb4fdd3637789f7465d873a
+)
+
 hunter_cmake_args(doctest CMAKE_ARGS
     DOCTEST_SKIP_EXAMPLES=ON
     DOCTEST_SKIP_COVERAGE=ON
