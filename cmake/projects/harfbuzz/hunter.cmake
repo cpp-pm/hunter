@@ -15,9 +15,9 @@ hunter_add_version(
     VERSION
     2.5.1-test1
     URL
-    "https://github.com/cpp-pm/harfbuzz/archive/0127-test-2.tar.gz"
+    "https://github.com/cpp-pm/harfbuzz/archive/0127-test-3.tar.gz"
     SHA1
-    bb9ab027d93ce103adf2b43f612bec25e835e834
+    ecf28e44bda049f84b028171bbaef6439b2946c0
 )
 
 hunter_add_version(
