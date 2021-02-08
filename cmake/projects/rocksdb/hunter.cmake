@@ -56,12 +56,20 @@ hunter_add_version(
 if(MSVC)
     hunter_cmake_args(rocksdb CMAKE_ARGS
         WITH_TESTS=OFF
+        WITH_GFLAGS=OFF
+        WITH_BENCHMARK_TOOLS=OFF
+        WITH_CORE_TOOLS=OFF
+        WITH_TOOLS=OFF
         PORTABLE=ON
         ROCKSDB_INSTALL_ON_WINDOWS=ON
         FAIL_ON_WARNINGS=OFF)
 else()
     hunter_cmake_args(rocksdb CMAKE_ARGS
         WITH_TESTS=OFF
+        WITH_GFLAGS=OFF
+        WITH_BENCHMARK_TOOLS=OFF
+        WITH_CORE_TOOLS=OFF
+        WITH_TOOLS=OFF
         PORTABLE=ON
         FAIL_ON_WARNINGS=OFF)
 endif()
