@@ -32,6 +32,17 @@ hunter_add_version(
     8059ef26c3d7dffa4d6dad64511c0675e46c0da6
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    zstd
+    VERSION
+    1.4.8
+    URL
+    "https://github.com/facebook/zstd/releases/download/v1.4.8/zstd-1.4.8.tar.gz"
+    SHA1
+    2b79c836ed2e11956ebd112ddc731f1954b4074c
+)
+
 hunter_source_subdir(zstd SOURCE_SUBDIR "build/cmake")
 
 hunter_cmake_args(zstd CMAKE_ARGS
