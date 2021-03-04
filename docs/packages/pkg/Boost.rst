@@ -105,7 +105,7 @@ config file (``boost/config/user.hpp``):
   
   - `Boost-log <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log/CMakeLists.txt>`__
   
-  - `Boost-log-usingBoostConfig <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log-usingBoostConfig/CMakeLists.txt>`__
+  - `Boost-log-useBoostConfig <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log-useBoostConfig/CMakeLists.txt>`__
 
 
 Python
