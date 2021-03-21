@@ -9,6 +9,17 @@ include(hunter_pick_scheme)
 
 # List of versions here...
 hunter_add_version(
+        PACKAGE_NAME
+        imgui
+        VERSION
+        "1.82-hunter-dock"
+        URL
+        "https://github.com/InfiniBrains/imgui/archive/v1.82-hunter-dock.tar.gz"
+        SHA1
+        50605b188a34566695c3ff5ac7a7e907138e7b5e
+)
+
+hunter_add_version(
     PACKAGE_NAME
     imgui
     VERSION
