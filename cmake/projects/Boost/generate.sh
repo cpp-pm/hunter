@@ -17,6 +17,7 @@ BOOST_LIBS="
     graph
     graph_parallel
     iostreams
+    json
     locale
     log
     math

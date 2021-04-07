@@ -200,6 +200,13 @@ if(have_osx_sysroot)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -isysroot @CMAKE_OSX_SYSROOT@")
 endif()
 
+string(COMPARE NOTEQUAL "@CMAKE_OSX_ARCHITECTURES@" "" have_osx_arch)
+if(have_osx_arch)
+  foreach(ARCH @CMAKE_OSX_ARCHITECTURES@)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -arch ${ARCH}")
+  endforeach()
+endif()
+
 if(BOOST_BUILD_STATIC)
   set(link_opts link=static)
   if("@MSVC@" AND NOT BOOST_BUILD_DYNAMIC_VSRUNTIME)

@@ -454,7 +454,7 @@ endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_boost)
 hunter_cacheable(Boost)
-hunter_download(PACKAGE_NAME Boost PACKAGE_INTERNAL_DEPS_ID "48")
+hunter_download(PACKAGE_NAME Boost PACKAGE_INTERNAL_DEPS_ID "49")
 
 # This settings Boost_USE_STATIC_LIBS and Boost_USE_STATIC_RUNTIME are needed to configure via find_package(Boost ....) for BoostConfig from boost
 if(NOT HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
@@ -468,7 +468,7 @@ if(NOT HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
         else()
             option(Boost_USE_STATIC_LIBS "Use of the static libraries" OFF)
         endif()
-        
+
         if(MSVC)
             if(boost_static_runtime LESS 0)
                 option(Boost_USE_STATIC_RUNTIME "Use libraries linked statically to the C++ runtime" OFF)
