@@ -25,7 +25,7 @@ Simple flex example (no bison).
     target_include_directories(main PUBLIC ${FLEX_INCLUDE_DIRS})
     target_link_libraries(main ${FLEX_LIBRARIES})
 
-More complex example involving flex and bison. Based on `FindFLEX <https://cmake.org/cmake/help/v3.0/module/FindFLEX.html>`__.
+More complex example involving flex and bison. Based on `FindFLEX <https://cmake.org/cmake/help/v3.2/module/FindFLEX.html>`__.
 
 .. code-block:: cmake
 

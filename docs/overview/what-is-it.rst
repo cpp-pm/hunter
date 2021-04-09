@@ -13,19 +13,19 @@ the ``URL`` and ``SHA1``:
   :emphasize-lines: 2-3
 
   HunterGate(
-      URL "https://github.com/cpp-pm/hunter/archive/v0.14.5.tar.gz"
-      SHA1 "f2c3de6d13baf8c5d2aa77bdc47c516e668c677e"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.23.297.tar.gz"
+      SHA1 "3319fe6a3b08090df7df98dee75134d68e2ef5a3"
   )
 
 Here is the content of the archive in simplified form:
 
 .. code-block:: none
 
-  Hunter (0.14.15) = {
-      Boost (1.60.0, 1.59.0, 1.58.0-p1, ...),
+  Hunter (0.23.297) = {
+      Boost (1.65.1, 1.65.0, 1.66.0, 1.66.0-p0, 1.67, ...),
       GTest (1.7.0, ...),
-      OpenCV (3.0.0-beta, 2.4.11, 2.4.10, ...),
-      OpenSSL (1.0.2g, 1.0.2f, 1.0.2e, ...),
+      OpenCV (4.1.1-p0, 4.0.0-p3, 3.4.6-p0, ...),
+      OpenSSL (1.1.1, 1.1.1a, 1.1.1b, 1.1.1c, 1.1.1d, 1.1.1g, 1.1.1g-p0, ...),
       ...
   }
 
@@ -47,19 +47,19 @@ package properties:
 .. code-block:: shell
 
       VERSION
-      "1.0.2g"
+      "1.1.1"
       URL
-      "https://github.com/openssl/openssl/archive/OpenSSL_1_0_2g.tar.gz"
+      "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1.tar.gz"
   --
       VERSION
-      "1.0.2f"
+      "1.1.1a"
       URL
-      "https://github.com/openssl/openssl/archive/OpenSSL_1_0_2f.tar.gz"
+      "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1a.tar.gz"
   --
       VERSION
-      "1.0.2e"
+      "1.1.1b"
       URL
-      "https://github.com/openssl/openssl/archive/OpenSSL_1_0_2e.tar.gz"
+      "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1b.tar.gz"
 
 Install instructions from build scheme `url_sha1_openssl.cmake.in`_:
 
@@ -83,7 +83,7 @@ Default version from `default.cmake`_
 
 .. code-block:: cmake
 
-  hunter_default_version(OpenSSL VERSION 1.0.2g)
+  hunter_default_version(OpenSSL VERSION 1.1.1)
 
 .. seealso::
 

@@ -24,9 +24,9 @@ When contributing please follow the style guides:
 
 .. note::
 
-     The minimum version of CMake for using Hunter is ``3.0``.
+     The minimum version of CMake for using Hunter is ``3.2``.
      Please check that you're not using commands from newer versions
-     (`see documentation for 3.0 <http://www.cmake.org/cmake/help/v3.0/>`__).
+     (`see documentation for 3.2 <http://www.cmake.org/cmake/help/v3.2/>`__).
 
 .. note::
 
@@ -59,7 +59,7 @@ and working correctly. Before reporting bugs please check:
 
     # CMakeLists.txt
 
-    cmake_minimum_required(VERSION 3.0)
+    cmake_minimum_required(VERSION 3.2)
     project(foo)
 
     add_executable(foo foo.cpp)

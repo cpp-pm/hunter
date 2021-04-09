@@ -125,8 +125,8 @@ option:
 
   include("cmake/HunterGate.cmake")
   HunterGate(
-      URL "https://github.com/cpp-pm/hunter/archive/v0.22.22.tar.gz"
-      SHA1 "83f7dd182930dee784fafd29745f55e7cd06ca34"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.23.297.tar.gz"
+      SHA1 "3319fe6a3b08090df7df98dee75134d68e2ef5a3"
   )
   project(foo)
 
@@ -187,8 +187,8 @@ As an example here are actions that can lead to incorrect cache state:
 
   include("cmake/HunterGate.cmake")
   HunterGate(
-      URL "https://github.com/cpp-pm/hunter/archive/v0.22.22.tar.gz"
-      SHA1 "83f7dd182930dee784fafd29745f55e7cd06ca34"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.23.297.tar.gz"
+      SHA1 "3319fe6a3b08090df7df98dee75134d68e2ef5a3"
   )
   project(foo)
 
@@ -245,8 +245,8 @@ And add "GTest" to CMakeLists.txt:
 
   include("cmake/HunterGate.cmake")
   HunterGate(
-      URL "https://github.com/cpp-pm/hunter/archive/v0.22.22.tar.gz"
-      SHA1 "83f7dd182930dee784fafd29745f55e7cd06ca34"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.23.297.tar.gz"
+      SHA1 "3319fe6a3b08090df7df98dee75134d68e2ef5a3"
   )
   project(foo)
 
@@ -299,7 +299,7 @@ Xcode generator only:
 
   include("cmake/HunterGate.cmake")
   HunterGate(
-      URL "https://github.com/cpp-pm/hunter/archive/v0.22.22.tar.gz"
-      SHA1 "83f7dd182930dee784fafd29745f55e7cd06ca34"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.23.297.tar.gz"
+      SHA1 "3319fe6a3b08090df7df98dee75134d68e2ef5a3"
   )
   project(foo)

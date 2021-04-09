@@ -63,4 +63,4 @@ All variants support specifying extra:
 * ``CONFIGURATION_TYPES`` (e.g. ``CONFIGURATION_TYPES Release MinSizeRel``)
 * ``KEEP_PACKAGE_SOURCES`` (see :ref:`HUNTER_KEEP_PACKAGE_SOURCES <hunter keep package sources>`)
 
-.. _ExternalProject_Add: http://www.cmake.org/cmake/help/v3.0/module/ExternalProject.html
+.. _ExternalProject_Add: http://www.cmake.org/cmake/help/v3.2/module/ExternalProject.html

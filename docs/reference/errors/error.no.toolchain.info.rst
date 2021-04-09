@@ -9,7 +9,7 @@ What happens
 Explanation
 -----------
 
-- Hunter use `try_compile <https://cmake.org/cmake/help/v3.0/command/try_compile.html>`_ to calculate `toolchain-id <https://github.com/ruslo/hunter#toolchain-id>`_. Internally ``*.cpp`` file with ``#pragma message(...)`` directives used to print different system macros. This error occurs when no information printed on compilation step.
+- Hunter use `try_compile <https://cmake.org/cmake/help/v3.2/command/try_compile.html>`_ to calculate `toolchain-id <https://github.com/ruslo/hunter#toolchain-id>`_. Internally ``*.cpp`` file with ``#pragma message(...)`` directives used to print different system macros. This error occurs when no information printed on compilation step.
 
 What to do
 ----------

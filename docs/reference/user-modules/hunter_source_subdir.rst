@@ -29,4 +29,4 @@ It is meant to be used in the project definition at
       SOURCE_SUBDIR "cpp"
   )
 
-.. _ExternalProject_Add: http://www.cmake.org/cmake/help/v3.0/module/ExternalProject.html
+.. _ExternalProject_Add: http://www.cmake.org/cmake/help/v3.2/module/ExternalProject.html

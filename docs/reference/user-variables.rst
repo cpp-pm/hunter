@@ -140,8 +140,8 @@ HUNTER_JOBS_NUMBER
 * Set variable to ``0`` to disable adding any flags: ``HUNTER_JOBS_NUMBER=0``
 * Defaults to maximum of two:
 
-  * `NUMBER_OF_LOGICAL_CORES <http://www.cmake.org/cmake/help/v3.11/command/cmake_host_system_information.html>`__
-  * `NUMBER_OF_PHYSICAL_CORES <http://www.cmake.org/cmake/help/v3.11/command/cmake_host_system_information.html>`__
+  * `NUMBER_OF_LOGICAL_CORES <http://www.cmake.org/cmake/help/v3.2/command/cmake_host_system_information.html>`__
+  * `NUMBER_OF_PHYSICAL_CORES <http://www.cmake.org/cmake/help/v3.2/command/cmake_host_system_information.html>`__
 
 .. _hunter run install:
 
