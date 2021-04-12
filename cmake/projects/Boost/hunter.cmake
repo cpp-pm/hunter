@@ -14,7 +14,7 @@ include(hunter_check_toolchain_definition)
 set(Boost_NO_SYSTEM_PATHS ON)
 
 # use base url for official boost releases
-set(_hunter_boost_base_url "https://dl.bintray.com/boostorg/release")
+set(_hunter_boost_base_url "https://boostorg.jfrog.io/artifactory/main/release")
 
 hunter_add_version(
     PACKAGE_NAME
