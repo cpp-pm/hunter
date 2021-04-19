@@ -19,6 +19,7 @@ list(APPEND CMAKE_MODULE_PATH "@HUNTER_SELF@/cmake/modules")
 
 include(hunter_status_debug)
 include(hunter_assert_not_empty_string)
+include(hunter_unsetvar)
 include(hunter_user_error)
 
 hunter_status_debug("Scheme: url_sha1_cmake")
@@ -82,8 +83,6 @@ else()
   set(jobs_option "")
 endif()
 
-set(previous_project "")
-
 if("@HUNTER_PACKAGE_LOG_BUILD@")
   set(log_build 1)
 else()
@@ -124,6 +123,13 @@ else()
   set(no_postfix FALSE)
 endif()
 
+set(configure_architectures @CMAKE_OSX_ARCHITECTURES@)
+
+if(NOT configure_architectures)
+  hunter_status_debug("Using default macOS architecture: x86_64")
+  set(configure_architectures "x86_64")
+endif()
+
 foreach(configuration ${configuration_types})
   # All configurations use the same URL which will be downloaded only once
   # i.e. overhead only for unpacking archive + no files from the previous
@@ -149,13 +155,86 @@ foreach(configuration ${configuration_types})
     set(build_type_opts "-DCMAKE_CONFIGURATION_TYPES=${configuration}")
   endif()
 
-  ExternalProject_Add(
+  hunter_unsetvar(jpeg_libraries)
+  hunter_unsetvar(turbojpeg_libraries)
+
+  foreach(arch ${configure_architectures})
+    list(GET configure_architectures 0 first_architecture)
+    if (first_architecture STREQUAL arch)
+      # install to main dir
+      set(install_location "@HUNTER_PACKAGE_INSTALL_PREFIX@")
+    else()
+      # install to temp dir
+      set(install_location "@HUNTER_PACKAGE_BUILD_DIR@/${arch}-install")
+    endif()
+
+    list(APPEND jpeg_libraries "${install_location}/lib/libjpeg${${postfix_name}}.a")
+    list(APPEND turbojpeg_libraries "${install_location}/lib/libturbojpeg${${postfix_name}}.a")
+
+    ExternalProject_Add(
+        "${current_project}-${arch}"
+        URL
+        @HUNTER_PACKAGE_URL@
+        URL_HASH
+        SHA1=@HUNTER_PACKAGE_SHA1@
+        ${http_credentials}
+        DOWNLOAD_DIR
+        "@HUNTER_PACKAGE_DOWNLOAD_DIR@"
+        TLS_VERIFY
+        "@HUNTER_TLS_VERIFY@"
+        SOURCE_DIR
+        "@HUNTER_PACKAGE_SOURCE_DIR@"
+        INSTALL_DIR
+        "${install_location}"
+            # not used, just avoid creating Install/<name> empty directory
+        SOURCE_SUBDIR
+        "@HUNTER_PACKAGE_SOURCE_SUBDIR@"
+        BUILD_COMMAND
+            # Separate build and install stage so we can suppress install log
+            # which may consist of a long list of files
+            "@CMAKE_COMMAND@"
+            --build .
+            --config ${configuration}
+            --
+            ${jobs_option}
+        CMAKE_ARGS
+        "-G@CMAKE_GENERATOR@"
+        "-C@HUNTER_CACHE_FILE@"
+        "-C@HUNTER_ARGS_FILE@"
+        "-D${postfix_name}=${${postfix_name}}"
+        "${build_type_opts}"
+        "-DCMAKE_INSTALL_PREFIX=${install_location}"
+        "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}"
+        "${make_args}"
+        ${ios_opts}
+        "-DCMAKE_OSX_ARCHITECTURES=${arch}"
+        INSTALL_COMMAND
+            "@CMAKE_COMMAND@"
+            --build .
+            --target install
+            --config ${configuration}
+          COMMAND # Copy license files
+            "@CMAKE_COMMAND@"
+            "-C@HUNTER_ARGS_FILE@" # for 'HUNTER_INSTALL_LICENSE_FILES'
+            "-Dsrcdir=@HUNTER_PACKAGE_SOURCE_DIR@"
+            "-Ddstdir=@HUNTER_PACKAGE_LICENSE_DIR@"
+            -P
+            "@HUNTER_SELF@/scripts/try-copy-license.cmake"
+        LOG_BUILD ${log_build}
+        LOG_INSTALL ${log_install}
+        ${uses_terminal}
+    )
+
+  endforeach()
+
+  list(LENGTH configure_architectures configure_architectures_length)
+  if (NOT ${configure_architectures_length} EQUAL 1)
+    # fuse all libraries with 'lipo'
+    # libjpeg-turbo does not support multiple arch builds due to asm requirements
+    ExternalProject_Add(
       "${current_project}"
-      URL
-      @HUNTER_PACKAGE_URL@
-      URL_HASH
-      SHA1=@HUNTER_PACKAGE_SHA1@
-      ${http_credentials}
+      DOWNLOAD_COMMAND
+      "@CMAKE_COMMAND@" -E echo "Dummy download command"
       DOWNLOAD_DIR
       "@HUNTER_PACKAGE_DOWNLOAD_DIR@"
       TLS_VERIFY
@@ -165,51 +244,39 @@ foreach(configuration ${configuration_types})
       INSTALL_DIR
       "@HUNTER_PACKAGE_INSTALL_PREFIX@"
           # not used, just avoid creating Install/<name> empty directory
-      SOURCE_SUBDIR
-      "@HUNTER_PACKAGE_SOURCE_SUBDIR@"
+      CONFIGURE_COMMAND
+      "@CMAKE_COMMAND@" -E echo "Dummy configure command"
       BUILD_COMMAND
-          # Separate build and install stage so we can suppress install log
-          # which may consist of a long list of files
-          "@CMAKE_COMMAND@"
-          --build .
-          --config ${configuration}
-          --
-          ${jobs_option}
-      CMAKE_ARGS
-      "-G@CMAKE_GENERATOR@"
-      "-C@HUNTER_CACHE_FILE@"
-      "-C@HUNTER_ARGS_FILE@"
-      "-D${postfix_name}=${${postfix_name}}"
-      "${build_type_opts}"
-      "-DCMAKE_INSTALL_PREFIX=@HUNTER_PACKAGE_INSTALL_PREFIX@"
-      "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}"
-      "${make_args}"
-      ${ios_opts}
+      "@CMAKE_COMMAND@" -E echo "Dummy build command"
       INSTALL_COMMAND
-          "@CMAKE_COMMAND@"
-          --build .
-          --target install
-          --config ${configuration}
-        COMMAND # Copy license files
-          "@CMAKE_COMMAND@"
-          "-C@HUNTER_ARGS_FILE@" # for 'HUNTER_INSTALL_LICENSE_FILES'
-          "-Dsrcdir=@HUNTER_PACKAGE_SOURCE_DIR@"
-          "-Ddstdir=@HUNTER_PACKAGE_LICENSE_DIR@"
-          -P
-          "@HUNTER_SELF@/scripts/try-copy-license.cmake"
-      LOG_BUILD ${log_build}
-      LOG_INSTALL ${log_install}
-      ${uses_terminal}
-  )
-
-  # Each external project must depends on previous one since they all use
-  # the same building directory
-  string(COMPARE EQUAL "${previous_project}" "" is_empty)
-  if(NOT is_empty)
-    add_dependencies(
-        "${current_project}"
-        "${previous_project}"
+      lipo
+      -create
+      ${jpeg_libraries}
+      -o
+      "@HUNTER_PACKAGE_INSTALL_PREFIX@/lib/libjpeg${${postfix_name}}.a"
+      COMMAND
+      lipo
+      -create
+      ${turbojpeg_libraries}
+      -o
+      "@HUNTER_PACKAGE_INSTALL_PREFIX@/lib/libturbojpeg${${postfix_name}}.a"
+      # Extra commands
+      ${extra_install_commands}
+      COMMAND # Copy license files
+        "@CMAKE_COMMAND@"
+        "-C@HUNTER_ARGS_FILE@" # for 'HUNTER_INSTALL_LICENSE_FILES'
+        "-Dsrcdir=@HUNTER_PACKAGE_SOURCE_DIR@}"
+        "-Ddstdir=@HUNTER_PACKAGE_LICENSE_DIR@"
+        -P
+        "@HUNTER_SELF@/scripts/try-copy-license.cmake"
     )
+
+    foreach(arch ${configure_architectures})
+      add_dependencies(
+        "${current_project}"
+        "${current_project}-${arch}"
+      )
+    endforeach()
   endif()
-  set(previous_project "${current_project}")
+
 endforeach()

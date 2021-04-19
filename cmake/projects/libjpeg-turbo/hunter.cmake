@@ -42,7 +42,11 @@ hunter_add_version(
     40daf166fb943a6601190e6cfab0f48b2b674e58
 )
 
-hunter_pick_scheme(DEFAULT url_sha1_cmake)
+if (APPLE)
+  hunter_pick_scheme(DEFAULT url_sha1_cmake_libjpeg-turbo)
+else()
+  hunter_pick_scheme(DEFAULT url_sha1_cmake)
+endif()
 
 hunter_cmake_args(
     libjpeg-turbo
