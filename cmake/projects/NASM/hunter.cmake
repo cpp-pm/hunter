@@ -10,7 +10,7 @@ include(hunter_pick_scheme)
 include(hunter_configuration_types)
 
 if(MINGW)
-  # NASM only supports a subset of VS compilers on Windows. 
+  # NASM only supports a subset of VS compilers on Windows.
   hunter_add_version(
     PACKAGE_NAME
     NASM
@@ -31,6 +31,17 @@ if(MINGW)
     "https://www.nasm.us/pub/nasm/releasebuilds/2.13/win32/nasm-2.13-win32.zip"
     SHA1
     2211e41a4123bb4c47eafe9c62341e5d47a9b045
+    )
+
+  hunter_add_version(
+    PACKAGE_NAME
+    NASM
+    VERSION
+    "2.15.05"
+    URL
+    "https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/win32/nasm-2.15.05-win32.zip"
+    SHA1
+    05a7c0ca5e5672fde400aeb95deeb984efe90a4f
     )
 else()
   hunter_add_version(
@@ -53,6 +64,17 @@ else()
     "http://www.nasm.us/pub/nasm/releasebuilds/2.13/nasm-2.13.tar.gz"
     SHA1
     1eca1df91aba51d944252a3e95a7120ebb969411
+    )
+
+  hunter_add_version(
+    PACKAGE_NAME
+    NASM
+    VERSION
+    "2.15.05"
+    URL
+    "https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/nasm-2.15.05.tar.gz"
+    SHA1
+    8a2a60b01d563c32dd216f94a99a20e6e31fd8aa
     )
 endif()
 
