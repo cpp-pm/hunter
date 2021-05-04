@@ -4,5 +4,5 @@
 
 int main() {
     Imf::Header header;
-    std::cout << header.version() << std::endl;
+    std::cout << header.compression() << std::endl;
 }
