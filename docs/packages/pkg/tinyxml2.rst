@@ -18,3 +18,14 @@ TinyXML2
   :language: cmake
   :start-after: # DOCUMENTATION_START {
   :end-before: # DOCUMENTATION_END }
+
+Old version
+-----------
+
+When using tinyxml2 versions before `8.1.0`, `tinyxml2` target is not namespaced
+
+.. code-block:: cmake
+
+    hunter_add_package(tinyxml2)
+    find_package(tinyxml2 CONFIG REQUIRED)
+    target_link_libraries(... tinyxml2)
