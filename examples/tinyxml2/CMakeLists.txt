@@ -14,5 +14,5 @@ hunter_add_package(tinyxml2)
 find_package(tinyxml2 CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC tinyxml2)
+target_link_libraries(boo PUBLIC tinyxml2::tinyxml2)
 # DOCUMENTATION_END }
