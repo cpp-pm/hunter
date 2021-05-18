@@ -22,7 +22,7 @@ TinyXML2
 Old version
 -----------
 
-When using tinyxml2 versions before `8.1.0`, `tinyxml2` target is not namespaced
+When using `tinyxml2` versions before `8.1.0`, `tinyxml2` target is not name-spaced
 
 .. code-block:: cmake
 
