@@ -2,8 +2,7 @@
 
     SWIG
 
-.. index::
-  single: unsorted ; SWIG
+.. index:: scripting ; SWIG
 
 .. _pkg.SWIG:
 
