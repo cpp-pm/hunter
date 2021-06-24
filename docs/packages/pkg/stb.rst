@@ -1,6 +1,8 @@
 .. spelling::
 
     stb
+    textedit
+    tilemap
 
 .. index:: unsorted ; stb
 
