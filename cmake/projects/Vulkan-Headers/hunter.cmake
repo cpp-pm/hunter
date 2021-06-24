@@ -54,7 +54,7 @@ else()
         CMAKE_ARGS
           VULKAN_HEADERS_EXPORT_CMAKE_TARGETS=ON
     )
-)
+endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(Vulkan-Headers)
