@@ -19,6 +19,7 @@ hunter_add_version(
     SHA1
     6dc8553af090daafa19ccb823d6e137ec89df4bd
 )
+
 hunter_add_version(
     PACKAGE_NAME
     Vulkan-Headers
@@ -30,10 +31,29 @@ hunter_add_version(
     435cc47891936db6d2f8f7fc31ae690363e2ef0f
 )
 
-hunter_cmake_args(
+hunter_add_version(
+    PACKAGE_NAME
     Vulkan-Headers
-    CMAKE_ARGS
-      VULKAN_HEADERS_SKIP_INSTALL=OFF
+    VERSION
+    1.2.182-p0
+    URL
+    "https://github.com/cpp-pm/Vulkan-Headers/archive/v1.2.182-p0.tar.gz"
+    SHA1
+    8ec404420c7be25fe8b649e65850a01b28155c1e
+)
+
+if("${HUNTER_Vulkan-Headers_VERSION}" VERSION_LESS "1.2.182")
+    hunter_cmake_args(
+        Vulkan-Headers
+        CMAKE_ARGS
+          VULKAN_HEADERS_SKIP_INSTALL=OFF
+    )
+else()
+    hunter_cmake_args(
+        Vulkan-Headers
+        CMAKE_ARGS
+          VULKAN_HEADERS_EXPORT_CMAKE_TARGETS=ON
+    )
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
