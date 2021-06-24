@@ -30,6 +30,17 @@ hunter_add_version(
     abc0d6a68c5bfb1efdf40a76c6c9f646e4f722ef
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    stb
+    VERSION
+    0.0.0-80c8f6a-p0
+    URL
+    "https://github.com/cpp-pm/stb/archive/refs/tags/v0.0.0-80c8f6a-p0.tar.gz"
+    SHA1
+    3e064f7db042956814818b288a39a1e91c6e2e3d
+)
+
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(stb)
 hunter_download(PACKAGE_NAME stb)
