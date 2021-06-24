@@ -11,8 +11,8 @@ project(download-Vulkan-Headers)
 
 # DOCUMENTATION_START {
 hunter_add_package(Vulkan-Headers)
-find_package(Vulkan-Headers CONFIG REQUIRED)
+find_package(VulkanHeaders CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC Vulkan-Headers::Vulkan-Headers)
+target_link_libraries(boo PUBLIC Vulkan::Headers)
 # DOCUMENTATION_END }
