@@ -9,8 +9,10 @@ include("../common.cmake")
 
 project(download-sentry)
 
+# DOCUMENTATION_START {
 hunter_add_package(sentry)
 find_package(sentry CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
 target_link_libraries(boo PUBLIC sentry::sentry)
+# DOCUMENTATION_END }
