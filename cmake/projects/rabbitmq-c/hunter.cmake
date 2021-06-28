@@ -4,9 +4,21 @@
 # !!! DO NOT PLACE HEADER GUARDS HERE !!!
 
 include(hunter_add_version)
+include(hunter_cacheable)
 include(hunter_download)
 include(hunter_pick_scheme)
 include(hunter_cmake_args)
+
+hunter_add_version(
+   PACKAGE_NAME
+   rabbitmq-c
+   VERSION
+   "0.10.0-773b883"
+   URL
+   "https://github.com/alanxz/rabbitmq-c/archive/773b883175ae50db024d59c7cce85c73e3f47e67.tar.gz"
+   SHA1
+   eabbd8d179e49849a47c3c58e1900e6a8610d18d
+)
 
 hunter_add_version(
     PACKAGE_NAME
@@ -87,4 +99,5 @@ hunter_cmake_args(
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
+hunter_cacheable(rabbitmq-c)
 hunter_download(PACKAGE_NAME rabbitmq-c)
