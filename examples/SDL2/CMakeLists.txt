@@ -11,11 +11,15 @@ find_package(SDL2 CONFIG REQUIRED)
 
 if(ANDROID)
   add_library(main SHARED main.cpp)
-elseif(IOS)
-  # FIXME
-  add_library(main dummy.cpp)
 else()
   add_executable(main main.cpp)
+endif()
+
+# Fix MinGW / MSYS build
+if(MINGW OR MSYS)
+target_link_libraries(main
+    mingw32
+)
 endif()
 
 target_link_libraries(main
