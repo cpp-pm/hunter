@@ -12,8 +12,4 @@ find_package(opusfile CONFIG REQUIRED)
 
 add_executable(main main.cpp)
 target_link_libraries(main PUBLIC opusfile::opusfile)
-
-if(NOT WIN32 AND NOT MINGW AND NOT MSYS)
-    target_link_libraries(main PUBLIC opusfile::opusurl)
-endif()
 # DOCUMENTATION_END }

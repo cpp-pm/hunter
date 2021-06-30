@@ -15,13 +15,11 @@ hunter_add_version(
     877447616c34b6dd7753ee1a883c713ca2f56773
 )
 
-if(WIN32 OR MINGW OR MSYS)
-    hunter_cmake_args(
-        opusfile
-        CMAKE_ARGS
-            BUILD_OPUSURL=OFF
-    )
-endif()
+hunter_cmake_args(
+    opusfile
+    CMAKE_ARGS
+        BUILD_OPUSURL=OFF
+)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(opusfile)
