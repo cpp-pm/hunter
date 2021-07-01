@@ -10,8 +10,8 @@ include("../common.cmake")
 project(download-hypre)
 
 # DOCUMENTATION_START {
-hunter_add_package(HYPRE)
-find_package(hypre CONFIG REQUIRED)
+hunter_add_package(hypre)
+find_package(HYPRE CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
 target_link_libraries(boo PUBLIC HYPRE::HYPRE)
