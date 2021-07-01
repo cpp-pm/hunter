@@ -282,7 +282,7 @@ hunter_add_version(
     7b100bb68db8df1060e178c495f3cbe941c9b058
 )
 
-if(HUNTER_GTest_VERSION VERSION_LESS 1.8.0)
+if(HUNTER_GTest_VERSION VERSION_LESS 1.8.0 OR HUNTER_GTest_VERSION VERSION_GREATER_EQUAL 1.11.0)
   set(_gtest_license "LICENSE")
 else()
   set(_gtest_license "googletest/LICENSE")
