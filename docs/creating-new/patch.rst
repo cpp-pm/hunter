@@ -11,7 +11,7 @@ In practice patching requires to have a fork of a project.  In general it does
 not matter where the fork is located. But it matters that there is a central
 place for the patched packages:
 
-* https://github.com/hunter-packages
+* https://github.com/cpp-pm
 
 If you want to create new fork let me know about it in a corresponding issue
 with `"new package" label`_, I will create a new team and add you so you can
