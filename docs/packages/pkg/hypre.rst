@@ -12,7 +12,7 @@ hypre
 
 -  `Official <https://github.com/hypre-space/hypre>`__
 -  `Example <https://github.com/hypre-space/hypre/tree/master/src/examples>`__
--  Added by `craffael <https://github.com/craffael>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/420>`__)
+-  Added by `craffael <https://github.com/craffael>`__ (`pr-420 <https://github.com/cpp-pm/hunter/pull/420>`__)
 
 .. literalinclude:: /../examples/hypre/CMakeLists.txt
   :language: cmake
