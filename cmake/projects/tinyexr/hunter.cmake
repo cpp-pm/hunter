@@ -38,7 +38,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/tinyexr/archive/refs/tags/v1.0.0-3c33352-p0.tar.gz"
     SHA1
-    e0c64e31006de21da4464f8c062fac6048a5aa2a
+    9d06c3179a8e8f119c78c43eee21cb806820aea7
 )
 
 hunter_add_version(
