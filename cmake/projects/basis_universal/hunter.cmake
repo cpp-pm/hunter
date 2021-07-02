@@ -31,11 +31,28 @@ hunter_add_version(
     b453e7b1077f95ee4e5618f93712ea3a54d9aeb8
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    basis_universal
+    VERSION
+    1.15-c4c0db7-p0
+    URL
+    "https://github.com/cpp-pm/basis_universal/archive/refs/tags/v1.15-c4c0db7-p0.tar.gz"
+    SHA1
+    73b86006f65be61bbaf85cc17fe39247fe20a27b
+)
+
 if(ANDROID OR IOS OR _hunter_windows_store)
   hunter_cmake_args(
       basis_universal
       CMAKE_ARGS
         BASISU_BUILD_TOOL=OFF
+  )
+else()
+  hunter_cmake_args(
+      basis_universal
+      CMAKE_ARGS
+        SSE=ON
   )
 endif()
 
