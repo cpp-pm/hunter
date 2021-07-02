@@ -84,7 +84,7 @@ hunter_default_version(Imath VERSION 3.0.1)
 hunter_default_version(Immer VERSION 0.6.2-cf44615)
 hunter_default_version(Jpeg VERSION 9c-p0)
 hunter_default_version(JsonSpirit VERSION 0.0.4-hunter)
-hunter_default_version(KhronosDataFormat VERSION 1.3.1-1f8c852-p2)
+hunter_default_version(KhronosDataFormat VERSION 1.3.1-1f8c852-p3)
 hunter_default_version(LAPACK VERSION 3.7.1)
 hunter_default_version(LLVM VERSION 6.0.1-p0) # Clang
 hunter_default_version(LLVMCompilerRT VERSION 6.0.1) # Clang
