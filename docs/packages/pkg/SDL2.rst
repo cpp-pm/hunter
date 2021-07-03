@@ -10,7 +10,7 @@ SDL2
 ====
 
 -  `Official <https://www.libsdl.org>`__
--  `Hunterized <https://github.com/hunter-packages/SDL2>`__
+-  `Hunterized <https://github.com/cpp-pm/SDL>`__
 
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/SDL2/CMakeLists.txt>`__
 -  Available since `v0.14.29 <https://github.com/cpp-pm/hunter/releases/tag/v0.14.29>`__
