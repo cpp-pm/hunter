@@ -28,7 +28,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/meshoptimizer/archive/refs/tags/v0.16-86740c2-p0.tar.gz"
     SHA1
-    51262572cfdfca2de943484f4bec6a092494ac28
+    10b94ef45995fa8c06e90dcb656eb353017ef16a
 )
 
 if(ANDROID OR IOS)
