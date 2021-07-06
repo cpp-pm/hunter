@@ -28,7 +28,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/dfdutils/archive/refs/tags/v0.0.0-659a739-p1.tar.gz"
     SHA1
-    6dcb48f2e5a0c9626cefa45ac54711d5f26fe372
+    66cc30d5ce8836ec6dbbc683dfdc67f2e8b3241b
 )
 
 hunter_cmake_args(
