@@ -20,6 +20,17 @@ hunter_add_version(
     1dc4c7dd587231496cddb7471d86d9d6c2b5e3d1
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    fast_obj
+    VERSION
+    1.1-9255172-p0
+    URL
+    "https://github.com/cpp-pm/fast_obj/archive/refs/tags/v1.1-9255172-p0.tar.gz"
+    SHA1
+    94a8dccb311a05847aa71c85684bc02318b2ea3d
+)
+
 hunter_cmake_args(
     fast_obj
     CMAKE_ARGS
