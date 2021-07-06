@@ -20,9 +20,21 @@ hunter_add_version(
     31cd5cb5a3f58a45cf0e8d730509477ff0f23af1
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    dfdutils
+    VERSION
+    0.0.0-659a739-p1
+    URL
+    "https://github.com/cpp-pm/dfdutils/archive/refs/tags/v0.0.0-659a739-p1.tar.gz"
+    SHA1
+    6dcb48f2e5a0c9626cefa45ac54711d5f26fe372
+)
+
 hunter_cmake_args(
     dfdutils
     CMAKE_ARGS
+        BUILD_FOR_LIBKTX=ON
         BUILD_TESTS=OFF
         BUILD_DOCS=OFF
 )
