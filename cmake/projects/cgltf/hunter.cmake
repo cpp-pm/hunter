@@ -13,6 +13,17 @@ hunter_add_version(
     PACKAGE_NAME
     cgltf
     VERSION
+    1.10-f9a8804-p0
+    URL
+    "https://github.com/cpp-pm/cgltf/archive/refs/tags/v1.10-f9a8804-p0.tar.gz"
+    SHA1
+    b252bc7a22e7c7ea1f45e5675cd872233a0043b5
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    cgltf
+    VERSION
     1.10-p0
     URL
     "https://github.com/cpp-pm/cgltf/archive/v1.10-p0.tar.gz"
