@@ -1,4 +1,4 @@
-#include <KhronosGroup/dfd.h>
+#include <KKR/dfd.h>
 
 int main() {
     InterpretedDFDChannel R = {0,0}, G = {0,0}, B = {0,0}, A = {0,0};
