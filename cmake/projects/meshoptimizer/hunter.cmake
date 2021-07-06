@@ -20,6 +20,17 @@ hunter_add_version(
     d8e23cf64352a62a85ff10c7b4a0638231643a24
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    meshoptimizer
+    VERSION
+    0.16-86740c2-p0
+    URL
+    "https://github.com/cpp-pm/meshoptimizer/archive/refs/tags/v0.16-86740c2-p0.tar.gz"
+    SHA1
+    51262572cfdfca2de943484f4bec6a092494ac28
+)
+
 if(ANDROID OR IOS)
   hunter_cmake_args(
     meshoptimizer
