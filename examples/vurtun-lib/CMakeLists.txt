@@ -11,7 +11,7 @@ project(download-vurtun-lib)
 
 # DOCUMENTATION_START {
 hunter_add_package(vurtun-lib)
-find_package(vurtun-lib CONFIG REQUIRED)
+find_package(vurtun CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
 target_link_libraries(boo PUBLIC vurtun::lib)
