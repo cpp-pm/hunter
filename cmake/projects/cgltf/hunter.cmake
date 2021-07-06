@@ -17,7 +17,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/cgltf/archive/refs/tags/v1.10-f9a8804-p0.tar.gz"
     SHA1
-    b252bc7a22e7c7ea1f45e5675cd872233a0043b5
+    239dc691bd5ad663256eebb44f4641ad01d8ce9d
 )
 
 hunter_add_version(
