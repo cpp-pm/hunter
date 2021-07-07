@@ -17,7 +17,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/KTX-Software/archive/refs/tags/v4.0.0-efc9f09-p0.tar.gz"
     SHA1
-    8f45163285730164beaa9b6b44bba2183dabb4f3
+    e55bf10b4e97265de8475b4b68cd5b46e5f3e1cc
 )
 
 hunter_cmake_args(
