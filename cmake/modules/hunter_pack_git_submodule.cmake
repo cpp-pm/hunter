@@ -45,10 +45,34 @@ function(hunter_pack_git_submodule)
 
   set(top_git_directory "${output}")
 
-  set(cmd "${git_executable}" submodule status "${x_GIT_SUBMODULE}")
+  set(submodule_dir "${top_git_directory}/${x_GIT_SUBMODULE}")
+  if(NOT EXISTS "${submodule_dir}")
+    hunter_internal_error("Directory not exist: '${submodule_dir}'")
+  endif()
+
+  set(cmd "${git_executable}" rev-parse --show-toplevel)
   execute_process(
       COMMAND ${cmd}
-      WORKING_DIRECTORY "${top_git_directory}"
+      WORKING_DIRECTORY "${submodule_dir}/../"
+      RESULT_VARIABLE result
+      OUTPUT_VARIABLE output
+      ERROR_VARIABLE error
+      OUTPUT_STRIP_TRAILING_WHITESPACE
+      ERROR_STRIP_TRAILING_WHITESPACE
+  )
+
+  if(NOT result EQUAL "0")
+    hunter_internal_error(
+        "Command failed: ${cmd} (${result}, ${output}, ${error})"
+    )
+  endif()
+
+  set(parent_git_directory "${output}")
+
+  set(cmd "${git_executable}" submodule status "${submodule_dir}")
+  execute_process(
+      COMMAND ${cmd}
+      WORKING_DIRECTORY "${parent_git_directory}"
       RESULT_VARIABLE result
       OUTPUT_VARIABLE output
       ERROR_VARIABLE error
@@ -60,23 +84,18 @@ function(hunter_pack_git_submodule)
     string(REPLACE ";" " " cmd "${cmd}")
     hunter_internal_error(
         "Command failed: '${cmd}' (${result}, ${output}, ${error})"
-        "To reproduce error go to '${top_git_directory}' and"
+        "To reproduce error go to '${parent_git_directory}' and"
         "run command '${cmd}'"
     )
   endif()
 
-  set(submodule_file "${top_git_directory}/.gitmodules")
+  set(submodule_file "${parent_git_directory}/.gitmodules")
   if(NOT EXISTS "${submodule_file}")
     hunter_internal_error("File not found: '${submodule_file}'")
   endif()
   set_property(
       DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${submodule_file}"
   )
-
-  set(submodule_dir "${top_git_directory}/${x_GIT_SUBMODULE}")
-  if(NOT EXISTS "${submodule_dir}")
-    hunter_internal_error("Directory not exist: '${submodule_dir}'")
-  endif()
 
   set(cmd "${git_executable}" status --porcelain)
   execute_process(
