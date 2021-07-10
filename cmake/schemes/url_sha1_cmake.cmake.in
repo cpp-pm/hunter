@@ -149,6 +149,31 @@ foreach(configuration ${configuration_types})
     set(build_type_opts "-DCMAKE_CONFIGURATION_TYPES=${configuration}")
   endif()
 
+  set(patch_command PATCH_COMMAND)
+  set(package_patch_dir "@HUNTER_PACKAGE_SETUP_DIR@/patches/@HUNTER_PACKAGE_VERSION@")
+  if(EXISTS ${package_patch_dir} AND IS_DIRECTORY ${package_patch_dir})
+    if(EXISTS ${package_patch_dir}/CMakeLists.txt)
+      list(APPEND patch_command
+        COMMAND ${CMAKE_COMMAND} -E copy ${package_patch_dir}/CMakeLists.txt @HUNTER_PACKAGE_SOURCE_DIR@
+      )
+    endif()
+    if(EXISTS ${package_patch_dir}/cmake AND IS_DIRECTORY ${package_patch_dir}/cmake)
+      list(APPEND patch_command
+        COMMAND ${CMAKE_COMMAND} -E copy_directory ${package_patch_dir}/cmake @HUNTER_PACKAGE_SOURCE_DIR@/cmake
+      )
+    endif()
+    file(GLOB package_patches ${package_patch_dir}/*.patch)
+    if(package_patches)
+      list(SORT package_patches)
+      include(hunter_get_git_executable)
+      hunter_get_git_executable(git_executable)
+      list(APPEND patch_command
+        COMMAND ${git_executable} --work-tree=. --git-dir=.git apply ${package_patches} --ignore-whitespace --whitespace=nowarn --verbose
+        WORKING_DIRECTORY @HUNTER_PACKAGE_SOURCE_DIR@
+      )
+    endif()
+  endif()
+
   ExternalProject_Add(
       "${current_project}"
       URL
@@ -167,6 +192,7 @@ foreach(configuration ${configuration_types})
           # not used, just avoid creating Install/<name> empty directory
       SOURCE_SUBDIR
       "@HUNTER_PACKAGE_SOURCE_SUBDIR@"
+      ${patch_command}
       BUILD_COMMAND
           # Separate build and install stage so we can suppress install log
           # which may consist of a long list of files
