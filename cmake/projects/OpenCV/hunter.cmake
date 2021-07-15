@@ -17,13 +17,23 @@ hunter_add_version(
     PACKAGE_NAME
     OpenCV
     VERSION
+    "4.5.3-p0"
+    URL
+    "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.5.3-p0.tar.gz"
+    SHA1
+    b88c398704633f419c6628549f9ec589ae3bcd01
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenCV
+    VERSION
     "4.1.1-p0"
     URL
     "https://github.com/cpp-pm/opencv/archive/v4.1.1-p0.tar.gz"
     SHA1
     9df096bd5afd6fa7dc02651491a1de04b46b4556
 )
-
 
 hunter_add_version(
     PACKAGE_NAME
@@ -481,6 +491,7 @@ hunter_cmake_args(
         BUILD_JPEG=OFF
         BUILD_JASPER=OFF
         BUILD_WEBP=OFF
+        BUILD_OPENEXR=OFF
         # This stuff will build shared libraries. Build with PIC required for dependencies.
         BUILD_opencv_java=OFF
         BUILD_opencv_python2=OFF
@@ -491,9 +502,8 @@ hunter_cmake_args(
         WITH_CUFFT=OFF
         # Fix for https://travis-ci.org/xsacha/hunter/jobs/347083573
         BUILD_opencv_dnn=OFF
-        # Fix for https://travis-ci.org/ingenue/hunter/builds/452039597
-        WITH_OPENEXR=OFF
         WITH_FFMPEG=OFF
+        WITH_OPENJPEG=OFF
 )
 
 # Pick a download scheme
