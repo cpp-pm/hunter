@@ -12,6 +12,17 @@ hunter_add_version(
     PACKAGE_NAME
     OpenSceneGraph
     VERSION
+    "3.7.0-76a58eb-p0"
+    URL
+    "https://github.com/cpp-pm/OpenSceneGraph/archive/refs/tags/v3.7.0-76a58eb-p0.tar.gz"
+    SHA1
+    07bf974eac5ac5a48a5ae34f53be4ebf3333e919
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSceneGraph
+    VERSION
     "3.6.3-p0"
     URL
     "https://github.com/hunter-packages/OpenSceneGraph/archive/v3.6.3-p0.tar.gz"
