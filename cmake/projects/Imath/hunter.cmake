@@ -13,6 +13,17 @@ hunter_add_version(
     PACKAGE_NAME
     Imath
     VERSION
+    3.1.1
+    URL
+    "https://github.com/AcademySoftwareFoundation/Imath/archive/refs/tags/v3.1.1.tar.gz"
+    SHA1
+    1f6812637a1ec2a518cd4445ef31808fe1dc4a29
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Imath
+    VERSION
     3.0.1
     URL
     "https://github.com/AcademySoftwareFoundation/Imath/archive/refs/tags/v3.0.1.tar.gz"
