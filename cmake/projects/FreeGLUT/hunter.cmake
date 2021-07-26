@@ -5,6 +5,7 @@
 
 include(hunter_add_version)
 include(hunter_cacheable)
+include(hunter_cmake_args)
 include(hunter_download)
 include(hunter_pick_scheme)
 
@@ -18,6 +19,13 @@ hunter_add_version(
     SHA1
     b2841bf9697185b8c29adb56bb01d7a5668e9741
 )
+
+hunter_cmake_args(
+    FreeGLUT
+    CMAKE_ARGS
+        FREEGLUT_BUILD_SHARED_LIBS=OFF
+        FREEGLUT_REPLACE_GLUT=ON
+        FREEGLUT_BUILD_DEMOS=OFF)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(FreeGLUT)
