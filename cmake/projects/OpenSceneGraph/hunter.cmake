@@ -16,7 +16,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/OpenSceneGraph/archive/refs/tags/v3.7.0-76a58eb-p0.tar.gz"
     SHA1
-    5ad7aae91ff8513ab68beac15503aaf4134d2e57
+    66a50eeda04ae7f325cb62b6d35ef3bbecdf82ee
 )
 
 hunter_add_version(
