@@ -29,7 +29,7 @@ hunter_add_version(
     VERSION "2.4.0"
     URL "https://github.com/pybind/pybind11/archive/v2.4.0.tar.gz"
     SHA1 "22c1bff0b451f2faa21374e03515276649c9d749")
-    
+
 hunter_add_version(
     PACKAGE_NAME pybind11
     VERSION "2.4.1"
@@ -53,7 +53,31 @@ hunter_add_version(
     VERSION "2.5.0"
     URL "https://github.com/pybind/pybind11/archive/v2.5.0.tar.gz"
     SHA1 "8caf0bde85813f9eac55e516d4afcb925806aa5e")
-    
+
+hunter_add_version(
+    PACKAGE_NAME pybind11
+    VERSION "2.6.0"
+    URL "https://github.com/pybind/pybind11/archive/v2.6.0.tar.gz"
+    SHA1 "446958f8e8a0268c50b934509ed07655f0c32eb4")
+
+hunter_add_version(
+    PACKAGE_NAME pybind11
+    VERSION "2.6.1"
+    URL "https://github.com/pybind/pybind11/archive/v2.6.1.tar.gz"
+    SHA1 "b21af7baafced23503ff19298b0c3a68fce88d61")
+
+hunter_add_version(
+    PACKAGE_NAME pybind11
+    VERSION "2.6.2"
+    URL "https://github.com/pybind/pybind11/archive/v2.6.2.tar.gz"
+    SHA1 "e340be2d61439deaf7bdd4bd273bb8c51b713f26")
+
+hunter_add_version(
+    PACKAGE_NAME pybind11
+    VERSION "2.7.0"
+    URL "https://github.com/pybind/pybind11/archive/v2.7.0.tar.gz"
+    SHA1 "3a7010e5952c56e08c8f9b7d6fb458a173fd585a")
+
 hunter_cmake_args(pybind11 CMAKE_ARGS PYBIND11_TEST=OFF)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)

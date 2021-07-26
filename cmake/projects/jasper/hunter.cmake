@@ -64,6 +64,17 @@ hunter_add_version(
     7a5b850b3c03e78b8d6f0a06c000e8ecc1f51432
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    jasper
+    VERSION
+    2.0.32-p0
+    URL
+    "https://github.com/cpp-pm/jasper/archive/refs/tags/v2.0.32-p0.tar.gz"
+    SHA1
+    ef82c0800db4070de0972dde4fe1b6032f2012f2
+)
+
 hunter_cmake_args(
     jasper
     CMAKE_ARGS
