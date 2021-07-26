@@ -1,6 +1,8 @@
 .. spelling::
 
-    aws_lambda_cpp
+    aws
+    lambda
+    cpp
 
 .. index:: frameworks ; aws_lambda_cpp
 
