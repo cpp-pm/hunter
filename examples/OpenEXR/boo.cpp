@@ -1,5 +1,7 @@
 #include <OpenEXR/ImfHeader.h>
 
+#include <ImfRgbaFile.h>
+
 #include <iostream>
 
 int main() {
