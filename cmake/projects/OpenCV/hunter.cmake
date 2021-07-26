@@ -21,7 +21,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.5.3-p0.tar.gz"
     SHA1
-    5d368167b85c079c2a5d70ece3ef7a1aba1f672c
+    6a6cace284822117a5c3f48f2faa5bd0f6123759
 )
 
 hunter_add_version(
