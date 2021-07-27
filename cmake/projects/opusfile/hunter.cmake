@@ -8,6 +8,17 @@ hunter_add_version(
     PACKAGE_NAME
     opusfile
     VERSION
+    0.12-p1
+    URL
+    "https://github.com/cpp-pm/opusfile/archive/v0.12-p1.tar.gz"
+    SHA1
+    32d654a0cb6135022b81a25ee4aedc7ecaae3930
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    opusfile
+    VERSION
     0.12-p0
     URL
     "https://github.com/cpp-pm/opusfile/archive/v0.12-p0.tar.gz"
