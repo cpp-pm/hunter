@@ -35,7 +35,7 @@ if [[ "$TOOLCHAIN" =~ "osx-11-0" ]]; then
 fi
 
 # Run build script
-if [[ "$BRANCH_NAME" == "master" ]]; then
+if [[ "$BRANCH_NAME" == "master" && ! -z "$GITHUB_USER_PASSWORD" ]]; then
     python jenkins.py --upload
 else
     python jenkins.py
