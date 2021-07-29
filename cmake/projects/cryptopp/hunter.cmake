@@ -10,6 +10,17 @@ hunter_add_version(
     PACKAGE_NAME
     cryptopp
     VERSION
+    "8.2.0-p1"
+    URL
+    "https://github.com/cpp-pm/cryptopp/archive/v8.2.0-p1.tar.gz"
+    SHA1
+    ad02d426c04ea576640f71908220b47be4a066b0
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    cryptopp
+    VERSION
     "8.2.0-p0"
     URL
     "https://github.com/hunter-packages/cryptopp/archive/v8.2.0-p0.tar.gz"
