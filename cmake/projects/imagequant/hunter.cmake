@@ -19,6 +19,17 @@ hunter_add_version(
     95960f65c1e103cc87a2b07e656ce247188ee082
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    imagequant
+    VERSION
+    2.15.1-p0
+    URL
+    "https://github.com/cpp-pm/libimagequant/archive/v2.15.1-p0.tar.gz"
+    SHA1
+    d9fd45fdad6075680e724dcdf3dc65b81bdbfaa9
+)
+
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(imagequant)
 hunter_download(PACKAGE_NAME imagequant)
