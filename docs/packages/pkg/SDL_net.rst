@@ -7,7 +7,7 @@
 .. _pkg.SDL_net:
 
 SDL_net
-=========
+=======
 
 -  `Official <https://www.libsdl.org/projects/SDL_net/>`__
 -  `Hunterized <https://github.com/cpp-pm/SDL_net>`__
