@@ -53,6 +53,17 @@ hunter_add_version(
     8c047d1d843a29072702ee09ec7ecbce00636433
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    flatbuffers
+    VERSION
+    2.0.0
+    URL
+    "https://github.com/google/flatbuffers/archive/v2.0.0.tar.gz"
+    SHA1
+    9bdc88f875bd1923403de8956ec125328a0f0bab
+)
+
 if(ANDROID OR IOS)
 hunter_cmake_args(
     flatbuffers
