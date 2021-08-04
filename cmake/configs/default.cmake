@@ -340,7 +340,7 @@ if(MSVC_VERSION LESS 1600)
   # for VS10 - version without support C++11
   hunter_default_version(jsoncpp VERSION 0.7.0)
 else()
-  hunter_default_version(jsoncpp VERSION 1.8.0)
+  hunter_default_version(jsoncpp VERSION 1.9.5-b1)
 endif()
 
 hunter_default_version(kNet VERSION 2.7-p1)
