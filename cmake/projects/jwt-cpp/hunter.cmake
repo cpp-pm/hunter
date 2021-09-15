@@ -17,7 +17,7 @@ hunter_add_version(
     URL
     "https://github.com/Thalhammer/jwt-cpp/archive/refs/tags/v0.5.2.tar.gz"
     SHA1
-    f378880bac1b9665165861bd7eaae74a91c0240b
+    528c0c23ec9d9e5af06770e4a0bc931a94a30a51
 )
 
 hunter_cmake_args(
