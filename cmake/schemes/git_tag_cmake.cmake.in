@@ -1,0 +1,216 @@
+# Copyright (c) 2015, Ruslan Baratov
+# All rights reserved.
+
+cmake_minimum_required(VERSION 3.0)
+project(Hunter)
+
+include(ExternalProject) # ExternalProject_Add
+
+# Scheme for CMake projects
+
+# This is universal CMake scheme that will work for
+#   * single-configuration (`* Makefiles`)
+#     * cmake -DCMAKE_BUILD_TYPE=${configuration}
+#   * multi-configuration (Visual Studio, Xcode)
+#     * cmake -DCMAKE_CONFIGURATION_TYPES=...
+#     * cmake --build --config ${configuration}
+
+list(APPEND CMAKE_MODULE_PATH "@HUNTER_SELF@/cmake/modules")
+
+include(hunter_status_debug)
+include(hunter_assert_not_empty_string)
+include(hunter_user_error)
+
+hunter_status_debug("Scheme: url_sha1_cmake")
+
+# Check preconditions
+hunter_assert_not_empty_string("@HUNTER_SELF@")
+hunter_assert_not_empty_string("@HUNTER_EP_NAME@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_URL@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_SHA1@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_DOWNLOAD_DIR@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_SOURCE_DIR@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_INSTALL_PREFIX@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_CONFIGURATION_TYPES@")
+hunter_assert_not_empty_string("@HUNTER_CACHE_FILE@")
+hunter_assert_not_empty_string("@HUNTER_ARGS_FILE@")
+hunter_assert_not_empty_string("@HUNTER_PACKAGE_LICENSE_DIR@")
+hunter_assert_not_empty_string("@CMAKE_GENERATOR@")
+hunter_assert_not_empty_string("${CMAKE_TOOLCHAIN_FILE}")
+hunter_assert_not_empty_string("@HUNTER_TLS_VERIFY@")
+
+if(IOS)
+  if(CMAKE_VERSION VERSION_LESS 3.5)
+    hunter_user_error("CMake 3.5+ version should be used for iOS toolchains")
+  endif()
+  string(COMPARE NOTEQUAL "${IPHONESIMULATOR_ARCHS}" "" has_simulator)
+  set(ios_opts "-DCMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH=NO")
+  if(has_simulator)
+    list(APPEND ios_opts "-DCMAKE_IOS_INSTALL_COMBINED=YES")
+  endif()
+else()
+  set(ios_opts "")
+endif()
+
+# https://cmake.org/cmake/help/v3.4/release/3.4.html#modules
+# https://cmake.org/cmake/help/v3.4/module/ExternalProject.html
+if(CMAKE_VERSION VERSION_LESS 3.4)
+  set(uses_terminal "")
+else()
+  set(
+      uses_terminal
+      USES_TERMINAL_DOWNLOAD 1
+      USES_TERMINAL_UPDATE 1
+      USES_TERMINAL_CONFIGURE 1
+      USES_TERMINAL_BUILD 1
+      USES_TERMINAL_TEST 1
+      USES_TERMINAL_INSTALL 1
+  )
+endif()
+
+string(COMPARE NOTEQUAL "@HUNTER_JOBS_OPTION@" "" have_jobs)
+if(have_jobs)
+  string(COMPARE NOTEQUAL "@XCODE_VERSION@" "" is_xcode)
+  if(is_xcode)
+    set(jobs_option "-jobs" "@HUNTER_JOBS_OPTION@")
+  elseif("@MSVC_IDE@")
+    set(jobs_option "/maxcpucount:@HUNTER_JOBS_OPTION@")
+  else()
+    set(jobs_option "-j@HUNTER_JOBS_OPTION@")
+  endif()
+else()
+  set(jobs_option "")
+endif()
+
+set(previous_project "")
+
+if("@HUNTER_PACKAGE_LOG_BUILD@")
+  set(log_build 1)
+else()
+  set(log_build 0)
+endif()
+
+if("@HUNTER_PACKAGE_LOG_INSTALL@" OR "@HUNTER_SUPPRESS_LIST_OF_FILES@")
+  set(log_install 1)
+else()
+  set(log_install 0)
+endif()
+
+string(COMPARE EQUAL "@HUNTER_PACKAGE_PROTECTED_SOURCES@" "" is_empty)
+if(is_empty)
+  set(http_credentials "")
+else()
+  set(
+      http_credentials
+      HTTP_USERNAME "@HUNTER_PACKAGE_HTTP_USERNAME@"
+      HTTP_PASSWORD "@HUNTER_PACKAGE_HTTP_PASSWORD@"
+  )
+endif()
+
+string(COMPARE NOTEQUAL "${CMAKE_MAKE_PROGRAM}" "" has_make)
+if(has_make)
+  set(make_args "-DCMAKE_MAKE_PROGRAM=${CMAKE_MAKE_PROGRAM}")
+else()
+  set(make_args "")
+endif()
+
+string(COMPARE EQUAL "${CMAKE_CFG_INTDIR}" "." is_single)
+
+set(configuration_types "@HUNTER_PACKAGE_CONFIGURATION_TYPES@")
+list(LENGTH configuration_types len)
+if(len EQUAL "1")
+  set(no_postfix TRUE)
+else()
+  set(no_postfix FALSE)
+endif()
+
+foreach(configuration ${configuration_types})
+  # All configurations use the same URL which will be downloaded only once
+  # i.e. overhead only for unpacking archive + no files from the previous
+  # build will be left in case package do some insource modification (wrongly)
+  string(TOUPPER "${configuration}" configuration_upper)
+  string(COMPARE EQUAL "${configuration_upper}" "RELEASE" is_release)
+  set(postfix_name "CMAKE_${configuration_upper}_POSTFIX")
+  string(COMPARE EQUAL "${${postfix_name}}" "" is_empty)
+
+  if(NOT is_release AND is_empty)
+    set("${postfix_name}" "-${configuration}")
+  endif()
+
+  if(no_postfix)
+    set("${postfix_name}" "")
+  endif()
+
+  set(current_project "@HUNTER_EP_NAME@-${configuration}")
+
+  if(is_single)
+    set(build_type_opts "-DCMAKE_BUILD_TYPE=${configuration}")
+  else()
+    set(build_type_opts "-DCMAKE_CONFIGURATION_TYPES=${configuration}")
+  endif()
+
+  ExternalProject_Add(
+      "${current_project}"
+      GIT_REPOSITORY
+      @HUNTER_PACKAGE_URL@
+      GIT_TAG
+      @HUNTER_PACKAGE_SHA1@
+      GIT_SHALLOW
+      ${http_credentials}
+      DOWNLOAD_DIR
+      "@HUNTER_PACKAGE_DOWNLOAD_DIR@"
+      TLS_VERIFY
+      "@HUNTER_TLS_VERIFY@"
+      SOURCE_DIR
+      "@HUNTER_PACKAGE_SOURCE_DIR@"
+      INSTALL_DIR
+      "@HUNTER_PACKAGE_INSTALL_PREFIX@"
+          # not used, just avoid creating Install/<name> empty directory
+      SOURCE_SUBDIR
+      "@HUNTER_PACKAGE_SOURCE_SUBDIR@"
+      BUILD_COMMAND
+          # Separate build and install stage so we can suppress install log
+          # which may consist of a long list of files
+          "@CMAKE_COMMAND@"
+          --build .
+          --config ${configuration}
+          --
+          ${jobs_option}
+      CMAKE_ARGS
+      "-G@CMAKE_GENERATOR@"
+      "-C@HUNTER_CACHE_FILE@"
+      "-C@HUNTER_ARGS_FILE@"
+      "-D${postfix_name}=${${postfix_name}}"
+      "${build_type_opts}"
+      "-DCMAKE_INSTALL_PREFIX=@HUNTER_PACKAGE_INSTALL_PREFIX@"
+      "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}"
+      "${make_args}"
+      ${ios_opts}
+      INSTALL_COMMAND
+          "@CMAKE_COMMAND@"
+          --build .
+          --target install
+          --config ${configuration}
+        COMMAND # Copy license files
+          "@CMAKE_COMMAND@"
+          "-C@HUNTER_ARGS_FILE@" # for 'HUNTER_INSTALL_LICENSE_FILES'
+          "-Dsrcdir=@HUNTER_PACKAGE_SOURCE_DIR@"
+          "-Ddstdir=@HUNTER_PACKAGE_LICENSE_DIR@"
+          -P
+          "@HUNTER_SELF@/scripts/try-copy-license.cmake"
+      LOG_BUILD ${log_build}
+      LOG_INSTALL ${log_install}
+      ${uses_terminal}
+  )
+
+  # Each external project must depends on previous one since they all use
+  # the same building directory
+  string(COMPARE EQUAL "${previous_project}" "" is_empty)
+  if(NOT is_empty)
+    add_dependencies(
+        "${current_project}"
+        "${previous_project}"
+    )
+  endif()
+  set(previous_project "${current_project}")
+endforeach()
