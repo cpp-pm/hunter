@@ -21,6 +21,17 @@ hunter_add_version(
     52486301a2b0a01dfe1513a09d136bc74675a287
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    taskflow
+    VERSION
+    "3.2.0"
+    URL 
+    "https://github.com/taskflow/taskflow/archive/refs/tags/v3.2.0.tar.gz"
+    SHA1
+    "4cb3d2589b6bf4b6fe5be3f444519fe8249f936a"
+)
+
 hunter_cmake_args(
     taskflow
     CMAKE_ARGS
