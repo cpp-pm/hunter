@@ -1,4 +1,4 @@
-#include <jwt-cpp/jwt-cpp.hpp>
+#include <jwt-cpp/jwt.h>
 
 int main() {
 }
