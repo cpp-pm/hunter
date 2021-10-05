@@ -8,7 +8,7 @@
 .. _pkg.jwt-cpp:
 
 jwt-cpp
-===
+=======
 
 -  `Official <https://github.com/Thalhammer/jwt-cpp>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/jwt-cpp/CMakeLists.txt>`__
