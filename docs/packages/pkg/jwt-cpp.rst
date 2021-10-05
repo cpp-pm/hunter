@@ -1,6 +1,7 @@
 .. spelling::
 
-    jwt-cpp
+    jwt
+    cpp
 
 .. index::
   single: crypto ; jwt-cpp
