@@ -17,7 +17,7 @@ hunter_add_version(
     URL
     "https://github.com/craffael/ittapi/archive/05ac701ea1277565d9b1f291ef29a09d4bb94a38.tar.gz"
     SHA1
-    05ac701ea1277565d9b1f291ef29a09d4bb94a38
+    1aac4650befe3bf81e1869d402c4ee757f5fcb80
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
