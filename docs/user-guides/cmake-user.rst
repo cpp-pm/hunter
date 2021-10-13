@@ -5,7 +5,7 @@ CMake user
 ----------
 
 This kind of developer can **read** CMake code that was written by more
-experienced CMake developer.  They understand some simple features such as
+experienced CMake developers. They understand some simple features such as
 adding an executable with the ``add_executable`` command, and that this
 command contains a list of source files associated with the executable.
 They will probably have difficulty understanding why, in some cases, the
