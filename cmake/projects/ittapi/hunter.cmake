@@ -13,11 +13,11 @@ hunter_add_version(
     PACKAGE_NAME
     ittapi
     VERSION
-    05ac701
+    f797dbf
     URL
-    "https://github.com/craffael/ittapi/archive/05ac701ea1277565d9b1f291ef29a09d4bb94a38.tar.gz"
+    "https://github.com/craffael/ittapi/archive/f797dbfc80de595f345e4249219398e7dca1ecd5.tar.gz"
     SHA1
-    1aac4650befe3bf81e1869d402c4ee757f5fcb80
+    d83c74280773195e2d261b138ca25cf251b91445
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
