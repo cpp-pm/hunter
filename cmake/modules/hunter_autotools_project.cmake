@@ -73,7 +73,6 @@ function(hunter_autotools_project target_name)
   set(optional_params)
   set(one_value_params
       HUNTER_SELF
-      URL
       URL_HASH
       DOWNLOAD_DIR
       SOURCE_DIR
@@ -88,6 +87,7 @@ function(hunter_autotools_project target_name)
       BOOTSTRAP
   )
   set(multi_value_params
+      URL
       PACKAGE_CONFIGURATION_TYPES
       EXTRA_FLAGS
       PATCH_COMMAND
