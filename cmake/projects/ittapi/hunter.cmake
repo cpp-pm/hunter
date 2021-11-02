@@ -13,11 +13,11 @@ hunter_add_version(
     PACKAGE_NAME
     ittapi
     VERSION
-    f797dbf
+    3.21.2-p0
     URL
-    "https://github.com/craffael/ittapi/archive/f797dbfc80de595f345e4249219398e7dca1ecd5.tar.gz"
+    "https://github.com/cpp-pm/ittapi/archive/v3.21.2-p0.tar.gz"
     SHA1
-    d83c74280773195e2d261b138ca25cf251b91445
+    1a2ef8c2b50c42deec85a63a23fd7b7b0fbe75b0
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
