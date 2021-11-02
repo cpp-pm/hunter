@@ -1,6 +1,8 @@
 .. spelling::
 
     tcmalloc
+    CMake
+    bazel
 
 .. index::
   single: unsorted ; tcmalloc
@@ -22,7 +24,7 @@ tcmalloc
 
 .. note::
 
-  * Because tcmalloc must be linked as an object library (:code:`alwayslink` in bazel) it is recommended to use Cmake 3.21. 
+  * Because tcmalloc must be linked as an object library (:code:`alwayslink` in bazel) it is require to use at least CMake 3.21. 
     See the corresponding note on `<https://cmake.org/cmake/help/latest/command/target_link_libraries.html#linking-object-libraries-via-target-objects>`__
   * Because tcmalloc requires at least C++17 and because it depends on `abseil <https://github.com/abseil/abseil-cpp>`__, it is important to make sure that abseil is also built with C++17.
     Otherwise you may get link time errors related to :code:`std::basic_string_view`.

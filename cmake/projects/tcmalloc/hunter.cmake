@@ -16,7 +16,7 @@ hunter_add_version(
     URL
     "https://github.com/craffael/tcmalloc/archive/0.0.0-bc7995b-p0.tar.gz"
     SHA1
-    297cb2eba7e30c9a9639141372ee51c544143780
+    f42e1fec0ff66f3cb51648cc644efe3600b1b9f1
 )
 
 
