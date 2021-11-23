@@ -142,6 +142,17 @@ hunter_add_version(
         PACKAGE_NAME
         SDL2
         VERSION
+        "2.0.16-p0"
+        URL
+        "https://github.com/cpp-pm/SDL/archive/v2.0.16-p0.tar.gz"
+        SHA1
+        3b8d0dfdbd1b062035a9432bff75a22ab439bcd1
+)
+
+hunter_add_version(
+        PACKAGE_NAME
+        SDL2
+        VERSION
         "2.0.4-urho-p2"
         URL
         "https://github.com/cpp-pm/SDL2_legacy/archive/v2.0.4-urho-p2.tar.gz"
