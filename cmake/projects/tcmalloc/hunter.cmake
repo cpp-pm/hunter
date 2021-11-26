@@ -14,7 +14,7 @@ hunter_add_version(
     VERSION
     "0.0.0-bc7995b-p0"
     URL
-    "https://github.com/craffael/tcmalloc/archive/0.0.0-bc7995b-p0.tar.gz"
+    "https://github.com/cpp-pm/tcmalloc/archive/0.0.0-bc7995b-p0.tar.gz"
     SHA1
     f42e1fec0ff66f3cb51648cc644efe3600b1b9f1
 )
