@@ -15,7 +15,7 @@ tcmalloc
 -  `Official <https://github.com/google/tcmalloc>`__
 -  `Hunterized <https://github.com/cpp-pm/tcmalloc>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/tcmalloc/CMakeLists.txt>`__
--  Added by `Raffael Casagrande <https://github.com/craffael>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
+-  Added by `Raffael Casagrande <https://github.com/craffael>`__ (`pr-493 <https://github.com/cpp-pm/hunter/pull/493>`__)
 
 .. literalinclude:: /../examples/tcmalloc/CMakeLists.txt
   :language: cmake
