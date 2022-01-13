@@ -74,6 +74,17 @@ hunter_add_version(
     7f172287e594c916150f1b2a2882a188f945e969
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    freetype
+    VERSION
+    "2.10.4-p0"
+    URL
+    "https://github.com/cpp-pm/freetype/archive/v2.10.4-p0.tar.gz"
+    SHA1
+    e9b199a80e16f5120587c44082ec62962cf3b553
+)
+
 hunter_cmake_args(
     freetype
     CMAKE_ARGS
