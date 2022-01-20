@@ -16,7 +16,7 @@ hunter_add_version(
     VERSION
     "8.41"
     URL
-    "https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.bz2"
+    "https://ftp.exim.org/pub/pcre/pcre-8.41.tar.bz2"
     SHA1
     7d1f4aae4191512744a718cc2b81bcf995ec1437
 )
