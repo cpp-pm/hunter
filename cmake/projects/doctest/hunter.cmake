@@ -14,17 +14,6 @@ hunter_add_version(
     PACKAGE_NAME
     doctest
     VERSION
-    "1.1.4-hunter-1"
-    URL
-    "https://github.com/piribes/doctest/archive/1.1.4-hunter-1.tar.gz"
-    SHA1
-    684580f4cf1f40ca7750bea90facc4564a807c2a
-)
-
-hunter_add_version(
-    PACKAGE_NAME
-    doctest
-    VERSION
     "1.2.0"
     URL
     "https://github.com/onqtam/doctest/archive/1.2.0.tar.gz"
