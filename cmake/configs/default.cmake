@@ -348,7 +348,7 @@ else()
   hunter_default_version(jsoncpp VERSION 1.9.5-b1)
 endif()
 
-hunter_default_version(jwt-cpp VERSION v0.6.0-rc.1)
+hunter_default_version(jwt-cpp VERSION v0.6.0-rc.2)
 hunter_default_version(kNet VERSION 2.7-p1)
 hunter_default_version(kbproto VERSION 1.0.7)
 hunter_default_version(lcms VERSION 2.9-p0)
