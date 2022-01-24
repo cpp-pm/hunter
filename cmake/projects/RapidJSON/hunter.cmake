@@ -97,28 +97,6 @@ hunter_add_version(
     bb0bfb8ad5cf2b575b57efbf2957619735a1696e
 )
 
-hunter_add_version(
-    PACKAGE_NAME
-    RapidJSON
-    VERSION
-    "0.11-p1"
-    URL
-    "https://github.com/hunter-packages/rapidjson/archive/v0.11-p1.tar.gz"
-    SHA1
-    1d027e4d1e9cf03b4dcdeaf8459e2e10607d5913
-)
-
-hunter_add_version(
-    PACKAGE_NAME
-    RapidJSON
-    VERSION
-    "0.11-hunter"
-    URL
-    "https://github.com/hunter-packages/rapidjson/archive/v0.11-hunter.tar.gz"
-    SHA1
-    3cae7f5043e2bfbeb83c033b90a1a9fb69fd2371
-)
-
 # C++ versions should be passed in by the toolchain.
 # Since this is a header-only library, the RAPIDJSON_BUILD_CXX11 setting is irrelevant.
 hunter_cmake_args(
