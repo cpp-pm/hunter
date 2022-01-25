@@ -13,16 +13,14 @@ include(hunter_check_toolchain_definition)
 # Disable searching in locations not specified by these hint variables.
 set(Boost_NO_SYSTEM_PATHS ON)
 
-# use base url for official boost releases
-set(_hunter_boost_base_url "https://boostorg.jfrog.io/artifactory/main/release")
-
+# for official boost releases use base url https://boostorg.jfrog.io/artifactory/main/release
 hunter_add_version(
     PACKAGE_NAME
     Boost
     VERSION
     "1.65.1"
     URL
-    "${_hunter_boost_base_url}/1.65.1/source/boost_1_65_1.tar.bz2"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.65.1/source/boost_1_65_1.tar.bz2"
     SHA1
     4a5b0c3c1b1b9a4d6cb6a6cc395e903e76f76720
 )
@@ -33,7 +31,7 @@ hunter_add_version(
     VERSION
     "1.65.0"
     URL
-    "${_hunter_boost_base_url}/1.65.0/source/boost_1_65_0.tar.bz2"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.65.0/source/boost_1_65_0.tar.bz2"
     SHA1
     f9260074ecfb31f3e65322fae9c15cc423c0ad59
 )
@@ -44,7 +42,7 @@ hunter_add_version(
     VERSION
     "1.66.0"
     URL
-    "${_hunter_boost_base_url}/1.66.0/source/boost_1_66_0.7z"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.66.0/source/boost_1_66_0.7z"
     SHA1
     075d0b43980614054b1f1bafd189f863bba6600e
 )
@@ -66,7 +64,7 @@ hunter_add_version(
     VERSION
     "1.67.0"
     URL
-    "${_hunter_boost_base_url}/1.67.0/source/boost_1_67_0.7z"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.67.0/source/boost_1_67_0.7z"
     SHA1
     64c278c23defe155e630a307ae2c0615348b14b3
 )
@@ -198,7 +196,7 @@ hunter_add_version(
     VERSION
     "1.75.0"
     URL
-    "${_hunter_boost_base_url}/1.75.0/source/boost_1_75_0.tar.bz2"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75_0.tar.bz2"
     SHA1
     6109efd3bdd8b9220d7d85b5e125f7f28721b9a9
 )
@@ -209,7 +207,7 @@ hunter_add_version(
     VERSION
     "1.76.0"
     URL
-    "${_hunter_boost_base_url}/1.76.0/source/boost_1_76_0.tar.bz2"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2"
     SHA1
     8064156508312dde1d834fec3dca9b11006555b6
 )
@@ -220,7 +218,7 @@ hunter_add_version(
     VERSION
     "1.77.0"
     URL
-    "${_hunter_boost_base_url}/1.77.0/source/boost_1_77_0.tar.bz2"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.tar.bz2"
     SHA1
     0cb4f947d094fc311e13ffacaff00418130ef5ef
 )
@@ -231,20 +229,19 @@ hunter_add_version(
     VERSION
     "1.78.0"
     URL
-    "${_hunter_boost_base_url}/1.78.0/source/boost_1_78_0.tar.bz2"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.bz2"
     SHA1
     7ccc47e82926be693810a687015ddc490b49296d
 )
 
-# up until 1.63 sourcefourge was used
-set(_hunter_boost_base_url "https://downloads.sourceforge.net/project/boost/boost/")
+# up until 1.63 sourcefourge was used, base url https://downloads.sourceforge.net/project/boost/boost
 hunter_add_version(
     PACKAGE_NAME
     Boost
     VERSION
     "1.64.0"
     URL
-    "${_hunter_boost_base_url}/1.64.0/boost_1_64_0.tar.bz2"
+    "https://downloads.sourceforge.net/project/boost/boost/1.64.0/boost_1_64_0.tar.bz2"
     SHA1
     51421ef259a4530edea0fbfc448460fcc5c64edb
 )
@@ -255,7 +252,7 @@ hunter_add_version(
     VERSION
     "1.63.0"
     URL
-    "${_hunter_boost_base_url}/1.63.0/boost_1_63_0.tar.bz2"
+    "https://downloads.sourceforge.net/project/boost/boost/1.63.0/boost_1_63_0.tar.bz2"
     SHA1
     9f1dd4fa364a3e3156a77dc17aa562ef06404ff6
 )
@@ -266,7 +263,7 @@ hunter_add_version(
     VERSION
     "1.62.0"
     URL
-    "${_hunter_boost_base_url}/1.62.0/boost_1_62_0.tar.bz2"
+    "https://downloads.sourceforge.net/project/boost/boost/1.62.0/boost_1_62_0.tar.bz2"
     SHA1
     5fd97433c3f859d8cbab1eaed4156d3068ae3648
 )
@@ -278,7 +275,7 @@ hunter_add_version(
     VERSION
     "1.61.0"
     URL
-    "${_hunter_boost_base_url}/1.61.0/boost_1_61_0.tar.bz2"
+    "https://downloads.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.tar.bz2"
     SHA1
     f84b1a1ce764108ec3c2b7bd7704cf8dfd3c9d01
 )
