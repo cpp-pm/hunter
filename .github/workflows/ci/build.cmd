@@ -45,8 +45,8 @@ if not "%TOOLCHAIN:vs-=%"=="%TOOLCHAIN%" set HUNTER_BINARY_DIR=C:\__BIN
 :: Add msbuild to PATH (for vs-14 toolchain, GitHub windows-2016 runner doesn't have VS 2015)
 if "%TOOLCHAIN:~0,5%"=="vs-14" set PATH=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin;%PATH%
 
+set "UPLOAD="
 if "%BRANCH_NAME%" == "master" if not "%GITHUB_USER_PASSWORD%" == "" (
-    python jenkins.py --upload
-) else (
-    python jenkins.py
+    set UPLOAD=-upload
 )
+python jenkins.py %UPLOAD%

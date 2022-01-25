@@ -53,6 +53,17 @@ hunter_add_version(
     105c15b2c0c56e6dc13b0dda0915f759231dfb0c
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    harfbuzz
+    VERSION
+    2.8.0-p0
+    URL
+    "https://github.com/cpp-pm/harfbuzz/archive/v2.8.0-p0.tar.gz"
+    SHA1
+    005062673b16a3009cc347e2e2ec398537723fff
+)
+
 set(
     _hunter_hb_cmake_args
     HB_HAVE_FREETYPE=ON
@@ -65,6 +76,14 @@ if(RASPBERRY_PI)
       APPEND
       _hunter_hb_cmake_args
       HAVE_XLOCALE_H=OFF
+  )
+endif()
+
+if(IOS)
+  list(
+      APPEND
+      _hunter_hb_cmake_args
+      HB_IOS=ON
   )
 endif()
 

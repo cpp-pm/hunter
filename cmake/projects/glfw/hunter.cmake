@@ -90,6 +90,17 @@ hunter_add_version(
     533debc50f12ce147d54d210408c7e33654f10a4
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    glfw
+    VERSION
+    "3.3.4-p0"
+    URL
+    "https://github.com/cpp-pm/glfw/archive/refs/tags/v3.3.4-p0.tar.gz"
+    SHA1
+    23bb8c61aef379e0e9a7a8298d8b9c4015e34bc2
+)
+
 hunter_cmake_args(
     glfw
     CMAKE_ARGS
