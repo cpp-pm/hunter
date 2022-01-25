@@ -14,7 +14,7 @@ hunter_add_version(
     VERSION
     "snapshot-20170420-2245"
     URL
-    "ftp://ftp.videolan.org/pub/x264/snapshots/x264-snapshot-20170420-2245.tar.bz2"
+    "https://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20170420-2245.tar.bz2"
     SHA1
     679b8c4f39f375090bf64e5c80c83303e4ddc37c
 )
