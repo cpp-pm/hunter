@@ -13,11 +13,11 @@ hunter_add_version(
     PACKAGE_NAME
     jwt-cpp
     VERSION
-    v0.6.0-rc.2
+    ba1077f95de6787a9c1ef150424bfee55ddca5e1
     URL
-    "https://github.com/Thalhammer/jwt-cpp/archive/refs/tags/v0.6.0-rc.2.tar.gz"
+    "https://github.com/Thalhammer/jwt-cpp/archive/ba1077f95de6787a9c1ef150424bfee55ddca5e1.tar.gz"
     SHA1
-    c952a399a98209eb80745941965b2a895387d516
+    012ff818c3089b8b29db87a31ad19df55ebec929
 )
 
 hunter_cmake_args(
@@ -26,7 +26,6 @@ hunter_cmake_args(
         JWT_BUILD_EXAMPLES=OFF
         JWT_BUILD_TESTS=OFF
         JWT_ENABLE_COVERAGE=OFF
-        HUNTER_ENABLED=ON
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
