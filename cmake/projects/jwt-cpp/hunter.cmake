@@ -13,7 +13,7 @@ hunter_add_version(
     PACKAGE_NAME
     jwt-cpp
     VERSION
-    v0.6.0
+    0.6.0
     URL
     "https://github.com/Thalhammer/jwt-cpp/archive/v0.6.0.tar.gz"
     SHA1
