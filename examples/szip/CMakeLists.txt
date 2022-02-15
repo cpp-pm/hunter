@@ -14,4 +14,4 @@ hunter_add_package(szip)
 find_package(szip REQUIRED)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo szip::szip)
+target_link_libraries(foo PRIVATE szip::szip)
