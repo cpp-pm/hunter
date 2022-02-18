@@ -42,6 +42,17 @@ hunter_add_version(
     b1c82261c8b9c87fb2fb5de6bdf70121ad1cca58
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    gflags
+    VERSION
+    2.2.2
+    URL
+    "https://github.com/gflags/gflags/archive/refs/tags/v2.2.2.tar.gz"
+    SHA1
+    4d42470afb7236fb0cf90f8bbb0cec588073c17c
+)
+
 hunter_cmake_args(
     gflags
     CMAKE_ARGS
