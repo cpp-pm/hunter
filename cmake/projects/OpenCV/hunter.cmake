@@ -516,6 +516,7 @@ hunter_cmake_args(
         WITH_FFMPEG=OFF
         WITH_OPENJPEG=OFF
         WITH_QUIRC=OFF
+        WITH_ADE=OFF
 )
 
 # Pick a download scheme
