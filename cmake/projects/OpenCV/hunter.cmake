@@ -17,6 +17,17 @@ hunter_add_version(
     PACKAGE_NAME
     OpenCV
     VERSION
+    "4.5.5-p0"
+    URL
+    "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.5.5-p0.tar.gz"
+    SHA1
+    2946dbc6a0f6e2a29ef45a647d31a9bf6426113f
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenCV
+    VERSION
     "4.5.3-p0"
     URL
     "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.5.3-p0.tar.gz"
@@ -504,6 +515,7 @@ hunter_cmake_args(
         BUILD_opencv_dnn=OFF
         WITH_FFMPEG=OFF
         WITH_OPENJPEG=OFF
+        WITH_QUIRC=OFF
 )
 
 # Pick a download scheme
