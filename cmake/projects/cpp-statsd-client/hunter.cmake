@@ -12,11 +12,11 @@ hunter_add_version(
     PACKAGE_NAME
     cpp-statsd-client
     VERSION
-    1.0.2-03862e8
+    2.0.0
     URL
-    "https://github.com/vthiery/cpp-statsd-client/archive/03862e84ed6619138c208f17e8118290735eed39.tar.gz"
+    "https://github.com/vthiery/cpp-statsd-client/archive/refs/tags/v2.0.0.tar.gz"
     SHA1
-    6f45cdb2a744fa988c1287f3b27ac7cd0eba63e6
+    f9178325b6c8c2ea60c870af58679b1d1bd8bd79
 )
 
 hunter_add_version(
