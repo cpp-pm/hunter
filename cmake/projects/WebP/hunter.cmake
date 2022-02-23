@@ -77,47 +77,38 @@ hunter_add_version(
     f29c5354f31b91b4f9a73e6b0426af19e25d4ea2
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    WebP
+    VERSION
+    "1.2.2-p0"
+    URL
+    "https://github.com/cpp-pm/libwebp/archive/refs/tags/v1.2.2-p0.tar.gz"
+    SHA1
+    4b82a4cd6efe46cf548c2715d308523fd1b30bdb
+)
+
 set(
     _hunter_webp_cmake_args
-    WEBP_BUILD_WEBP_JS=OFF
-    WEBP_ENABLE_NEAR_LOSSLESS=ON
+    WEBP_BUILD_ANIM_UTILS=OFF
+    WEBP_BUILD_CWEBP=OFF
+    WEBP_BUILD_DWEBP=OFF
+    WEBP_BUILD_EXTRAS=OFF
+    WEBP_BUILD_GIF2WEBP=OFF
+    WEBP_BUILD_IMG2WEBP=OFF
+    WEBP_BUILD_WEBPINFO=OFF
+    WEBP_BUILD_WEBPMUX=OFF
     WEBP_ENABLE_SIMD=ON
     WEBP_ENABLE_SWAP_16BIT_CSP=OFF
     WEBP_EXPERIMENTAL_FEATURES=OFF
+    WEBP_BUILD_VWEBP=OFF
 )
 
-if(ANDROID OR IOS)
+if(EMSCRIPTEN)
   list(
       APPEND
       _hunter_webp_cmake_args
-      WEBP_BUILD_ANIM_UTILS=OFF
-      WEBP_BUILD_CWEBP=OFF
-      WEBP_BUILD_DWEBP=OFF
-      WEBP_BUILD_EXTRAS=OFF
-      WEBP_BUILD_GIF2WEBP=OFF
-      WEBP_BUILD_IMG2WEBP=OFF
-      WEBP_BUILD_WEBPINFO=OFF
-      WEBP_BUILD_WEBPMUX=OFF
-  )
-else()
-  list(
-      APPEND
-      _hunter_webp_cmake_args
-      WEBP_BUILD_CWEBP=ON
-      WEBP_BUILD_DWEBP=ON
-      WEBP_BUILD_GIF2WEBP=ON
-      WEBP_BUILD_IMG2WEBP=ON
-      WEBP_BUILD_WEBPINFO=ON
-  )
-endif()
-
-if(APPLE)
-  # FindGLUT issue:
-  # - https://travis-ci.org/ingenue/hunter/jobs/502944277
-  list(
-      APPEND
-      _hunter_webp_cmake_args
-      WEBP_BUILD_VWEBP=OFF
+      WEBP_BUILD_WEBP_JS=ON
   )
 endif()
 
