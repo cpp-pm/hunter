@@ -155,6 +155,62 @@ hunter_add_version(
     SHA1 70a16819777672d3771a2754eccee95e4249b3b4
 )
 
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.9.0"
+    URL "https://github.com/nlohmann/json/archive/v3.9.0.tar.gz"
+    SHA1 2ee1a2653c53251fec1dd05f105c84c6150ec4d6
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.9.1"
+    URL "https://github.com/nlohmann/json/archive/v3.9.1.tar.gz"
+    SHA1 f8a20a7e19227906d77de0ede97468fbcfea03e7
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.10.0"
+    URL "https://github.com/nlohmann/json/archive/v3.10.0.tar.gz"
+    SHA1 046dc1617438035aa464be6cf66830903f7df809
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.10.1"
+    URL "https://github.com/nlohmann/json/archive/v3.10.1.tar.gz"
+    SHA1 3839cab00e0a7b475293b89a84893df4c6803698
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.10.2"
+    URL "https://github.com/nlohmann/json/archive/v3.10.2.tar.gz"
+    SHA1 6b2221fff3f53886614dd823b645df6696402fcd
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.10.3"
+    URL "https://github.com/nlohmann/json/archive/v3.10.3.tar.gz"
+    SHA1 39f9eaecdb5c1dd44a9516345d2c6fe66afef5b9
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.10.4"
+    URL "https://github.com/nlohmann/json/archive/v3.10.4.tar.gz"
+    SHA1 2ffa3306bff9c739b5823b76dda05186ac8d046a
+)
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.10.5"
+    URL "https://github.com/nlohmann/json/archive/v3.10.5.tar.gz"
+    SHA1 8969f5ad1a422e01f040ff48dcae9c0e6ad0811d
+)
+
 hunter_cmake_args(nlohmann_json CMAKE_ARGS JSON_BuildTests=OFF)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
