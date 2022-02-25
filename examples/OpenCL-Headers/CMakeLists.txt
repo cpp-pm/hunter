@@ -11,7 +11,7 @@ project(download-OpenCL-Headers)
 
 # DOCUMENTATION_START {
 hunter_add_package(OpenCL-Headers)
-find_package(OpenCL-Headers CONFIG REQUIRED)
+find_package(OpenCLHeaders CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
 target_link_libraries(boo PUBLIC OpenCL::Headers)
