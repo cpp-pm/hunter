@@ -42,6 +42,17 @@ hunter_add_version(
     73b86006f65be61bbaf85cc17fe39247fe20a27b
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    basis_universal
+    VERSION
+    1.16.3-p0
+    URL
+    "https://github.com/cpp-pm/basis_universal/archive/refs/tags/v1.16.3-p0.tar.gz"
+    SHA1
+    eff867b8cf79480fa84011841aa258887ed57f7a
+)
+
 if(ANDROID OR IOS OR _hunter_windows_store)
   hunter_cmake_args(
       basis_universal
@@ -53,6 +64,7 @@ else()
       basis_universal
       CMAKE_ARGS
         SSE=ON
+        OPENCL=OFF
   )
 endif()
 
