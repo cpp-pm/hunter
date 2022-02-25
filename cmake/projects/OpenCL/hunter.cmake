@@ -12,6 +12,17 @@ hunter_add_version(
     PACKAGE_NAME
     OpenCL
     VERSION
+    "2022.01.04-p0"
+    URL
+    "https://github.com/cpp-pm/OpenCL-ICD-Loader/archive/refs/tags/v2022.01.04-p0.tar.gz"
+    SHA1
+    197a83967b90acf9839722a11f1ccb20208c0f75
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenCL
+    VERSION
     "2.1-p3"
     URL
     "https://github.com/hunter-packages/OpenCL-ICD-Loader/archive/2.1-p3.tar.gz"
