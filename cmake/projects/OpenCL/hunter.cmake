@@ -16,7 +16,7 @@ hunter_add_version(
     URL
     "https://github.com/cpp-pm/OpenCL-ICD-Loader/archive/refs/tags/v2022.01.04-p0.tar.gz"
     SHA1
-    197a83967b90acf9839722a11f1ccb20208c0f75
+    82337aaaf89dcc0961f5db62dc11deba5e515980
 )
 
 hunter_add_version(
