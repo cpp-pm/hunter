@@ -4,7 +4,7 @@
 #include <CL/cl.h>
 #endif
 
-#include <CL/cl.hpp>
+#include <CL/opencl.hpp>
 
 int main()
 {

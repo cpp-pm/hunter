@@ -12,6 +12,17 @@ hunter_add_version(
     PACKAGE_NAME
     OpenCL-cpp
     VERSION
+    "2.0.16-61a5c9a-p0"
+    URL
+    "https://github.com/cpp-pm/OpenCL-CLHPP/archive/refs/tags/v2.0.16-61a5c9a-p0.tar.gz"
+    SHA1
+    c1bf63fd603d8e581245b3e89fce47679f571c16
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenCL-cpp
+    VERSION
     "2.0.10-p0"
     URL
    "https://github.com/hunter-packages/OpenCL-CLHPP/archive/2.0.10-p0.tar.gz"
@@ -24,7 +35,7 @@ hunter_cmake_args(
     CMAKE_ARGS
         BUILD_DOCS=OFF
         BUILD_EXAMPLES=OFF
-        BUILD_TESTS=OFF
+        BUILD_TESTING=OFF
 )
 
 # Pick a download scheme
