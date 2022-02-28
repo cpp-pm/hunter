@@ -2,9 +2,7 @@
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     SED_COMMAND=gsed
-    if command -v $SED_COMMAND > /dev/null 2>&1; then
-        echo "Found gsed"
-    else
+    if ! command -v $SED_COMMAND > /dev/null 2>&1; then
         echo "GNU sed not installed. Try brew install gsed."
         exit 1
     fi
