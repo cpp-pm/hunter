@@ -1,9 +1,3 @@
-// Needed for mingw compiles
-#if defined _WIN32 && defined __unix__
-  #define WINVER 0x0601
-  #define _WIN32_WINNT 0x0601
-#endif
-
 #include <CL/cl.h>
 
 int main()
