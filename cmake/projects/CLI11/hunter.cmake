@@ -171,6 +171,9 @@ hunter_cmake_args(
     CLI11_TESTING=OFF
     CLI11_EXAMPLES=OFF
     CLI11_SINGLE_FILE=OFF
+    CLI11_BUILD_DOCS=OFF
+    CLI11_BUILD_TESTS=OFF
+    CLI11_BUILD_EXAMPLES=OFF
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
