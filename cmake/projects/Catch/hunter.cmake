@@ -13,6 +13,39 @@ hunter_add_version(
     PACKAGE_NAME
     Catch
     VERSION
+    "2.13.9"
+    URL
+    "https://github.com/catchorg/Catch2/archive/refs/tags/v2.13.9.tar.gz"
+    SHA1
+    dcdb80e8215451fb99c8a24ca375274f2bd5f233
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Catch
+    VERSION
+    "2.12.4"
+    URL
+    "https://github.com/catchorg/Catch2/archive/refs/tags/v2.12.4.tar.gz"
+    SHA1
+    f889fccf14709fc473b69e48f9b60016caf7c7ee
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Catch
+    VERSION
+    "2.11.3"
+    URL
+    "https://github.com/catchorg/Catch2/archive/refs/tags/v2.11.3.tar.gz"
+    SHA1
+    ba08fc5a436108b4520d791f5e4d3346a284669a
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Catch
+    VERSION
     "2.11.0"
     URL
     "https://github.com/catchorg/Catch2/archive/v2.11.0.tar.gz"
