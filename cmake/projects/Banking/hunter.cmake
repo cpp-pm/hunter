@@ -12,11 +12,11 @@ hunter_add_version(
     PACKAGE_NAME
     Banking
     VERSION
-    1.0.0
+    1.0.1
     URL
-    "https://github.com/undefinedev/Banking/archive/v1.0.0.tar.gz"
+    "https://github.com/undefinedev/Banking/archive/v1.0.1.tar.gz"
     SHA1
-    7f130af23054371f4d70bb2c0cc6a9a5884a49bb
+    552af4b4e5f344c3b782a047a869c4130763fb6d
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)

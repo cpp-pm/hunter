@@ -14,5 +14,5 @@ hunter_add_package(Banking)
 find_package(Banking CONFIG REQUIRED)
 
 add_executable(boo boo.cpp)
-target_link_libraries(boo PUBLIC Banking::account Banking::transaction)
+target_link_libraries(boo PUBLIC Banking::Banking)
 # DOCUMENTATION_END }
