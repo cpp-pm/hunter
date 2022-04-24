@@ -10,8 +10,6 @@ include("../common.cmake")
 project(download-asio-grpc)
 
 # DOCUMENTATION_START {
-hunter_add_package(gRPC)
-hunter_add_package(Boost)
 hunter_add_package(asio-grpc)
 find_package(asio-grpc CONFIG REQUIRED)
 
