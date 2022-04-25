@@ -13,7 +13,7 @@ asio-grpc
 
 -  `Official <https://github.com/Tradias/asio-grpc>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/asio-grpc/CMakeLists.txt>`__
--  Added by `Tradias <https://github.com/Tradias>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
+-  Added by `Tradias <https://github.com/Tradias>`__ (`pr-554 <https://github.com/cpp-pm/hunter/pull/554>`__)
 
 .. literalinclude:: /../examples/asio-grpc/CMakeLists.txt
   :language: cmake

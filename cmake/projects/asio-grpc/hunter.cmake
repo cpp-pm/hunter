@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2020, Rahul Sheth, Ruslan Baratov
+# Copyright (c) 2022, Tradias
 # All rights reserved.
 
 # !!! DO NOT PLACE HEADER GUARDS HERE !!!
@@ -12,11 +12,11 @@ hunter_add_version(
     PACKAGE_NAME
     asio-grpc
     VERSION
-    1.5.1
+    1.5.2
     URL
-    "https://github.com/Tradias/asio-grpc/archive/refs/heads/master.zip "
+    "https://github.com/Tradias/asio-grpc/archive/refs/heads/master.zip"
     SHA1
-    c97d20fb2ffe36d32f5cab26b67f67ede89e91b9
+    9169bcc78abec8a9e29b7b40d2a3351ac50d4870
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
