@@ -31,6 +31,127 @@ hunter_add_version(
     ac4796e631461c27cd05629097a6931c1d5b13a4
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2020.10.01
+    URL
+    https://github.com/google/re2/archive/2020-10-01.tar.gz
+    SHA1
+    64379e5e59ee2bd9930462fc49196ace7de80558
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2020.11.01
+    URL
+    https://github.com/google/re2/archive/2020-11-01.tar.gz
+    SHA1
+    9da195449f7a7d3ac98c7d1078b9eb93dd256b63
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2021.02.01
+    URL
+    https://github.com/google/re2/archive/2021-02-01.tar.gz
+    SHA1
+    69c24463d2437515f27c857641bfaf49306fabac
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2021.02.02
+    URL
+    https://github.com/google/re2/archive/2021-02-02.tar.gz
+    SHA1
+    08c9b13951d6ac7ab0507c80a1f3a49aa679b4c9
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2021.04.01
+    URL
+    https://github.com/google/re2/archive/2021-04-01.tar.gz
+    SHA1
+    6eab56a3b4939778390539afe59f0c56235fdce1
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2021.06.01
+    URL
+    https://github.com/google/re2/archive/2021-06-01.tar.gz
+    SHA1
+    dee2d1de6196d72d424768a9f01d40378d0b584f
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2021.08.01
+    URL
+    https://github.com/google/re2/archive/2021-08-01.tar.gz
+    SHA1
+    c9dc2fd86d1ae2f4abce8dfe0b5544b2928ae9db
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2021.09.01
+    URL
+    https://github.com/google/re2/archive/2021-09-01.tar.gz
+    SHA1
+    838ac1688de7b8e59eb5582b6be6a470bab64b54
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2021.11.01
+    URL
+    https://github.com/google/re2/archive/2021-11-01.tar.gz
+    SHA1
+    4c18662f103ef53f106f8f98d7b46b723615e14f
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2022.02.01
+    URL
+    https://github.com/google/re2/archive/2022-02-01.tar.gz
+    SHA1
+    79bbfeaaa88426794f2386216f4b7944a9da44ee
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2022.04.01
+    URL
+    https://github.com/google/re2/archive/2022-04-01.tar.gz
+    SHA1
+    e88e72adc5dd18d00922a9c7ddf6e056e29a3d06
+)
+
 hunter_cmake_args(
     re2
     CMAKE_ARGS

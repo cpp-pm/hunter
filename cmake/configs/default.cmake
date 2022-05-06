@@ -478,7 +478,7 @@ else()
   hunter_default_version(range-v3 VERSION 0.11.0)
 endif()
 
-hunter_default_version(re2 VERSION 2020.08.01)
+hunter_default_version(re2 VERSION 2022.04.01)
 hunter_default_version(readline VERSION 6.3)
 hunter_default_version(recastnavigation VERSION 1.4-p0)
 hunter_default_version(renderproto VERSION 0.11.1)
