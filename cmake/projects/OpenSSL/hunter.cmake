@@ -169,6 +169,17 @@ hunter_add_version(
     PACKAGE_NAME
     OpenSSL
     VERSION
+    "1.1.1o"
+    URL
+    "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1o.tar.gz"
+    SHA1
+    a697ae04ff9e6e587358788326da97bc411c4407
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
     "1.1.0"
     URL
     "https://github.com/openssl/openssl/archive/OpenSSL_1_1_0.tar.gz"
