@@ -38,8 +38,8 @@ this repository** in general, see `notes`_):
   :emphasize-lines: 2, 3
 
   HunterGate(
-      URL "https://github.com/cpp-pm/hunter/archive/v0.23.297.tar.gz"
-      SHA1 "3319fe6a3b08090df7df98dee75134d68e2ef5a3"
+      URL "https://github.com/cpp-pm/hunter/archive/v0.23.320.tar.gz"
+      SHA1 "9b4e732afd22f40482c11ad6342f7d336634226f"
   )
 
 Now project can be started:
