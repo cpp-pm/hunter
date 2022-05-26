@@ -34,7 +34,7 @@ hunter_add_version(
     PACKAGE_NAME
     asio
     VERSION
-    v1.22.1-p0
+    1.22.1-p0
     URL
     "https://github.com/cpp-pm/asio/archive/v1.22.1-p0.tar.gz"
     SHA1
