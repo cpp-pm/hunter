@@ -34,11 +34,11 @@ hunter_add_version(
     PACKAGE_NAME
     asio
     VERSION
-    1.22.1-p0
+    1.22.1-p1
     URL
-    "https://github.com/cpp-pm/asio/archive/v1.22.1-p0.tar.gz"
+    "https://github.com/cpp-pm/asio/archive/v1.22.1-p1.tar.gz"
     SHA1
-    1b89a8e87e01580da44f419169f79ff7dfc7450f
+    a3a9a8b1f00d97323ef825586a01783b502f7e56
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
