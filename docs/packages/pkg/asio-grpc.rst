@@ -1,6 +1,8 @@
 .. spelling::
 
     asio-grpc
+    asio
+    grpc
 
 .. index::
   single: concurrency ; asio-grpc
@@ -25,9 +27,9 @@ CMake options
 
 The ``CMAKE_ARGS`` feature (see
 `customization <https://hunter.readthedocs.io/en/latest/reference/user-modules/hunter_config.html>`__)
-can be used to customize asio-grpc:
+can be used to customize ``asio-grpc``:
 
-- To use standalone Asio instead of Boost.Asio:
+- To use standalone ``Asio`` instead of ``Boost.Asio``:
 
   .. code-block:: cmake
 
