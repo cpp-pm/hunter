@@ -24,14 +24,9 @@ export ANDROID_NDK_r15c="`pwd`/_ci/android-ndk-r15c"
 export ANDROID_NDK_r16b="`pwd`/_ci/android-ndk-r16b"
 export ANDROID_NDK_r17="`pwd`/_ci/android-ndk-r17"
 
-# Use Xcode 11.3.1 instead of default 11.6 (for ios-13-2 toolchain, no iOS 13.2 SDK in Xcode 11.6)
-if [[ "$TOOLCHAIN" =~ "ios-nocodesign-13-2" ]]; then
-    export DEVELOPER_DIR="/Applications/Xcode_11.3.1.app/Contents/Developer"
-fi
-
-# Use Xcode 12.2 instead of default 12.4 (no macOS 11.0 SDK in Xcode 12.4)
-if [[ "$TOOLCHAIN" =~ "osx-11-0" ]]; then
-    export DEVELOPER_DIR="/Applications/Xcode_12.2.app/Contents/Developer"
+# Use Xcode 13.4 for macOS 12.x and iOS 15.x toolchains
+if [[ "$TOOLCHAIN" =~ "osx-12" || "$TOOLCHAIN" =~ "ios-nocodesign-15" ]]; then
+    export DEVELOPER_DIR="/Applications/Xcode_13.4.app/Contents/Developer"
 fi
 
 # Run build script
