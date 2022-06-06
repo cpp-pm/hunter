@@ -19,6 +19,17 @@ hunter_add_version(
     a5ab9797a34b390236fdd52986ee792a6894221f
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    asio-grpc
+    VERSION
+    1.7.0
+    URL
+    "https://github.com/Tradias/asio-grpc/archive/refs/tags/v1.7.0.tar.gz"
+    SHA1
+    0e636e89b5ba3a4b6bec07d793ecffe1c4cfada1
+)
+
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(asio-grpc)
 hunter_download(PACKAGE_NAME asio-grpc)
