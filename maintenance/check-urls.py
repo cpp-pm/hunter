@@ -1,6 +1,7 @@
 from os.path import dirname, abspath, join
 from glob import glob
 import re
+import sys
 import pycurl
 
 def getResponseStausCode(url):
@@ -20,7 +21,11 @@ def getResponseStausCode(url):
 hunterDir = dirname(dirname(abspath(__file__)))
 projectsDir = join(hunterDir, 'cmake', 'projects')
 
-projectsFiles = join(projectsDir, '**', '*.cmake')
+project = ''
+if len(sys.argv) > 1:
+    project = sys.argv[1]
+
+projectsFiles = join(projectsDir, project, '**', '*.cmake')
 
 checkedFile = join(hunterDir, 'maintenance', 'checked.txt')
 try:
