@@ -209,17 +209,6 @@ hunter_add_version(
     PACKAGE_NAME
     Qt
     VERSION
-    "5.6.0-alpha"
-    URL
-    "http://download.qt.io/development_releases/qt/5.6/5.6.0-alpha/single/qt-everywhere-opensource-src-5.6.0-alpha.7z"
-    SHA1
-    d902b7df94219d2ed2f5c868839c85ce9daa056a
-)
-
-hunter_add_version(
-    PACKAGE_NAME
-    Qt
-    VERSION
     "5.9.1-p0"
     URL
     "https://github.com/hunter-packages/Qt/releases/download/v5.9.1-p0/hunter-5.9.1.7z"
