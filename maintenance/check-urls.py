@@ -33,9 +33,8 @@ except FileNotFoundError:
 projects = dict()
 
 for projectFile in glob(projectsFiles, recursive=True):
-    file = open(projectFile, "r")
-    content = file.read()
-    file.close()
+    with open(projectFile, "r") as file:
+        content = file.read()
 
     entries = re.findall(r'hunter_add_version\s*\(\s*PACKAGE_NAME\s+"*(.*?)"*\s+VERSION\s+"*(.*?)"*\s+URL\s+"*(.*?)"*\s+SHA1\s+"*(.*?)"*\s+.*?\)', content, re.MULTILINE | re.DOTALL)
     if len(entries):
