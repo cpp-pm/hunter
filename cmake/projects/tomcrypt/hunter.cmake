@@ -15,7 +15,7 @@ hunter_add_version(
     VERSION
     "1.17-p1"
     URL
-    "https://github.com/hunter-packages/libtomcrypt/archive/1.17-p1.tar.gz"
+    "https://github.com/hunter-packages/libtomcrypt/archive/refs/tags/1.17-p1.tar.gz"
     SHA1
     3c9c61ee441b77517525528f5c191fa19801fd30
 )
