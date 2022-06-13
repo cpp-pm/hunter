@@ -9,7 +9,7 @@ include(hunter_pick_scheme)
 hunter_add_version(
     PACKAGE_NAME crc32c
     VERSION "1.0.5"
-    URL "https://github.com/hunter-packages/crc32c/archive/hunter-1.0.5.tar.gz"
+    URL "https://github.com/hunter-packages/crc32c/archive/refs/tags/hunter-1.0.5.tar.gz"
     SHA1 "dc7fa8cb877b9cb12a4e22e553087fdd6ce28cce")
 
 hunter_add_version(
