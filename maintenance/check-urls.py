@@ -22,7 +22,7 @@ projectsDir = join(hunterDir, 'cmake', 'projects')
 
 projectsFiles = join(projectsDir, '**', '*.cmake')
 
-checkedFile = join(hunterDir, 'checked.txt')
+checkedFile = join(hunterDir, 'maintenance', 'checked.txt')
 try:
     checkedStream = open(checkedFile, "r+")
     checked = checkedStream.readlines()
