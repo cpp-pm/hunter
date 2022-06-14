@@ -424,6 +424,12 @@ if(have_jobs)
   endif()
 endif()
 
+if("@WIN32@")
+  if(NOT "${BOOST_USE_WINAPI_VERSION}" STREQUAL "")
+    list(APPEND build_opts "define=BOOST_USE_WINAPI_VERSION=${BOOST_USE_WINAPI_VERSION}")
+  endif()
+endif()
+
 if(@HUNTER_STATUS_DEBUG@)
   set(verbose_output "-d+2 --debug-configuration")
 endif()

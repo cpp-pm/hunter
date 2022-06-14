@@ -107,11 +107,18 @@ config file (``boost/config/user.hpp``):
   
   - `Boost-log-useBoostConfig <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log-useBoostConfig/CMakeLists.txt>`__
 
-- Option ``BOOST_BUILD_DYNAMIC_VSRUNTIME=OFF`` use on Windows to build the boost libraries with the static runtime.
+- Option ``BOOST_USE_WINAPI_VERSION=<API_VERSION>`` use on Windows in order to set the Windows API version used for building the boost libraries.
 
-  Should be used together with ``USE_CONFIG_FROM_BOOST=ON``.
-  Otherwise the generated library filenames won't be found by the provided ``FindBoost.cmake`` module.
+  Since Boost 1.78.0 Boost.Log exports additional symbols when building for Windows 8 or newer.
+  So it is recommended to set the CMake variable ``BOOST_USE_WINAPI_VERSION`` in the CMake-toolchain file (or the ``CMAKE_ARGS``) to the same value as the defines ``_WIN32_WINNT`` and ``WINVER``.
 
+  - `Boost.WinAPI documentation <https://www.boost.org/doc/libs/1_79_0/libs/winapi/doc/html/winapi/config.html>`__
+
+  The version passed must match the hexadecimal integer values used for ``_WIN32_WINNT`` and ``WINVER``.
+  The version numbers are described in
+  `Windows Headers documentation <https://docs.microsoft.com/en-us/windows/win32/winprog/using-the-windows-headers?redirectedfrom=MSDN#macros_for_conditional_declarations>`__.
+
+  ``API_VERSION`` is passed as a hexadecimal integer e.g. ``BOOST_USE_WINAPI_VERSION=0x0603`` sets the Windows API version to Windows 8.1.
 
 Python
 ------
