@@ -13,6 +13,17 @@ hunter_add_version(
     PACKAGE_NAME
     aws-sdk-cpp
     VERSION
+    1.9.107
+    URL
+    "https://github.com/cpp-pm/aws-sdk-cpp.git"
+    SHA1
+    d0d1ad5cfa2130af33638ae42da022ce6d30c709
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    aws-sdk-cpp
+    VERSION
     1.9.199-p0
     URL
     "https://github.com/cpp-pm/aws-sdk-cpp.git"
@@ -24,11 +35,11 @@ hunter_add_version(
     PACKAGE_NAME
     aws-sdk-cpp
     VERSION
-    1.9.107
+    1.9.278-p0
     URL
     "https://github.com/cpp-pm/aws-sdk-cpp.git"
     SHA1
-    d0d1ad5cfa2130af33638ae42da022ce6d30c709
+    5825fcbf56b004225ec096f21611d5e181ade456
 )
 
 hunter_cmake_args(
