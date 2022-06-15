@@ -31,6 +31,17 @@ hunter_add_version(
     "0f165960e99ee6153939683b4cf208a899111ef3"
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    tinyxml2
+    VERSION
+    "9.0.0"
+    URL
+    "https://github.com/leethomason/tinyxml2/archive/refs/tags/9.0.0.tar.gz"
+    SHA1
+    "c3a0ba1e5e81f4297d3a796c397682ae3eeb8e89"
+)
+
 hunter_cmake_args(
     tinyxml2
     CMAKE_ARGS
