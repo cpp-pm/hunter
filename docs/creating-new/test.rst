@@ -8,7 +8,7 @@ Hunter uses `GitHub Actions <https://docs.github.com/en/actions>`__ for :ref:`co
 You can also test :ref:`package building <testing locally>` and :ref:`documentation <testing documentation locally>` locally, however this is optional.
 
 Testing will be performed automatically on pull request.
-To perform testing on push to yours Hunter fork, ensure that GitHub Actions are enabled for your repository -
+To perform testing on push to your Hunter fork, ensure that GitHub Actions are enabled for your repository -
 `Managing GitHub Actions <https://docs.github.com/en/github/administering-a-repository/disabling-or-limiting-github-actions-for-a-repository#managing-github-actions-permissions-for-your-repository>`__.
 
 Package build testing will be performed for multiple platforms (different toolchains).
