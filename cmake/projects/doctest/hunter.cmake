@@ -69,7 +69,7 @@ hunter_add_version(
     PACKAGE_NAME
     doctest
     VERSION
-    "v2.4.9"
+    "2.4.9"
     URL
     "https://github.com/doctest/doctest/archive/v2.4.9.tar.gz"
     SHA1
