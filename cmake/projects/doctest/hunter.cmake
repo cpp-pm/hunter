@@ -65,6 +65,17 @@ hunter_add_version(
     d1baae099a165b231bb4fdd3637789f7465d873a
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    doctest
+    VERSION
+    "v2.4.9"
+    URL
+    "https://github.com/doctest/doctest/archive/v2.4.9.tar.gz"
+    SHA
+    9c2a6b805fb3d52a4eb0ea88da0f8b38cff4ebc0
+)
+
 hunter_cmake_args(doctest CMAKE_ARGS
     DOCTEST_SKIP_EXAMPLES=ON
     DOCTEST_SKIP_COVERAGE=ON
