@@ -72,7 +72,7 @@ hunter_add_version(
     "v2.4.9"
     URL
     "https://github.com/doctest/doctest/archive/v2.4.9.tar.gz"
-    SHA
+    SHA1
     9c2a6b805fb3d52a4eb0ea88da0f8b38cff4ebc0
 )
 
