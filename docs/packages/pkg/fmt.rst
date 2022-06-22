@@ -1,6 +1,7 @@
 .. spelling::
 
     fmt
+    formatter
 
 .. index:: logging ; fmt
 
