@@ -64,6 +64,7 @@ function(hunter_calculate_toolchain_sha1 hunter_self hunter_base)
       "-G${CMAKE_GENERATOR}"
       "-H${temp_project_dir}"
       "-B${temp_build_dir}"
+      "-DANDROID_ABI=x86_64"
   )
 
   string(COMPARE NOTEQUAL "${CMAKE_MAKE_PROGRAM}" "" has_make)
