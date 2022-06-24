@@ -52,7 +52,8 @@ hunter_add_version(
 hunter_cmake_args(
     SuiteSparse
     CMAKE_ARGS
-    BUILD_METIS=NO
+    # 2022-06-22: ceres-solver starting with v2.2.0 expects Metis to be available if SuiteSparse is found
+    BUILD_METIS=YES
     HUNTER_INSTALL_LICENSE_FILES=LICENSE.md
 )
 
