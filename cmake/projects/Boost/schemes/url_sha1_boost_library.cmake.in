@@ -285,6 +285,14 @@ else()
   )
 endif()
 
+# pass defines set by `add_compile_definitions()` in cmake toolchain to boost-user.jam
+get_directory_property(dir_COMPILE_DEFINITIONS COMPILE_DEFINITIONS)
+foreach(compile_def ${dir_COMPILE_DEFINITIONS})
+  # Note: Flags should be quoted:
+  # - https://github.com/boostorg/build/issues/426#issuecomment-482564740
+  file( APPEND ${boost_user_jam} "  <compileflags>\"-D${compile_def}\"\n")
+endforeach()
+
 if(use_cmake_archiver)
   # We need custom '<archiver>' and '<ranlib>' for
   # Android LTO ('*-gcc-ar' instead of '*-ar')
