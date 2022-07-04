@@ -46,6 +46,8 @@ elseif(MINGW)
   else()
     set(configure_command "./Configure" mingw)
   endif()
+elseif(EMSCRIPTEN)
+  set(configure_command AR=${CMAKE_AR} RANLIB=${CMAKE_RANLIB} "./config")
 else()
   set(configure_command "./config")
 endif()
@@ -106,6 +108,9 @@ elseif(RASPBERRY_PI)
   set(configure_opts "linux-generic32")
 elseif(OPENWRT)
   set(configure_opts "linux-generic32" "no-async")
+elseif(EMSCRIPTEN)
+  # disable features that will not work with emscripten
+  set(configure_opts "no-engine" "no-dso" "no-asm" "no-shared" "no-sse2" "no-srtp")
 endif()
 
 # Pass C compiler through
