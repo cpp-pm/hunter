@@ -211,6 +211,15 @@ hunter_add_version(
     SHA1 8969f5ad1a422e01f040ff48dcae9c0e6ad0811d
 )
 
+# v3.11.0 omitted; was released with a bug
+
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.11.1"
+    URL "https://github.com/nlohmann/json/archive/v3.11.1.tar.gz"
+    SHA1 ac7ee8446d7c5099a590c3fdb05df5ce56ee04c8
+)
+
 hunter_cmake_args(nlohmann_json CMAKE_ARGS JSON_BuildTests=OFF)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
