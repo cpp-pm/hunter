@@ -220,6 +220,13 @@ hunter_add_version(
     SHA1 ac7ee8446d7c5099a590c3fdb05df5ce56ee04c8
 )
 
+hunter_add_version(
+    PACKAGE_NAME nlohmann_json
+    VERSION "3.11.2"
+    URL "https://github.com/nlohmann/json/archive/v3.11.2.tar.gz"
+    SHA1 1b0701dc7fdc068aad8ce68fc3e019a038232437
+)
+
 hunter_cmake_args(nlohmann_json CMAKE_ARGS JSON_BuildTests=OFF)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
