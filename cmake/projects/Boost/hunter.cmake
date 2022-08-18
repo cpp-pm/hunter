@@ -234,6 +234,17 @@ hunter_add_version(
     7ccc47e82926be693810a687015ddc490b49296d
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    Boost
+    VERSION
+    "1.79.0"
+    URL
+    "https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.bz2"
+    SHA1
+    31209dcff292bd6a64e5e08ceb3ce44a33615dc0
+)
+
 # up until 1.63 sourcefourge was used, base url https://downloads.sourceforge.net/project/boost/boost
 hunter_add_version(
     PACKAGE_NAME
