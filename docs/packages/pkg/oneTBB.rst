@@ -8,7 +8,7 @@
 .. _pkg.oneTBB:
 
 oneTBB
-===
+======
 
 -  `Official <https://github.com/oneapi-src/oneTBB>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/oneTBB/CMakeLists.txt>`__
