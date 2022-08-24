@@ -10,10 +10,9 @@
 oneTBB
 ===
 
--  `Official <https://official_oneTBB>`__
--  `Hunterized <https://github.com/cpp-pm/oneTBB>`__
+-  `Official <https://github.com/oneapi-src/oneTBB>`__
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/oneTBB/CMakeLists.txt>`__
--  Added by `oneTBB_developer <https://github.com/oneTBB_developer>`__ (`pr-N <https://github.com/cpp-pm/hunter/pull/N>`__)
+-  Added by `craffael <https://github.com/craffael>`__ (`pr-600 <https://github.com/cpp-pm/hunter/pull/600>`__)
 
 .. literalinclude:: /../examples/oneTBB/CMakeLists.txt
   :language: cmake
