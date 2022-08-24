@@ -24,7 +24,7 @@ hunter_cmake_args(
   oneTBB
   CMAKE_ARGS
     TBB_TEST=OFF
-	TBB_STRICT=OFF
+    TBB_STRICT=OFF
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
