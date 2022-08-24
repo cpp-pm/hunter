@@ -12,6 +12,7 @@ project(download-oneTBB)
 # DOCUMENTATION_START {
 hunter_add_package(oneTBB)
 find_package(TBB CONFIG REQUIRED)
+find_package(Threads REQUIRED)
 
 
 add_executable(boo boo.cpp)
