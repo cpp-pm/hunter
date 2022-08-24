@@ -275,7 +275,9 @@ Download release archive and calculate ``SHA1``:
 Add this information to ``cmake/projects/hunter_box_1/hunter.cmake`` file:
 
 .. code-block:: cmake
-  :emphasize-lines: 10, 12, 14, 16
+  :emphasize-lines: 1, 12, 14, 16, 18
+  # Copyright (c) 2016-2020, Rahul Sheth, Ruslan Baratov
+  # All rights reserved.
 
   # !!! DO NOT PLACE HEADER GUARDS HERE !!!
 
@@ -402,7 +404,8 @@ Create example
   [hunter]> sed -i 's,foo,hunter_box_1,g' examples/hunter_box_1/*
 
 Tweak all files in ``examples/hunter_box_1`` directory to fit headers and
-names of imported targets.
+names of imported targets. Don't forget to update the copyright notices in 
+`examples/hunter_box_1/CMakeLists.txt` with your name.
 
 Add documentation
 =================
