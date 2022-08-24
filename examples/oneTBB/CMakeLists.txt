@@ -14,7 +14,6 @@ hunter_add_package(oneTBB)
 find_package(TBB CONFIG REQUIRED)
 find_package(Threads REQUIRED)
 
-
 add_executable(boo boo.cpp)
 target_link_libraries(boo PUBLIC TBB::tbb)
 # DOCUMENTATION_END }
