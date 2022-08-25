@@ -406,7 +406,7 @@ Create example
 
 Tweak all files in ``examples/hunter_box_1`` directory to fit headers and
 names of imported targets. Don't forget to update the copyright notices in 
-``examples/hunter_box_1/CMakeLists.txt`` with your name.
+``examples/hunter_box_1/CMakeLists.txt`` with the current year and your name.
 
 Add documentation
 =================
