@@ -46,6 +46,9 @@ if(IOS)
   string(COMPARE NOTEQUAL "${IPHONESIMULATOR_ARCHS}" "" has_simulator)
   set(ios_opts "-DCMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH=NO")
   if(has_simulator)
+    if (CMAKE_GENERATOR STREQUAL "Xcode" AND XCODE_VERSION VERSION_GREATER_EQUAL 12 AND CMAKE_VERSION VERSION_LESS 3.19.5)
+      hunter_user_error("CMake 3.19.5+ version should be used for CMAKE_IOS_INSTALL_COMBINED on Xcode 12+")
+    endif()
     list(APPEND ios_opts "-DCMAKE_IOS_INSTALL_COMBINED=YES")
   endif()
 else()
@@ -149,6 +152,12 @@ foreach(configuration ${configuration_types})
     set(build_type_opts "-DCMAKE_CONFIGURATION_TYPES=${configuration}")
   endif()
 
+  if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.15")
+    set(cmake_install_command --install .)
+  else()
+    set(cmake_install_command --build . --target install)
+  endif()
+
   ExternalProject_Add(
       "${current_project}"
       GIT_REPOSITORY
@@ -188,8 +197,7 @@ foreach(configuration ${configuration_types})
       ${ios_opts}
       INSTALL_COMMAND
           "@CMAKE_COMMAND@"
-          --build .
-          --target install
+          ${cmake_install_command}
           --config ${configuration}
         COMMAND # Copy license files
           "@CMAKE_COMMAND@"
