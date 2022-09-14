@@ -31,6 +31,17 @@ hunter_add_version(
     00603b84f7bc99453f5edafe1c5caa72120f5c9d
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    date
+    VERSION
+    3.0.1
+    URL
+    "https://github.com/HowardHinnant/date/archive/v3.0.1.tar.gz"
+    SHA1
+    7d56e93ca31dbe4ea1fb6992b26655752a556cca
+)
+
 hunter_cmake_args(date CMAKE_ARGS ENABLE_DATE_TESTING=OFF USE_SYSTEM_TZ_DB=ON)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
