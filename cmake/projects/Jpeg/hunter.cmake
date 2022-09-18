@@ -57,6 +57,17 @@ hunter_add_version(
     PACKAGE_NAME
     Jpeg
     VERSION
+    "9e-p0"
+    URL
+    "https://github.com/cpp-pm/jpeg/archive/v9e-p0.tar.gz"
+    SHA1
+    58d2bc6beeaecf8f02cfd28c4b6d97cfeb5f5b16
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Jpeg
+    VERSION
     "turbo-2.0.3-p4"
     URL
     "https://github.com/cpp-pm/libjpeg-turbo/archive/v2.0.3-p4.tar.gz"
