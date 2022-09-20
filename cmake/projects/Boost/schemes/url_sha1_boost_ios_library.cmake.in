@@ -255,10 +255,17 @@ else()
 endif()
 
 if(has_isim)
+  if (has_iphoneos)
+    # CMake variable replacement means we need a dummy command, empty string is ignored
+    set(skip_download "DOWNLOAD_COMMAND" "${CMAKE_COMMAND}" -E echo "SKIPPING DOWNLOAD STEP")
+  endif()
+
   ExternalProject_Add(
       "@HUNTER_EP_NAME@-ios_sim"
-      DOWNLOAD_COMMAND
-      ""
+      URL
+      @HUNTER_PACKAGE_URL@
+      URL_HASH
+      SHA1=@HUNTER_PACKAGE_SHA1@
       DOWNLOAD_DIR
       "@HUNTER_PACKAGE_DOWNLOAD_DIR@"
       TLS_VERIFY
@@ -268,6 +275,7 @@ if(has_isim)
       INSTALL_DIR
       "@HUNTER_PACKAGE_INSTALL_PREFIX@"
           # not used, just avoid creating Install/<name> empty directory
+      "${skip_download}"
       CONFIGURE_COMMAND
       ${bootstrap}
       BUILD_COMMAND
@@ -281,7 +289,7 @@ if(has_isim)
       -d0
       ${build_opts_iphonesimulator}
       install
-      "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"  
+      "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"
   )
 else()
   # Add dummy target

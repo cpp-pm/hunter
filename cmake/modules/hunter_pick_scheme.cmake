@@ -23,7 +23,12 @@ function(hunter_pick_scheme)
     hunter_internal_error("hunter_pick_scheme unparsed: ${x_UNPARSED_ARGUMENTS}")
   endif()
 
-  string(COMPARE EQUAL "${CMAKE_OSX_SYSROOT}" "iphoneos" is_iphoneos)
+  set(_apple_embedded "iphoneos" "iphonesimulator" "appletvos" "appletvsimulator" "watchos" "watchsimulator")
+  list(FIND _apple_embedded "${CMAKE_OSX_SYSROOT}" _found)
+  set(is_iphoneos FALSE)
+  if (${_found} GREATER -1)
+    set(is_iphoneos TRUE)
+  endif()
 
   # set HUNTER_DOWNLOAD_SCHEME
   if(is_iphoneos AND x_IPHONEOS)
