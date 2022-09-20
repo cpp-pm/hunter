@@ -19,6 +19,17 @@ hunter_add_version(
     5bea20d0e6e98b743e5e72ba1c130e13b9b73584
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    lcms
+    VERSION
+    2.13.1-p0
+    URL
+    "https://github.com/cpp-pm/Little-CMS/archive/v2.13.1-p0.tar.gz"
+    SHA1
+    b09c439d3397f6e014d9bf7725c6151b22f1f74e
+)
+
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(lcms)
 hunter_download(PACKAGE_NAME lcms)
