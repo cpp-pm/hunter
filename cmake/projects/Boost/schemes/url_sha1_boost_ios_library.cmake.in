@@ -149,11 +149,21 @@ hunter_boost_component_b2_args(
 
 list(APPEND build_opts ${b2_component_opts})
 
-hunter_dump_cmake_flags()
+# SKIP_DEPLOYMENT_TARGET as different targets (ios, iossim, etc) need different ones
+hunter_dump_cmake_flags(SKIP_DEPLOYMENT_TARGET)
 # -> CMAKE_CXX_FLAGS
 
-if(CMAKE_CXX_FLAGS)
-  list(APPEND build_opts "cxxflags=${CMAKE_CXX_FLAGS}")
+set(cmake_cxx_flags_iphoneos "${CMAKE_CXX_FLAGS}")
+set(cmake_cxx_flags_iphonesimulator "${CMAKE_CXX_FLAGS}")
+
+if(IOS_DEPLOYMENT_SDK_VERSION)
+  set(cmake_cxx_flags_iphoneos "${cmake_cxx_flags_iphoneos} -miphoneos-version-min=${IOS_DEPLOYMENT_SDK_VERSION}")
+  set(cmake_cxx_flags_iphonesimulator "${cmake_cxx_flags_iphonesimulator} -mios-simulator-version-min=${IOS_DEPLOYMENT_SDK_VERSION}")
+endif()
+
+if(CMAKE_CXX_FLAGS AND IOS_DEPLOYMENT_SDK_VERSION)
+  list(APPEND build_opts_iphoneos "cxxflags=${cmake_cxx_flags_iphoneos}")
+  list(APPEND build_opts_iphonesimulator "cxxflags=${cmake_cxx_flags_iphonesimulator}")
 endif()
 
 string(COMPARE NOTEQUAL "@HUNTER_JOBS_OPTION@" "" have_jobs)
