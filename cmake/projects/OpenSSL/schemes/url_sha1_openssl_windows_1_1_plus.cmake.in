@@ -105,6 +105,12 @@ else()
   set(shared "no-shared")
 endif()
 
+if(HUNTER_UWP_PLATFORM)
+  set(platform "store")
+else()
+  set(platform "")
+endif()
+
 set(openssl_dir "@HUNTER_PACKAGE_INSTALL_PREFIX@/ssl")
 set(openssl_install_dir "@HUNTER_PACKAGE_INSTALL_PREFIX@")
 
@@ -138,7 +144,7 @@ ExternalProject_Add(
     "@HUNTER_PACKAGE_INSTALL_PREFIX@"
         # not used, just avoid creating Install/<name> empty directory
     CONFIGURE_COMMAND
-    "@HUNTER_MSVC_VCVARSALL@" "@HUNTER_MSVC_ARCH@"
+    "@HUNTER_MSVC_VCVARSALL@" "@HUNTER_MSVC_ARCH@" ${platform}
     COMMAND
     "@CMAKE_COMMAND@" -P "@HUNTER_PACKAGE_BUILD_DIR@/configure_1_1_plus.cmake"
     COMMAND
