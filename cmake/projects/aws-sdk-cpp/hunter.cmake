@@ -48,9 +48,9 @@ hunter_add_version(
     VERSION
     1.9.278-p1
     URL
-    "https://github.com/hjmallon/aws-sdk-cpp.git"
+    "https://github.com/cpp-pm/aws-sdk-cpp.git"
     SHA1
-    da65b7edac9467265ea6cd762fbf20f5397e054b
+    0492bf18882ee04c1448c8f9d9c810e1721e6483
 )
 
 hunter_cmake_args(
