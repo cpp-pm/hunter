@@ -76,6 +76,17 @@ hunter_add_version(
     0d5ea6760304a2f76185e4e81959c0b2eb5bbc35
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    OpenBLAS
+    VERSION
+    0.3.21
+    URL
+    "https://github.com/xianyi/OpenBLAS/archive/v0.3.21.tar.gz"
+    SHA1
+    b052d196ad694b29302e074b3eb8cc66745f6e2f
+)
+
 hunter_configuration_types(OpenBLAS CONFIGURATION_TYPES Release)
 if(HUNTER_OpenBLAS_VERSION VERSION_LESS 0.3.1)
   hunter_pick_scheme(DEFAULT OpenBLAS)
@@ -89,6 +100,7 @@ else()
     OpenBLAS
     CMAKE_ARGS
     NOFORTRAN=1
+    BUILD_WITHOUT_LAPACK=ON
   )
   hunter_pick_scheme(DEFAULT url_sha1_cmake)
   set(_openblas_unrelocatable_text_files "")
