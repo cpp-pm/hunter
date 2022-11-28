@@ -1,6 +1,8 @@
 .. spelling::
 
     OpenBLAS
+    Fortran
+    LAPACK
 
 .. index:: math ; OpenBLAS
 
@@ -23,3 +25,6 @@ OpenBLAS
     hunter_add_package(OpenBLAS)
     find_package(OpenBLAS CONFIG REQUIRED)
     target_link_libraries(... OpenBLAS::OpenBLAS)
+
+Starting with OpenBLAS v0.3.21 LAPACK support is enabled by default in Hunter.
+This is due to upstream adding a f2c-converted copy of LAPACK 3.9.0 as fallback if no Fortran compiler is available.
