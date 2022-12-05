@@ -47,12 +47,35 @@ hunter_add_version(
     SHA1
     6ea701f288a51bc57f1db5918c6b0879d800ed28
 )
+## suitesparse-metis-for-windows version is 1.6.0
+## suitesparse library version is 5.4.0
+hunter_add_version(
+    PACKAGE_NAME
+    SuiteSparse
+    VERSION
+    "5.4.0"
+    URL
+    "https://github.com/jlblancoc/suitesparse-metis-for-windows/archive/refs/tags/v1.6.1.tar.gz"
+    SHA1
+    d3131ac76330981150619b05664a75ade58da947
+)
 
+if(HUNTER_SuiteSparse_VERSION VERSION_LESS 5.4.0)
+    set(_SuiteSparse_BUILD_METIS NO)
+    set(_SuiteSparse_WITH_OPENBLAS NO)
+else()
+    # starting with tag v1.6.0 (SuiteSparse 5.4.0) build with metis support
+    set(_SuiteSparse_BUILD_METIS YES)
+    # and build against OpenBLAS, which starting with v0.3.21 provides a
+    # f2c-converted LAPACK v3.9.0 implementation, making the build C++ only
+    set(_SuiteSparse_WITH_OPENBLAS YES)
+endif()
 
 hunter_cmake_args(
     SuiteSparse
     CMAKE_ARGS
-    BUILD_METIS=NO
+    BUILD_METIS=${_SuiteSparse_BUILD_METIS}
+    WITH_OPENBLAS=${_SuiteSparse_WITH_OPENBLAS}
     HUNTER_INSTALL_LICENSE_FILES=LICENSE.md
 )
 
