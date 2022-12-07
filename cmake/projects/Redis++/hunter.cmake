@@ -5,7 +5,6 @@ include(hunter_cacheable)
 include(hunter_cmake_args)
 include(hunter_download)
 include(hunter_pick_scheme)
-include(hunter_report_broken_package)
 
 hunter_add_version(
   PACKAGE_NAME
@@ -20,7 +19,8 @@ hunter_add_version(
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 
-hunter_cmake_args(Redis++ CMAKE_ARGS REDIS_PLUS_PLUS_BUILD_ASYNC=libuv REDIS_PLUS_PLUS_BUILD_TEST=OFF CMAKE_PREFIX_PATH=${HUNTER_INSTALL_PREFIX})
+hunter_cmake_args(Redis++ CMAKE_ARGS REDIS_PLUS_PLUS_BUILD_ASYNC=libuv
+  REDIS_PLUS_PLUS_BUILD_TEST=OFF CMAKE_PREFIX_PATH=${HUNTER_INSTALL_PREFIX})
 
 hunter_cacheable(Redis++)
 hunter_download(PACKAGE_NAME Redis++)
