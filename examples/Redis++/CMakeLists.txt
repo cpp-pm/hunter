@@ -9,6 +9,7 @@ include("../common.cmake")
 
 project(download-redis++)
 
+# DOCUMENTATION_START {
 hunter_add_package(HiRedis)
 find_package(HiRedis CONFIG REQUIRED)
 
@@ -20,3 +21,7 @@ find_package(Redis++ CONFIG REQUIRED)
 
 add_executable(example main.cpp)
 target_link_libraries(example PUBLIC redis++::redis++_static uv)
+# DOCUMENTATION_END }
+
+# Test double library creation
+find_package(Redis++ CONFIG REQUIRED)
