@@ -11,6 +11,17 @@ hunter_add_version(
   PACKAGE_NAME
   libuv
   VERSION
+  1.44.2
+  URL
+  "https://github.com/libuv/libuv/archive/refs/tags/v1.44.2.tar.gz"
+  SHA1
+  0ea9726936755088e9c01d30caacfca1a384f3bb
+  )
+
+hunter_add_version(
+  PACKAGE_NAME
+  libuv
+  VERSION
   1.42.0-p0
   URL
   "https://github.com/cpp-pm/libuv/archive/refs/tags/v1.42.0-p0.tar.gz"
