@@ -8,7 +8,7 @@
 .. _pkg.Redis++:
 
 Redis++
-=====
+=======
 
 -  `Official <https://github.com/sewenew/redis-plus-plus/>`__
 -  `Example
@@ -19,7 +19,7 @@ Redis++
 
     hunter_add_package(HiRedis)
     find_package(HiRedis CONFIG REQUIRED)
-    
+
     hunter_add_package(libuv)
     find_package(libuv CONFIG REQUIRED)
 
