@@ -5,7 +5,6 @@ include(hunter_cacheable)
 include(hunter_cmake_args)
 include(hunter_download)
 include(hunter_pick_scheme)
-include(hunter_report_broken_package)
 
 hunter_add_version(
   PACKAGE_NAME
