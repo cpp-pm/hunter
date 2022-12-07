@@ -2,6 +2,8 @@
 
     ceres
     performant
+    OpenBLAS
+    Fortran
 
 .. index:: unsorted ; ceres-solver
 
@@ -85,3 +87,25 @@ add a local ``cmake/Hunter/config.cmake`` file with the following contents:
 
 With a dynamic ``LAPACK`` library the ``enable_language(Fortran)`` is not needed.
 But when shipping your project one must also ship the shared ``LAPACK`` library.
+
+with OpenBLAS as alternative to LAPACK
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since ``v0.3.21`` ``OpenBLAS`` provides a f2c-converted copy of ``LAPACK`` ``v3.9.0``.
+This copy is used when building without a Fortran compiler.
+Using this in ``ceres-solver`` and ``SuiteSparse`` enables us to build a pure C++ library.
+Which means the resulting library can be static with no Fortran runtime dependencies.
+
+Since Hunter `v0.24.9 <https://github.com/cpp-pm/hunter/releases/tag/v0.24.9>`__
+``SuiteSparse`` per default is built against ``OpenBLAS``,
+which in Hunter per default compiles without Fortran and with ``LAPACK`` enabled.
+
+.. code-block:: cmake
+
+    hunter_config(ceres-solver
+      VERSION ${HUNTER_ceres-solver_VERSION} CMAKE_ARGS
+        LAPACK=ON
+        WITH_OPENBLAS=ON # since 2.1.0-p0
+        SUITESPARSE=ON
+        CXSPARSE=ON # since 1.14.0-p1
+    )
