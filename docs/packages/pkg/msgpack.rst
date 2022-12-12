@@ -18,9 +18,10 @@ msgpack
 -  Added by `Antal Tátrai <https://github.com/tatraian>`__
    (`pr-406 <https://github.com/ruslo/hunter/pull/406>`__)
 - Available since |hunter|
+- Target library name is now changed from "msgpack::msgpack" to "msgpackc-cxx"
 
 .. code-block:: cmake
 
     hunter_add_package(msgpack)
     find_package(msgpack CONFIG REQUIRED)
-    target_link_libraries(... msgpackc-cxx)
+    target_link_libraries(... PRIVATE msgpackc-cxx)
