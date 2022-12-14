@@ -17,8 +17,8 @@
 {% assign projects = site.data.projects | sort %}
 {% for project in projects %}
 {% assign job_ids = "" %}
-<tr class="highlight">
-    <td><strong>{{ project[0] }}</strong></td>
+<tr class="highlight" id="{{ project[0] }}">
+    <td><a href="#{{ project[0] }}"><strong>{{ project[0] }}</strong></a></td>
     {% for os in oses %}
     <td>
         {% for job in project[1] %}
