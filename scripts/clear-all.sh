@@ -269,6 +269,7 @@ unset TEMP_FILE_DIR
 unset TEMP_ROOT
 unset TEST # Break Makefile OpenSSL build
 unset TOOLCHAINS
+unset TVOS_DEPLOYMENT_TARGET
 unset UNSTRIPPED_PRODUCT
 unset USER_APPS_DIR
 unset USER_LIBRARY_DIR

@@ -270,6 +270,7 @@ unset(ENV{TEMP_FILE_DIR})
 unset(ENV{TEMP_ROOT})
 unset(ENV{TEST}) # Break Makefile OpenSSL build
 unset(ENV{TOOLCHAINS})
+unset(ENV{TVOS_DEPLOYMENT_TARGET})
 unset(ENV{UNSTRIPPED_PRODUCT})
 unset(ENV{USER_APPS_DIR})
 unset(ENV{USER_LIBRARY_DIR})
