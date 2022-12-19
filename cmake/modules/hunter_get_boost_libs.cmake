@@ -84,6 +84,7 @@ function(hunter_get_boost_libs)
   hunter_append_component(${common_args} COMPONENT thread          SINCE 1.25.0)
   hunter_append_component(${common_args} COMPONENT timer           SINCE 1.9.0)
   hunter_append_component(${common_args} COMPONENT type_erasure    SINCE 1.60.0)
+  hunter_append_component(${common_args} COMPONENT url             SINCE 1.81.0)
   hunter_append_component(${common_args} COMPONENT wave            SINCE 1.33.0)
   # DOCUMENTATION_END }
 
