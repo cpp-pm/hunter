@@ -59,6 +59,18 @@ hunter_add_version(
     SHA1
     d3131ac76330981150619b05664a75ade58da947
 )
+## suitesparse-metis-for-windows version is 1.7.0
+## suitesparse library version is 5.4.0
+hunter_add_version(
+    PACKAGE_NAME
+    SuiteSparse
+    VERSION
+    "5.4.0-1"
+    URL
+    "https://github.com/jlblancoc/suitesparse-metis-for-windows/archive/refs/tags/v1.7.0.tar.gz"
+    SHA1
+    8d5f788248a8ca3558855afc556d7be4f7659c40
+)
 
 if(HUNTER_SuiteSparse_VERSION VERSION_LESS 5.4.0)
     set(_SuiteSparse_BUILD_METIS NO)
