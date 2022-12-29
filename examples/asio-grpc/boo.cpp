@@ -3,7 +3,7 @@
 #include <iostream>
 
 int main() {
-  agrpc::GrpcContext grpc_context{std::make_unique<grpc::CompletionQueue>()};
+  agrpc::GrpcContext grpc_context;
   grpc::Alarm alarm;
   agrpc::wait(alarm,
               std::chrono::system_clock::now() + std::chrono::milliseconds(10),
