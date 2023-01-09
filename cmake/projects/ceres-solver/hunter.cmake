@@ -87,6 +87,17 @@ hunter_add_version(
     315d16137f08ed4b4ee303d505a6355f96b9a3aa
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    ceres-solver
+    VERSION
+    "2.1.0-p1"
+    URL
+    "https://github.com/cpp-pm/ceres-solver/archive/refs/tags/v2.1.0-p1.tar.gz"
+    SHA1
+    8b14c6f33af3ef0595094cee2e6567681a481737
+)
+
 hunter_cmake_args(ceres-solver CMAKE_ARGS
     # explicitly remove dependency on gflags (only needed for tests)
     GFLAGS=OFF
