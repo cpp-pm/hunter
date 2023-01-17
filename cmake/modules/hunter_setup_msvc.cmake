@@ -121,7 +121,7 @@ macro(hunter_setup_msvc)
     elseif(_is_arm)
       set(HUNTER_MSVC_ARCH_TARGET "arm")
     elseif(_is_arm64)
-      set(HUNTER_MSVC_ARCH_TARGET "arm64")
+      set(HUNTER_MSVC_ARCH_TARGET "ARM64")
     else()
       hunter_internal_error(
           "Unexpected MSVC_*_ARCHITECTURE_ID: '${_architecture_id}'"
@@ -132,11 +132,17 @@ macro(hunter_setup_msvc)
     string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "" _host_is_default_x86)
     string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "x86" _host_is_x86)
     string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "x64" _host_is_x64)
+	string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "arm" _host_is_arm)
+	string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "ARM64" _host_is_arm64)
 
     if(_host_is_x86 OR _host_is_default_x86)
       set(HUNTER_MSVC_ARCH_HOST "x86")
     elseif(_host_is_x64)
-      set(HUNTER_MSVC_ARCH_HOST "amd64")
+      set(HUNTER_MSVC_ARCH_HOST "x64")
+    elseif(_host_is_arm)
+      set(HUNTER_MSVC_ARCH_HOST "arm")
+    elseif(_host_is_arm64)
+      set(HUNTER_MSVC_ARCH_HOST "ARM64")
     else()
       hunter_internal_error(
           "Unexpected CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE: '${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}'"
