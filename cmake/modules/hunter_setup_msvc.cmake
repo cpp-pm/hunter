@@ -137,7 +137,6 @@ macro(hunter_setup_msvc)
     string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "x64" _host_is_x64)
     string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "ARM" _host_is_arm)
     string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "ARM64" _host_is_arm64)
-    string(COMPARE EQUAL "${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}" "ARM64EC" _host_is_arm64ec)
 
     if(_host_is_x86 OR _host_is_default_x86)
       set(HUNTER_MSVC_ARCH_HOST "x86")
@@ -147,8 +146,6 @@ macro(hunter_setup_msvc)
       set(HUNTER_MSVC_ARCH_HOST "ARM")
     elseif(_host_is_arm64)
       set(HUNTER_MSVC_ARCH_HOST "ARM64")
-    elseif(_host_is_arm64ec)
-      set(HUNTER_MSVC_ARCH_HOST "ARM64EC")
     else()
       hunter_internal_error(
           "Unexpected CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE: '${CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE}'"
