@@ -105,6 +105,8 @@ hunter_cmake_args(ceres-solver CMAKE_ARGS
     LAPACK=OFF
     SUITESPARSE=OFF
     CXSPARSE=OFF # since 1.14.0-p0
+    # user must explicitly opt in to compile wit CUDA support, since v2.1.0-p0
+    CUDA=OFF
     # OpenBLAS flag, alternative to LAPACK since v2.1.0-p0
     WITH_OPENBLAS=OFF
     # don't build tests
