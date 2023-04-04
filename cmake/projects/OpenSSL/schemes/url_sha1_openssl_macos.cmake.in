@@ -194,6 +194,7 @@ foreach(arch ${configure_architectures})
       "${configure_arch}"
       "${configure_opts}"
       "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"
+      "--libdir=lib"
       BUILD_COMMAND
       "${build_command}"
       BUILD_IN_SOURCE

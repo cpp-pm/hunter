@@ -151,6 +151,7 @@ foreach(variant @IPHONEOS_ARCHS@ @IPHONESIMULATOR_ARCHS@)
       "${configure_opts}"
       "no-async"
       "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"
+      "--libdir=lib"
       "-arch ${variant}"
       "-isysroot ${SDK_ROOT}"
       BUILD_COMMAND
