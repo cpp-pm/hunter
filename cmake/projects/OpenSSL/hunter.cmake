@@ -14,28 +14,6 @@ hunter_add_version(
     PACKAGE_NAME
     OpenSSL
     VERSION
-    "3.1.0"
-    URL
-    "https://github.com/openssl/openssl/archive/openssl-3.1.0.tar.gz"
-    SHA1
-    1adb0f773af645b9f54738301920e5c74360b76d
-)
-
-hunter_add_version(
-    PACKAGE_NAME
-    OpenSSL
-    VERSION
-    "3.0.8"
-    URL
-    "https://github.com/openssl/openssl/archive/openssl-3.0.8.tar.gz"
-    SHA1
-    49816d51f0c4e306f72a6928780d3fb2815d05ac
-)
-
-hunter_add_version(
-    PACKAGE_NAME
-    OpenSSL
-    VERSION
     "1.1.1"
     URL
     "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1.tar.gz"
@@ -669,6 +647,28 @@ hunter_add_version(
     "https://github.com/openssl/openssl/archive/OpenSSL_1_0_2a.tar.gz"
     SHA1
     072cf2bc8e19c7c59a42e7e20977fe3037c9c9f3
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.1.0"
+    URL
+    "https://github.com/openssl/openssl/archive/openssl-3.1.0.tar.gz"
+    SHA1
+    1adb0f773af645b9f54738301920e5c74360b76d
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.0.8"
+    URL
+    "https://github.com/openssl/openssl/archive/openssl-3.0.8.tar.gz"
+    SHA1
+    49816d51f0c4e306f72a6928780d3fb2815d05ac
 )
 
 if(MINGW)
