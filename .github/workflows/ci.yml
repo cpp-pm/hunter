@@ -1,9 +1,7 @@
 name: CI
 on:
   push:
-    paths: [ 'cmake/projects/**' ]
   pull_request:
-    paths: [ 'cmake/projects/**' ]
   workflow_dispatch:
     inputs:
       project:
