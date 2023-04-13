@@ -306,6 +306,7 @@ if(OPENSSL_INCLUDE_DIR AND EXISTS "${OPENSSL_INCLUDE_DIR}/openssl/opensslv.h")
 
   string(COMPARE EQUAL "${openssl_version_str}" "" _is_empty)
   if(NOT _is_empty)
+    # Version parsing pre 3.x i.e 1.1.1 etc.
     # The version number is encoded as 0xMNNFFPPS: major minor fix patch status
     # The status gives if this is a developer or prerelease and is ignored here.
     # Major, minor, and fix directly translate into the version numbers shown in
@@ -335,6 +336,7 @@ if(OPENSSL_INCLUDE_DIR AND EXISTS "${OPENSSL_INCLUDE_DIR}/openssl/opensslv.h")
 
     set(OPENSSL_VERSION "${OPENSSL_VERSION_MAJOR}.${OPENSSL_VERSION_MINOR}.${OPENSSL_VERSION_FIX}${OPENSSL_VERSION_PATCH_STRING}")
   else()
+    # Version parsing post 3.x
     file(STRINGS "${OPENSSL_INCLUDE_DIR}/openssl/opensslv.h" OPENSSL_VERSION_MAJOR
       REGEX "^#[\t ]*define[\t ]+OPENSSL_VERSION_MAJOR[\t ]+([0-9a-fA-F])+.*")
     string(COMPARE EQUAL "${OPENSSL_VERSION_MAJOR}" "" _major_is_empty)
