@@ -13,6 +13,8 @@ function(hunter_sanity_checks)
     hunter_internal_error("CMAKE_GENERATOR is empty")
   endif()
 
+  string(COMPARE EQUAL "${CMAKE_GENERATOR}" "Ninja Multi-Config" is_ninja_multi_config)
+
   string(REGEX MATCH "^Visual Studio" vs_string "${CMAKE_GENERATOR}")
   string(COMPARE EQUAL "${vs_string}" "Visual Studio" is_visual_studio)
 
@@ -31,7 +33,7 @@ function(hunter_sanity_checks)
     )
   endif()
 
-  if(is_xcode OR is_visual_studio)
+  if(is_ninja_multi_config OR is_xcode OR is_visual_studio)
     set(multiconfig_generator TRUE)
   else()
     set(multiconfig_generator FALSE)
