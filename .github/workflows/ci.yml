@@ -1,9 +1,19 @@
 name: CI
 on:
   push:
-    paths: [ 'cmake/projects/**' ]
+    paths:
+      - 'cmake/projects/**'
+      - 'cmake/modules/**'
+      - 'cmake/schemes/**'
+      - 'cmake/templates/**'
+      - 'tests/**'
   pull_request:
-    paths: [ 'cmake/projects/**' ]
+    paths:
+      - 'cmake/projects/**'
+      - 'cmake/modules/**'
+      - 'cmake/schemes/**'
+      - 'cmake/templates/**'
+      - 'tests/**'
   workflow_dispatch:
     inputs:
       project:
@@ -82,15 +92,22 @@ jobs:
       run: echo "##[set-output name=branch;]${GITHUB_REF#refs/heads/}"
       id: extract_branch
 
+    - name: Build hunter_tests Unix
+      if: runner.os != 'Windows' && matrix.toolchain == 'hunter_tests'
+      env:
+        PROJECT_DIR: ${{ matrix.example }}
+      run: |
+        bash ${{ matrix.script }}
+
     - name: Build on Unix
-      if: runner.os != 'Windows'
+      if: runner.os != 'Windows' && matrix.toolchain != 'hunter_tests'
       env:
         BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
       run: |
         bash ${{ matrix.script }}
 
     - name: Build on Windows
-      if: runner.os == 'Windows'
+      if: runner.os == 'Windows' && matrix.toolchain != 'hunter_tests'
       env:
         BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
       run: |

@@ -23,6 +23,7 @@ except IOError:
   sys.exit('Can\'t read changed files from files.json')
 
 projects = set()
+run_hunter_tests : bool = False
 
 p = re.compile('cmake/projects/([^/]+)')
 for file in files:
@@ -30,8 +31,16 @@ for file in files:
     project = p.match(file).group(1)
     if os.path.isdir('cmake/projects/' + project):
       projects.add(project)
+  if file.startswith("cmake/modules/"):
+    run_hunter_tests = True
+  if file.startswith("cmake/schemes/"):
+    run_hunter_tests = True
+  if file.startswith("cmake/templates/"):
+    run_hunter_tests = True
+  if file.startswith("tests/"):
+    run_hunter_tests = True
 
-if projects:
+if projects or run_hunter_tests:
   dafault_dir = '.github/workflows/ci/'
 
   default_matrix = json_from_file_ignore_comments(dafault_dir + 'matrix.json')
@@ -53,6 +62,12 @@ if projects:
         leg['script'] = dafault_dir + leg['script']
 
     include += project_matrix
+
+  if run_hunter_tests:
+    hunter_tests_matrix = json_from_file_ignore_comments(dafault_dir + 'matrix_hunter_tests.json')
+    for leg in hunter_tests_matrix:
+      leg['script'] = dafault_dir + leg['script']
+    include += hunter_tests_matrix
 
   print(json.dumps({'include': include}))
 else:

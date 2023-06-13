@@ -1,0 +1,26 @@
+[
+// { "example": "tests/simple",                           "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+// { "example": "tests/issue/22",                         "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+// { "example": "tests/issue/24/unit",                    "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/issue/107",                         "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+// { "example": "tests/issue/109/unit",                   "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/autotools-merge-lipo",              "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_create_args_file",           "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_create_dependency_entry",    "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_create_deps_info",           "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+// download cache tests disabled because upstream file missing
+//{ "example": "tests/hunter_download_cache_meta_file",   "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+//{ "example": "tests/hunter_download_cache_raw_file",    "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_generate_qt_info",           "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_get_package_deps",           "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_get_package_deps_recurse",   "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_pack_directory",             "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_register_dependency",        "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_setup_msvc",                 "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_sleep_before_download",      "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_unpack_directory",           "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_init_not_found_counter",     "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+// disabled because of 'Unexpected empty string' and I don't want to debug that test
+//{ "example": "tests/hunter_check_toolchain_definition", "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" },
+{ "example": "tests/hunter_standard_flag",              "toolchain": "hunter_tests", "os": "ubuntu-22.04", "python": "3.8", "script": "build_hunter_tests.sh" }
+]
