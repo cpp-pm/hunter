@@ -1,7 +1,7 @@
 # Copyright (c) 2017, NeroBurner
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate

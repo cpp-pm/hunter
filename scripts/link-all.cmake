@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 string(COMPARE EQUAL "${HUNTER_INSTALL_PREFIX}" "" is_empty)
 if(is_empty)

@@ -1,7 +1,7 @@
 # Copyright (c) 2015, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 include("../../examples/common.cmake")
 project(TestAutotoolsMergeLipo)

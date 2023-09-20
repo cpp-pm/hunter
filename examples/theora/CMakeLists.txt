@@ -1,7 +1,7 @@
 # Copyright (c)
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.5)
 
 # Emulate HunterGate:
 # * https://github.com/cpp-pm/gate

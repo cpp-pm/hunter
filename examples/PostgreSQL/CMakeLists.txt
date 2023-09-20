@@ -1,5 +1,5 @@
 # Copyright (c) 2016, Alexandre Pretyman
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate

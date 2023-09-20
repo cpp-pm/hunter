@@ -2,7 +2,7 @@
 # Modified work: Copyright (c) 2018, Gregory Kramida
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.5)
 option(HUNTER_BUILD_SHARED_LIBS "..." ON)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")

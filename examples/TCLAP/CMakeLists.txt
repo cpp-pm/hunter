@@ -2,7 +2,7 @@
 # by Cyberunner23
 # for the Hunter project
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 variable_watch(HUNTER_TCLAP_VERSION)
 

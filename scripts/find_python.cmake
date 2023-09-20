@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 if(${CMAKE_VERSION} VERSION_LESS "3.12.0")
   find_package(PythonInterp 3 QUIET)

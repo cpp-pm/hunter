@@ -29,7 +29,7 @@ and set the ``GIT_SUBMODULE`` flag:
 
   # CMakeLists.txt
 
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
 
   include("cmake/HunterGate.cmake")
   HunterGate(
@@ -192,7 +192,7 @@ First let's remove ``LOCAL`` config and build standard TIFF with standard ZLIB:
   :emphasize-lines: 5-8
 
   # CMakeLists.txt
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
 
   include("cmake/HunterGate.cmake")
   HunterGate(
@@ -226,7 +226,7 @@ Now let's add ``LOCAL`` back and run build again:
 
   # CMakeLists.txt
 
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
 
   include("cmake/HunterGate.cmake")
   HunterGate(

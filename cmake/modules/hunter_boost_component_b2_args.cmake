@@ -2,7 +2,7 @@
 # Copyright (c) 2016, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 # for iostreams dependency on ZLIB and BZIP2
 include(hunter_add_package)

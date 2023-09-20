@@ -1,7 +1,7 @@
 # Copyright (c) 2016, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 set(HUNTER_USE_CACHE_SERVERS NO)
 

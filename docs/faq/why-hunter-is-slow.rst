@@ -73,7 +73,7 @@ it may take much longer then with Makefile generator:
 
   # CMakeLists.txt
 
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
   project(foo)
 
 .. code-block:: none
@@ -115,7 +115,7 @@ option:
 
   # CMakeLists.txt
 
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
 
   option(
       HUNTER_NO_TOOLCHAIN_ID_RECALCULATION
@@ -169,7 +169,7 @@ As an example here are actions that can lead to incorrect cache state:
 
   # CMakeLists.txt
 
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
 
   option(
       HUNTER_NO_TOOLCHAIN_ID_RECALCULATION
@@ -227,7 +227,7 @@ And add "GTest" to CMakeLists.txt:
 
   # CMakeLists.txt
 
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
 
   option(
       HUNTER_NO_TOOLCHAIN_ID_RECALCULATION
@@ -287,7 +287,7 @@ Xcode generator only:
 .. code-block:: cmake
   :emphasize-lines: 3-9
 
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
 
   if(CMAKE_GENERATOR STREQUAL "Xcode")
     option(

@@ -1,7 +1,7 @@
 # Copyright (c) 2014-2016, Ruslan Baratov, Sumedh Ghaisas
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 include(hunter_fatal_error)
 include(hunter_internal_error)

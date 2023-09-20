@@ -31,7 +31,7 @@ You can check that everything is fine by invoking this script:
 
   # script.cmake
 
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
 
   file(
       DOWNLOAD

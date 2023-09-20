@@ -1,7 +1,7 @@
 # Simple Qt Widgets project created by QtCreator
 # CmakeLists.txt from http://doc.qt.io/qt-5/cmake-manual.html
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate

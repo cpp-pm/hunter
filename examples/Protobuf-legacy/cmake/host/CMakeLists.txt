@@ -1,5 +1,5 @@
 # CMake project to install protobuf::protoc from hunter Protobuf package
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate

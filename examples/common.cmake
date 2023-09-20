@@ -1,7 +1,7 @@
 # Copyright (c) 2013, 2015 Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 ### Include HunterGate module from git submodule
 set(gate_dir "${CMAKE_CURRENT_LIST_DIR}/../gate")

@@ -118,7 +118,7 @@ variable before ``HunterGate`` to configure ``Hunter`` to use ``Artifactory`` se
 .. code-block:: cmake
   :emphasize-lines: 4-5
 
-  cmake_minimum_required(VERSION 3.2)
+  cmake_minimum_required(VERSION 3.5)
 
   set(
       HUNTER_CACHE_SERVERS

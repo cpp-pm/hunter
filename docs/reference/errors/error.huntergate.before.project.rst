@@ -26,7 +26,7 @@ What to do
   .. code-block:: cmake
 
      # Check CMake version before any commands
-     cmake_minimum_required(VERSION 3.2)
+     cmake_minimum_required(VERSION 3.5)
      
      # Load HunterGate module
      include("cmake/HunterGate.cmake")
@@ -48,7 +48,7 @@ What to do
   .. code-block:: cmake
 
      # CMakeLists.txt
-     cmake_minimum_required(VERSION 3.2)
+     cmake_minimum_required(VERSION 3.5)
      include("cmake/HunterGate.cmake")
      HunterGate(URL ... SHA1 ...)
      add_subdirectory(subdir1)
@@ -63,7 +63,7 @@ What to do
   .. code-block:: cmake
 
      # CMakeLists.txt
-     cmake_minimum_required(VERSION 3.2)
+     cmake_minimum_required(VERSION 3.5)
      include("cmake/HunterGate.cmake")
      HunterGate(URL ... SHA1 ...)
      project(Foo) # <--------------- before add_subdirectory
