@@ -4,16 +4,7 @@
 Notes about version of CMake
 ----------------------------
 
-* `3.2.0`_ **Minimum required**
-
-  * New ``continue`` command
-  * New synchronization command ``file(LOCK ...)``
-
-* `3.4.1`_
-
-  * **Buggy**, see `issue #405 <https://github.com/ruslo/hunter/issues/405>`__
-
-* `3.5.0`_ **Minimum for iOS projects**
+* `3.5.0`_ **Minimum required**
 
   * New variable `CMAKE_IOS_INSTALL_COMBINED <https://cmake.org/cmake/help/v3.5/variable/CMAKE_IOS_INSTALL_COMBINED.html>`__
   * `iOS toolchains <http://polly.readthedocs.io/en/latest/toolchains/ios.html>`__
@@ -54,8 +45,6 @@ Notes about version of CMake
   Latest Hunter release with support of old Android toolchains
   (before CMake 3.7.1) is v0.16.36
 
-.. _3.2.0: https://www.cmake.org/cmake/help/v3.2/release/3.2.html#commands
-.. _3.4.1: https://www.cmake.org/cmake/help/v3.4/release/3.4.html
 .. _3.5.0: https://www.cmake.org/cmake/help/v3.5/release/3.5.html#platforms
 .. _3.7.0: https://cmake.org/cmake/help/latest/release/3.7.html#commands
 .. _3.7.1: https://cmake.org/cmake/help/latest/release/3.7.html#platforms
