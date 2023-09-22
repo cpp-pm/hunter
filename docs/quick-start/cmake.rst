@@ -6,6 +6,8 @@ Notes about version of CMake
 
 * `3.5.0`_ **Minimum required**
 
+  * Since: `PR #689 <https://github.com/cpp-pm/hunter/pull/689>`__
+
   * New variable `CMAKE_IOS_INSTALL_COMBINED <https://cmake.org/cmake/help/v3.5/variable/CMAKE_IOS_INSTALL_COMBINED.html>`__
   * `iOS toolchains <http://polly.readthedocs.io/en/latest/toolchains/ios.html>`__
 
