@@ -9,20 +9,17 @@
 OpenCV-Extra
 ============
 
-.. warning::
+-  `Official <https://github.com/opencv/opencv_contrib>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/OpenCV-Extra/CMakeLists.txt>`__
+-  Available since `v0.11.1 <https://github.com/cpp-pm/hunter/releases/tag/v0.11.1>`__
+-  Added by `Ruslan Baratov <https://github.com/ruslo>`__ (`commit c0bb8aac <https://github.com/cpp-pm/hunter/commit/c0bb8aacac3ae8bc4f63a294e3dbf0ede0b7c785>`__)
 
-    This page is a template and contains no real information.
-    Please send pull request with real description.
-
--  `__FIXME__ Official <https://__FIXME__>`__
--  `__FIXME__ Hunterized <https://github.com/hunter-packages/__FIXME__>`__
--  `__FIXME__ Example <https://github.com/cpp-pm/hunter/blob/master/examples/__FIXME__/CMakeLists.txt>`__
--  Available since `__FIXME__ vX.Y.Z <https://github.com/cpp-pm/hunter/releases/tag/vX.Y.Z>`__
--  Added by `__FIXME__ <https://github.com/__FIXME__>`__ (`__FIXME__ pr-N <https://github.com/ruslo/hunter/pull/N>`__)
+Enabled by setting the flag ``OPENCV_WITH_EXTRA_MODULES=YES`` in the projects ``config.cmake`` file.
 
 .. code-block:: cmake
 
-    hunter_add_package(__FIXME__)
-    find_package(__FIXME__ CONFIG REQUIRED)
-    target_link_libraries(foo __FIXME__::__FIXME__)
-
+    hunter_config(OpenCV
+        VERSION ${HUNTER_OpenCV_VERSION}
+        CMAKE_ARGS
+            OPENCV_WITH_EXTRA_MODULES=YES
+    )

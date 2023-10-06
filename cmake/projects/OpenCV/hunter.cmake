@@ -17,6 +17,17 @@ hunter_add_version(
     PACKAGE_NAME
     OpenCV
     VERSION
+    "4.8.1-p0"
+    URL
+    "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.8.1-p0.tar.gz"
+    SHA1
+    4338a5be8b3fe1d5fb7ba7935d99669005c1a7a0
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenCV
+    VERSION
     "4.5.5-p0"
     URL
     "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.5.5-p0.tar.gz"
@@ -503,20 +514,33 @@ hunter_cmake_args(
         BUILD_JASPER=OFF
         BUILD_WEBP=OFF
         BUILD_OPENEXR=OFF
+        BUILD_OPENJPEG=OFF
+        BUILD_PROTOBUF=OFF
+        BUILD_TBB=OFF
+        BUILD_ITT=OFF
         # This stuff will build shared libraries. Build with PIC required for dependencies.
         BUILD_opencv_java=OFF
         BUILD_opencv_python2=OFF
         BUILD_opencv_python3=OFF
+        # disable downloaders because they download from the internet at configuration time
+        BUILD_opencv_wechat_qrcode=OFF
+        BUILD_opencv_xfeatures2d=OFF
+        WITH_ADE=OFF
+        BUILD_opencv_cudaoptflow=OFF
+        BUILD_opencv_face=OFF
         # There is not a CUDA package so need to stop OpenCV from searching for it, otherwise
         #  it might pick up the host version
         WITH_CUDA=OFF
+        WITH_CUDNN=OFF
         WITH_CUFFT=OFF
+        WITH_CUBLAS=OFF
         # Fix for https://travis-ci.org/xsacha/hunter/jobs/347083573
         BUILD_opencv_dnn=OFF
         WITH_FFMPEG=OFF
         WITH_OPENJPEG=OFF
         WITH_QUIRC=OFF
-        WITH_ADE=OFF
+        WITH_LAPACK=OFF
+        WITH_PROTOBUF=OFF
 )
 
 # Pick a download scheme

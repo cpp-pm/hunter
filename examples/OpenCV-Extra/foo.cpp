@@ -1,26 +1,24 @@
-// http://docs.opencv.org/doc/tutorials/introduction/linux_gcc_cmake/linux_gcc_cmake.html
+// from OpenCV_contrib/modules/stereo/samples/export_param_file.cpp
 
-#include <stdio.h>
-#include <opencv2/opencv.hpp>
-#include <opencv2/xfeatures2d.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/stereo.hpp>
 
-int main(int argc, char** argv) {
-  if (argc != 2) {
-    printf("usage: DisplayImage.out <Image_Path>\n");
-    return -1;
-  }
+using namespace cv;
+using namespace std;
 
-  cv::Mat image;
-  image = cv::imread(argv[1], 1);
+int main(int argc, char* argv[])
+{
+//!     [create]
+    Ptr<stereo::QuasiDenseStereo> stereo =  stereo::QuasiDenseStereo::create(cv::Size(5,5));
+//!     [create]
 
-  if (!image.data) {
-    printf("No image data \n");
-    return EXIT_FAILURE;
-  }
-  cv::namedWindow("Display Image", cv::WINDOW_AUTOSIZE);
-  cv::imshow("Display Image", image);
 
-  cv::waitKey(0);
+//!     [write]
+    std::string parameterFileLocation = "./parameters.yaml";
+    if (argc > 1)
+        parameterFileLocation = argv[1];
+    stereo->saveParameters(parameterFileLocation);
+//!     [write]
 
-  return EXIT_SUCCESS;
+    return 0;
 }

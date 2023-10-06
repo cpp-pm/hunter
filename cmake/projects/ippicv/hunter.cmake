@@ -7,6 +7,7 @@ include(hunter_add_version)
 include(hunter_download)
 include(hunter_pick_scheme)
 
+# Version 20151201
 if(APPLE)
   hunter_add_version(
       PACKAGE_NAME
@@ -42,6 +43,7 @@ elseif(WIN32)
   )
 endif()
 
+# Version 20141027
 if(APPLE)
   hunter_add_version(
       PACKAGE_NAME
@@ -76,6 +78,44 @@ elseif(WIN32)
       6722cb73ab815f61f103b87114d44d93f8f9d3ba
   )
 endif()
+
+# Version: 20230330
+# added for OpenCV 4.8.1
+if(APPLE)
+  hunter_add_version(
+      PACKAGE_NAME
+      ippicv
+      VERSION
+      "20230330"
+      URL
+      "https://raw.githubusercontent.com/opencv/opencv_3rdparty/1224f78da6684df04397ac0f40c961ed37f79ccb/ippicv/ippicv_2021.8_mac_intel64_20230330_general.tgz"
+      SHA1
+      abc8caf5d8819abfbe0b257c4d41d9cd32406ebb
+  )
+elseif(UNIX)
+  hunter_add_version(
+      PACKAGE_NAME
+      ippicv
+      VERSION
+      "20230330"
+      URL
+      "https://raw.githubusercontent.com/opencv/opencv_3rdparty/1224f78da6684df04397ac0f40c961ed37f79ccb/ippicv/ippicv_2021.8_lnx_intel64_20230330_general.tgz"
+      SHA1
+      80c96d62ca6b4596775da7c5dcc9602712328a61
+  )
+elseif(WIN32)
+  hunter_add_version(
+      PACKAGE_NAME
+      ippicv
+      VERSION
+      "20230330"
+      URL
+      "https://raw.githubusercontent.com/opencv/opencv_3rdparty/1224f78da6684df04397ac0f40c961ed37f79ccb/ippicv/ippicv_2021.8_win_intel64_20230330_general.zip"
+      SHA1
+      7c7f83e37caf6c342d76014f3eccedb47d559010
+  )
+endif()
+
 
 hunter_pick_scheme(DEFAULT url_sha1_download)
 hunter_download(PACKAGE_NAME ippicv)

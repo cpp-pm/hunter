@@ -1,28 +1,28 @@
 .. spelling::
 
     ippicv
+    OpenCV
 
-.. index:: unsorted ; ippicv
+.. index:: opencv_component ; ippicv
 
 .. _pkg.ippicv:
 
 ippicv
 ======
 
-.. warning::
-
-    This page is a template and contains no real information.
-    Please send pull request with real description.
-
--  `__FIXME__ Official <https://__FIXME__>`__
--  `__FIXME__ Hunterized <https://github.com/hunter-packages/__FIXME__>`__
--  `__FIXME__ Example <https://github.com/cpp-pm/hunter/blob/master/examples/__FIXME__/CMakeLists.txt>`__
--  Available since `__FIXME__ vX.Y.Z <https://github.com/cpp-pm/hunter/releases/tag/vX.Y.Z>`__
--  Added by `__FIXME__ <https://github.com/__FIXME__>`__ (`__FIXME__ pr-N <https://github.com/ruslo/hunter/pull/N>`__)
+-  `Official <https://github.com/opencv/opencv_3rdparty/tree/ippicv/master>`__
+-  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/ippicv/CMakeLists.txt>`__
+-  Available since `v0.14.12 <https://github.com/cpp-pm/hunter/releases/tag/v0.14.12>`__
 
 .. code-block:: cmake
 
-    hunter_add_package(__FIXME__)
-    find_package(__FIXME__ CONFIG REQUIRED)
-    target_link_libraries(foo __FIXME__::__FIXME__)
+    hunter_add_package(ippicv)
+    file(GLOB ippicv_archive "${IPPICV_ROOT}/ippicv_*")
+    if(EXISTS "${ippicv_archive}")
+      message("ippicv archive: ${ippicv_archive}")
+    else()
+      message(FATAL_ERROR "Nothing found in `${IPPICV_ROOT}`")
+    endif()
 
+ippicv stands for Intel(R) Integrated Performance Primitives for OpenCV.
+The package was added to be used by the OpenCV project and should be updated together with OpenCV.
