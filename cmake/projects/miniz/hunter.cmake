@@ -20,6 +20,17 @@ hunter_add_version(
     cabba521a61b9af353e197e74c1fa00307f33241
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    miniz
+    VERSION
+    3.0.2
+    URL
+    "https://github.com/richgel999/miniz/archive/refs/tags/3.0.2.tar.gz"
+    SHA1
+    4eca6e106380929fbd808d6170a2f1a63ad6165e
+)
+
 hunter_cmake_args(
     miniz
     CMAKE_ARGS
