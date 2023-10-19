@@ -143,9 +143,9 @@ hunter_add_version(
     VERSION
     "1.12.0-p0"
     URL
-    "https://github.com/JamesEggleton/spdlog/archive/refs/tags/v1.12.0-p0.tar.gz"
+    "https://github.com/cpp-pm/spdlog/archive/v1.12.0-p0.tar.gz"
     SHA1
-    a05082f4c7c92acc7d2cf962bafe916108357a22
+    ed377f84e2c14e8532ee85aa55656852bf29cc43
 )
 
 hunter_cmake_args(
