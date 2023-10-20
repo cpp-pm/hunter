@@ -219,7 +219,14 @@ hunter_default_version(catkin VERSION 0.7.17-p0)
 hunter_default_version(cctz VERSION 2.2.0)
 hunter_default_version(ccv VERSION 0.7-p6)
 hunter_default_version(cereal VERSION 1.2.2-p0)
-hunter_default_version(ceres-solver VERSION 2.1.0-p1)
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS "8.0")
+  # Ubuntu 18.04 GCC compiler isn't C++17 conformant enough, stay at lower version
+  # - Ubuntu 18.04 disablement: https://github.com/ceres-solver/ceres-solver/commit/40c1a7e18ee040261f87b32374c9a46724ca2214
+  # - C++17 requirement: https://github.com/ceres-solver/ceres-solver/commit/1274743609bc59621adc9e311cdeeaad7eb65201
+  hunter_default_version(ceres-solver VERSION 2.1.0-p1)
+else()
+  hunter_default_version(ceres-solver VERSION 2.2.0-p0)
+endif()
 hunter_default_version(cgltf VERSION 1.10-f9a8804-p0)
 hunter_default_version(check_ci_tag VERSION 1.0.0)
 hunter_default_version(chromium_zlib VERSION 0.0.0-f87c2b10efb4-p0)

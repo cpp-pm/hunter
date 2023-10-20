@@ -98,15 +98,28 @@ hunter_add_version(
     8b14c6f33af3ef0595094cee2e6567681a481737
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    ceres-solver
+    VERSION
+    "2.2.0-p0"
+    URL
+    "https://github.com/cpp-pm/ceres-solver/archive/refs/tags/v2.2.0-p0.tar.gz"
+    SHA1
+    34500d5f4f536d5ea12740d04c6f0a086a735ccb
+)
+
 hunter_cmake_args(ceres-solver CMAKE_ARGS
     # explicitly remove dependency on gflags (only needed for tests)
     GFLAGS=OFF
     # explicitly disable suitesparse support
     LAPACK=OFF
     SUITESPARSE=OFF
-    CXSPARSE=OFF # since 1.14.0-p0
+    CXSPARSE=OFF # since 1.14.0-p0, option removed with v2.2.0-p0
     # user must explicitly opt in to compile wit CUDA support, since v2.1.0-p0
     CUDA=OFF
+    # CUDA keyword renamed to USE_CUDA since v2.2.0
+    USE_CUDA=OFF
     # OpenBLAS flag, alternative to LAPACK since v2.1.0-p0
     WITH_OPENBLAS=OFF
     # don't build tests

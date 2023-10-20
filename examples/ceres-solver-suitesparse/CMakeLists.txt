@@ -10,14 +10,7 @@ set(TESTING_CONFIG_OPT FILEPATH "${CMAKE_CURRENT_LIST_DIR}/config.cmake")
 include("../common.cmake")
 
 project(download-ceres-solver)
-# enable Fortran support, needed for LAPACK static libs
-enable_language(Fortran)
-# as alternative LAPACK can be built as shared lib by adding
-# the following lines to config.cmake (uncommented)
-#hunter_config(LAPACK
-#  VERSION ${HUNTER_LAPACK_VERSION}
-#  CMAKE_ARGS BUILD_SHARED_LIBS=ON
-#)
+# using OpenBLAS instead of Fortran based LAPACK, no fortran needed since 2.1.0-p0
 
 hunter_add_package(ceres-solver)
 

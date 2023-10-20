@@ -2,7 +2,6 @@ hunter_config(ceres-solver
   VERSION ${HUNTER_ceres-solver_VERSION} CMAKE_ARGS
     LAPACK=ON
     SUITESPARSE=ON
-    CXSPARSE=OFF # since 1.14.0-p1
     WITH_OPENBLAS=OFF # we want to test generic LAPACK dynamic lib, not OpenBLAS
 )
 hunter_config(SuiteSparse
