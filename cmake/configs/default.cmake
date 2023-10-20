@@ -599,7 +599,7 @@ hunter_default_version(yaml-cpp VERSION 0.6.3)
 hunter_default_version(zip VERSION 0.1.15)
 hunter_default_version(zlog VERSION 1.2.14)
 hunter_default_version(zookeeper VERSION 3.4.9-p2)
-hunter_default_version(zstd VERSION 1.5.0)
+hunter_default_version(zstd VERSION 1.5.5)
 
 if(ANDROID)
   string(COMPARE EQUAL "${CMAKE_SYSTEM_VERSION}" "" _is_empty)

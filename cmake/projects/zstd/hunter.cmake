@@ -54,6 +54,50 @@ hunter_add_version(
     c53019729e3a595f0104facab6533d78296a2945
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    zstd
+    VERSION
+    1.5.1
+    URL
+    "https://github.com/facebook/zstd/releases/download/v1.5.1/zstd-1.5.1.tar.gz"
+    SHA1
+    e6a51ef3f7d5be5b74ac74d88bf3850057e00adb
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    zstd
+    VERSION
+    1.5.2
+    URL
+    "https://github.com/facebook/zstd/releases/download/v1.5.2/zstd-1.5.2.tar.gz"
+    SHA1
+    c56c8e6d703d14029464b2a1a66164dc5cf80855
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    zstd
+    VERSION
+    1.5.4
+    URL
+    "https://github.com/facebook/zstd/releases/download/v1.5.4/zstd-1.5.4.tar.gz"
+    SHA1
+    128aa7c9305b8d13b1ba8a88766492a779cebe40
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    zstd
+    VERSION
+    1.5.5
+    URL
+    "https://github.com/facebook/zstd/releases/download/v1.5.5/zstd-1.5.5.tar.gz"
+    SHA1
+    4479ecc74300d23391d99fbebf2fddd47aed9b28
+)
+
 hunter_source_subdir(zstd SOURCE_SUBDIR "build/cmake")
 
 hunter_cmake_args(zstd CMAKE_ARGS
