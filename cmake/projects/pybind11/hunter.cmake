@@ -87,8 +87,14 @@ hunter_add_version(
 hunter_add_version(
     PACKAGE_NAME pybind11
     VERSION "2.10.4"
-    URL "https://github.com/pybind/pybind11/archive/refs/tags/v2.10.4.tar.gz"
+    URL "https://github.com/pybind/pybind11/archive/v2.10.4.tar.gz"
     SHA1 "5c366a92fc4b3937bcc3389405edbe362b1f3cbd")
+
+hunter_add_version(
+    PACKAGE_NAME pybind11
+    VERSION "2.11.1"
+    URL "https://github.com/pybind/pybind11/archive/v2.11.1.tar.gz"
+    SHA1 "2d27e340522284e3f8a212b52d649f48102ae18d")
 
 hunter_cmake_args(pybind11 CMAKE_ARGS PYBIND11_TEST=OFF)
 
