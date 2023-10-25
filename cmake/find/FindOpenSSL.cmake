@@ -338,13 +338,16 @@ if(OPENSSL_INCLUDE_DIR AND EXISTS "${OPENSSL_INCLUDE_DIR}/openssl/opensslv.h")
   else()
     # Version parsing post 3.x
     file(STRINGS "${OPENSSL_INCLUDE_DIR}/openssl/opensslv.h" OPENSSL_VERSION_MAJOR
-      REGEX "^#[\t ]*define[\t ]+OPENSSL_VERSION_MAJOR[\t ]+([0-9a-fA-F])+.*")
+      REGEX "^#[\t ]*define[\t ]+OPENSSL_VERSION_MAJOR[\t ]+[0-9a-fA-F]+.*")
+    string(REGEX REPLACE "^.*OPENSSL_VERSION_MAJOR[\t ]+([0-9a-fA-F]+).*$" "\\1" OPENSSL_VERSION_MAJOR "${OPENSSL_VERSION_MAJOR}")
     string(COMPARE EQUAL "${OPENSSL_VERSION_MAJOR}" "" _major_is_empty)
     file(STRINGS "${OPENSSL_INCLUDE_DIR}/openssl/opensslv.h" OPENSSL_VERSION_MINOR
-      REGEX "^#[\t ]*define[\t ]+OPENSSL_VERSION_MINOR[\t ]+([0-9a-fA-F])+.*")
+      REGEX "^#[\t ]*define[\t ]+OPENSSL_VERSION_MINOR[\t ]+[0-9a-fA-F]+.*")
+    string(REGEX REPLACE "^.*OPENSSL_VERSION_MINOR[\t ]+([0-9a-fA-F]+).*$" "\\1" OPENSSL_VERSION_MINOR "${OPENSSL_VERSION_MINOR}")
     string(COMPARE EQUAL "${OPENSSL_VERSION_MINOR}" "" _minor_is_empty)
     file(STRINGS "${OPENSSL_INCLUDE_DIR}/openssl/opensslv.h" OPENSSL_VERSION_PATCH
-      REGEX "^#[\t ]*define[\t ]+OPENSSL_VERSION_PATCH[\t ]+([0-9a-fA-F])+.*")
+      REGEX "^#[\t ]*define[\t ]+OPENSSL_VERSION_PATCH[\t ]+[0-9a-fA-F]+.*")
+    string(REGEX REPLACE "^.*OPENSSL_VERSION_PATCH[\t ]+([0-9a-fA-F]+).*$" "\\1" OPENSSL_VERSION_PATCH "${OPENSSL_VERSION_PATCH}")
     string(COMPARE EQUAL "${OPENSSL_VERSION_PATCH}" "" _patch_is_empty)
 
     if(_major_is_empty OR _minor_is_empty OR _patch_is_empty)
