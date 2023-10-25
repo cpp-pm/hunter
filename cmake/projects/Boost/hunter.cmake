@@ -490,9 +490,9 @@ hunter_add_version(
     VERSION
     "1.80.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.7z"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.tar.bz2"
     SHA1
-    5463e5380ccd1564e57747969c9dcc852b82b237
+    690a2a2ed6861129828984b1d52a473d2c8393d1
 )
 
 hunter_add_version(
@@ -501,9 +501,31 @@ hunter_add_version(
     VERSION
     "1.81.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.7z"
+    "https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.tar.bz2"
     SHA1
-    90bef80787606e1f4022a877073b2346636fdba3
+    898469f1ae407f5cbfca84f63ad602962eebf4cc
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Boost
+    VERSION
+    "1.82.0"
+    URL
+    "https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.bz2"
+    SHA1
+    5c0736ce8d6f0d21275a1d9407dce48e6decce6a
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    Boost
+    VERSION
+    "1.83.0"
+    URL
+    "https://boostorg.jfrog.io/artifactory/main/release/1.83.0/source/boost_1_83_0.tar.bz2"
+    SHA1
+    75b1f569134401d178ad2aaf97a2993898dd7ee3
 )
 
 if(MSVC)
