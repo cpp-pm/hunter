@@ -72,6 +72,19 @@ hunter_add_version(
     8d5f788248a8ca3558855afc556d7be4f7659c40
 )
 
+## suitesparse-metis-for-windows version is 1.8.0
+## suitesparse library version is 5.4.0
+hunter_add_version(
+    PACKAGE_NAME
+    SuiteSparse
+    VERSION
+    "5.4.0-2"
+    URL
+    "https://github.com/jlblancoc/suitesparse-metis-for-windows/archive/refs/tags/v1.8.0.tar.gz"
+    SHA1
+    c85cc6149dc44e7d351b5549c6e23a53ff94bc23
+)
+
 if(HUNTER_SuiteSparse_VERSION VERSION_LESS 5.4.0)
     set(_SuiteSparse_BUILD_METIS NO)
     set(_SuiteSparse_WITH_OPENBLAS NO)
@@ -88,6 +101,7 @@ hunter_cmake_args(
     CMAKE_ARGS
     BUILD_METIS=${_SuiteSparse_BUILD_METIS}
     WITH_OPENBLAS=${_SuiteSparse_WITH_OPENBLAS}
+    METIS_IDXTYPEWIDTH=32 # since 5.4.0-2, needed for compatibility with ceres-solver 2.2.0
     HUNTER_INSTALL_LICENSE_FILES=LICENSE.md
 )
 
