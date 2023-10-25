@@ -663,9 +663,53 @@ hunter_add_version(
     VERSION
     "3.0.8"
     URL
-    "https://github.com/openssl/openssl/archive/openssl-3.0.8.tar.gz"
+    "https://www.openssl.org/source/openssl-3.0.8.tar.gz"
     SHA1
-    49816d51f0c4e306f72a6928780d3fb2815d05ac
+    580d8a7232327fe1fa6e7db54ac060d4321f40ab
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.0.9"
+    URL
+    "https://www.openssl.org/source/openssl-3.0.9.tar.gz"
+    SHA1
+    b569725118c0603537c9a19449046b41b39627c8
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.0.10"
+    URL
+    "https://www.openssl.org/source/openssl-3.0.10.tar.gz"
+    SHA1
+    f6ce69840df105fd4b9450f76075068e236d620f
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.0.11"
+    URL
+    "https://www.openssl.org/source/openssl-3.0.11.tar.gz"
+    SHA1
+    b5cd8cb24198e9f9c5de3dd1661650b2c32f06ea
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.0.12"
+    URL
+    "https://www.openssl.org/source/openssl-3.0.12.tar.gz"
+    SHA1
+    b48e20c07facfdf6da9ad43a6c5126d51897699b
 )
 
 # 3.1 series (not LTS)
@@ -675,9 +719,53 @@ hunter_add_version(
     VERSION
     "3.1.0"
     URL
-    "https://github.com/openssl/openssl/archive/openssl-3.1.0.tar.gz"
+    "https://www.openssl.org/source/openssl-3.1.0.tar.gz"
     SHA1
-    1adb0f773af645b9f54738301920e5c74360b76d
+    323b175eda887b33fb23f5806ef307b4dda2df00
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.1.1"
+    URL
+    "https://www.openssl.org/source/openssl-3.1.1.tar.gz"
+    SHA1
+    d01a0f243672d514aee14bdd74a5d109b6394a78
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.1.2"
+    URL
+    "https://www.openssl.org/source/openssl-3.1.2.tar.gz"
+    SHA1
+    206036c21264e53f0196f715d81d905742e6245b
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.1.3"
+    URL
+    "https://www.openssl.org/source/openssl-3.1.3.tar.gz"
+    SHA1
+    4f15668cbfa4ed2fb9d4c7fe0a4a209b5821d01a
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.1.4"
+    URL
+    "https://www.openssl.org/source/openssl-3.1.4.tar.gz"
+    SHA1
+    24c5d4308e0f901326f15c274c8c736117966499
 )
 
 if(MINGW)
