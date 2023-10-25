@@ -198,7 +198,11 @@ endif()
 hunter_cmake_args(
     Eigen
     CMAKE_ARGS
+    # explicitly disable gfortran usage
+    CMAKE_Fortran_COMPILER=NOTFOUND
+    # no need for tests or docs to save build-time
     BUILD_TESTING=OFF
+    EIGEN_BUILD_DOC=OFF
     HUNTER_INSTALL_LICENSE_FILES=COPYING.MPL2
     ${_android_args}
 )
