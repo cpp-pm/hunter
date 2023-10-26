@@ -152,6 +152,17 @@ hunter_add_version(
     e88e72adc5dd18d00922a9c7ddf6e056e29a3d06
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2023.09.01
+    URL
+    https://github.com/google/re2/archive/2023-09-01.tar.gz
+    SHA1
+    7518f50fd6e0d47c9a5ee6534d43aae31a0b4d5b
+)
+
 hunter_cmake_args(
     re2
     CMAKE_ARGS
