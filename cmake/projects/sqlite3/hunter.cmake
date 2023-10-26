@@ -12,6 +12,17 @@ hunter_add_version(
     PACKAGE_NAME
     sqlite3
     VERSION
+    3.30.1-p0
+    URL
+    "https://github.com/cpp-pm/sqlite3/archive/v3.30.1-p0.tar.gz"
+    SHA1
+    d9c239e6e08ceb6c7c3b1c53966ccfeb58dd9f55
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    sqlite3
+    VERSION
     3.21.0-p1
     URL
     "https://github.com/hunter-packages/sqlite3/archive/v3.21.0-p1.tar.gz"
@@ -61,28 +72,6 @@ hunter_add_version(
     "https://github.com/hunter-packages/sqlite3/archive/v3.27.2-p0.tar.gz"
     SHA1
     e4f2b69b5b9e5fe9797909abb51c1acaba25e4f2
-)
-
-hunter_add_version(
-    PACKAGE_NAME
-    sqlite3
-    VERSION
-    3.30.1-p0
-    URL
-    "https://github.com/cpp-pm/sqlite3/archive/v3.30.1-p0.tar.gz"
-    SHA1
-    d9c239e6e08ceb6c7c3b1c53966ccfeb58dd9f55
-)
-
-hunter_add_version(
-    PACKAGE_NAME
-    sqlite3
-    VERSION
-    3.43.2-p0
-    URL
-    "https://github.com/cpp-pm/sqlite3/archive/refs/heads/pr.3.43.2.tar.gz"
-    SHA1
-    66833029532842561f583cb16bb4a8780ec03640
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
