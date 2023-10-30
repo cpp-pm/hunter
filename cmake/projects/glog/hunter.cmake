@@ -86,8 +86,24 @@ hunter_add_version(
     d4c64e1b2de9cfc52970532b301106ed94e94991
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    glog
+    VERSION
+    "0.6.0"
+    URL
+    "https://github.com/google/glog/archive/refs/tags/v0.6.0.tar.gz"
+    SHA1
+    31376c7916aee2fc6375994468744123ad6179b9
+)
+
 # explicitly remove dependency on gflags (only needed for tests)
-hunter_cmake_args(glog CMAKE_ARGS WITH_GFLAGS=OFF BUILD_TESTING=OFF)
+hunter_cmake_args(glog CMAKE_ARGS
+    WITH_GFLAGS=OFF
+    WITH_UNWIND=OFF # since 0.5.0
+    WITH_GTEST=OFF # since 0.6.0
+    BUILD_TESTING=OFF
+)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(glog)
