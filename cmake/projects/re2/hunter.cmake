@@ -152,6 +152,50 @@ hunter_add_version(
     e88e72adc5dd18d00922a9c7ddf6e056e29a3d06
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2022.06.01
+    URL
+    https://github.com/google/re2/archive/2022-06-01.tar.gz
+    SHA1
+    547c9a5bbb4133bed1aae47037bba1bdade6ec9d
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2022.12.01
+    URL
+    https://github.com/google/re2/archive/2022-12-01.tar.gz
+    SHA1
+    8146fb81e2b8988a455f2f7291c7a8a4001e55a6
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2023.02.01
+    URL
+    https://github.com/google/re2/archive/2023-02-01.tar.gz
+    SHA1
+    f3533ed1afd1634cc3acd83ab2fa2c30c6cc751e
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    re2
+    VERSION
+    2023.03.01
+    URL
+    https://github.com/google/re2/archive/2023-03-01.tar.gz
+    SHA1
+    3e37cc282ad4ea05e2971e0ed28ef5dba0129651
+)
+
 hunter_cmake_args(
     re2
     CMAKE_ARGS
