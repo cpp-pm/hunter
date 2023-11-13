@@ -268,9 +268,8 @@ Download release archive and calculate ``SHA1``:
 
 .. code-block:: none
 
-  > wget https://github.com/hunterbox/hunter_box_1/archive/v1.0.0.tar.gz
-  > openssl sha1 v1.0.0.tar.gz
-  SHA1(v1.0.0.tar.gz)= c724e0f8a4ebc95cf7ba628b89b998b3b3c2697d
+  > wget -O- https://github.com/hunterbox/hunter_box_1/archive/v1.0.0.tar.gz | openssl sha1
+  SHA1(stdin)= 4fa7fe75629f148a61cedc6ba0bce74f177a6747
 
 Add this information to ``cmake/projects/hunter_box_1/hunter.cmake`` file:
 
@@ -292,7 +291,7 @@ Add this information to ``cmake/projects/hunter_box_1/hunter.cmake`` file:
       URL
       "https://github.com/hunterbox/hunter_box_1/archive/v1.0.0.tar.gz"
       SHA1
-      c724e0f8a4ebc95cf7ba628b89b998b3b3c2697d
+      4fa7fe75629f148a61cedc6ba0bce74f177a6747
   )
 
   hunter_pick_scheme(DEFAULT url_sha1_cmake)
