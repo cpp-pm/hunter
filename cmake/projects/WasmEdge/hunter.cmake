@@ -21,7 +21,7 @@ hunter_add_version(
 )
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL "13.0.0")
-    set(WASMEDGE_FLAGS -Wno-error=dangling-reference)
+    set(WASMEDGE_FLAGS WASMEDGE_CFLAGS=-Wno-error=dangling-reference)
 endif()
 
 hunter_cmake_args(
