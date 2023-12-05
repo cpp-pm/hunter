@@ -29,7 +29,7 @@ hunter_cmake_args(
     WasmEdge
     CMAKE_ARGS
     WASMEDGE_BUILD_TOOLS=OFF
-    WASMEDGE_CFLAGS=-Wno-error=dangling-reference
+    WASMEDGE_CFLAGS=${WASMEDGE_FLAGS}
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
