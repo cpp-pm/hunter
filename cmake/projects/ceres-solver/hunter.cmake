@@ -120,6 +120,17 @@ hunter_add_version(
     e7640e7d3a12bb4b3b36a0a6206ad65108c65326
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    ceres-solver
+    VERSION
+    "2.2.0-p2"
+    URL
+    "https://github.com/cpp-pm/ceres-solver/archive/refs/tags/v2.2.0-p2.tar.gz"
+    SHA1
+    1fe13c3b6188541b4b2d2b8c18119c0caf29e173
+)
+
 hunter_cmake_args(ceres-solver CMAKE_ARGS
     # explicitly remove dependency on gflags (only needed for tests)
     GFLAGS=OFF
@@ -137,6 +148,8 @@ hunter_cmake_args(ceres-solver CMAKE_ARGS
     BUILD_TESTING=OFF
     # also don't build examples: when suitesparse is enabled the examples need Fortran libraries
     BUILD_EXAMPLES=OFF
+    # since SuiteSparse-metis 7.5.1-1 no SuiteSparse::metis target is installed
+    EIGENMETIS=OFF
 )
 
 # Pick a download scheme

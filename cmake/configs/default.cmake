@@ -225,7 +225,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND CMAKE_CXX_COMPILER_VERSION VERSION_L
   # - C++17 requirement: https://github.com/ceres-solver/ceres-solver/commit/1274743609bc59621adc9e311cdeeaad7eb65201
   hunter_default_version(ceres-solver VERSION 2.1.0-p1)
 else()
-  hunter_default_version(ceres-solver VERSION 2.2.0-p1)
+  hunter_default_version(ceres-solver VERSION 2.2.0-p2)
 endif()
 hunter_default_version(cgltf VERSION 1.10-f9a8804-p0)
 hunter_default_version(check_ci_tag VERSION 1.0.0)
