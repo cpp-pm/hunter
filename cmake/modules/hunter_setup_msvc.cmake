@@ -66,7 +66,7 @@ macro(hunter_setup_msvc)
     string(COMPARE EQUAL "${MSVC_VERSION}" "1900" _vs_14_2015)
     string(REGEX MATCH "^191[0-9]$" _vs_15_2017 "${MSVC_VERSION}")
     string(REGEX MATCH "^192[0-9]$" _vs_16_2019 "${MSVC_VERSION}")
-    string(REGEX MATCH "^193[0-9]$" _vs_17_2022 "${MSVC_VERSION}")
+    string(REGEX MATCH "^19[34][0-9]$" _vs_17_2022 "${MSVC_VERSION}")
 
     if(_vs_8_2005)
       set(HUNTER_MSVC_VERSION "8")
