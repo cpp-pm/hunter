@@ -13,6 +13,17 @@ hunter_add_version(
     PACKAGE_NAME
     civetweb
     VERSION
+    1.13-p0
+    URL
+    "https://github.com/cpp-pm/civetweb/archive/v1.13-p0.tar.gz"
+    SHA1
+    8873a6be8d40600bc820116d82dea15002291b78
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    civetweb
+    VERSION
     1.11-p0
     URL
     "https://github.com/hunter-packages/civetweb/archive/v1.11-p0.tar.gz"
