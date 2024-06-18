@@ -87,6 +87,17 @@ hunter_add_version(
     b052d196ad694b29302e074b3eb8cc66745f6e2f
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    OpenBLAS
+    VERSION
+    0.3.27
+    URL
+    "https://github.com/xianyi/OpenBLAS/archive/v0.3.27.tar.gz"
+    SHA1
+    a2fe037b96c3d7aae64d1a31b3362cfd8e89b8c6
+)
+
 hunter_configuration_types(OpenBLAS CONFIGURATION_TYPES Release)
 if(HUNTER_OpenBLAS_VERSION VERSION_LESS 0.3.1)
   hunter_pick_scheme(DEFAULT OpenBLAS)
