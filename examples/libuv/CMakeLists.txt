@@ -22,7 +22,7 @@ message("CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")
 find_package(libuv CONFIG REQUIRED)
 add_executable(example example.c)
 
-target_link_libraries(example libuv::uv)
+target_link_libraries(example uv)
 
 enable_testing()
 

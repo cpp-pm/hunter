@@ -96,6 +96,17 @@ hunter_add_version(
   4b334b174f4abf4a7f41656e1cfe3c60ad9382ca
 )
 
+hunter_add_version(
+  PACKAGE_NAME
+  libuv
+  VERSION
+  1.44.2
+  URL
+  "https://github.com/libuv/libuv/archive/refs/tags/v1.44.2.tar.gz"
+  SHA1
+  0ea9726936755088e9c01d30caacfca1a384f3bb
+)
+
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 
 hunter_cmake_args(libuv CMAKE_ARGS BUILD_TESTING=OFF)
