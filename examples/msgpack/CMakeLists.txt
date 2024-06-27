@@ -11,4 +11,4 @@ set (CMAKE_CXX_STANDARD 11)
 find_package(msgpack CONFIG REQUIRED)
 
 add_executable(container container.cpp)
-target_link_libraries(container msgpack::msgpack)
+target_link_libraries(container PRIVATE msgpackc-cxx)
