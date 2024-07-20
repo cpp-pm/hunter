@@ -1,9 +1,8 @@
-# Copyright (c) 2023, Alexander Voronov
+# Copyright (c) 2024 Eyal Rozenberg <eyalroz1@gmx.com>
+# Copyright (c) 2024 Alexander Voronov <kab00m@ya.ru>
 # All rights reserved.
 
 cmake_minimum_required(VERSION 3.5)
-
-set(TESTING_CONFIG_OPT FILEPATH "${CMAKE_CURRENT_LIST_DIR}/config.cmake")
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
