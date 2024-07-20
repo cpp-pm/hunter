@@ -18,3 +18,6 @@ find_package(printf CONFIG REQUIRED)
 add_executable(main main.c)
 target_link_libraries(main PUBLIC printf::printf)
 # DOCUMENTATION_END }
+
+# Test double library creation
+find_package(printf CONFIG REQUIRED)

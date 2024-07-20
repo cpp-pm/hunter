@@ -1,7 +1,7 @@
 .. spelling::
 
     eyalroz
-    printf 
+    printf
 
 .. index:: logging ; eyalroz_printf
 
