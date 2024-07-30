@@ -175,7 +175,7 @@ hunter_default_version(ZMQPP VERSION 4.2.0-p0)
 hunter_default_version(ZeroMQ VERSION 4.2.3-p1)
 hunter_default_version(Zug VERSION 0.0.1-be20cae)
 
-hunter_default_version(abseil VERSION 20230802.1)
+hunter_default_version(abseil VERSION 20240116.2)
 hunter_default_version(acf VERSION 0.1.14)
 hunter_default_version(actionlib VERSION 1.11.13-p0)
 hunter_default_version(aes VERSION 0.0.1-p1)
