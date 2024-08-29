@@ -22,7 +22,7 @@ libuv
 
     hunter_add_package(libuv)
     find_package(libuv CONFIG REQUIRED)
-    target_link_libraries(... libuv::uv)
+    target_link_libraries(... uv)
 
 uv_ssize_t
 ~~~~~~~~~~
