@@ -17,6 +17,17 @@ hunter_add_version(
     PACKAGE_NAME
     OpenCV
     VERSION
+    "4.10.0-p0"
+    URL
+    "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.10.0-p0.tar.gz"
+    SHA1
+    a1c036469148b5c9e2d29861612a7cbb2ed75a9d
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenCV
+    VERSION
     "4.8.1-p0"
     URL
     "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.8.1-p0.tar.gz"

@@ -116,6 +116,43 @@ elseif(WIN32)
   )
 endif()
 
+# Version: 20240201
+# added for OpenCV 4.10.0
+if(APPLE)
+  hunter_add_version(
+      PACKAGE_NAME
+      ippicv
+      VERSION
+      "20240201"
+      URL
+      "https://raw.githubusercontent.com/opencv/opencv_3rdparty/0cc4aa06bf2bef4b05d237c69a5a96b9cd0cb85a/ippicv/ippicv_2021.9.1_mac_intel64_20230919_general.tgz"
+      SHA1
+      b9b3e0775a1599d32cd8fed14e670c153ece4722
+  )
+elseif(UNIX)
+  hunter_add_version(
+      PACKAGE_NAME
+      ippicv
+      VERSION
+      "20240201"
+      URL
+      "https://raw.githubusercontent.com/opencv/opencv_3rdparty/fd27188235d85e552de31425e7ea0f53ba73ba53/ippicv/ippicv_2021.11.0_lnx_intel64_20240201_general.tgz"
+      SHA1
+      d4da464d3b5796bdcaafac85bddece601c708f41
+  )
+elseif(WIN32)
+  hunter_add_version(
+      PACKAGE_NAME
+      ippicv
+      VERSION
+      "20240201"
+      URL
+      "https://raw.githubusercontent.com/opencv/opencv_3rdparty/fd27188235d85e552de31425e7ea0f53ba73ba53/ippicv/ippicv_2021.11.0_win_intel64_20240201_general.zip"
+      SHA1
+      a15f378ccd01ebceb84ddd5fc0128f87a962fed6
+  )
+endif()
+
 
 hunter_pick_scheme(DEFAULT url_sha1_download)
 hunter_download(PACKAGE_NAME ippicv)
