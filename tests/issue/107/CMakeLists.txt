@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.5...3.12)
 
 set(OLD_UNIX "${UNIX}")
 set(OLD_WIN32 "${WIN32}")

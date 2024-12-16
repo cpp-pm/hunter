@@ -1,7 +1,7 @@
 # Copyright (c) 2017, Pawel Bylica
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.5...3.12)
 
 include("../../examples/common.cmake")
 
