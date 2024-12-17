@@ -1,7 +1,7 @@
 # Copyright (c) 2016-2017, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -16,4 +16,3 @@ find_package(cpuinfo CONFIG REQUIRED)
 add_executable(test example.cpp)
 target_link_libraries(test cpuinfo::cpuinfo)
 # DOCUMENTATION_END }
-

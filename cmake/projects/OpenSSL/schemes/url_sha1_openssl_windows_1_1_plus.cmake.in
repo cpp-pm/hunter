@@ -1,7 +1,7 @@
 # Copyright (c) 2016, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(Hunter)
 
 include(ExternalProject) # ExternalProject_Add
@@ -71,7 +71,7 @@ if(is_amd64 OR is_arm64)
 else()
   if("${CMAKE_SYSTEM_NAME}" STREQUAL "WindowsStore")
     set(arch "VC-WIN32-ONECORE")
-  else() 
+  else()
     set(arch "VC-WIN32")
   endif()
 endif()

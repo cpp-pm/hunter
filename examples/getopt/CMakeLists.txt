@@ -1,7 +1,7 @@
 # Copyright (c) 2015, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -18,4 +18,3 @@ endif()
 
 add_executable(getopt_example main.cpp)
 target_link_libraries(getopt_example ${getopt_example_libraries})
-

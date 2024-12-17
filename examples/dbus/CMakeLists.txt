@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -12,5 +12,3 @@ find_package(dbus REQUIRED)
 add_executable(main main.cpp)
 target_link_libraries(main
     dbus::dbus)
-
-

@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
 
 set(HUNTER_USE_CACHE_SERVERS NO)
 

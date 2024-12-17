@@ -4,7 +4,7 @@ there are a 3 custom schemes for [OpenSSL](https://github.com/cpp-pm/hunter/blob
 ### 01. Test it manually
 ```bash
 > wget https://github.com/phonegap/ios-sim/archive/1.8.2.tar.gz
-> openssl sha1 1.8.2.tar.gz 
+> openssl sha1 1.8.2.tar.gz
 SHA1(1.8.2.tar.gz)= 4328b3c8e6b455631d52b7ce5968170c9769eb1e
 > tar xf 1.8.2.tar.gz
 > cd ios-sim-1.8.2/
@@ -16,7 +16,7 @@ build/Release/ios-sim
 ### 02. Test it using ExternalProject_Add
 ```bash
 > cat CMakeLists.txt
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 include(ExternalProject) # ExternalProject_Add
 
@@ -49,7 +49,7 @@ First, custom build scheme need to be added to `cmake/schemes` directory
 > cd ${HUNTER_ROOT}
 > cat cmake/schemes/url_sha1_ios_sim.cmake.in
 # This is configuration file, variable @SOME_VARIABLE_NAME@ will be substituted during configure_file command
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # If such variables like `CMAKE_CXX_FLAGS` or `CMAKE_CXX_COMPILER` not used by scheme
 # setting `LANGUAGES` to `NONE` will speed-up build a little bit. If you have any problems/glitches
@@ -101,7 +101,7 @@ ExternalProject_Add(
 Next steps are similar to [simple CMake-based](https://github.com/ruslo/hunter/wiki/usr.adding.new.package)
 project add:
 ```
-> cat cmake/projects/ios_sim/hunter.cmake 
+> cat cmake/projects/ios_sim/hunter.cmake
 
 # !!! DO NOT PLACE HEADER GUARDS HERE !!!
 
@@ -124,14 +124,14 @@ hunter_pick_scheme(DEFAULT url_sha1_ios_sim) # Use new custom scheme
 hunter_download(PACKAGE_NAME ios_sim)
 ```
 ```
-> grep ios_sim cmake/config/default.cmake 
+> grep ios_sim cmake/config/default.cmake
 hunter_config(ios_sim VERSION 1.8.2)
 ```
 
 ### 04. Using
 Now package ready to be used:
 ```bash
-> cat CMakeLists.txt 
+> cat CMakeLists.txt
 cmake_minimum_required(VERSION 2.8)
 
 include("cmake/HunterGate.cmake")

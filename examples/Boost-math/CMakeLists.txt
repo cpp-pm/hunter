@@ -1,7 +1,7 @@
 # Copyright (c) 2013, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 set(Boost_DEBUG ON CACHE BOOLEAN "")
 
@@ -27,4 +27,3 @@ target_link_libraries(foo
   Boost::math_tr1f
   Boost::math_tr1l
 )
-

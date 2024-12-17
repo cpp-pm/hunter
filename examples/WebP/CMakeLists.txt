@@ -2,7 +2,7 @@
 # Copyright (c) 2018, Mathieu-Andre Chiasson
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -16,4 +16,3 @@ find_package(WebP CONFIG REQUIRED)
 add_executable(main main.cpp)
 target_link_libraries(main WebP::webp)
 # DOCUMENTATION_END }
-

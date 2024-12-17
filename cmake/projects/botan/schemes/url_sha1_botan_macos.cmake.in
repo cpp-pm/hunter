@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 project(Hunter)
 
@@ -44,13 +44,13 @@ if(NOT configure_architectures)
 endif()
 
 # Usage: configure.py [options]
-# 
+#
 # Options:
 #   --version                         show program's version number and exit
 #   -h, --help                        show this help message and exit
 #   --verbose                         Show debug messages
 #   --quiet                           Show only warnings and errors
-# 
+#
 #   Target options:
 #     --cpu=CPU                       set the target CPU architecture
 #     --os=OS                         set the target operating system
@@ -83,7 +83,7 @@ endif()
 #     --disable-altivec               disable AltiVec intrinsics
 #     --disable-neon                  disable NEON intrinsics
 #     --disable-armv8crypto           disable ARMv8Crypto intrinsics
-# 
+#
 #   Build options:
 #     --with-debug-info               include debug symbols
 #     --with-sanitizers               enable ASan/UBSan checks
@@ -115,14 +115,14 @@ endif()
 #     --unsafe-fuzzer-mode            Disable essential checks for testing
 #     --build-fuzzers=TYPE            Build fuzzers (afl, libfuzzer, klee, test)
 #     --with-fuzzer-lib=LIB           additionally link in LIB
-# 
+#
 #   Documentation Options:
 #     --without-documentation         Skip building/installing documentation
 #     --with-sphinx                   Use Sphinx
 #     --with-pdf                      Use Sphinx to generate PDF doc
 #     --with-rst2man                  Use rst2man to generate man page
 #     --with-doxygen                  Use Doxygen
-# 
+#
 #   Module selection:
 #     --module-policy=POL             module policy file (see src/build-
 #                                     data/policy)
@@ -138,7 +138,7 @@ endif()
 #     --with-sqlite3                  use sqlite3
 #     --with-zlib                     use zlib
 #     --with-tpm                      use tpm
-# 
+#
 #   Installation options:
 #     --program-suffix=SUFFIX         append string to program names
 #     --library-suffix=SUFFIX         append string to library names
@@ -148,7 +148,7 @@ endif()
 #     --libdir=DIR                    set the library install dir
 #     --mandir=DIR                    set the install dir for man pages
 #     --includedir=DIR                set the include file install dir
-# 
+#
 #   Informational:
 #     --list-modules                  list available modules and exit
 #     --list-os-features              list available OS features and exit

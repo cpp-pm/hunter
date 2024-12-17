@@ -1,7 +1,7 @@
 # Copyright (c) 2013, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(Hunter)
 
 include(ExternalProject) # ExternalProject_Add
@@ -234,7 +234,7 @@ if(has_iphoneos)
       -d0
       ${build_opts_iphoneos}
       install
-      "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"  
+      "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"
   )
 else()
   # Add dummy target

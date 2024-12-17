@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -13,4 +13,4 @@ find_package(HastyNoise CONFIG REQUIRED)
 
 add_executable(hastynoise_test main.cpp)
 target_link_libraries(hastynoise_test HastyNoise::hastyNoise)
-# DOCUMENTATION_END } 
+# DOCUMENTATION_END }

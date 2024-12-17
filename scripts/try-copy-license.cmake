@@ -2,7 +2,7 @@
 # Copyright (c) 2017 Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 string(COMPARE EQUAL "${srcdir}" "" is_empty)
 if(is_empty)

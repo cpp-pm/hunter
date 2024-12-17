@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -10,7 +10,7 @@ hunter_add_package(Avahi)
 find_package(Avahi REQUIRED)
 
 add_executable(main main.cpp)
-target_link_libraries(main 
+target_link_libraries(main
   Avahi::common
   Avahi::client
   Avahi::compat_libdns_sd)
