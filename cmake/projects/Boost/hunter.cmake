@@ -252,14 +252,14 @@ hunter_add_version(
     51421ef259a4530edea0fbfc448460fcc5c64edb
 )
 
-# for official boost releases use base url https://boostorg.jfrog.io/artifactory/main/release
+# for official boost releases use base url https://archives.boost.io/release
 hunter_add_version(
     PACKAGE_NAME
     Boost
     VERSION
     "1.65.1"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.65.1/source/boost_1_65_1.tar.bz2"
+    "https://archives.boost.io/release/1.65.1/source/boost_1_65_1.tar.bz2"
     SHA1
     4a5b0c3c1b1b9a4d6cb6a6cc395e903e76f76720
 )
@@ -270,7 +270,7 @@ hunter_add_version(
     VERSION
     "1.65.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.65.0/source/boost_1_65_0.tar.bz2"
+    "https://archives.boost.io/release/1.65.0/source/boost_1_65_0.tar.bz2"
     SHA1
     f9260074ecfb31f3e65322fae9c15cc423c0ad59
 )
@@ -281,7 +281,7 @@ hunter_add_version(
     VERSION
     "1.66.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.66.0/source/boost_1_66_0.7z"
+    "https://archives.boost.io/release/1.66.0/source/boost_1_66_0.7z"
     SHA1
     075d0b43980614054b1f1bafd189f863bba6600e
 )
@@ -303,7 +303,7 @@ hunter_add_version(
     VERSION
     "1.67.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.67.0/source/boost_1_67_0.7z"
+    "https://archives.boost.io/release/1.67.0/source/boost_1_67_0.7z"
     SHA1
     64c278c23defe155e630a307ae2c0615348b14b3
 )
@@ -435,7 +435,7 @@ hunter_add_version(
     VERSION
     "1.75.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75_0.tar.bz2"
+    "https://archives.boost.io/release/1.75.0/source/boost_1_75_0.tar.bz2"
     SHA1
     6109efd3bdd8b9220d7d85b5e125f7f28721b9a9
 )
@@ -446,7 +446,7 @@ hunter_add_version(
     VERSION
     "1.76.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2"
+    "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.bz2"
     SHA1
     8064156508312dde1d834fec3dca9b11006555b6
 )
@@ -457,7 +457,7 @@ hunter_add_version(
     VERSION
     "1.77.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.tar.bz2"
+    "https://archives.boost.io/release/1.77.0/source/boost_1_77_0.tar.bz2"
     SHA1
     0cb4f947d094fc311e13ffacaff00418130ef5ef
 )
@@ -468,7 +468,7 @@ hunter_add_version(
     VERSION
     "1.78.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.bz2"
+    "https://archives.boost.io/release/1.78.0/source/boost_1_78_0.tar.bz2"
     SHA1
     7ccc47e82926be693810a687015ddc490b49296d
 )
@@ -479,7 +479,7 @@ hunter_add_version(
     VERSION
     "1.79.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.bz2"
+    "https://archives.boost.io/release/1.79.0/source/boost_1_79_0.tar.bz2"
     SHA1
     31209dcff292bd6a64e5e08ceb3ce44a33615dc0
 )
@@ -490,7 +490,7 @@ hunter_add_version(
     VERSION
     "1.80.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.tar.bz2"
+    "https://archives.boost.io/release/1.80.0/source/boost_1_80_0.tar.bz2"
     SHA1
     690a2a2ed6861129828984b1d52a473d2c8393d1
 )
@@ -501,7 +501,7 @@ hunter_add_version(
     VERSION
     "1.81.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.tar.bz2"
+    "https://archives.boost.io/release/1.81.0/source/boost_1_81_0.tar.bz2"
     SHA1
     898469f1ae407f5cbfca84f63ad602962eebf4cc
 )
@@ -512,7 +512,7 @@ hunter_add_version(
     VERSION
     "1.82.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.bz2"
+    "https://archives.boost.io/release/1.82.0/source/boost_1_82_0.tar.bz2"
     SHA1
     5c0736ce8d6f0d21275a1d9407dce48e6decce6a
 )
@@ -523,7 +523,7 @@ hunter_add_version(
     VERSION
     "1.83.0"
     URL
-    "https://boostorg.jfrog.io/artifactory/main/release/1.83.0/source/boost_1_83_0.tar.bz2"
+    "https://archives.boost.io/release/1.83.0/source/boost_1_83_0.tar.bz2"
     SHA1
     75b1f569134401d178ad2aaf97a2993898dd7ee3
 )
