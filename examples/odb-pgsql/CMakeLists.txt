@@ -1,5 +1,5 @@
 # Copyright (c) 2016, Alexandre Pretyman
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -46,4 +46,3 @@ target_compile_definitions(${PROJECT_NAME}
     PRIVATE
       DATABASE_PGSQL
 )
-

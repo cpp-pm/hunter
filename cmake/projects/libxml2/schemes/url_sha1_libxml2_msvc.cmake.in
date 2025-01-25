@@ -2,7 +2,7 @@
 # Copyright (c) 2017, Sacha Refshauge
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(Hunter)
 
 include(ExternalProject) # ExternalProject_Add
@@ -109,7 +109,7 @@ foreach(build_config_type @HUNTER_PACKAGE_CONFIGURATION_TYPES@)
         "@HUNTER_SELF@/scripts/try-copy-license.cmake"
         LOG_CONFIGURE 1
     )
-  
+
     # Each external project must depends on previous one since they all use
     # the same building directory
     string(COMPARE EQUAL "${previous_project}" "" is_empty)
@@ -120,14 +120,14 @@ foreach(build_config_type @HUNTER_PACKAGE_CONFIGURATION_TYPES@)
         )
     endif()
     set(previous_project "${current_project}")
-  
+
     # Install target file
     # Required: lib file name, BUILD_SHARED_LIBS, install prefix, hunter_self
     string(TOUPPER ${build_config_type} TARGET_CONFIGURATION)
     set(HUNTER_PACKAGE_INSTALL_PREFIX "@HUNTER_PACKAGE_INSTALL_PREFIX@")
     set(TARGET_LIB_FILE               "libxml2${LIB_EXT}.lib")
     set(HUNTER_SELF                   "@HUNTER_SELF@")
-  
+
     hunter_install_libxml2_targets()
 endforeach()
 

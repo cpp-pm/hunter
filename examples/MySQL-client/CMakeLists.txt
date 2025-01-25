@@ -1,5 +1,5 @@
 # Copyright (c) 2016, Alexandre Pretyman
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -18,4 +18,3 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME} "MySQL::libmysql")
-

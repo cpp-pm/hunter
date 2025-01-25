@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -12,4 +12,4 @@ find_package(imgui CONFIG REQUIRED)
 
 add_executable(imgui_test main.cpp)
 target_link_libraries(imgui_test imgui::imgui)
-# DOCUMENTATION_END } 
+# DOCUMENTATION_END }

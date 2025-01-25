@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -12,4 +12,4 @@ find_package(ctti CONFIG REQUIRED)
 
 add_executable(ctti_test main.cpp)
 target_link_libraries(ctti_test ctti::ctti)
-# DOCUMENTATION_END } 
+# DOCUMENTATION_END }

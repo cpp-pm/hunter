@@ -1,7 +1,7 @@
 # Copyright (c) 2015, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 
 set(TESTING_CONFIG_OPT FILEPATH "${CMAKE_CURRENT_LIST_DIR}/config.cmake")
@@ -32,4 +32,3 @@ find_package(cblas CONFIG REQUIRED)
 
 add_executable(foo foo.cpp)
 target_link_libraries(foo cblas)
-

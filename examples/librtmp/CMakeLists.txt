@@ -1,7 +1,7 @@
 # Copyright (c) 2015, Ruslan Baratov
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
@@ -14,4 +14,3 @@ find_package(librtmp CONFIG REQUIRED)
 
 add_executable(librtmp_example main.cpp)
 target_link_libraries(librtmp_example librtmp::librtmp)
-
