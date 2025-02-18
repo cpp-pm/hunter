@@ -7,6 +7,7 @@
 BOOST_LIBS="
     atomic
     chrono
+    cobalt
     container
     context
     contract
