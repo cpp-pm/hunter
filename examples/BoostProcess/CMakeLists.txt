@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
-# * https://github.com/hunter-packages/gate
+# * https://github.com/cpp-pm/gate
 include("../common.cmake")
 
 project(example-boost-process)
