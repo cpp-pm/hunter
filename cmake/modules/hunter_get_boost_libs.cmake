@@ -53,6 +53,7 @@ function(hunter_get_boost_libs)
   # DOCUMENTATION_START {
   hunter_append_component(${common_args} COMPONENT atomic          SINCE 1.53.0)
   hunter_append_component(${common_args} COMPONENT chrono          SINCE 1.47.0)
+  hunter_append_component(${common_args} COMPONENT charconv        SINCE 1.85.0)
   hunter_append_component(${common_args} COMPONENT cobalt          SINCE 1.84.0)
   hunter_append_component(${common_args} COMPONENT container       SINCE 1.56.0)
   hunter_append_component(${common_args} COMPONENT context         SINCE 1.51.0)
