@@ -7,6 +7,7 @@
 BOOST_LIBS="
     atomic
     chrono
+    charconv
     cobalt
     container
     context
