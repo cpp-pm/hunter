@@ -26,6 +26,8 @@ BOOST_LIBS="
     math
     mpi
     nowide
+    predef
+    process
     program_options
     python
     random
