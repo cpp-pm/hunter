@@ -74,6 +74,8 @@ function(hunter_get_boost_libs)
   hunter_append_component(${common_args} COMPONENT metaparse       SINCE 1.61.0 UNTIL 1.66.0)
   hunter_append_component(${common_args} COMPONENT mpi             SINCE 1.35.0)
   hunter_append_component(${common_args} COMPONENT nowide          SINCE 1.74.0)
+  hunter_append_component(${common_args} COMPONENT predef          SINCE 1.86.0) # is listed as a lib since 1.86.0, but can not be built as one
+  hunter_append_component(${common_args} COMPONENT process         SINCE 1.86.0) # was header only until 1.86.0
   hunter_append_component(${common_args} COMPONENT program_options SINCE 1.32.0)
   hunter_append_component(${common_args} COMPONENT python          SINCE 1.19.0)
   hunter_append_component(${common_args} COMPONENT random          SINCE 1.15.0)
