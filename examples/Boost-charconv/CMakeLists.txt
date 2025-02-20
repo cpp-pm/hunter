@@ -11,8 +11,8 @@ set(TESTING_CONFIG_OPT FILEPATH ${CMAKE_CURRENT_LIST_DIR}/../Boost-useBoostConfi
 include("../common.cmake")
 
 project(download-boost)
-hunter_add_package(Boost COMPONENTS process)
-find_package(Boost CONFIG REQUIRED process)
+hunter_add_package(Boost COMPONENTS charconv)
+find_package(Boost CONFIG REQUIRED charconv)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::process)
+target_link_libraries(foo PUBLIC Boost::charconv)

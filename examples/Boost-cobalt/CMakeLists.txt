@@ -6,13 +6,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(Boost_DEBUG ON CACHE BOOLEAN "")
 set(TESTING_CONFIG_OPT FILEPATH ${CMAKE_CURRENT_LIST_DIR}/../Boost-useBoostConfig/config.cmake)
 
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/toolchain.cmake"
+    CACHE FILEPATH "Path to CMake toolchain file")
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
 include("../common.cmake")
 
 project(download-boost)
-hunter_add_package(Boost COMPONENTS process)
-find_package(Boost CONFIG REQUIRED process)
+
+hunter_add_package(Boost COMPONENTS cobalt)
+find_package(Boost CONFIG REQUIRED cobalt)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::process)
+target_link_libraries(foo PUBLIC Boost::cobalt)

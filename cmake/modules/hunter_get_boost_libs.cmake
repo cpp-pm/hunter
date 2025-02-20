@@ -53,6 +53,8 @@ function(hunter_get_boost_libs)
   # DOCUMENTATION_START {
   hunter_append_component(${common_args} COMPONENT atomic          SINCE 1.53.0)
   hunter_append_component(${common_args} COMPONENT chrono          SINCE 1.47.0)
+  hunter_append_component(${common_args} COMPONENT charconv        SINCE 1.85.0)
+  hunter_append_component(${common_args} COMPONENT cobalt          SINCE 1.84.0)
   hunter_append_component(${common_args} COMPONENT container       SINCE 1.56.0)
   hunter_append_component(${common_args} COMPONENT context         SINCE 1.51.0)
   hunter_append_component(${common_args} COMPONENT contract        SINCE 1.67.0)
@@ -72,6 +74,8 @@ function(hunter_get_boost_libs)
   hunter_append_component(${common_args} COMPONENT metaparse       SINCE 1.61.0 UNTIL 1.66.0)
   hunter_append_component(${common_args} COMPONENT mpi             SINCE 1.35.0)
   hunter_append_component(${common_args} COMPONENT nowide          SINCE 1.74.0)
+  hunter_append_component(${common_args} COMPONENT predef          SINCE 1.86.0) # is listed as a lib since 1.86.0, but can not be built as one
+  hunter_append_component(${common_args} COMPONENT process         SINCE 1.86.0) # was header only until 1.86.0
   hunter_append_component(${common_args} COMPONENT program_options SINCE 1.32.0)
   hunter_append_component(${common_args} COMPONENT python          SINCE 1.19.0)
   hunter_append_component(${common_args} COMPONENT random          SINCE 1.15.0)

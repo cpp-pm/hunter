@@ -7,6 +7,8 @@
 BOOST_LIBS="
     atomic
     chrono
+    charconv
+    cobalt
     container
     context
     contract
@@ -24,6 +26,8 @@ BOOST_LIBS="
     math
     mpi
     nowide
+    predef
+    process
     program_options
     python
     random
