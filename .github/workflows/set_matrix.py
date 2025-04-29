@@ -30,6 +30,13 @@ def main():
         help="space separated list of projects to process, used for local debugging",
         type=str,
     )
+    parser.add_argument(
+        "-o",
+        "--output",
+        help="specify file to write to, default write to stdout",
+        type=str,
+        default="",
+    )
     args = parser.parse_args()
 
     repo_root = pathlib.Path(__file__).parent.parent.parent
@@ -59,7 +66,7 @@ def main():
         for file in files:
             if p.match(file):
                 project = p.match(file).group(1)
-                if os.path.isdir("cmake/projects/" + project):
+                if (projects_dir / project).is_dir():
                     projects.add(project)
             if file.startswith("cmake/modules/"):
                 run_hunter_tests = True
@@ -71,37 +78,42 @@ def main():
                 run_hunter_tests = True
 
     if projects or run_hunter_tests:
-        dafault_dir = ".github/workflows/ci/"
+        dafault_dir = repo_root / ".github/workflows/ci"
 
-        default_matrix = json_from_file_ignore_comments(dafault_dir + "matrix.json")
+        default_matrix = json_from_file_ignore_comments(dafault_dir / "matrix.json")
 
         include = []
         for project in projects:
-            project_dir = "cmake/projects/" + project + "/ci/"
+            project_dir = projects_dir / project / "ci"
 
-            matrix_override = project_dir + "matrix.json"
+            matrix_override = project_dir / "matrix.json"
             if os.path.isfile(matrix_override):
                 project_matrix = json_from_file_ignore_comments(matrix_override)
             else:
                 project_matrix = [dict(leg, example=project) for leg in default_matrix]
 
             for leg in project_matrix:
-                if os.path.isfile(project_dir + leg["script"]):
-                    leg["script"] = project_dir + leg["script"]
+                if os.path.isfile(project_dir / leg["script"]):
+                    leg["script"] = (project_dir / leg["script"]).as_posix()
                 else:
-                    leg["script"] = dafault_dir + leg["script"]
+                    leg["script"] = (dafault_dir / leg["script"]).as_posix()
 
             include += project_matrix
 
         if run_hunter_tests:
             hunter_tests_matrix = json_from_file_ignore_comments(
-                dafault_dir + "matrix_hunter_tests.json"
+                dafault_dir / "matrix_hunter_tests.json"
             )
             for leg in hunter_tests_matrix:
-                leg["script"] = dafault_dir + leg["script"]
+                leg["script"] = (dafault_dir / leg["script"]).as_posix()
             include += hunter_tests_matrix
 
-        print(json.dumps({"include": include}))
+        json_output = {"include": include}
+        if args.output:
+            with open(args.output, "w", encoding="utf-8") as f:
+                json.dump(json_output, f, indent=2)
+        else:
+            print(json.dumps(json_output, indent=2))
     else:
         print("No projects found")
         return 1
