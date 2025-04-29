@@ -1,12 +1,13 @@
 # Copyright (c) 2017 Pawel Bylica
+# Copyright (c) 2025, Dominik Nussbaumer
 # All rights reserved.
 
 include(hunter_status_debug)
 
 function(hunter_get_lang_standard_flag LANG OUTPUT)
-  # https://github.com/Kitware/CMake/blob/9d48d3f61b25400a191f12ea92b8e5496ab47a8f/Source/cmLocalGenerator.cxx#L1766-L1782
-  set(CXX_standards 20 17 14 11 98)
-  set(C_standards 11 99 90)
+  # https://github.com/Kitware/CMake/blob/ee515b2aa837ce9ccbd067b345625323b9149b51/Source/cmStandardLevelResolver.cxx#L491-L517 (v4.0.1)
+  set(CXX_standards 26 23 20 17 14 11 98)
+  set(C_standards 23 17 11 99 90)
 
   # Find the <lang> standard flag.
   # This maps the logic in the CMake code:
