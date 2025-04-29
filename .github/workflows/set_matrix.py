@@ -113,7 +113,7 @@ def main():
             with open(args.output, "w", encoding="utf-8") as f:
                 json.dump(json_output, f, indent=2)
         else:
-            print(json.dumps(json_output, indent=2))
+            print(json.dumps(json_output))
     else:
         print("No projects found")
         return 1
