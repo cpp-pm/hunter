@@ -106,6 +106,18 @@ jobs:
       run: |
         bash ${{ matrix.script }}
 
+    - name: Prepare Build on Windows
+      if: runner.os == 'Windows' && matrix.toolchain != 'hunter_tests' && matrix.VCVARSALL != ""
+      run: |
+        "call VCVARSALL using command '$VCVARSALL' and args '$VCVARSALL_ARGS'"
+        cmd /c 'call "%VCVARSALL%" %VCVARSALL_ARGS% && set' | foreach {
+            if ($_ -match "=") {
+                #"processing line: '$_'"
+                $v = $_.split("=");
+                set-item -force -path "ENV:\$($v[0])" -value "$($v[1])";
+            }
+        }
+
     - name: Build on Windows
       if: runner.os == 'Windows' && matrix.toolchain != 'hunter_tests'
       env:
