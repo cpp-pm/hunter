@@ -33,18 +33,26 @@ def create_toolchain(toolchains_dir: str | pathlib.Path, toolchain: str):
     if m:
         parsed_toolchain = toolchain[m.end() :]
         out += f"""\
-# Generator handled outside toolchain file: {m.groups(1)}
+# Generator handled outside toolchain file: {m.groups(1)[0]}
 """
 
-    m = re.match(r"^(gcc|clang)(-[\d]+)?", toolchain)
+    m = re.match(r"^(gcc|clang|mingw|msys)(-[\d]+)?", toolchain)
     if m:
         parsed_toolchain = toolchain[m.end() :]
         if toolchain.startswith("clang"):
             cc = "clang"
             cxx = "clang++"
-        if toolchain.startswith("gcc"):
+        elif toolchain.startswith("gcc"):
             cc = "gcc"
             cxx = "g++"
+        elif toolchain.startswith(("mingw", "msys")):
+            # generator handled outside of toolchain
+            cc = "gcc"
+            cxx = "g++"
+        parsed_toolchain = toolchain[m.end() :]
+        out += f"""\
+# Generator handled outside toolchain file: {m.groups(1)[0]}
+"""
         ext = m.group(2)
         if ext:
             cc += ext
