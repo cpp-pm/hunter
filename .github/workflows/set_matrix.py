@@ -58,7 +58,7 @@ def create_toolchain(toolchains_dir: str | pathlib.Path, toolchain: str):
             cxx += ext
 
     m = re.match(
-        r"^android-api-([\d]+)-(armeabi|armeabi-v7a|arm64-v8a)", parsed_toolchain
+        r"^android-ndk-api-([\d]+)-(armeabi|armeabi-v7a|arm64-v8a)", parsed_toolchain
     )
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
