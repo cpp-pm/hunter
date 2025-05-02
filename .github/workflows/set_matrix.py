@@ -43,6 +43,40 @@ def create_toolchain(toolchains_dir: str | pathlib.Path, toolchain: str):
             cc += ext
             cxx += ext
 
+    m = re.match(
+        r"^android-api-([\d]+)-(armeabi|armeabi-v7a|arm64-v8a)", parsed_toolchain
+    )
+    if m:
+        parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
+        # ANDROID_NDK provided by GitHub, just check if ANDROID_NDK variable is set
+        # android_ndk_version = m.group(1)
+        android_api = m.group(1)
+        android_arch_abi = m.group(2)
+        out += f"""
+set(CMAKE_SYSTEM_NAME "Android")
+set(CMAKE_SYSTEM_VERSION "{android_api}") # API level
+set(CMAKE_ANDROID_ARCH_ABI "{android_arch_abi}")
+set(CMAKE_ANDROID_NDK "$ENV{{ANDROID_NDK}}") # provided by GitHub
+
+string(COMPARE EQUAL "${{CMAKE_ANDROID_NDK}}" "" _is_empty)
+if(_is_empty)
+  message(FATAL_ERROR
+      "Environment variable 'ANDROID_NDK' not set"
+  )
+endif()
+
+# ANDROID macro is not defined by CMake 3.7+, however it is used by
+# some packages like OpenCV
+# (https://gitlab.kitware.com/cmake/cmake/merge_requests/62)
+add_definitions("-DANDROID")
+"""
+
+    if "libcxx" in toolchain:
+        # for android if we have libcxx in toolchain assume static runtime
+        out += f"""
+set(CMAKE_ANDROID_STL_TYPE "c++_static") # LLVM libc++ static
+"""
+
     m = re.match(r"^osx-([\d]+)-([\d]+)", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
@@ -111,10 +145,21 @@ set(CMAKE_C_COMPILER "{cc}" CACHE STRING "C compiler" FORCE)
 set(CMAKE_CXX_COMPILER "{cxx}" CACHE STRING "C++ compiler" FORCE)
 """
 
+    cxx_standard = None
+    m = re.match(r"^-libcxx([\d]+)", parsed_toolchain)
+    if m:
+        parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
+        out += """
+set(CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT} -stdlib=libc++"
+"""
+        cxx_standard = m.group(1)
+
     m = re.match(r"^-cxx([\d]+)", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         cxx_standard = m.group(1)
+
+    if cxx_standard:
         out += f"set(CMAKE_CXX_STANDARD {cxx_standard})\n"
         out += f"set(CMAKE_CXX_STANDARD_REQUIRED ON)\n"
         out += f"set(CMAKE_CXX_EXTENSIONS OFF)\n"
