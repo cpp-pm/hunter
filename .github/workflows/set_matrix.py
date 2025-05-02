@@ -49,8 +49,7 @@ def create_toolchain(toolchains_dir: str | pathlib.Path, toolchain: str):
             # generator handled outside of toolchain
             cc = "gcc"
             cxx = "g++"
-        parsed_toolchain = toolchain[m.end() :]
-        out += f"""\
+            out += f"""\
 # Generator handled outside toolchain file: {m.groups(1)[0]}
 """
         ext = m.group(2)
@@ -195,7 +194,7 @@ set(CMAKE_CXX_COMPILER "{cxx}" CACHE STRING "C++ compiler" FORCE)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         out += """\
-set(CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT} -stdlib=libc++"
+set(CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT} -stdlib=libc++")
 """
         cxx_standard = m.group(1)
 
