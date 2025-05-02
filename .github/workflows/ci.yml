@@ -109,8 +109,8 @@ jobs:
     - name: Prepare Build on Windows
       if: runner.os == 'Windows' && matrix.toolchain != 'hunter_tests' && matrix.VCVARSALL != ''
       run: |
-        "call VCVARSALL using command '$VCVARSALL' and args '$VCVARSALL_ARGS'"
-        cmd /c 'call "%VCVARSALL%" %VCVARSALL_ARGS% && set' | foreach {
+        "call VCVARSALL using command '${{ matrix.VCVARSALL }}' and args '${{ matrix.VCVARSALL_ARGS }}'"
+        cmd /c 'call "${{ matrix.VCVARSALL }}" ${{ matrix.VCVARSALL_ARGS }} && set' | foreach {
             if ($_ -match "=") {
                 #"processing line: '$_'"
                 $v = $_.split("=");
