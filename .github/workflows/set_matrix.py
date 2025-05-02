@@ -29,6 +29,13 @@ def create_toolchain(toolchains_dir: str | pathlib.Path, toolchain: str):
     cxx = ""
 
     parsed_toolchain = toolchain
+    m = re.match(r"^(ninja|nmake)[-]?", toolchain)
+    if m:
+        parsed_toolchain = toolchain[m.end() :]
+        out += f"""\
+# Generator handled outside toolchain file: {m.groups(1)}
+"""
+
     m = re.match(r"^(gcc|clang)(-[\d]+)?", toolchain)
     if m:
         parsed_toolchain = toolchain[m.end() :]
@@ -134,6 +141,36 @@ set(CMAKE_MACOSX_BUNDLE YES)
             out += """\
 set(IPHONEOS_ARCHS arm64)
 set(IPHONESIMULATOR_ARCHS "")
+"""
+
+    m = re.match(r"^vs-([\d]+)-([\d]+)(-win64)?", parsed_toolchain)
+    if m:
+        parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
+        out += f"""\
+# VS compiler selection handled toolchain file: {m.groups(0)}
+"""
+        cc = "cl"
+        cxx = "cl"
+
+        m = re.match(r"^-sdk(-[\d]+)+", parsed_toolchain)
+        if m:
+            parsed_toolchain = (
+                parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
+            )
+            sdk_version_str = m.group(0).replace("-sdk-", "")
+            sdk_version = sdk_version_str.replace("-", ".")
+            out += f"""
+set(CMAKE_SYSTEM_VERSION {sdk_version})
+"""
+
+        m = re.match(r"^-store-10", parsed_toolchain)
+        if m:
+            parsed_toolchain = (
+                parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
+            )
+            out += f"""
+set(CMAKE_SYSTEM_NAME WindowsStore)
+set(CMAKE_SYSTEM_VERSION 10.0)
 """
 
     if cc:
@@ -295,6 +332,7 @@ def main():
                 create_toolchain(
                     toolchains_dir=toolchains_dir, toolchain=leg["toolchain"]
                 )
+                # TODO: handle vs-xx-xxxx generator string handling
 
             include += project_matrix
 
