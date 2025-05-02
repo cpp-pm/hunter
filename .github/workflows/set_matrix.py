@@ -146,7 +146,7 @@ set(CMAKE_CXX_COMPILER "{cxx}" CACHE STRING "C++ compiler" FORCE)
 """
 
     cxx_standard = None
-    m = re.match(r"^-libcxx([\d]+)", parsed_toolchain)
+    m = re.match(r"^-libcxx([\d]+)?", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         out += """
@@ -163,6 +163,22 @@ set(CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT} -stdlib=libc++"
         out += f"set(CMAKE_CXX_STANDARD {cxx_standard})\n"
         out += f"set(CMAKE_CXX_STANDARD_REQUIRED ON)\n"
         out += f"set(CMAKE_CXX_EXTENSIONS OFF)\n"
+
+    m = re.match(r"^-c([\d]+)", parsed_toolchain)
+    if m:
+        parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
+        c_standard = m.group(1)
+        if not c_standard:
+            raise RuntimeError(
+                f"encountered unhandled '-c<number>' flag in toolchain: '{toolchain}'"
+            )
+        out += f"""
+set(CMAKE_C_STANDARD {c_standard})
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_EXTENSIONS OFF)
+# Hunter doesn't run toolchain-id calculation for C compiler
+list(APPEND HUNTER_TOOLCHAIN_UNDETECTABLE_ID "c11")
+"""
 
     if parsed_toolchain.startswith("-fpic"):
         parsed_toolchain = parsed_toolchain[len("-fpic") :]
