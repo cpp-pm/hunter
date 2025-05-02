@@ -257,6 +257,62 @@ list(APPEND HUNTER_TOOLCHAIN_UNDETECTABLE_ID "pic")
         f.write(out)
 
 
+def generator_and_runscript(leg: dict):
+    toolchain = leg["toolchain"]
+
+    generator = None
+
+    parsed_toolchain = toolchain
+    m = re.match(r"^(ninja|nmake|mingw|msys)[-]?", toolchain)
+    if m:
+        parsed_toolchain = parsed_toolchain[m.end() :]
+        if m.group(1).startswith("ninja"):
+            generator = "Ninja"
+        elif m.group(1).startswith("nmake"):
+            generator = "NMake Makefiles"
+        elif m.group(1).startswith("mingw"):
+            generator = "MinGW Makefiles"
+        elif m.group(1).startswith("msys"):
+            generator = "MSYS Makefiles"
+        else:
+            raise RuntimeError(
+                f"unhandled generator: {m.group()} in toolchain: {toolchain}"
+            )
+
+    m = re.match(r"^vs-([\d]+)-([\d]+)(-win64)?", parsed_toolchain)
+    if m:
+        parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
+        vs_version = m.group(1)
+        vs_year = m.group(2)
+        vs_win64 = True if m.group(3) else False
+        generator_str = None
+        if vs_version == "16":
+            if vs_year != "2019":
+                raise RuntimeError("VS 16 expected to have year 2019")
+            generator_str = "Visual Studio 16 2019"
+            VCVARSALL = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
+        elif vs_version == "17":
+            if vs_year != "2022":
+                raise RuntimeError("VS 17 expected to have year 2022")
+            generator_str = "Visual Studio 17 2022"
+            VCVARSALL = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
+        else:
+            raise RuntimeError(
+                f"unhandled vs-generator: {m.group()} in toolchain: {toolchain}"
+            )
+        if not generator and generator_str:
+            generator = generator_str
+        if vs_win64:
+            VCVARSALL_ARGS = "-arch=amd64 -host_arch=amd64"
+        else:
+            VCVARSALL_ARGS = ""
+        leg["VCVARSALL"] = VCVARSALL
+        leg["VCVARSALL_ARGS"] = VCVARSALL_ARGS
+
+    if generator:
+        leg["generator"] = generator
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -340,6 +396,7 @@ def main():
                     toolchains_dir=toolchains_dir, toolchain=leg["toolchain"]
                 )
                 # TODO: handle vs-xx-xxxx generator string handling
+                generator_and_runscript(leg)
 
             include += project_matrix
 
