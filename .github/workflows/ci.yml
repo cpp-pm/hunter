@@ -51,11 +51,17 @@ jobs:
         if [ "${MATRIX}" ]; then
           echo "matrix=${MATRIX}" >> $GITHUB_OUTPUT
         else
+          echo "matrix=${MATRIX}"
           exit 1
         fi
 
+    - uses: actions/upload-artifact@v4
+      with:
+        name: toolchains
+        path: .github/toolchains
+
   build:
-    name: ${{ matrix.example }} ${{ matrix.toolchain }} ${{ matrix.os }}
+    name: ${{ matrix.project }} ${{ matrix.toolchain }} ${{ matrix.os }}
     needs: set_matrix
     runs-on: ${{ matrix.os }}
     strategy:
@@ -63,8 +69,9 @@ jobs:
       matrix: ${{ fromJson(needs.set_matrix.outputs.matrix) }}
 
     env:
-      TOOLCHAIN: ${{ matrix.toolchain }}
-      PROJECT_DIR: examples/${{ matrix.example }}
+      TOOLCHAIN: '${{ matrix.toolchain }}'
+      PROJECT_DIR: ${{ matrix.example }}
+      SCRIPT: ${{ matrix.script }}
       GITHUB_USER_PASSWORD: ${{ secrets.CPP_PM_BOT_TOKEN }}
 
     steps:
@@ -73,6 +80,9 @@ jobs:
       uses: actions/checkout@v4.1.1
       with:
         submodules: true
+
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v4
 
     - name: Set up Python
       uses: actions/setup-python@v5.1.0
@@ -87,26 +97,31 @@ jobs:
       if: runner.os == 'Windows'
       run: echo "HUNTER_PYTHON_LOCATION=$env:pythonLocation" | Out-File -Append -FilePath $env:GITHUB_ENV -Encoding utf8
 
-    - name: Build hunter_tests Unix
-      if: runner.os != 'Windows' && matrix.toolchain == 'hunter_tests'
-      env:
-        PROJECT_DIR: ${{ matrix.example }}
-      run: |
-        bash ${{ matrix.script }}
-
     - name: Build on Unix
-      if: runner.os != 'Windows' && matrix.toolchain != 'hunter_tests'
+      if: runner.os != 'Windows'
       env:
         BRANCH_NAME: ${{ github.ref_name }}
       run: |
-        bash ${{ matrix.script }}
+        python .github/workflows/ci/build.py
 
     - name: Build on Windows
       if: runner.os == 'Windows' && matrix.toolchain != 'hunter_tests'
       env:
         BRANCH_NAME: ${{ github.ref_name }}
+        VCVARSALL: ${{ matrix.VCVARSALL }}
+        VCVARSALL_ARGS: ${{ matrix.VCVARSALL_ARGS }}
       run: |
-        ${{ matrix.script }}
+        if ("$env:VCVARSALL") {
+            Write-Host "call VCVARSALL using command '${env:VCVARSALL}' and args '${env:VCVARSALL_ARGS}'"
+            cmd /c 'call "%VCVARSALL%" %VCVARSALL_ARGS% && set' | foreach {
+                if ($_ -match "=") {
+                    #"processing line: '$_'"
+                    $v = $_.split("=");
+                    set-item -force -path "ENV:\$($v[0])" -value "$($v[1])";
+                }
+            }
+        }
+        python .github/workflows/ci/build.py
 
   set_status:
     needs: [ set_matrix, build ]
