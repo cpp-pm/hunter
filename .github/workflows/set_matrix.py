@@ -67,7 +67,7 @@ def create_toolchain(toolchains_dir: str | pathlib.Path, toolchain: str):
         # android_ndk_version = m.group(1)
         android_api = m.group(1)
         android_arch_abi = m.group(2)
-        out += f"""
+        out += f"""\
 set(CMAKE_SYSTEM_NAME "Android")
 set(CMAKE_SYSTEM_VERSION "{android_api}") # API level
 set(CMAKE_ANDROID_ARCH_ABI "{android_arch_abi}")
@@ -88,7 +88,7 @@ add_definitions("-DANDROID")
 
     if "libcxx" in toolchain:
         # for android if we have libcxx in toolchain assume static runtime
-        out += f"""
+        out += f"""\
 set(CMAKE_ANDROID_STL_TYPE "c++_static") # LLVM libc++ static
 """
 
@@ -167,7 +167,7 @@ set(IPHONESIMULATOR_ARCHS "")
             )
             sdk_version_str = m.group(0).replace("-sdk-", "")
             sdk_version = sdk_version_str.replace("-", ".")
-            out += f"""
+            out += f"""\
 set(CMAKE_SYSTEM_VERSION {sdk_version})
 """
 
@@ -176,7 +176,7 @@ set(CMAKE_SYSTEM_VERSION {sdk_version})
             parsed_toolchain = (
                 parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
             )
-            out += f"""
+            out += f"""\
 set(CMAKE_SYSTEM_NAME WindowsStore)
 set(CMAKE_SYSTEM_VERSION 10.0)
 """
@@ -194,7 +194,7 @@ set(CMAKE_CXX_COMPILER "{cxx}" CACHE STRING "C++ compiler" FORCE)
     m = re.match(r"^-libcxx([\d]+)?", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
-        out += """
+        out += """\
 set(CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT} -stdlib=libc++"
 """
         cxx_standard = m.group(1)
@@ -217,12 +217,12 @@ set(CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT} -stdlib=libc++"
             raise RuntimeError(
                 f"encountered unhandled '-c<number>' flag in toolchain: '{toolchain}'"
             )
-        out += f"""
+        out += f"""\
 set(CMAKE_C_STANDARD {c_standard})
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS OFF)
 # Hunter doesn't run toolchain-id calculation for C compiler
-list(APPEND HUNTER_TOOLCHAIN_UNDETECTABLE_ID "c11")
+list(APPEND HUNTER_TOOLCHAIN_UNDETECTABLE_ID "c{c_standard}")
 """
 
     if parsed_toolchain.startswith("-fpic"):
