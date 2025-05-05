@@ -41,11 +41,6 @@ def run():
         help="Do not create Hunter archive (reusing old)",
     )
     parser.add_argument(
-        "--all-release",
-        action="store_true",
-        help="Release build type for all 3rd party packages",
-    )
-    parser.add_argument(
         "--clear",
         action="store_true",
         help="Remove old testing directories",
@@ -144,7 +139,6 @@ def run():
         clear_except_download(hunter_root)
 
     print("Testing in: {}".format(testing_dir))
-    os.chdir(testing_dir)
     build_dir = testing_dir / "build"
 
     args = [
@@ -167,9 +161,6 @@ def run():
 
     if parsed_args.disable_builds:
         args += ["-DHUNTER_DISABLE_BUILDS=ON"]
-
-    if parsed_args.all_release:
-        args += ["-DHUNTER_CONFIGURATION_TYPES=Release"]
 
     if parsed_args.upload:
         passwords = cdir / "maintenance" / "upload-password-template.cmake"
