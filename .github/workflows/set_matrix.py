@@ -397,9 +397,6 @@ def main():
 
             for leg in project_matrix:
                 leg["project"] = project
-                if "python" not in leg:
-                    # default Python version to use
-                    leg["python"] = "3.12"
                 if "script" in leg:
                     # script file provided, it MUST exist in project dir
                     proj_script_file = project_dir / leg["script"]
@@ -449,6 +446,11 @@ def main():
                 leg["project"] = leg["example"]
                 leg["script"] = ""
             include += hunter_tests_matrix
+
+        for leg in include:
+            if "python" not in leg:
+                # default Python version to use
+                leg["python"] = "3.12"
 
         json_output = {"include": include}
         if args.output:
