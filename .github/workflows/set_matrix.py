@@ -325,9 +325,9 @@ def generator_and_runscript(leg: dict):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--projects",
-        help="space separated list of projects to process, used for local debugging",
-        type=str,
+        "projects",
+        help="project names to process, used for local debugging",
+        nargs="*",
     )
     parser.add_argument(
         "-o",
@@ -347,7 +347,7 @@ def main():
     projects = set()
     run_hunter_tests: bool = False
     if args.projects:
-        for project in set(args.projects.split(" ")):
+        for project in args.projects:
             if project == "hunter_tests":
                 run_hunter_tests = True
             else:
@@ -390,23 +390,47 @@ def main():
             project_dir = projects_dir / project / "ci"
 
             matrix_override = project_dir / "matrix.json"
-            if os.path.isfile(matrix_override):
+            if matrix_override.is_file():
                 project_matrix = json_from_file_ignore_comments(matrix_override)
             else:
                 project_matrix = [dict(leg, example=project) for leg in default_matrix]
 
             for leg in project_matrix:
-                if os.path.isfile(project_dir / leg["script"]):
+                if "python" not in leg:
+                    # default Python version to use
+                    leg["python"] = "3.12"
+                if "script" in leg:
+                    # script file provided, it MUST exist in project dir
+                    proj_script_file = project_dir / leg["script"]
+                    if not proj_script_file.is_file():
+                        raise RuntimeError(
+                            f"project: {project}: specified script file missing, expected path: {proj_script_file.as_posix()}"
+                        )
                     leg["script"] = (project_dir / leg["script"]).as_posix()
                 else:
-                    leg["script"] = (dafault_dir / leg["script"]).as_posix()
+                    # try to find os specific install script (build.sh/build.cmd)
+                    if leg["os"].startswith(("ubuntu", "macos")):
+                        proj_script_file = project_dir / "build.sh"
+                        if proj_script_file.is_file():
+                            leg["script"] = proj_script_file.as_posix()
+                    elif leg["os"].startswith("windows"):
+                        proj_script_file = project_dir / "build.cmd"
+                        if proj_script_file.is_file():
+                            leg["script"] = proj_script_file.as_posix()
+                    else:
+                        raise RuntimeError(
+                            f"project: {project}: unhandled os: {leg['os']}"
+                        )
+                    if "script" not in leg:
+                        # explicitly set empty script
+                        leg["script"] = ""
                 # create toolchain file
                 create_toolchain(
                     toolchains_dir=toolchains_dir,
                     toolchain=leg["toolchain"],
                     project_name=project,
                 )
-                # TODO: handle vs-xx-xxxx generator string handling
+                # handle vs-xx-xxxx/mingw/etc generator string
                 generator_and_runscript(leg)
 
             include += project_matrix
