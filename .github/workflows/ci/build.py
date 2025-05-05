@@ -153,12 +153,12 @@ def run():
         project_dir.as_posix(),
         "-B",
         build_dir.as_posix(),
-        f"-DCMAKE_TOOLCHAIN_FILE={toolchain}",
+        f"-DCMAKE_TOOLCHAIN_FILE={toolchain.as_posix()}",
         "-DCMAKE_POLICY_DEFAULT_CMP0069=NEW",
         "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
-        f"-DHUNTER_ROOT={hunter_root}",
-        f"-DTESTING_URL={hunter_url}",
-        f"-DTESTING_SHA1={hunter_sha1}",
+        f"-DHUNTER_ROOT={hunter_root.as_posix()}",
+        f"-DTESTING_URL={hunter_url.as_posix()}",
+        f"-DTESTING_SHA1={hunter_sha1.as_posix()}",
     ]
 
     if not parsed_args.nocreate:
@@ -226,9 +226,9 @@ def run():
             "-DHUNTER_USE_CACHE_SERVERS=ONLY",
             "-DCMAKE_POLICY_DEFAULT_CMP0069=NEW",
             "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
-            f"-DHUNTER_ROOT={hunter_root}",
-            f"-DTESTING_URL={hunter_url}",
-            f"-DTESTING_SHA1={hunter_sha1}",
+            f"-DHUNTER_ROOT={hunter_root.as_posix()}",
+            f"-DTESTING_URL={hunter_url.as_posix()}",
+            f"-DTESTING_SHA1={hunter_sha1.as_posix()}",
         ]
         if verbose:
             args += ["-DCMAKE_VERBOSE_MAKEFILE=ON"]
