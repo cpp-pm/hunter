@@ -79,11 +79,6 @@ def run():
     cdir = pathlib.Path(os.getcwd())
     hunter_root = cdir
 
-    toolchain = os.getenv("TOOLCHAIN")
-    if not toolchain:
-        raise RuntimeError("Environment variable TOOLCHAIN is empty")
-    toolchain = cdir / toolchain
-
     project_dir = os.getenv("PROJECT_DIR")
     if not project_dir:
         raise RuntimeError("Expected environment variable PROJECT_DIR")
@@ -101,6 +96,16 @@ def run():
                     env_verbose
                 )
             )
+
+    toolchain = os.getenv("TOOLCHAIN")
+    if not toolchain:
+        raise RuntimeError("Environment variable TOOLCHAIN is empty")
+    if toolchain == "hunter_tests":
+        # no toolchain for hunter_tests, but verbose config
+        toolchain = None
+        verbose = True
+    else:
+        toolchain = cdir / toolchain
 
     env_script = os.getenv("SCRIPT")
     if env_script:
@@ -157,11 +162,12 @@ def run():
         project_dir.as_posix(),
         "-B",
         build_dir.as_posix(),
-        f"-DCMAKE_TOOLCHAIN_FILE={toolchain.as_posix()}",
         "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
         "-DHUNTER_CONFIGURATION_TYPES=Release",
         "-DCMAKE_BUILD_TYPE=Release",
     ]
+    if toolchain:
+        args += [f"-DCMAKE_TOOLCHAIN_FILE={toolchain.as_posix()}"]
     # disabled zip creation, see above
     # args += [
     #    f"-DHUNTER_ROOT={hunter_root.as_posix()}",
@@ -229,13 +235,15 @@ def run():
             project_dir.as_posix(),
             "-B",
             build_dir.as_posix(),
-            f"-DCMAKE_TOOLCHAIN_FILE={toolchain.as_posix()}",
             "-DHUNTER_DISABLE_BUILDS=ON",
             "-DHUNTER_USE_CACHE_SERVERS=ONLY",
             "-DHUNTER_CONFIGURATION_TYPES=Release",
             "-DCMAKE_BUILD_TYPE=Release",
             "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
         ]
+        if toolchain:
+            args += [f"-DCMAKE_TOOLCHAIN_FILE={toolchain.as_posix()}"]
+
         # disabled zip creation, see above
         # args += [
         #    f"-DHUNTER_ROOT={hunter_root.as_posix()}",
