@@ -294,6 +294,8 @@ def generator_and_runscript(leg: dict):
                 raise RuntimeError(
                     f"project: {project_name}: VS 16 expected to have year 2019"
                 )
+            # The Windows 2019 Actions runner image will begin deprecation on 2025-06-01 and will be fully unsupported by 2025-06-30
+            # https://github.com/actions/runner-images/issues/12045
             generator_str = "Visual Studio 16 2019"
             VCVARSALL = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
         elif vs_version == "17":
