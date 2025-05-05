@@ -23,7 +23,9 @@ def json_from_file_ignore_comments(filePath):
     return json_data
 
 
-def create_toolchain(toolchains_dir: str | pathlib.Path, toolchain: str):
+def create_toolchain(
+    toolchains_dir: str | pathlib.Path, toolchain: str, project_name: str
+):
     out = ""
     cc = ""
     cxx = ""
@@ -96,7 +98,7 @@ set(CMAKE_ANDROID_STL_TYPE "c++_static") # LLVM libc++ static
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         if not m.group(1) or not m.group(2):
             raise RuntimeError(
-                f"error while parsing osx toolchain SDK verison: {toolchain}"
+                f"project: {project_name}: error while parsing osx toolchain SDK verison: {toolchain}"
             )
         osx_sdk = f"{m.group(1)}.{m.group(2)}"
         out += f"""\
@@ -119,7 +121,7 @@ set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64" CACHE STRING "OS X Target Architectur
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         if not m.group(1) or not m.group(2):
             raise RuntimeError(
-                f"error while parsing osx toolchain SDK verison: {toolchain}"
+                f"project: {project_name}: error while parsing osx toolchain SDK verison: {toolchain}"
             )
         osx_sdk = f"{m.group(1)}.{m.group(2)}"
         out += f"""\
@@ -214,7 +216,7 @@ set(CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT} -stdlib=libc++")
         c_standard = m.group(1)
         if not c_standard:
             raise RuntimeError(
-                f"encountered unhandled '-c<number>' flag in toolchain: '{toolchain}'"
+                f"project: {project_name}: encountered unhandled '-c<number>' flag in toolchain: '{toolchain}'"
             )
         out += f"""\
 set(CMAKE_C_STANDARD {c_standard})
@@ -243,11 +245,11 @@ list(APPEND HUNTER_TOOLCHAIN_UNDETECTABLE_ID "pic")
 """
     if parsed_toolchain != "":
         raise RuntimeError(
-            f"toolchain not handled completely: '{toolchain}': unparsed string: '{parsed_toolchain}'"
+            f"project: {project_name}: toolchain not handled completely: '{toolchain}': unparsed string: '{parsed_toolchain}'"
         )
 
     if out == "":
-        raise RuntimeError(f"unhandled toolchain: {toolchain}")
+        raise RuntimeError(f"project: {project_name}: unhandled toolchain: {toolchain}")
 
     toolchain_file = toolchains_dir / (
         toolchain if toolchain.endswith(".cmake") else f"{toolchain}.cmake"
@@ -259,6 +261,7 @@ list(APPEND HUNTER_TOOLCHAIN_UNDETECTABLE_ID "pic")
 
 def generator_and_runscript(leg: dict):
     toolchain = leg["toolchain"]
+    project_name = leg["example"]
 
     generator = None
 
@@ -276,7 +279,7 @@ def generator_and_runscript(leg: dict):
             generator = "MSYS Makefiles"
         else:
             raise RuntimeError(
-                f"unhandled generator: {m.group()} in toolchain: {toolchain}"
+                f"project: {project_name}: unhandled generator: {m.group()} in toolchain: {toolchain}"
             )
 
     m = re.match(r"^vs-([\d]+)-([\d]+)(-win64)?", parsed_toolchain)
@@ -288,17 +291,21 @@ def generator_and_runscript(leg: dict):
         generator_str = None
         if vs_version == "16":
             if vs_year != "2019":
-                raise RuntimeError("VS 16 expected to have year 2019")
+                raise RuntimeError(
+                    f"project: {project_name}: VS 16 expected to have year 2019"
+                )
             generator_str = "Visual Studio 16 2019"
             VCVARSALL = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
         elif vs_version == "17":
             if vs_year != "2022":
-                raise RuntimeError("VS 17 expected to have year 2022")
+                raise RuntimeError(
+                    f"project: {project_name}: VS 17 expected to have year 2022"
+                )
             generator_str = "Visual Studio 17 2022"
             VCVARSALL = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
         else:
             raise RuntimeError(
-                f"unhandled vs-generator: {m.group()} in toolchain: {toolchain}"
+                f"project: {project_name}: unhandled vs-generator: {m.group()} in toolchain: {toolchain}"
             )
         if not generator and generator_str:
             generator = generator_str
@@ -393,7 +400,9 @@ def main():
                     leg["script"] = (dafault_dir / leg["script"]).as_posix()
                 # create toolchain file
                 create_toolchain(
-                    toolchains_dir=toolchains_dir, toolchain=leg["toolchain"]
+                    toolchains_dir=toolchains_dir,
+                    toolchain=leg["toolchain"],
+                    project_name=project,
                 )
                 # TODO: handle vs-xx-xxxx generator string handling
                 generator_and_runscript(leg)
