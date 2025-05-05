@@ -396,6 +396,7 @@ def main():
                 project_matrix = [dict(leg, example=project) for leg in default_matrix]
 
             for leg in project_matrix:
+                leg["project"] = project
                 if "python" not in leg:
                     # default Python version to use
                     leg["python"] = "3.12"
@@ -445,6 +446,7 @@ def main():
                 dafault_dir / "matrix_hunter_tests.json"
             )
             for leg in hunter_tests_matrix:
+                leg["project"] = leg["example"]
                 leg["script"] = ""
             include += hunter_tests_matrix
 
