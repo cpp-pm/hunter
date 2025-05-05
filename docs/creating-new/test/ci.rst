@@ -91,11 +91,13 @@ Each line defines parameters for a job that will run on `GitHub-hosted runner <h
 * **toolchain** - `Polly <https://github.com/cpp-pm/polly>`__ toolchain
 * **os** - `Supported GitHub-hosted runner <https://docs.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners#supported-runners-and-hardware-resources>`__.
   Set this according to toolchain.
-* **python** - Python version installed on the runner.
+* **python** - Override Python version used for job.
   Change this if your project uses Python scripts (that require specific Python version) for testing.
-* **script** - Build script executed on the runner.
-  The path of the script is relative to directory where ``matrix.json`` is located.
-  If the script with defined name was not found in this path, default path ``.github/workflows/ci`` will be used.
+* **script** - Script executed before ``build.py`` calls ``cmake`` on the runner.
+  The path of the script is relative to the directory where ``matrix.json`` is located.
+  If the script with defined name was not found in this path ``set_matrix.py`` raises an exception.
+  If no script override is specified a ``build.sh`` (Ubuntu and macOS) or ``build.cmd`` (Windows)
+  is used when located next to the projects ``matrix.json``.
 
 **Example matrix override:**
 
@@ -104,12 +106,12 @@ A part of ``cmake/projects/Boost/ci/matrix.json``:
 .. code-block:: json
 
     [
-    { "example": "Boost",              "toolchain": "clang-cxx17",              "os": "ubuntu-16.04", "python": "3.8", "script": "build.sh" },
-    { "example": "Boost-python",       "toolchain": "gcc-7-cxx17",              "os": "ubuntu-16.04", "python": "3.5", "script": "build.sh" },
-    { "example": "Boost-python-numpy", "toolchain": "gcc-7-cxx17",              "os": "ubuntu-16.04", "python": "3.5", "script": "build-add-virtualenv.sh" },
-    { "example": "Boost",              "toolchain": "vs-15-2017-win64-cxx17",   "os": "windows-2016", "python": "3.8", "script": "build.cmd" },
-    { "example": "Boost-python",       "toolchain": "vs-14-2015-win64-sdk-8-1", "os": "windows-2016", "python": "3.5", "script": "build.cmd" },
-    { "example": "Boost-python-numpy", "toolchain": "vs-14-2015-win64-sdk-8-1", "os": "windows-2016", "python": "3.5", "script": "build-add-virtualenv.cmd" }
+    { "example": "Boost",              "toolchain": "clang-cxx17",              "os": "ubuntu-24.04" },
+    { "example": "Boost-python",       "toolchain": "gcc-13-cxx17",             "os": "ubuntu-24.04", "script": "build.sh" },
+    { "example": "Boost-python-numpy", "toolchain": "gcc-13-cxx17",             "os": "ubuntu-24.04", "python": "3.12", "script": "build-add-virtualenv.sh" },
+    { "example": "Boost",              "toolchain": "vs-17-2022-win64-cxx17",   "os": "windows-2022" },
+    { "example": "Boost-python",       "toolchain": "vs-17-2022-win64-sdk-10",  "os": "windows-2022" },
+    { "example": "Boost-python-numpy", "toolchain": "vs-17-2022-win64-sdk-10",  "os": "windows-2022", "python": "3.12", "script": "build-add-virtualenv.cmd" }
     ]
 
 Build scripts
@@ -123,22 +125,12 @@ Environment variables:
 
 * **TOOLCHAIN** - build matrix's **toolchain** parameter
 * **PROJECT_DIR** - **example** parameter
+* **SCRIPT** - full path to file defined by **script** parameter, called by ``build.py`` before build
 
-Default build script for Ubuntu and macOS runners is ``.github/workflows/ci/build.sh`` (bash script)
+Default build script for all runners is ``.github/workflows/ci/build.py`` (python script)
 
-.. literalinclude:: ../../../.github/workflows/ci/build.sh
-  :language: BASH
-
-Default build script for Windows runner - ``.github/workflows/ci/build.cmd`` (batch file) is similar.
-
-* installs `Polly <https://github.com/cpp-pm/polly>`__ and all necessary dependencies
-* defines default environment variables
-* runs ``jenkins.py`` script to :ref:`test building of a project <testing locally>`.
-
-.. warning::
-  If you don't need to alter Polly installation or predefined environment variables,
-  don't copy and modify default script. Instead call the default script from your custom script,
-  see example.
+.. literalinclude:: ../../../.github/workflows/ci/build.py
+  :language: PYTHON
 
 **Examples of override build scripts:**
 
@@ -153,8 +145,6 @@ for Ubuntu runner ``cmake/projects/<PACKAGE_NAME>/ci/build-ubuntu.sh``:
   pip install virtualenv
   sudo apt-get install libgl1-mesa-dev
 
-  bash .github/workflows/ci/build.sh
-
 for macOS ``cmake/projects/<PACKAGE_NAME>/ci/build-macos.sh``
 
 .. code-block:: bash
@@ -162,13 +152,9 @@ for macOS ``cmake/projects/<PACKAGE_NAME>/ci/build-macos.sh``
   export HUNTER_JOBS_NUMBER=1
   pip install virtualenv
 
-  bash .github/workflows/ci/build.sh
-
 for Windows ``cmake/projects/<PACKAGE_NAME>/ci/build.cmd``:
 
 .. code-block:: batch
 
     set HUNTER_JOBS_NUMBER=1
     pip install virtualenv
-
-    .github/workflows/ci/build.cmd
