@@ -120,20 +120,22 @@ def run():
             )
             testing_dir = pathlib.Path(temp_dir)
 
-    hunter_url = testing_dir / "hunter.tar.gz"
+    # disable zip creation as it somehow breaks Windows 10 Store builds
+    # examples/Eigen breaks with the message "Can't link to standard math library"
+    # no clue why, but PRs are welcome if the zip creation is needed for something
+    # hunter_url = testing_dir / "hunter.tar.gz"
+    # if parsed_args.nocreate:
+    #     if not os.path.exists(hunter_url):
+    #         raise RuntimeError("Option `--nocreate` but no archive")
+    # else:
+    #     arch = tarfile.open(hunter_url, "w:gz")
+    #     arch.add("cmake")
+    #     arch.add("scripts")
+    #     arch.close()
 
-    if parsed_args.nocreate:
-        if not os.path.exists(hunter_url):
-            raise RuntimeError("Option `--nocreate` but no archive")
-    else:
-        arch = tarfile.open(hunter_url, "w:gz")
-        arch.add("cmake")
-        arch.add("scripts")
-        arch.close()
+    # hunter_sha1 = hashlib.sha1(open(hunter_url, "rb").read()).hexdigest()
 
-    hunter_sha1 = hashlib.sha1(open(hunter_url, "rb").read()).hexdigest()
-
-    hunter_root = testing_dir / "Hunter"
+    # hunter_root = testing_dir / "Hunter"
 
     if parsed_args.clear_except_download:
         clear_except_download(hunter_root)
@@ -151,10 +153,13 @@ def run():
         "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
         "-DHUNTER_CONFIGURATION_TYPES=Release",
         "-DCMAKE_BUILD_TYPES=Release",
-        # f"-DHUNTER_ROOT={hunter_root.as_posix()}",
-        # f"-DTESTING_URL={hunter_url.as_posix()}",
-        # f"-DTESTING_SHA1={hunter_sha1}",
     ]
+    # disabled zip creation, see above
+    # args += [
+    #    f"-DHUNTER_ROOT={hunter_root.as_posix()}",
+    #    f"-DTESTING_URL={hunter_url.as_posix()}",
+    #    f"-DTESTING_SHA1={hunter_sha1}",
+    # ]
 
     if not parsed_args.nocreate:
         args += ["-DHUNTER_RUN_INSTALL=ON"]
@@ -221,10 +226,13 @@ def run():
             "-DHUNTER_CONFIGURATION_TYPES=Release",
             "-DCMAKE_BUILD_TYPES=Release",
             "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
-            # f"-DHUNTER_ROOT={hunter_root.as_posix()}",
-            # f"-DTESTING_URL={hunter_url.as_posix()}",
-            # f"-DTESTING_SHA1={hunter_sha1}",
         ]
+        # disabled zip creation, see above
+        # args += [
+        #    f"-DHUNTER_ROOT={hunter_root.as_posix()}",
+        #    f"-DTESTING_URL={hunter_url.as_posix()}",
+        #    f"-DTESTING_SHA1={hunter_sha1}",
+        # ]
         if verbose:
             args += ["-DCMAKE_VERBOSE_MAKEFILE=ON"]
             args += ["-DHUNTER_STATUS_DEBUG=ON"]
