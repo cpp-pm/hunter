@@ -190,7 +190,7 @@ def run():
     args_build = [
         parsed_args.cmake_exe,
         "--build",
-        build_dir,
+        build_dir.as_posix(),
     ]
     print("Execute build command: [")
     for i in args_build:
@@ -217,9 +217,9 @@ def run():
         args = [
             parsed_args.cmake_exe,
             "-S",
-            project_dir,
+            project_dir.as_posix(),
             "-B",
-            build_dir,
+            build_dir.as_posix(),
             f"-DCMAKE_TOOLCHAIN_FILE={toolchain}",
             "-DHUNTER_DISABLE_BUILDS=ON",
             "-DHUNTER_USE_CACHE_SERVERS=ONLY",
