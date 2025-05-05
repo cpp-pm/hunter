@@ -158,7 +158,7 @@ def run():
         "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
         f"-DHUNTER_ROOT={hunter_root.as_posix()}",
         f"-DTESTING_URL={hunter_url.as_posix()}",
-        f"-DTESTING_SHA1={hunter_sha1.as_posix()}",
+        f"-DTESTING_SHA1={hunter_sha1}",
     ]
 
     if not parsed_args.nocreate:
@@ -193,7 +193,7 @@ def run():
         "--build",
         build_dir.as_posix(),
         "--config",
-        "Release"
+        "Release",
     ]
     print("Execute build command: [")
     for i in args_build:
@@ -230,7 +230,7 @@ def run():
             "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
             f"-DHUNTER_ROOT={hunter_root.as_posix()}",
             f"-DTESTING_URL={hunter_url.as_posix()}",
-            f"-DTESTING_SHA1={hunter_sha1.as_posix()}",
+            f"-DTESTING_SHA1={hunter_sha1}",
         ]
         if verbose:
             args += ["-DCMAKE_VERBOSE_MAKEFILE=ON"]
