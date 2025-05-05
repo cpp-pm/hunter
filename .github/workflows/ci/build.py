@@ -151,9 +151,9 @@ def run():
         "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
         "-DHUNTER_CONFIGURATION_TYPES=Release",
         "-DCMAKE_BUILD_TYPES=Release",
-        f"-DHUNTER_ROOT={hunter_root.as_posix()}",
-        f"-DTESTING_URL={hunter_url.as_posix()}",
-        f"-DTESTING_SHA1={hunter_sha1}",
+        # f"-DHUNTER_ROOT={hunter_root.as_posix()}",
+        # f"-DTESTING_URL={hunter_url.as_posix()}",
+        # f"-DTESTING_SHA1={hunter_sha1}",
     ]
 
     if not parsed_args.nocreate:
@@ -221,9 +221,9 @@ def run():
             "-DHUNTER_CONFIGURATION_TYPES=Release",
             "-DCMAKE_BUILD_TYPES=Release",
             "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
-            f"-DHUNTER_ROOT={hunter_root.as_posix()}",
-            f"-DTESTING_URL={hunter_url.as_posix()}",
-            f"-DTESTING_SHA1={hunter_sha1}",
+            # f"-DHUNTER_ROOT={hunter_root.as_posix()}",
+            # f"-DTESTING_URL={hunter_url.as_posix()}",
+            # f"-DTESTING_SHA1={hunter_sha1}",
         ]
         if verbose:
             args += ["-DCMAKE_VERBOSE_MAKEFILE=ON"]
