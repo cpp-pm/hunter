@@ -102,6 +102,11 @@ def run():
                 )
             )
 
+    env_script = os.getenv("SCRIPT")
+    if env_script:
+        print(f"running specified SCRIPT before build: {env_script}")
+        subprocess.check_call(env_script)
+
     project_dir = cdir / project_dir
 
     testing_dir = cdir / "_testing"
