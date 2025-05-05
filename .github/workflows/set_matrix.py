@@ -424,6 +424,11 @@ def main():
                     if "script" not in leg:
                         # explicitly set empty script
                         leg["script"] = ""
+                if not (repo_root / "examples" / project).is_dir():
+                    raise RuntimeError(
+                        f"project: {project}: missing examples/{project} dir"
+                    )
+                leg["example"] = f"examples/{project}"
                 # create toolchain file
                 create_toolchain(
                     toolchains_dir=toolchains_dir,
@@ -440,7 +445,7 @@ def main():
                 dafault_dir / "matrix_hunter_tests.json"
             )
             for leg in hunter_tests_matrix:
-                leg["script"] = (dafault_dir / leg["script"]).as_posix()
+                leg["script"] = ""
             include += hunter_tests_matrix
 
         json_output = {"include": include}
