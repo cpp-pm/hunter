@@ -86,6 +86,7 @@ def run():
     toolchain = os.getenv("TOOLCHAIN")
     if not toolchain:
         raise RuntimeError("Environment variable TOOLCHAIN is empty")
+    toolchain = cdir / toolchain
 
     project_dir = os.getenv("PROJECT_DIR")
     if not project_dir:
