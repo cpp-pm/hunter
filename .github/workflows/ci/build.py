@@ -192,6 +192,8 @@ def run():
         parsed_args.cmake_exe,
         "--build",
         build_dir.as_posix(),
+        "--config",
+        "Release"
     ]
     print("Execute build command: [")
     for i in args_build:
