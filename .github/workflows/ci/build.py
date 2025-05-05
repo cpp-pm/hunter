@@ -103,7 +103,7 @@ def run():
 
     project_dir = cdir / project_dir
 
-    testing_dir = pathlib.Path(os.getcwd()) / "_testing"
+    testing_dir = cdir / "_testing"
     if testing_dir.exists() and parsed_args.clear:
         print(f"REMOVING: {testing_dir}")
         shutil.rmtree(testing_dir)
