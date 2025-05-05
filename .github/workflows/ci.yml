@@ -127,8 +127,7 @@ jobs:
                 }
             }
         }
-        cmake -S "${env:PROJECT_DIR}" -B build -G "${{ matrix.generator }}" -DCMAKE_TOOLCHAIN_FILE="${pwd}/toolchains/${{ matrix.toolchain }}.cmake"
-        cmake --build build --config Release
+        python .github/workflows/ci/build.py
 
   set_status:
     needs: [ set_matrix, build ]
