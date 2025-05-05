@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
+# TODO: remove this line again, just to trigger CI pipelines
 
 set(OLD_UNIX "${UNIX}")
 set(OLD_WIN32 "${WIN32}")
