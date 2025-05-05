@@ -68,7 +68,7 @@ jobs:
       matrix: ${{ fromJson(needs.set_matrix.outputs.matrix) }}
 
     env:
-      TOOLCHAIN: ${{ matrix.toolchain }}
+      TOOLCHAIN: 'toolchains/${{ matrix.toolchain }}.cmake'
       PROJECT_DIR: examples/${{ matrix.example }}
       GITHUB_USER_PASSWORD: ${{ secrets.CPP_PM_BOT_TOKEN }}
 
@@ -99,6 +99,7 @@ jobs:
       if: runner.os != 'Windows' && matrix.toolchain == 'hunter_tests'
       env:
         PROJECT_DIR: ${{ matrix.example }}
+        TOOLCHAIN: ''
       run: |
         bash ${{ matrix.script }}
 
@@ -107,8 +108,7 @@ jobs:
       env:
         BRANCH_NAME: ${{ github.ref_name }}
       run: |
-        cmake -S "${PROJECT_DIR}" -B build -DCMAKE_TOOLCHAIN_FILE=${PWD}/toolchains/${{ matrix.toolchain }}.cmake
-        cmake --build build
+        python .github/workflows/ci/build.py
 
     - name: Build on Windows
       if: runner.os == 'Windows' && matrix.toolchain != 'hunter_tests'
