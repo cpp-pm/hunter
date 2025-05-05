@@ -69,7 +69,7 @@ jobs:
 
     env:
       TOOLCHAIN: 'toolchains/${{ matrix.toolchain }}.cmake'
-      PROJECT_DIR: examples/${{ matrix.example }}
+      PROJECT_DIR: ${{ matrix.example }}
       GITHUB_USER_PASSWORD: ${{ secrets.CPP_PM_BOT_TOKEN }}
 
     steps:
@@ -98,10 +98,9 @@ jobs:
     - name: Build hunter_tests Unix
       if: runner.os != 'Windows' && matrix.toolchain == 'hunter_tests'
       env:
-        PROJECT_DIR: ${{ matrix.example }}
-        TOOLCHAIN: ''
+        TOOLCHAIN: '${{ matrix.toolchain }}'
       run: |
-        bash ${{ matrix.script }}
+        python .github/workflows/ci/build.py
 
     - name: Build on Unix
       if: runner.os != 'Windows' && matrix.toolchain != 'hunter_tests'
