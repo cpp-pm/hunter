@@ -127,7 +127,7 @@ jobs:
                 }
             }
         }
-        cmake -S "${PROJECT_DIR}" -B build -G "${{ matrix.generator }}" -DCMAKE_TOOLCHAIN_FILE="${pwd}/toolchains/${{ matrix.toolchain }}.cmake"
+        cmake -S "${env:PROJECT_DIR}" -B build -G "${{ matrix.generator }}" -DCMAKE_TOOLCHAIN_FILE="${pwd}/toolchains/${{ matrix.toolchain }}.cmake"
         cmake --build build --config Release
 
   set_status:
