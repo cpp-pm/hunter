@@ -68,7 +68,7 @@ jobs:
       matrix: ${{ fromJson(needs.set_matrix.outputs.matrix) }}
 
     env:
-      TOOLCHAIN: '${GITHUB_WORKSPACE}/toolchains/${{ matrix.toolchain }}.cmake'
+      TOOLCHAIN: 'toolchains/${{ matrix.toolchain }}.cmake'
       PROJECT_DIR: examples/${{ matrix.example }}
       GITHUB_USER_PASSWORD: ${{ secrets.CPP_PM_BOT_TOKEN }}
 
