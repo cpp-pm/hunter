@@ -35,11 +35,12 @@ def clear_except_download(hunter_root: pathlib.Path):
 
 def run():
     parser = argparse.ArgumentParser("Testing script")
-    parser.add_argument(
-        "--nocreate",
-        action="store_true",
-        help="Do not create Hunter archive (reusing old)",
-    )
+    # disabled zip creation, see below
+    # parser.add_argument(
+    #     "--nocreate",
+    #     action="store_true",
+    #     help="Do not create Hunter archive (reusing old)",
+    # )
     parser.add_argument(
         "--clear",
         action="store_true",
@@ -142,6 +143,8 @@ def run():
 
     print("Testing in: {}".format(testing_dir))
     build_dir = testing_dir / "build"
+    if build_dir.exists():
+        shutil.rmtree(build_dir)
 
     args = [
         parsed_args.cmake_exe,
@@ -152,7 +155,7 @@ def run():
         f"-DCMAKE_TOOLCHAIN_FILE={toolchain.as_posix()}",
         "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
         "-DHUNTER_CONFIGURATION_TYPES=Release",
-        "-DCMAKE_BUILD_TYPES=Release",
+        "-DCMAKE_BUILD_TYPE=Release",
     ]
     # disabled zip creation, see above
     # args += [
@@ -161,8 +164,9 @@ def run():
     #    f"-DTESTING_SHA1={hunter_sha1}",
     # ]
 
-    if not parsed_args.nocreate:
-        args += ["-DHUNTER_RUN_INSTALL=ON"]
+    # disabled zip creation, see above
+    # if not parsed_args.nocreate:
+    #     args += ["-DHUNTER_RUN_INSTALL=ON"]
 
     if parsed_args.disable_builds:
         args += ["-DHUNTER_DISABLE_BUILDS=ON"]
@@ -224,7 +228,7 @@ def run():
             "-DHUNTER_DISABLE_BUILDS=ON",
             "-DHUNTER_USE_CACHE_SERVERS=ONLY",
             "-DHUNTER_CONFIGURATION_TYPES=Release",
-            "-DCMAKE_BUILD_TYPES=Release",
+            "-DCMAKE_BUILD_TYPE=Release",
             "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
         ]
         # disabled zip creation, see above
