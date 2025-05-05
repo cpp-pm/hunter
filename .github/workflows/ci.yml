@@ -129,7 +129,7 @@ jobs:
       env:
         BRANCH_NAME: ${{ github.ref_name }}
       run: |
-        cmake -S examples/${{ matrix.example }} -B build -G ${{ matrix.generator }} -DCMAKE_TOOLCHAIN_FILE=.github/toolchains/${{ matrix.toolchain }}
+        cmake -S examples/${{ matrix.example }} -B build -G ${{ matrix.generator }} -DCMAKE_TOOLCHAIN_FILE=.github/toolchains/${{ matrix.toolchain }}.cmake
 
   set_status:
     needs: [ set_matrix, build ]
