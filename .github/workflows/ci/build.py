@@ -247,7 +247,7 @@ def run():
             cache_retry_count += 1
 
         if cache_retry_count >= max_cache_retry_count:
-            exit(1)
+            sys.exit(1)
 
 
 if __name__ == "__main__":
