@@ -302,7 +302,7 @@ def generator_and_runscript(leg: dict):
                     f"project: {project_name}: VS 17 expected to have year 2022"
                 )
             generator_str = "Visual Studio 17 2022"
-            VCVARSALL = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
+            VCVARSALL = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
         else:
             raise RuntimeError(
                 f"project: {project_name}: unhandled vs-generator: {m.group()} in toolchain: {toolchain}"
