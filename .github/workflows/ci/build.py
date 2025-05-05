@@ -147,7 +147,7 @@ def run():
     build_dir = testing_dir / "build"
 
     args = [
-        args.cmake_exe,
+        parsed_args.cmake_exe,
         "-S",
         project_dir.as_posix(),
         "-B",
@@ -188,7 +188,7 @@ def run():
 
     subprocess.check_call(args)
     args_build = [
-        args.cmake_exe,
+        parsed_args.cmake_exe,
         "--build",
         build_dir,
     ]
@@ -215,7 +215,7 @@ def run():
 
         # Sanity check - run build again with disabled building from sources
         args = [
-            args.cmake_exe,
+            parsed_args.cmake_exe,
             "-S",
             project_dir,
             "-B",
