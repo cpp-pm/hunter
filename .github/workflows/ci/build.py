@@ -97,6 +97,15 @@ def run():
                 )
             )
 
+    env_branch_name = os.getenv("BRANCH_NAME")
+    if env_branch_name:
+        password = os.getenv("GITHUB_USER_PASSWORD")
+        if env_branch_name in ["master", "main"] and password:
+            print(
+                f"branch name is '{env_branch_name}' and GITHUB_USER_PASSWORD is set, uploading"
+            )
+            parsed_args.upload = True
+
     toolchain = os.getenv("TOOLCHAIN")
     if not toolchain:
         raise RuntimeError("Environment variable TOOLCHAIN is empty")
