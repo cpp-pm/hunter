@@ -121,7 +121,7 @@ jobs:
             "call VCVARSALL using command '${{ matrix.VCVARSALL }}' and args '${{ matrix.VCVARSALL_ARGS }}'"
             cmd /c 'call "%VCVARSALL%" %VCVARSALL_ARGS% && set' | foreach {
                 if ($_ -match "=") {
-                    #"processing line: '$_'"
+                    "processing line: '$_'"
                     $v = $_.split("=");
                     set-item -force -path "ENV:\$($v[0])" -value "$($v[1])";
                 }
