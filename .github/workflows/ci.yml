@@ -60,7 +60,7 @@ jobs:
         path: .github/toolchains
 
   build:
-    name: ${{ matrix.example }} ${{ matrix.toolchain }} ${{ matrix.os }}
+    name: ${{ matrix.project }} ${{ matrix.toolchain }} ${{ matrix.os }}
     needs: set_matrix
     runs-on: ${{ matrix.os }}
     strategy:
