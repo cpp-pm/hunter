@@ -128,6 +128,7 @@ jobs:
             }
         }
         cmake -S examples/${{ matrix.example }} -B build -G "${{ matrix.generator }}" -DCMAKE_TOOLCHAIN_FILE="${pwd}/toolchains/${{ matrix.toolchain }}.cmake"
+        cmake --build build --config Release
 
   set_status:
     needs: [ set_matrix, build ]
