@@ -7,6 +7,7 @@
 import argparse
 import hashlib
 import os
+import pathlib
 import shutil
 import subprocess
 import sys
@@ -15,7 +16,7 @@ import tempfile
 import time
 
 
-def clear_except_download(hunter_root):
+def clear_except_download(hunter_root: pathlib.Path):
     base_dir = os.path.join(hunter_root, "_Base")
     if os.path.exists(base_dir):
         print("Clearing directory: {}".format(base_dir))
@@ -45,7 +46,9 @@ def run():
         help="Release build type for all 3rd party packages",
     )
     parser.add_argument(
-        "--clear", action="store_true", help="Remove old testing directories"
+        "--clear",
+        action="store_true",
+        help="Remove old testing directories",
     )
     parser.add_argument(
         "--clear-except-download",
@@ -58,6 +61,11 @@ def run():
         help="Disable building of package (useful for checking package can be loaded from cache)",
     )
     parser.add_argument(
+        "--cmake-exe",
+        help="specify cmake executable",
+        default="cmake",
+    )
+    parser.add_argument(
         "--upload",
         action="store_true",
         help="Upload cache to server and run checks (clean up will be triggered, same as --clear-except-download)",
@@ -68,25 +76,22 @@ def run():
     if parsed_args.upload:
         password = os.getenv("GITHUB_USER_PASSWORD")
         if password is None:
-            sys.exit("Expected environment variable GITHUB_USER_PASSWORD on uploading")
+            raise RuntimeError(
+                "Expected environment variable GITHUB_USER_PASSWORD on uploading"
+            )
 
-    cdir = os.getcwd()
+    cdir = pathlib.Path(os.getcwd())
     hunter_root = cdir
 
     toolchain = os.getenv("TOOLCHAIN")
     if not toolchain:
-        sys.exit("Environment variable TOOLCHAIN is empty")
+        raise RuntimeError("Environment variable TOOLCHAIN is empty")
 
     project_dir = os.getenv("PROJECT_DIR")
     if not project_dir:
-        sys.exit("Expected environment variable PROJECT_DIR")
+        raise RuntimeError("Expected environment variable PROJECT_DIR")
 
-    ci = os.getenv("TRAVIS") or os.getenv("APPVEYOR")
-    if ci and toolchain == "dummy":
-        print("Skip build: CI dummy (workaround)")
-        sys.exit(0)
-
-    verbose = True
+    verbose = False
     env_verbose = os.getenv("VERBOSE")
     if env_verbose:
         if env_verbose == "0":
@@ -94,20 +99,19 @@ def run():
         elif env_verbose == "1":
             verbose = True
         else:
-            sys.exit(
+            raise RuntimeError(
                 'Environment variable VERBOSE: expected 0 or 1, got "{}"'.format(
                     env_verbose
                 )
             )
 
-    project_dir = os.path.join(cdir, project_dir)
-    project_dir = os.path.normpath(project_dir)
+    project_dir = cdir / project_dir
 
-    testing_dir = os.path.join(os.getcwd(), "_testing")
-    if os.path.exists(testing_dir) and parsed_args.clear:
-        print("REMOVING: {}".format(testing_dir))
+    testing_dir = pathlib.Path(os.getcwd()) / "_testing"
+    if testing_dir.exists() and parsed_args.clear:
+        print(f"REMOVING: {testing_dir}")
         shutil.rmtree(testing_dir)
-    os.makedirs(testing_dir, exist_ok=True)
+    testing_dir.mkdir(exist_ok=True)
 
     if os.name == "nt":
         # path too long workaround
@@ -118,13 +122,13 @@ def run():
             subprocess.check_output(
                 "cmd /c mklink /J {} {}".format(temp_dir, testing_dir)
             )
-            testing_dir = temp_dir
+            testing_dir = pathlib.Path(temp_dir)
 
-    hunter_url = os.path.join(testing_dir, "hunter.tar.gz")
+    hunter_url = testing_dir / "hunter.tar.gz"
 
     if parsed_args.nocreate:
         if not os.path.exists(hunter_url):
-            sys.exit("Option `--nocreate` but no archive")
+            raise RuntimeError("Option `--nocreate` but no archive")
     else:
         arch = tarfile.open(hunter_url, "w:gz")
         arch.add("cmake")
@@ -133,75 +137,69 @@ def run():
 
     hunter_sha1 = hashlib.sha1(open(hunter_url, "rb").read()).hexdigest()
 
-    hunter_root = os.path.join(testing_dir, "Hunter")
+    hunter_root = testing_dir / "Hunter"
 
     if parsed_args.clear_except_download:
         clear_except_download(hunter_root)
 
-    if os.name == "nt":
-        which = "where"
-    else:
-        which = "which"
-
-    polly_root = os.getenv("POLLY_ROOT")
-    if polly_root:
-        polly_root = os.path.abspath(polly_root)
-        print("Using POLLY_ROOT: {}".format(polly_root))
-        build_script = os.path.join(polly_root, "bin", "build.py")
-    else:
-        build_script = subprocess.check_output(
-            [which, "build.py"], universal_newlines=True
-        ).split("\n")[0]
-
-    if not os.path.exists(build_script):
-        sys.exit("Script not found: {}".format(build_script))
-
     print("Testing in: {}".format(testing_dir))
     os.chdir(testing_dir)
+    build_dir = testing_dir / "build"
 
     args = [
-        sys.executable,
-        build_script,
-        "--clear",
-        "--config",
-        "Release",
-        "--toolchain",
-        toolchain,
-        "--home",
-        project_dir,
-        "--fwd",
-        "CMAKE_POLICY_DEFAULT_CMP0069=NEW",
-        "HUNTER_SUPPRESS_LIST_OF_FILES=ON",
-        "HUNTER_ROOT={}".format(hunter_root),
-        "TESTING_URL={}".format(hunter_url),
-        "TESTING_SHA1={}".format(hunter_sha1),
+        args.cmake_exe,
+        "-S",
+        project_dir.as_posix(),
+        "-B",
+        build_dir.as_posix(),
+        f"-DCMAKE_TOOLCHAIN_FILE={toolchain}",
+        "-DCMAKE_POLICY_DEFAULT_CMP0069=NEW",
+        "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
+        f"-DHUNTER_ROOT={hunter_root}",
+        f"-DTESTING_URL={hunter_url}",
+        f"-DTESTING_SHA1={hunter_sha1}",
     ]
 
     if not parsed_args.nocreate:
-        args += ["HUNTER_RUN_INSTALL=ON"]
+        args += ["-DHUNTER_RUN_INSTALL=ON"]
 
     if parsed_args.disable_builds:
-        args += ["HUNTER_DISABLE_BUILDS=ON"]
+        args += ["-DHUNTER_DISABLE_BUILDS=ON"]
 
     if parsed_args.all_release:
-        args += ["HUNTER_CONFIGURATION_TYPES=Release"]
+        args += ["-DHUNTER_CONFIGURATION_TYPES=Release"]
 
     if parsed_args.upload:
-        passwords = os.path.join(cdir, "maintenance", "upload-password-template.cmake")
-        args += ["HUNTER_RUN_UPLOAD=ON"]
-        args += ["HUNTER_PASSWORDS_PATH={}".format(passwords)]
+        passwords = cdir / "maintenance" / "upload-password-template.cmake"
+        args += ["-DHUNTER_RUN_UPLOAD=ON"]
+        args += [f"-DHUNTER_PASSWORDS_PATH={passwords}"]
 
-    args += ["--verbose"]
-    if not verbose:
-        args += ["--discard", "10"]
-        args += ["--tail", "200"]
+    if verbose:
+        args += ["-DCMAKE_VERBOSE_MAKEFILE=ON"]
+        args += ["-DHUNTER_STATUS_DEBUG=ON"]
 
     print("Execute command: [")
     for i in args:
-        print("  `{}`".format(i))
+        if " " in i:
+            print(f'  "{i}"')
+        else:
+            print(f"  {i}")
     print("]")
 
     subprocess.check_call(args)
+    args_build = [
+        args.cmake_exe,
+        "--build",
+        build_dir,
+    ]
+    print("Execute build command: [")
+    for i in args_build:
+        if " " in i:
+            print(f'  "{i}"')
+        else:
+            print(f"  {i}")
+    print("]")
+    subprocess.check_call(args_build)
 
     cache_retry_count = 0
     max_cache_retry_count = 5
@@ -217,38 +215,34 @@ def run():
 
         # Sanity check - run build again with disabled building from sources
         args = [
-            sys.executable,
-            build_script,
-            "--clear",
-            "--verbose",
-            "--config",
-            "Release",
-            "--toolchain",
-            toolchain,
-            "--home",
+            args.cmake_exe,
+            "-S",
             project_dir,
-            "--fwd",
-            "HUNTER_DISABLE_BUILDS=ON",
-            "HUNTER_USE_CACHE_SERVERS=ONLY",
-            "CMAKE_POLICY_DEFAULT_CMP0069=NEW",
-            "HUNTER_SUPPRESS_LIST_OF_FILES=ON",
-            "HUNTER_ROOT={}".format(hunter_root),
-            "TESTING_URL={}".format(hunter_url),
-            "TESTING_SHA1={}".format(hunter_sha1),
+            "-B",
+            build_dir,
+            f"-DCMAKE_TOOLCHAIN_FILE={toolchain}",
+            "-DHUNTER_DISABLE_BUILDS=ON",
+            "-DHUNTER_USE_CACHE_SERVERS=ONLY",
+            "-DCMAKE_POLICY_DEFAULT_CMP0069=NEW",
+            "-DHUNTER_SUPPRESS_LIST_OF_FILES=ON",
+            f"-DHUNTER_ROOT={hunter_root}",
+            f"-DTESTING_URL={hunter_url}",
+            f"-DTESTING_SHA1={hunter_sha1}",
         ]
-        if not verbose:
-            args += ["--discard", "10"]
-            args += ["--tail", "200"]
+        if verbose:
+            args += ["-DCMAKE_VERBOSE_MAKEFILE=ON"]
+            args += ["-DHUNTER_STATUS_DEBUG=ON"]
 
         print("Execute command: [")
         for i in args:
-            print("  `{}`".format(i))
+            if " " in i:
+                print(f'  "{i}"')
+            else:
+                print(f"  {i}")
         print("]")
 
         while subprocess.call(args) and cache_retry_count < max_cache_retry_count:
-            print(
-                "Cache-only sanity check attempt {} failed...".format(cache_retry_count)
-            )
+            print(f"Cache-only sanity check attempt {cache_retry_count} failed...")
             time.sleep(seconds)
             cache_retry_count += 1
 
