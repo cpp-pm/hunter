@@ -221,7 +221,7 @@ def run():
             project_dir.as_posix(),
             "-B",
             build_dir.as_posix(),
-            f"-DCMAKE_TOOLCHAIN_FILE={toolchain}",
+            f"-DCMAKE_TOOLCHAIN_FILE={toolchain.as_posix()}",
             "-DHUNTER_DISABLE_BUILDS=ON",
             "-DHUNTER_USE_CACHE_SERVERS=ONLY",
             "-DCMAKE_POLICY_DEFAULT_CMP0069=NEW",
