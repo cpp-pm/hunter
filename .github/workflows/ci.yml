@@ -117,8 +117,8 @@ jobs:
         VCVARSALL: ${{ matrix.VCVARSALL }}
         VCVARSALL_ARGS: ${{ matrix.VCVARSALL_ARGS }}
       run: |
-        if ("$VCVARSALL") {
-            Write-Host "call VCVARSALL using command '${VCVARSALL}' and args '${VCVARSALL_ARGS}'"
+        if ("$env:VCVARSALL") {
+            Write-Host "call VCVARSALL using command '${env:VCVARSALL}' and args '${env:VCVARSALL_ARGS}'"
             cmd /c 'call "%VCVARSALL%" %VCVARSALL_ARGS% && set' | foreach {
                 if ($_ -match "=") {
                     "processing line: '$_'"
