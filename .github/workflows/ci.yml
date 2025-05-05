@@ -97,6 +97,8 @@ jobs:
 
     - name: Build hunter_tests Unix
       if: runner.os != 'Windows' && matrix.toolchain == 'hunter_tests'
+      env:
+        PROJECT_DIR: ${{ matrix.example }}
       run: |
         bash ${{ matrix.script }}
 
