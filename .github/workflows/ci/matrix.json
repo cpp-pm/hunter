@@ -1,19 +1,18 @@
 [
-{ "example": "foo", "toolchain": "clang-cxx17",                                     "os": "ubuntu-20.04", "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "gcc-7-cxx17",                                     "os": "ubuntu-20.04", "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "gcc-8-cxx17-fpic",                                "os": "ubuntu-20.04", "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "gcc-9-cxx17-fpic",                                "os": "ubuntu-20.04", "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "android-ndk-r17-api-24-arm64-v8a-clang-libcxx14", "os": "ubuntu-20.04", "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "analyze-cxx17",                                   "os": "ubuntu-20.04", "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "sanitize-address-cxx17",                          "os": "ubuntu-20.04", "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "sanitize-leak-cxx17",                             "os": "ubuntu-20.04", "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "sanitize-thread-cxx17",                           "os": "ubuntu-20.04", "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "osx-12-3-arch-universal2-cxx17",                  "os": "macos-12",     "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "ios-nocodesign-15-5-arm64-cxx17",                 "os": "macos-12",     "python": "3.8", "script": "build.sh"  },
-{ "example": "foo", "toolchain": "ninja-vs-16-2019-win64-cxx17",                    "os": "windows-2019", "python": "3.8", "script": "build.cmd" },
-{ "example": "foo", "toolchain": "nmake-vs-16-2019-win64-cxx17",                    "os": "windows-2019", "python": "3.8", "script": "build.cmd" },
-{ "example": "foo", "toolchain": "vs-16-2019-win64-sdk-10-0-18362-0-cxx17",         "os": "windows-2019", "python": "3.8", "script": "build.cmd" },
-{ "example": "foo", "toolchain": "vs-16-2019-win64-store-10-cxx17",                 "os": "windows-2019", "python": "3.8", "script": "build.cmd" },
-{ "example": "foo", "toolchain": "mingw-cxx17",                                     "os": "windows-2019", "python": "3.8", "script": "build.cmd" },
-{ "example": "foo", "toolchain": "msys-cxx17",                                      "os": "windows-2019", "python": "3.8", "script": "build.cmd" }
+// optional entries:
+// - python: override python version to setup/use
+// - script: specify a per project build script running before build.py
+{ "example": "foo", "toolchain": "clang-cxx17",                                     "os": "ubuntu-24.04" },
+{ "example": "foo", "toolchain": "gcc-12-cxx17",                                    "os": "ubuntu-24.04" },
+{ "example": "foo", "toolchain": "gcc-13-cxx17-fpic",                               "os": "ubuntu-24.04" },
+{ "example": "foo", "toolchain": "gcc-14-cxx17-fpic",                               "os": "ubuntu-24.04" },
+{ "example": "foo", "toolchain": "android-ndk-api-35-arm64-v8a-libcxx14",           "os": "ubuntu-24.04" },
+{ "example": "foo", "toolchain": "osx-15-4-arch-universal2-cxx17",                  "os": "macos-15"     },
+{ "example": "foo", "toolchain": "ios-nocodesign-17-5-arm64-cxx17",                 "os": "macos-15"     },
+{ "example": "foo", "toolchain": "ninja-vs-17-2022-win64-cxx17",                    "os": "windows-2022" },
+{ "example": "foo", "toolchain": "nmake-vs-17-2022-win64-cxx17",                    "os": "windows-2022" },
+{ "example": "foo", "toolchain": "vs-17-2022-win64-sdk-10-0-22000-0-cxx17",         "os": "windows-2022" },
+{ "example": "foo", "toolchain": "vs-17-2022-win64-store-10-cxx17",                 "os": "windows-2022" },
+{ "example": "foo", "toolchain": "mingw-cxx17",                                     "os": "windows-2022" },
+{ "example": "foo", "toolchain": "msys-cxx17",                                      "os": "windows-2022" }
 ]

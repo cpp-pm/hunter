@@ -1,6 +1,7 @@
 # Copyright (c) 2015, David Hirvonen
 # All rights reserved.
 
+# newline to trigger CI
 # !!! DO NOT PLACE HEADER GUARDS HERE !!!
 
 # Load used modules
