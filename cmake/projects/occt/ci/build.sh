@@ -1,7 +1,7 @@
 # Install additional dependencies:
 
 if [ "$(uname)" == "Darwin" ]; then
-    # OSX    
+    # OSX
     :
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # GNU/Linux
@@ -14,7 +14,3 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
     # Windows x64
     :
 fi
-
-
-# Run normal build script: 
-source ./.github/workflows/ci/build.sh
