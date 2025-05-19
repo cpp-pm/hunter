@@ -426,7 +426,14 @@ def main():
                     raise RuntimeError(
                         f"project: {project}: missing examples/{project} dir"
                     )
-                leg["example"] = f"examples/{project}"
+                example_dir_entry = f"examples/{leg['example']}"
+                example_dir = repo_root / example_dir_entry
+                if not example_dir.is_dir():
+                    raise RuntimeError(
+                        f"project: {project}: missing {example_dir_entry} dir"
+                    )
+                leg["example"] = example_dir_entry
+                leg["project"] = example_dir.name
                 # create toolchain file
                 create_toolchain(
                     toolchains_dir=toolchains_dir,
