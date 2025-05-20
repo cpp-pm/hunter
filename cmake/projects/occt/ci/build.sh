@@ -1,3 +1,4 @@
+#!/bin/sh
 # Install additional dependencies:
 
 if [ "$(uname)" == "Darwin" ]; then
