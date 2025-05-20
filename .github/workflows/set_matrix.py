@@ -404,17 +404,22 @@ def main():
                         raise RuntimeError(
                             f"project: {project}: specified script file missing, expected path: {proj_script_file.as_posix()}"
                         )
-                    leg["script"] = (project_dir / leg["script"]).as_posix()
+
+                    leg["script"] = proj_script_file.relative_to(repo_root).as_posix()
                 else:
                     # try to find os specific install script (build.sh/build.cmd)
                     if leg["os"].startswith(("ubuntu", "macos")):
                         proj_script_file = project_dir / "build.sh"
                         if proj_script_file.is_file():
-                            leg["script"] = proj_script_file.as_posix()
+                            leg["script"] = proj_script_file.relative_to(
+                                repo_root
+                            ).as_posix()
                     elif leg["os"].startswith("windows"):
                         proj_script_file = project_dir / "build.cmd"
                         if proj_script_file.is_file():
-                            leg["script"] = proj_script_file.as_posix()
+                            leg["script"] = proj_script_file.relative_to(
+                                repo_root
+                            ).as_posix()
                     else:
                         raise RuntimeError(
                             f"project: {project}: unhandled os: {leg['os']}"
