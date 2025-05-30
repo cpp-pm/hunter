@@ -5,8 +5,6 @@
 Boost
 =====
 
-Since boost 1.70 you should use for header only libraries as target:
-
 .. code-block:: cmake
 
     # Header-only libraries
