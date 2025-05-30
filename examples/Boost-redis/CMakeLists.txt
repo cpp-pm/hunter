@@ -4,7 +4,6 @@
 cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(Boost_DEBUG ON CACHE BOOLEAN "")
-set(TESTING_CONFIG_OPT FILEPATH ${CMAKE_CURRENT_LIST_DIR}/../Boost-useBoostConfig/config.cmake)
 
 set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/toolchain.cmake"
     CACHE FILEPATH "Path to CMake toolchain file")

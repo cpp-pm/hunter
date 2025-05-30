@@ -16,7 +16,6 @@ include(hunter_boost_component_b2_args)
 include(hunter_dump_cmake_flags)
 include(hunter_fatal_error)
 include(hunter_get_boost_libs)
-include(hunter_install_boost_config)
 include(hunter_internal_error)
 include(hunter_pick_archiver)
 include(hunter_status_debug)
@@ -240,10 +239,6 @@ set(
     --with-@HUNTER_PACKAGE_COMPONENT@
     --abbreviate-paths
 )
-
-if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0 AND NOT USE_CONFIG_FROM_BOOST)
-  list(APPEND build_opts --no-cmake-config )
-endif()
 
 if("@MINGW@")
   # cross compile from "linux" to "windows" using mingw
@@ -565,7 +560,3 @@ ExternalProject_Add(
 set(HUNTER_SELF "@HUNTER_SELF@")
 set(HUNTER_PACKAGE_INSTALL_PREFIX "@HUNTER_PACKAGE_INSTALL_PREFIX@")
 set(HUNTER_Boost_VERSION "@HUNTER_Boost_VERSION@")
-
-if(NOT USE_CONFIG_FROM_BOOST OR HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
-  hunter_install_boost_config()
-endif()

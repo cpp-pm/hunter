@@ -10,15 +10,9 @@ Boost
     # Header-only libraries
     hunter_add_package(Boost)
     find_package(Boost CONFIG REQUIRED)
-    target_link_libraries(... Boost::boost)
+    target_link_libraries(... Boost::headers)
 
 -  `Example <https://github.com/cpp-pm/hunter/blob/master/examples/Boost/CMakeLists.txt>`__
-
-Since boost 1.70 you should use for header only libraries as target:
-
-.. code-block:: cmake
-
-    target_link_libraries(... Boost::headers)
 
 .. code-block:: cmake
 
@@ -94,18 +88,8 @@ config file (``boost/config/user.hpp``):
     #define BOOST_MPL_CFG_NO_PREPROCESSED_HEADERS
     #define BOOST_MPL_LIMIT_LIST_SIZE 3
 
-- Option ``USE_CONFIG_FROM_BOOST=ON`` use the package configuration file provided 
-  by the boost project.
-
-  Since boost version 1.70.0, the boost project provide a well maintained package 
-  configuration file for use with find_package's config mode. As minimum required CMake 
-  version you need 3.3.
-
-  See the difference between following example:
-  
-  - `Boost-log <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log/CMakeLists.txt>`__
-  
-  - `Boost-log-useBoostConfig <https://github.com/cpp-pm/hunter/blob/master/examples/Boost-log-useBoostConfig/CMakeLists.txt>`__
+- Option ``USE_CONFIG_FROM_BOOST=ON`` was removed with Hunter ``v0.26.0``,
+  now the package configuration file is always provided by the Boost project.
 
 - Option ``BOOST_USE_WINAPI_VERSION=<API_VERSION>`` use on Windows in order to set the Windows API version used for building the boost libraries.
 
