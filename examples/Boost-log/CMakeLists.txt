@@ -1,4 +1,5 @@
 # Copyright (c) 2013-2017, Ruslan Baratov
+# Copyright (c) 2025, NeroBurner
 # All rights reserved.
 
 cmake_minimum_required(VERSION 3.10)
@@ -11,17 +12,8 @@ include("../common.cmake")
 
 project(download-boost)
 
-hunter_add_package(Boost COMPONENTS log filesystem system chrono thread regex date_time atomic)
-find_package(Boost CONFIG REQUIRED log filesystem system chrono thread regex date_time atomic)
+hunter_add_package(Boost COMPONENTS log)
+find_package(Boost CONFIG REQUIRED log)
 
 add_executable(foo foo.cpp)
-target_link_libraries(foo PUBLIC Boost::log
-    Boost::filesystem
-    Boost::chrono
-    Boost::thread
-    Boost::regex
-    Boost::date_time
-    Boost::atomic
-    Boost::system
-    Boost::boost
-)
+target_link_libraries(foo PUBLIC Boost::log)

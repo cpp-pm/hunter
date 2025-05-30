@@ -11,7 +11,6 @@ include(ExternalProject) # ExternalProject_Add
 list(APPEND CMAKE_MODULE_PATH "@HUNTER_SELF@/cmake/modules")
 
 include(hunter_get_boost_libs)
-include(hunter_install_boost_config)
 include(hunter_report_broken_package)
 include(hunter_status_debug)
 include(hunter_status_print)
@@ -108,11 +107,6 @@ configure_file(
 )
 
 
-set(pass_boost_no_cmake_config )
-if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0 AND NOT USE_CONFIG_FROM_BOOST)
-  set(pass_boost_no_cmake_config --no-cmake-config)
-endif()
-
 ExternalProject_Add(
     "@HUNTER_EP_NAME@"
     URL
@@ -148,7 +142,6 @@ ExternalProject_Add(
     ${boost_list}
     "--prefix=@HUNTER_PACKAGE_INSTALL_PREFIX@"
     --ignore-site-config # Ignore Gentoo specific optimization "none" in site config that only the patched bjam of Gentoo can understand.
-    ${pass_boost_no_cmake_config}
     COMMAND # Copy license files
     "@CMAKE_COMMAND@"
     "-C@HUNTER_ARGS_FILE@" # for 'HUNTER_INSTALL_LICENSE_FILES'
@@ -168,7 +161,3 @@ ExternalProject_Add(
 set(HUNTER_SELF "@HUNTER_SELF@")
 set(HUNTER_PACKAGE_INSTALL_PREFIX "@HUNTER_PACKAGE_INSTALL_PREFIX@")
 set(HUNTER_Boost_VERSION "@HUNTER_Boost_VERSION@")
-
-if(NOT USE_CONFIG_FROM_BOOST OR HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
-  hunter_install_boost_config()
-endif()
