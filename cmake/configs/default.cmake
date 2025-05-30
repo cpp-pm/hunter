@@ -33,14 +33,7 @@ hunter_default_version(Async++ VERSION 0.0.3-hunter)
 hunter_default_version(Avahi VERSION 0.6.31)
 hunter_default_version(BZip2 VERSION 1.0.8-p0)
 hunter_default_version(Beast VERSION 1.0.0-b84-hunter-0)
-
-if(MINGW)
-  # https://github.com/boostorg/build/issues/301
-  hunter_default_version(Boost VERSION 1.64.0)
-else()
-  hunter_default_version(Boost VERSION 1.86.0)
-endif()
-
+hunter_default_version(Boost VERSION 1.86.0)
 hunter_default_version(BoostCompute VERSION 0.5-p0)
 hunter_default_version(BoostProcess VERSION 0.5)
 hunter_default_version(BoringSSL VERSION 0.0.0-0f5ecd3a8-p0)

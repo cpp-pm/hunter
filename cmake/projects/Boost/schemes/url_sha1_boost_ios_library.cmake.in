@@ -12,7 +12,6 @@ list(APPEND CMAKE_MODULE_PATH "@HUNTER_SELF@/cmake/modules")
 
 include(hunter_boost_component_b2_args)
 include(hunter_dump_cmake_flags)
-include(hunter_install_boost_config)
 include(hunter_internal_error)
 include(hunter_status_debug)
 include(hunter_assert_not_empty_string)
@@ -132,10 +131,6 @@ set(
     --layout=tagged
     --user-config="${boost_user_jam}"
 )
-
-if (@HUNTER_Boost_VERSION@ VERSION_GREATER_EQUAL 1.72.0 AND NOT USE_CONFIG_FROM_BOOST)
-  list(APPEND build_opts --no-cmake-config )
-endif()
 
 set(BOOST_VERSION "@HUNTER_Boost_VERSION@")
 
@@ -401,7 +396,3 @@ ExternalProject_Add(
 set(HUNTER_SELF "@HUNTER_SELF@")
 set(HUNTER_PACKAGE_INSTALL_PREFIX "@HUNTER_PACKAGE_INSTALL_PREFIX@")
 set(HUNTER_Boost_VERSION "@HUNTER_Boost_VERSION@")
-
-if(NOT USE_CONFIG_FROM_BOOST OR HUNTER_Boost_VERSION VERSION_LESS 1.72.0)
-  hunter_install_boost_config()
-endif()
