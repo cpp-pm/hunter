@@ -19,7 +19,7 @@ hunter_add_version(
     VERSION
     "3.4.0"
     URL
-    "https://gitlab.com/libeigens/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz"
+    "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz"
     SHA1
     d222db69a9e87d9006608e029d1039039f360b52
 )
