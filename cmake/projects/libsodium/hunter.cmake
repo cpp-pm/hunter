@@ -47,9 +47,9 @@ hunter_add_version(
     VERSION
     "1.0.18"
     URL
-    "https://github.com/hunter-packages/libsodium/archive/v1.0.18.tar.gz"
+    "https://github.com/cpp-pm/libsodium/archive/refs/tags/v1.0.18-p0.tar.gz"
     SHA1
-    795b73e3f92a362fabee238a71735579bf46bb97
+    0fafd2219825c6a9d62205b1e921c816b3e94113
 )
 
 string(COMPARE EQUAL "${HUNTER_libsodium_VERSION}" "1.0.10" __is_1_0_10)
