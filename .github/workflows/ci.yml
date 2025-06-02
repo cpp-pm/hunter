@@ -46,6 +46,7 @@ jobs:
 
     - name: Check changed projects for working URLs
       run: |
+        apt install -yq python3-pycurl
         python maintenance/check-urls.py
 
     - name: Set matrix for subsequent build
