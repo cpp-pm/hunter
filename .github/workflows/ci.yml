@@ -44,6 +44,10 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Check changed projects for working URLs
+      run: |
+        python maintenance/check-urls.py
+
     - name: Set matrix for subsequent build
       id: set-matrix
       run: |
