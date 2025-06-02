@@ -1,7 +1,7 @@
-# Copyright (c) 2016-2020, Rahul Sheth, Ruslan Baratov
+# Copyright (c) 2022, Raffael Casagrande
 # All rights reserved.
 
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.10)
 
 # Emulate HunterGate:
 # * https://github.com/hunter-packages/gate
