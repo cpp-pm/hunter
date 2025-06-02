@@ -11,14 +11,14 @@ import sys
 
 # simple helper to allow single-line-comments with `//` in json files
 # https://stackoverflow.com/a/57814048
-def json_from_file_ignore_comments(filePath):
+def json_from_file_ignore_comments(filepath):
     contents = ""
-    with open(filePath, "r") as fh:
+    with open(filepath, "r") as fh:
         for line in fh:
-            cleanedLine = line.split("//", 1)[0]
-            if len(cleanedLine) > 0 and line.endswith("\n") and "\n" not in cleanedLine:
-                cleanedLine += "\n"
-            contents += cleanedLine
+            cleaned_line = line.split("//", 1)[0]
+            if len(cleaned_line) > 0 and line.endswith("\n") and "\n" not in cleaned_line:
+                cleaned_line += "\n"
+            contents += cleaned_line
     json_data = json.loads(contents)
     return json_data
 
@@ -31,14 +31,14 @@ def create_toolchain(
     cxx = ""
 
     parsed_toolchain = toolchain
-    m = re.match(r"^(ninja|nmake)[-]?", toolchain)
+    m = re.match(r"^(ninja|nmake)-?", toolchain)
     if m:
         parsed_toolchain = toolchain[m.end() :]
         out += f"""\
 # Generator handled outside toolchain file: {m.groups(1)[0]}
 """
 
-    m = re.match(r"^(gcc|clang|mingw|msys)(-[\d]+)?", toolchain)
+    m = re.match(r"^(gcc|clang|mingw|msys)(-\d+)?", toolchain)
     if m:
         parsed_toolchain = toolchain[m.end() :]
         if toolchain.startswith("clang"):
@@ -60,7 +60,7 @@ def create_toolchain(
             cxx += ext
 
     m = re.match(
-        r"^android-ndk-api-([\d]+)-(armeabi|armeabi-v7a|arm64-v8a)", parsed_toolchain
+        r"^android-ndk-api-(\d+)-(armeabi|armeabi-v7a|arm64-v8a)", parsed_toolchain
     )
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
@@ -93,12 +93,12 @@ add_definitions("-DANDROID")
 set(CMAKE_ANDROID_STL_TYPE "c++_static") # LLVM libc++ static
 """
 
-    m = re.match(r"^osx-([\d]+)-([\d]+)", parsed_toolchain)
+    m = re.match(r"^osx-(\d+)-(\d+)", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         if not m.group(1) or not m.group(2):
             raise RuntimeError(
-                f"project: {project_name}: error while parsing osx toolchain SDK verison: {toolchain}"
+                f"project: {project_name}: error while parsing osx toolchain SDK version: {toolchain}"
             )
         osx_sdk = f"{m.group(1)}.{m.group(2)}"
         out += f"""\
@@ -116,12 +116,12 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "{osx_sdk}" CACHE STRING "Minimum OS X deploymen
 set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64" CACHE STRING "OS X Target Architectures" FORCE)
 """
 
-    m = re.match(r"^ios-nocodesign-([\d]+)-([\d]+)", parsed_toolchain)
+    m = re.match(r"^ios-nocodesign-(\d+)-(\d+)", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         if not m.group(1) or not m.group(2):
             raise RuntimeError(
-                f"project: {project_name}: error while parsing osx toolchain SDK verison: {toolchain}"
+                f"project: {project_name}: error while parsing osx toolchain SDK version: {toolchain}"
             )
         osx_sdk = f"{m.group(1)}.{m.group(2)}"
         out += f"""\
@@ -152,7 +152,7 @@ set(IPHONEOS_ARCHS arm64)
 set(IPHONESIMULATOR_ARCHS "")
 """
 
-    m = re.match(r"^vs-([\d]+)-([\d]+)(-win64)?", parsed_toolchain)
+    m = re.match(r"^vs-(\d+)-(\d+)(-win64)?", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         out += f"""\
@@ -161,7 +161,7 @@ set(IPHONESIMULATOR_ARCHS "")
         cc = "cl"
         cxx = "cl"
 
-        m = re.match(r"^-sdk(-[\d]+)+", parsed_toolchain)
+        m = re.match(r"^-sdk(-\d+)+", parsed_toolchain)
         if m:
             parsed_toolchain = (
                 parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
@@ -192,7 +192,7 @@ set(CMAKE_CXX_COMPILER "{cxx}" CACHE STRING "C++ compiler" FORCE)
 """
 
     cxx_standard = None
-    m = re.match(r"^-libcxx([\d]+)?", parsed_toolchain)
+    m = re.match(r"^-libcxx(\d+)?", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         out += """\
@@ -200,7 +200,7 @@ set(CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT} -stdlib=libc++")
 """
         cxx_standard = m.group(1)
 
-    m = re.match(r"^-cxx([\d]+)", parsed_toolchain)
+    m = re.match(r"^-cxx(\d+)", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         cxx_standard = m.group(1)
@@ -210,7 +210,7 @@ set(CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT} -stdlib=libc++")
         out += f"set(CMAKE_CXX_STANDARD_REQUIRED ON)\n"
         out += f"set(CMAKE_CXX_EXTENSIONS OFF)\n"
 
-    m = re.match(r"^-c([\d]+)", parsed_toolchain)
+    m = re.match(r"^-c(\d+)", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         c_standard = m.group(1)
@@ -266,7 +266,7 @@ def generator_and_runscript(leg: dict):
     generator = None
 
     parsed_toolchain = toolchain
-    m = re.match(r"^(ninja|nmake|mingw|msys)[-]?", toolchain)
+    m = re.match(r"^(ninja|nmake|mingw|msys)-?", toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[m.end() :]
         if m.group(1).startswith("ninja"):
@@ -282,7 +282,7 @@ def generator_and_runscript(leg: dict):
                 f"project: {project_name}: unhandled generator: {m.group()} in toolchain: {toolchain}"
             )
 
-    m = re.match(r"^vs-([\d]+)-([\d]+)(-win64)?", parsed_toolchain)
+    m = re.match(r"^vs-(\d+)-(\d+)(-win64)?", parsed_toolchain)
     if m:
         parsed_toolchain = parsed_toolchain[: m.start()] + parsed_toolchain[m.end() :]
         vs_version = m.group(1)
@@ -297,14 +297,14 @@ def generator_and_runscript(leg: dict):
             # The Windows 2019 Actions runner image will begin deprecation on 2025-06-01 and will be fully unsupported by 2025-06-30
             # https://github.com/actions/runner-images/issues/12045
             generator_str = "Visual Studio 16 2019"
-            VCVARSALL = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
+            vcvarsall = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
         elif vs_version == "17":
             if vs_year != "2022":
                 raise RuntimeError(
                     f"project: {project_name}: VS 17 expected to have year 2022"
                 )
             generator_str = "Visual Studio 17 2022"
-            VCVARSALL = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
+            vcvarsall = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
         else:
             raise RuntimeError(
                 f"project: {project_name}: unhandled vs-generator: {m.group()} in toolchain: {toolchain}"
@@ -312,11 +312,11 @@ def generator_and_runscript(leg: dict):
         if not generator and generator_str:
             generator = generator_str
         if vs_win64:
-            VCVARSALL_ARGS = "-arch=amd64 -host_arch=amd64"
+            vcvarsall_args = "-arch=amd64 -host_arch=amd64"
         else:
-            VCVARSALL_ARGS = ""
-        leg["VCVARSALL"] = VCVARSALL
-        leg["VCVARSALL_ARGS"] = VCVARSALL_ARGS
+            vcvarsall_args = ""
+        leg["VCVARSALL"] = vcvarsall
+        leg["VCVARSALL_ARGS"] = vcvarsall_args
 
     if generator:
         leg["generator"] = generator
@@ -378,9 +378,9 @@ def main():
                 run_hunter_tests = True
 
     if projects or run_hunter_tests:
-        dafault_dir = repo_root / ".github/workflows/ci"
+        default_dir = repo_root / ".github/workflows/ci"
 
-        default_matrix = json_from_file_ignore_comments(dafault_dir / "matrix.json")
+        default_matrix = json_from_file_ignore_comments(default_dir / "matrix.json")
 
         if projects:
             toolchains_dir.mkdir(exist_ok=True)
@@ -407,7 +407,7 @@ def main():
 
                     leg["script"] = proj_script_file.relative_to(repo_root).as_posix()
                 else:
-                    # try to find os specific install script (build.sh/build.cmd)
+                    # try to find os specific install-script (build.sh/build.cmd)
                     if leg["os"].startswith(("ubuntu", "macos")):
                         proj_script_file = project_dir / "build.sh"
                         if proj_script_file.is_file():
@@ -452,7 +452,7 @@ def main():
 
         if run_hunter_tests:
             hunter_tests_matrix = json_from_file_ignore_comments(
-                dafault_dir / "matrix_hunter_tests.json"
+                default_dir / "matrix_hunter_tests.json"
             )
             for leg in hunter_tests_matrix:
                 leg["project"] = leg["example"]
@@ -470,6 +470,7 @@ def main():
                 json.dump(json_output, f, indent=2)
         else:
             print(json.dumps(json_output))
+        return 0
     else:
         print("No projects found")
         return 1
