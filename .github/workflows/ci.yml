@@ -22,6 +22,29 @@ on:
 
 jobs:
 
+  check_urls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: Manual dispatch, get project name from input
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo '["cmake/projects/${{ github.event.inputs.project }}/hunter.cmake"]' > ${HOME}/files.json
+
+      - name: Get changed files and save them to ${HOME}/files.json
+        if: github.event_name != 'workflow_dispatch'
+        id: files
+        uses: lots0logs/gh-action-get-changed-files@2.2.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check changed projects for working URLs
+        run: |
+          sudo apt-get install -yq python3-pycurl
+          python maintenance/check-urls.py
+
   set_matrix:
     runs-on: ubuntu-latest
     outputs:
@@ -43,11 +66,6 @@ jobs:
       uses: lots0logs/gh-action-get-changed-files@2.2.2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Check changed projects for working URLs
-      run: |
-        sudo apt-get install -yq python3-pycurl
-        python maintenance/check-urls.py
 
     - name: Set matrix for subsequent build
       id: set-matrix
