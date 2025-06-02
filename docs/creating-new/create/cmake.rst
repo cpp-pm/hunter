@@ -277,7 +277,7 @@ Add this information to ``cmake/projects/hunter_box_1/hunter.cmake`` file:
 .. code-block:: cmake
   :emphasize-lines: 1, 13, 15, 17, 19
   
-  # Copyright (c) 2016-2020, Rahul Sheth, Ruslan Baratov
+  # Copyright (c) 2025-20XX, <your-name-here>
   # All rights reserved.
 
   # !!! DO NOT PLACE HEADER GUARDS HERE !!!
