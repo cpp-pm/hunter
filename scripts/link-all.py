@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import math
 import os
 import sys
 import multiprocessing
@@ -19,29 +20,25 @@ with open(cmd_args.list, 'r') as f:
     src_list.append(line.strip())
 
 list_len = len(src_list)
-proc_num = multiprocessing.cpu_count()
-files_per_job = list_len // proc_num
+proc_num = min(multiprocessing.cpu_count(), 32)
+files_per_job = max(math.ceil(list_len / proc_num), 1)
 
-def job(job_index):
+def job(chunk):
   try:
-    begin_ind = files_per_job * job_index
-    end_ind = files_per_job * (job_index + 1)
-    last_job = (job_index == proc_num - 1)
-    if last_job:
-      end_ind = list_len
-    for i in range(begin_ind, end_ind):
-      filename = src_list[i]
+    for filename in chunk:
       link_from = os.path.join(cmd_args.cellar, filename)
       link_to = os.path.join(cmd_args.dest, filename)
-      os.link(link_from, link_to)
+      if not os.path.exists(link_to):
+        os.link(link_from, link_to)
     return 0
   except Exception as exc:
     print('Exception caught: {}'.format(exc))
     return 1
 
 def run_link():
-  pool = multiprocessing.Pool(processes=proc_num)
-  result = pool.map(job, range(proc_num))
+  chunks = [src_list[i:i + files_per_job] for i in range(0, list_len, files_per_job)]
+  pool = multiprocessing.Pool(processes=len(chunks))
+  result = pool.map(job, chunks)
   pool.close()
   pool.join()
 
