@@ -21,7 +21,7 @@ def print_failed_projects():
         print("failed projects:")
         print(json.dumps(failed_projects, indent=2))
     else:
-        print("all clear! no failed projects found")
+        print("all clear! No project with failing URL found")
 
 
 def signal_handler(signal, frame):
@@ -125,13 +125,11 @@ def main():
                 if project not in failed_projects:
                     failed_projects[project] = []
                 failed_projects[project].append(f"{status_code} {url}")
-    if len(failed_projects) > 0:
-        print_failed_projects()
-        if args.output:
-            with open(args.output, "w", encoding="utf-8") as file:
-                json.dump(failed_projects, file, indent=2)
-        return 1
-    return 0
+    print_failed_projects()
+    if len(failed_projects) > 0 and args.output:
+        with open(args.output, "w", encoding="utf-8") as file:
+            json.dump(failed_projects, file, indent=2)
+    return 0 if len(failed_projects) == 0 else 1
 
 
 if __name__ == "__main__":
