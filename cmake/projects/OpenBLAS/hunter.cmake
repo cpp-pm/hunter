@@ -115,12 +115,21 @@ else()
     # https://github.com/xianyi/OpenBLAS/releases/tag/v0.3.21
     set(_openblas_BUILD_WITHOUT_LAPACK "OFF")
   endif()
+  # silence warnings on OpenBLAS build
+  if(CMAKE_C_COMPILER_ID STREQUAL "Clang" OR CMAKE_C_COMPILER_ID STREQUAL "GNU")
+    set(_openblas_cflags "CMAKE_C_FLAGS=-w")
+  elseif(MSVC)
+    set(_openblas_cflags "CMAKE_C_FLAGS=/W0")
+  else()
+    set(_openblas_cflags)
+  endif()
   hunter_cmake_args(
     OpenBLAS
     CMAKE_ARGS
     BUILD_TESTING=OFF
     NOFORTRAN=1
     BUILD_WITHOUT_LAPACK=${_openblas_BUILD_WITHOUT_LAPACK}
+    ${_openblas_cflags}
   )
   hunter_pick_scheme(DEFAULT url_sha1_cmake)
   set(_openblas_unrelocatable_text_files "")
