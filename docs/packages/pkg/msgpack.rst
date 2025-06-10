@@ -1,6 +1,7 @@
 .. spelling::
 
     msgpack
+    msgpackc
 
 .. index:: unsorted ; msgpack
   
@@ -18,7 +19,7 @@ msgpack
 -  Added by `Antal Tátrai <https://github.com/tatraian>`__
    (`pr-406 <https://github.com/ruslo/hunter/pull/406>`__)
 - Available since |hunter|
-- Target library name from "msgpack::msgpack" to "msgpackc-cxx" with `v4.1.3`
+- Target library renamed from ``msgpack::msgpack`` to ``msgpackc-cxx`` with ``v4.1.3``
 
 .. code-block:: cmake
 
