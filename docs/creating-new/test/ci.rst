@@ -82,7 +82,6 @@ Build matrix
   This will lead to you project testing toolchains diverge from default ones in the future.
 
 .. literalinclude:: ../../../.github/workflows/ci/matrix.json
-  :language: JSON
 
 Each line defines parameters for a job that will run on `GitHub-hosted runner <https://docs.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners>`__:
 
