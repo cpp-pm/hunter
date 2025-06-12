@@ -8,7 +8,7 @@ First step
 
   kung fu
 
-Set `HUNTER_ROOT`_ environment variable to **an empty directory**. This
+Set :ref:`env hunter root` environment variable to **an empty directory**. This
 directory will be used by ``HunterGate`` module for storing packages and
 utility files.  Using environment variable is recommended but not mandatory,
 see `other options`_.
@@ -91,7 +91,6 @@ Build it:
   > cmake -H. -B_builds -DHUNTER_STATUS_DEBUG=ON -DCMAKE_BUILD_TYPE=Release
   > cmake --build _builds --config Release
 
-.. _HUNTER_ROOT: https://github.com/ruslo/hunter/wiki/usr.variables#hunter_root
 .. _other options: https://github.com/cpp-pm/gate#effects
 .. _HunterGate: https://github.com/cpp-pm/gate
 .. _notes: https://github.com/cpp-pm/gate#notes
