@@ -4,7 +4,7 @@
 First step
 ----------
 
-.. spelling::
+.. spelling:word-list::
 
   kung fu
 

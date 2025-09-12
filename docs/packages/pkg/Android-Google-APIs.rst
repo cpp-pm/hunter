@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     Android-Google-APIs
     APIs

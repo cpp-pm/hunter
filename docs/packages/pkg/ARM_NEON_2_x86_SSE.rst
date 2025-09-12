@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     ARM_NEON_2_x86_SSE
 

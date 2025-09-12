@@ -1,7 +1,7 @@
 .. Copyright (c) 2016, Ruslan Baratov
 .. All rights reserved.
 
-.. spelling::
+.. spelling:word-list::
 
   eae
 

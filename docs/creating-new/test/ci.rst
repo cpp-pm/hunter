@@ -1,7 +1,7 @@
 .. Copyright (c) 2020, Dmitry Rodin
 .. All rights reserved.
 
-.. spelling::
+.. spelling:word-list::
 
   workflow
   json

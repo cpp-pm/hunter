@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     Urho3D
     Urho

@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     Android-ARM-EABI-v7a-System-Image
     EABI

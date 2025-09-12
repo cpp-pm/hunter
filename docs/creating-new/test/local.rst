@@ -87,7 +87,7 @@ fixed by adding all correct but unrecognized names, string, or terms to the
 .. code-block:: none
   :emphasize-lines: 1-4
 
-  .. spelling::
+  .. spelling:word-list::
 
     bar
     baz

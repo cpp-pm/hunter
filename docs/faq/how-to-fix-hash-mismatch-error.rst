@@ -1,7 +1,7 @@
 .. Copyright (c) 2018, Ruslan Baratov
 .. All rights reserved.
 
-.. spelling::
+.. spelling:word-list::
 
   da
   ee

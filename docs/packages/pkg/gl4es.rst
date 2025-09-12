@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     gl4es
     gl

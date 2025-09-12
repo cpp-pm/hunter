@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     Android-Intel-x86-Atom-System-Image
 

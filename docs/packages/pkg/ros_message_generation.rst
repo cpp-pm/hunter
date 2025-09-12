@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     message_generation
     ros_message_generation

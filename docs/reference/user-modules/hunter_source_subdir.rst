@@ -1,7 +1,7 @@
 .. Copyright (c) 2019, NeroBurner
 .. All rights reserved.
 
-.. spelling::
+.. spelling:word-list::
 
   subdir
 

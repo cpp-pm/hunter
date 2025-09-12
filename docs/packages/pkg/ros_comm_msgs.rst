@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     msgs
     ros_comm_msgs

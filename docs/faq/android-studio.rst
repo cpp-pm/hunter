@@ -1,7 +1,7 @@
 .. Copyright (c) 2018-2019, Ruslan Baratov
 .. All rights reserved.
 
-.. spelling::
+.. spelling:word-list::
 
   Gradle
   md

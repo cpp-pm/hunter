@@ -4,7 +4,7 @@
 Config-ID
 ---------
 
-.. spelling::
+.. spelling:word-list::
 
   eae
 

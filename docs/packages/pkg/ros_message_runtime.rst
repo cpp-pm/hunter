@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     message_runtime
     ros_message_runtime

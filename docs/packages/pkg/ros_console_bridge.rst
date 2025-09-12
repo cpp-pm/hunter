@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     ros_console_bridge
     ros

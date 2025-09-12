@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     iroha-ed25519
     Iroha

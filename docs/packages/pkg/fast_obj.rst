@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
     fast_obj
 

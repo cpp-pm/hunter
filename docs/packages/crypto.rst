@@ -1,4 +1,4 @@
-.. spelling::
+.. spelling:word-list::
 
   Crypto
   CRC32C
