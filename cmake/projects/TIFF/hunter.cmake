@@ -5,6 +5,7 @@
 
 include(hunter_add_version)
 include(hunter_cacheable)
+include(hunter_cmake_args)
 include(hunter_download)
 include(hunter_pick_scheme)
 
@@ -72,6 +73,36 @@ hunter_add_version(
     "https://github.com/hunter-packages/tiff/archive/v4.0.2-p5.tar.gz"
     SHA1
     7bee2843b47c5f9865973b7235e58aa3fb26e1b0
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    TIFF
+    VERSION
+    "4.7.0-p0"
+    URL
+    "https://github.com/cpp-pm/libtiff/archive/v4.7.0-p0.tar.gz"
+    SHA1
+    a9289150caba29de303070275b57ea087a146c80
+)
+
+hunter_cmake_args(
+    TIFF
+    CMAKE_ARGS
+    tiff-tools=OFF
+    tiff-tests=OFF
+    tiff-docs=OFF
+    tiff-openGL=OFF
+    zlib=ON
+    libdeflate=ON # since 4.7.0-p0
+    #pixarlog=ON # don't set, available only with ZLIB=ON, no additional dependency
+    jpeg=OFF # available since 4.7.0-p0
+    #old-jpeg=ON # determined based on jpeg
+    #jpeg12=OFF # determined based on jpeg
+    jbig=OFF # not implemented in 4.7.0-p0
+    lerc=OFF # not implemented in 4.7.0-p0
+    lzma=OFF # available since 4.7.0-p0
+    webp=OFF # not implemented in 4.7.0-p0
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
