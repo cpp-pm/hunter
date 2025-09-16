@@ -68,11 +68,11 @@ hunter_add_version(
     PACKAGE_NAME
     Jpeg
     VERSION
-    "9f-p0"
+    "9f-p1"
     URL
-    "https://github.com/cpp-pm/jpeg/archive/v9f-p0.tar.gz"
+    "https://github.com/cpp-pm/jpeg/archive/v9f-p1.tar.gz"
     SHA1
-    551797341fe9e67eff0e57c6de4898d311ae6e61
+    0fc6fcac03223375f1dfe717785cc9a77524fac6
 )
 
 hunter_add_version(
