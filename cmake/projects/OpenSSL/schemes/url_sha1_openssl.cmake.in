@@ -104,6 +104,14 @@ if(ANDROID)
   # * android-ndk-r17-api-24-arm64-v8a-clang-libcxx14
   # * android-ndk-r18-api-24-arm64-v8a-clang-libcxx14
   list(APPEND configure_opts "-latomic ${CMAKE_EXE_LINKER_FLAGS}")
+
+  # On Clang-based Android NDK toolchains, explicitly linking libunwind is
+  # unnecessary and results in malformed flags like "-l-l:libunwind.a", which
+  # break the build. This block strips such flags from configure options to
+  # ensure successful compilation.
+  if(CMAKE_C_COMPILER_ID MATCHES "Clang")
+    string(REPLACE "-l-l:libunwind.a" "" configure_opts "${configure_opts}")
+  endif()
 elseif(RASPBERRY_PI)
   set(configure_opts "linux-generic32")
 elseif(OPENWRT)
