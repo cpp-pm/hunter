@@ -98,6 +98,17 @@ hunter_add_version(
     dee61a3f48ed2d436a4e7fb8cdaf3cabaa3e604e
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    PNG
+    VERSION
+    "1.6.36-p4"
+    URL
+    "https://github.com/cpp-pm/libpng/archive/v1.6.36-p4.tar.gz"
+    SHA1
+    429d1645d9203e5cb0cd711dae7d1e98d9f27ae0
+)
+
 hunter_cmake_args(PNG CMAKE_ARGS PNG_TESTS=OFF)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
