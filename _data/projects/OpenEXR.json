@@ -1,20 +1,20 @@
 [
     {
-        "id": 50488466207,
-        "run_id": 17765655601,
+        "id": 50490219687,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbHw",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466207",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466207",
+        "node_id": "CR_kwDODClGW88AAAALwXOcpw",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219687",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219687",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:27:41Z",
-        "completed_at": "2025-09-16T12:29:11Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:46:29Z",
+        "completed_at": "2025-09-16T12:46:57Z",
         "name": "OpenEXR android-ndk-api-35-arm64-v8a-libcxx14 ubuntu-24.04",
         "steps": [
             {
@@ -22,115 +22,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:27:41Z",
-                "completed_at": "2025-09-16T12:27:42Z"
+                "started_at": "2025-09-16T12:46:30Z",
+                "completed_at": "2025-09-16T12:46:31Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:27:42Z",
-                "completed_at": "2025-09-16T12:27:44Z"
+                "started_at": "2025-09-16T12:46:31Z",
+                "completed_at": "2025-09-16T12:46:33Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:27:44Z",
-                "completed_at": "2025-09-16T12:27:45Z"
+                "started_at": "2025-09-16T12:46:33Z",
+                "completed_at": "2025-09-16T12:46:33Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:27:45Z",
-                "completed_at": "2025-09-16T12:27:45Z"
+                "started_at": "2025-09-16T12:46:33Z",
+                "completed_at": "2025-09-16T12:46:34Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 5,
-                "started_at": "2025-09-16T12:27:45Z",
-                "completed_at": "2025-09-16T12:27:45Z"
+                "started_at": "2025-09-16T12:46:34Z",
+                "completed_at": "2025-09-16T12:46:34Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 6,
-                "started_at": "2025-09-16T12:27:45Z",
-                "completed_at": "2025-09-16T12:27:45Z"
+                "started_at": "2025-09-16T12:46:34Z",
+                "completed_at": "2025-09-16T12:46:34Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 7,
-                "started_at": "2025-09-16T12:27:45Z",
-                "completed_at": "2025-09-16T12:29:09Z"
+                "started_at": "2025-09-16T12:46:34Z",
+                "completed_at": "2025-09-16T12:46:56Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 8,
-                "started_at": "2025-09-16T12:29:09Z",
-                "completed_at": "2025-09-16T12:29:09Z"
+                "started_at": "2025-09-16T12:46:56Z",
+                "completed_at": "2025-09-16T12:46:56Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:29:09Z",
-                "completed_at": "2025-09-16T12:29:09Z"
+                "started_at": "2025-09-16T12:46:56Z",
+                "completed_at": "2025-09-16T12:46:56Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:29:09Z",
-                "completed_at": "2025-09-16T12:29:09Z"
+                "started_at": "2025-09-16T12:46:56Z",
+                "completed_at": "2025-09-16T12:46:56Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:29:09Z",
-                "completed_at": "2025-09-16T12:29:09Z"
+                "started_at": "2025-09-16T12:46:56Z",
+                "completed_at": "2025-09-16T12:46:56Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466207",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219687",
         "labels": [
             "ubuntu-24.04"
         ],
-        "runner_id": 1000005050,
-        "runner_name": "GitHub Actions 1000005050",
+        "runner_id": 1000005082,
+        "runner_name": "GitHub Actions 1000005082",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466202,
-        "run_id": 17765655601,
+        "id": 50490219680,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbGg",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466202",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466202",
+        "node_id": "CR_kwDODClGW88AAAALwXOcoA",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219680",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219680",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:27:33Z",
-        "completed_at": "2025-09-16T12:29:25Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:47:03Z",
+        "completed_at": "2025-09-16T12:47:35Z",
         "name": "OpenEXR clang-cxx17 ubuntu-24.04",
         "steps": [
             {
@@ -138,115 +138,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:27:34Z",
-                "completed_at": "2025-09-16T12:27:35Z"
+                "started_at": "2025-09-16T12:47:04Z",
+                "completed_at": "2025-09-16T12:47:06Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:27:35Z",
-                "completed_at": "2025-09-16T12:27:37Z"
+                "started_at": "2025-09-16T12:47:06Z",
+                "completed_at": "2025-09-16T12:47:10Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:27:37Z",
-                "completed_at": "2025-09-16T12:27:38Z"
+                "started_at": "2025-09-16T12:47:10Z",
+                "completed_at": "2025-09-16T12:47:11Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:27:38Z",
-                "completed_at": "2025-09-16T12:27:38Z"
+                "started_at": "2025-09-16T12:47:11Z",
+                "completed_at": "2025-09-16T12:47:11Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 5,
-                "started_at": "2025-09-16T12:27:38Z",
-                "completed_at": "2025-09-16T12:27:38Z"
+                "started_at": "2025-09-16T12:47:11Z",
+                "completed_at": "2025-09-16T12:47:11Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 6,
-                "started_at": "2025-09-16T12:27:38Z",
-                "completed_at": "2025-09-16T12:27:38Z"
+                "started_at": "2025-09-16T12:47:11Z",
+                "completed_at": "2025-09-16T12:47:11Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 7,
-                "started_at": "2025-09-16T12:27:38Z",
-                "completed_at": "2025-09-16T12:29:23Z"
+                "started_at": "2025-09-16T12:47:11Z",
+                "completed_at": "2025-09-16T12:47:33Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 8,
-                "started_at": "2025-09-16T12:29:23Z",
-                "completed_at": "2025-09-16T12:29:23Z"
+                "started_at": "2025-09-16T12:47:33Z",
+                "completed_at": "2025-09-16T12:47:33Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:29:23Z",
-                "completed_at": "2025-09-16T12:29:23Z"
+                "started_at": "2025-09-16T12:47:33Z",
+                "completed_at": "2025-09-16T12:47:33Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:29:23Z",
-                "completed_at": "2025-09-16T12:29:23Z"
+                "started_at": "2025-09-16T12:47:33Z",
+                "completed_at": "2025-09-16T12:47:33Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:29:23Z",
-                "completed_at": "2025-09-16T12:29:23Z"
+                "started_at": "2025-09-16T12:47:33Z",
+                "completed_at": "2025-09-16T12:47:33Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466202",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219680",
         "labels": [
             "ubuntu-24.04"
         ],
-        "runner_id": 1000005049,
-        "runner_name": "GitHub Actions 1000005049",
+        "runner_id": 1000005086,
+        "runner_name": "GitHub Actions 1000005086",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466204,
-        "run_id": 17765655601,
+        "id": 50490219691,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbHA",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466204",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466204",
+        "node_id": "CR_kwDODClGW88AAAALwXOcqw",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219691",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219691",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:27:15Z",
-        "completed_at": "2025-09-16T12:28:53Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:47:10Z",
+        "completed_at": "2025-09-16T12:47:39Z",
         "name": "OpenEXR gcc-12-cxx17 ubuntu-24.04",
         "steps": [
             {
@@ -254,115 +254,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:27:15Z",
-                "completed_at": "2025-09-16T12:27:16Z"
+                "started_at": "2025-09-16T12:47:11Z",
+                "completed_at": "2025-09-16T12:47:12Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:27:16Z",
-                "completed_at": "2025-09-16T12:27:19Z"
+                "started_at": "2025-09-16T12:47:12Z",
+                "completed_at": "2025-09-16T12:47:16Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:27:19Z",
-                "completed_at": "2025-09-16T12:27:19Z"
+                "started_at": "2025-09-16T12:47:16Z",
+                "completed_at": "2025-09-16T12:47:17Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:27:19Z",
-                "completed_at": "2025-09-16T12:27:19Z"
+                "started_at": "2025-09-16T12:47:17Z",
+                "completed_at": "2025-09-16T12:47:18Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 5,
-                "started_at": "2025-09-16T12:27:19Z",
-                "completed_at": "2025-09-16T12:27:19Z"
+                "started_at": "2025-09-16T12:47:18Z",
+                "completed_at": "2025-09-16T12:47:18Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 6,
-                "started_at": "2025-09-16T12:27:19Z",
-                "completed_at": "2025-09-16T12:27:19Z"
+                "started_at": "2025-09-16T12:47:18Z",
+                "completed_at": "2025-09-16T12:47:18Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 7,
-                "started_at": "2025-09-16T12:27:19Z",
-                "completed_at": "2025-09-16T12:28:52Z"
+                "started_at": "2025-09-16T12:47:18Z",
+                "completed_at": "2025-09-16T12:47:37Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 8,
-                "started_at": "2025-09-16T12:28:52Z",
-                "completed_at": "2025-09-16T12:28:52Z"
+                "started_at": "2025-09-16T12:47:37Z",
+                "completed_at": "2025-09-16T12:47:37Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:28:52Z",
-                "completed_at": "2025-09-16T12:28:52Z"
+                "started_at": "2025-09-16T12:47:37Z",
+                "completed_at": "2025-09-16T12:47:37Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:28:52Z",
-                "completed_at": "2025-09-16T12:28:52Z"
+                "started_at": "2025-09-16T12:47:37Z",
+                "completed_at": "2025-09-16T12:47:37Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:28:52Z",
-                "completed_at": "2025-09-16T12:28:52Z"
+                "started_at": "2025-09-16T12:47:37Z",
+                "completed_at": "2025-09-16T12:47:37Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466204",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219691",
         "labels": [
             "ubuntu-24.04"
         ],
-        "runner_id": 1000005047,
-        "runner_name": "GitHub Actions 1000005047",
+        "runner_id": 1000005087,
+        "runner_name": "GitHub Actions 1000005087",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466191,
-        "run_id": 17765655601,
+        "id": 50490219697,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbDw",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466191",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466191",
+        "node_id": "CR_kwDODClGW88AAAALwXOcsQ",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219697",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219697",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:26:11Z",
-        "completed_at": "2025-09-16T12:27:39Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:46:52Z",
+        "completed_at": "2025-09-16T12:47:22Z",
         "name": "OpenEXR gcc-13-cxx17-fpic ubuntu-24.04",
         "steps": [
             {
@@ -370,115 +370,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:26:11Z",
-                "completed_at": "2025-09-16T12:26:12Z"
+                "started_at": "2025-09-16T12:46:53Z",
+                "completed_at": "2025-09-16T12:46:54Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:26:12Z",
-                "completed_at": "2025-09-16T12:26:15Z"
+                "started_at": "2025-09-16T12:46:54Z",
+                "completed_at": "2025-09-16T12:46:57Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:26:15Z",
-                "completed_at": "2025-09-16T12:26:15Z"
+                "started_at": "2025-09-16T12:46:57Z",
+                "completed_at": "2025-09-16T12:46:57Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:26:15Z",
-                "completed_at": "2025-09-16T12:26:15Z"
+                "started_at": "2025-09-16T12:46:57Z",
+                "completed_at": "2025-09-16T12:46:57Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 5,
-                "started_at": "2025-09-16T12:26:15Z",
-                "completed_at": "2025-09-16T12:26:15Z"
+                "started_at": "2025-09-16T12:46:57Z",
+                "completed_at": "2025-09-16T12:46:57Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 6,
-                "started_at": "2025-09-16T12:26:15Z",
-                "completed_at": "2025-09-16T12:26:15Z"
+                "started_at": "2025-09-16T12:46:57Z",
+                "completed_at": "2025-09-16T12:46:57Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 7,
-                "started_at": "2025-09-16T12:26:15Z",
-                "completed_at": "2025-09-16T12:27:37Z"
+                "started_at": "2025-09-16T12:46:57Z",
+                "completed_at": "2025-09-16T12:47:20Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 8,
-                "started_at": "2025-09-16T12:27:37Z",
-                "completed_at": "2025-09-16T12:27:37Z"
+                "started_at": "2025-09-16T12:47:20Z",
+                "completed_at": "2025-09-16T12:47:20Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:27:37Z",
-                "completed_at": "2025-09-16T12:27:37Z"
+                "started_at": "2025-09-16T12:47:20Z",
+                "completed_at": "2025-09-16T12:47:20Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:27:37Z",
-                "completed_at": "2025-09-16T12:27:38Z"
+                "started_at": "2025-09-16T12:47:20Z",
+                "completed_at": "2025-09-16T12:47:20Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:27:38Z",
-                "completed_at": "2025-09-16T12:27:38Z"
+                "started_at": "2025-09-16T12:47:20Z",
+                "completed_at": "2025-09-16T12:47:20Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466191",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219697",
         "labels": [
             "ubuntu-24.04"
         ],
-        "runner_id": 1000005039,
-        "runner_name": "GitHub Actions 1000005039",
+        "runner_id": 1000005085,
+        "runner_name": "GitHub Actions 1000005085",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466229,
-        "run_id": 17765655601,
+        "id": 50490219681,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbNQ",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466229",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466229",
+        "node_id": "CR_kwDODClGW88AAAALwXOcoQ",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219681",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219681",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:26:11Z",
-        "completed_at": "2025-09-16T12:27:55Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:46:29Z",
+        "completed_at": "2025-09-16T12:46:50Z",
         "name": "OpenEXR gcc-14-cxx17-fpic ubuntu-24.04",
         "steps": [
             {
@@ -486,115 +486,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:26:12Z",
-                "completed_at": "2025-09-16T12:26:13Z"
+                "started_at": "2025-09-16T12:46:30Z",
+                "completed_at": "2025-09-16T12:46:31Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:26:13Z",
-                "completed_at": "2025-09-16T12:26:16Z"
+                "started_at": "2025-09-16T12:46:31Z",
+                "completed_at": "2025-09-16T12:46:33Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:26:16Z",
-                "completed_at": "2025-09-16T12:26:16Z"
+                "started_at": "2025-09-16T12:46:33Z",
+                "completed_at": "2025-09-16T12:46:34Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:26:16Z",
-                "completed_at": "2025-09-16T12:26:17Z"
+                "started_at": "2025-09-16T12:46:34Z",
+                "completed_at": "2025-09-16T12:46:34Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 5,
-                "started_at": "2025-09-16T12:26:17Z",
-                "completed_at": "2025-09-16T12:26:17Z"
+                "started_at": "2025-09-16T12:46:34Z",
+                "completed_at": "2025-09-16T12:46:34Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 6,
-                "started_at": "2025-09-16T12:26:17Z",
-                "completed_at": "2025-09-16T12:26:17Z"
+                "started_at": "2025-09-16T12:46:34Z",
+                "completed_at": "2025-09-16T12:46:34Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 7,
-                "started_at": "2025-09-16T12:26:17Z",
-                "completed_at": "2025-09-16T12:27:53Z"
+                "started_at": "2025-09-16T12:46:34Z",
+                "completed_at": "2025-09-16T12:46:48Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 8,
-                "started_at": "2025-09-16T12:27:53Z",
-                "completed_at": "2025-09-16T12:27:53Z"
+                "started_at": "2025-09-16T12:46:48Z",
+                "completed_at": "2025-09-16T12:46:48Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:27:53Z",
-                "completed_at": "2025-09-16T12:27:53Z"
+                "started_at": "2025-09-16T12:46:48Z",
+                "completed_at": "2025-09-16T12:46:48Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:27:53Z",
-                "completed_at": "2025-09-16T12:27:54Z"
+                "started_at": "2025-09-16T12:46:48Z",
+                "completed_at": "2025-09-16T12:46:49Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:27:54Z",
-                "completed_at": "2025-09-16T12:27:54Z"
+                "started_at": "2025-09-16T12:46:49Z",
+                "completed_at": "2025-09-16T12:46:49Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466229",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219681",
         "labels": [
             "ubuntu-24.04"
         ],
-        "runner_id": 1000005040,
-        "runner_name": "GitHub Actions 1000005040",
+        "runner_id": 1000005083,
+        "runner_name": "GitHub Actions 1000005083",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466278,
-        "run_id": 17765655601,
+        "id": 50490219725,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbZg",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466278",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466278",
+        "node_id": "CR_kwDODClGW88AAAALwXOczQ",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219725",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219725",
         "status": "completed",
         "conclusion": "failure",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:27:25Z",
-        "completed_at": "2025-09-16T12:28:00Z",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:47:10Z",
+        "completed_at": "2025-09-16T12:47:49Z",
         "name": "OpenEXR ios-nocodesign-17-5-arm64-cxx17 macos-15",
         "steps": [
             {
@@ -602,115 +602,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:27:26Z",
-                "completed_at": "2025-09-16T12:27:28Z"
+                "started_at": "2025-09-16T12:47:11Z",
+                "completed_at": "2025-09-16T12:47:13Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:27:28Z",
-                "completed_at": "2025-09-16T12:27:35Z"
+                "started_at": "2025-09-16T12:47:13Z",
+                "completed_at": "2025-09-16T12:47:21Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:27:35Z",
-                "completed_at": "2025-09-16T12:27:36Z"
+                "started_at": "2025-09-16T12:47:21Z",
+                "completed_at": "2025-09-16T12:47:22Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:27:36Z",
-                "completed_at": "2025-09-16T12:27:36Z"
+                "started_at": "2025-09-16T12:47:22Z",
+                "completed_at": "2025-09-16T12:47:22Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 5,
-                "started_at": "2025-09-16T12:27:36Z",
-                "completed_at": "2025-09-16T12:27:36Z"
+                "started_at": "2025-09-16T12:47:22Z",
+                "completed_at": "2025-09-16T12:47:22Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 6,
-                "started_at": "2025-09-16T12:27:36Z",
-                "completed_at": "2025-09-16T12:27:36Z"
+                "started_at": "2025-09-16T12:47:22Z",
+                "completed_at": "2025-09-16T12:47:22Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
                 "conclusion": "failure",
                 "number": 7,
-                "started_at": "2025-09-16T12:27:36Z",
-                "completed_at": "2025-09-16T12:27:57Z"
+                "started_at": "2025-09-16T12:47:22Z",
+                "completed_at": "2025-09-16T12:47:45Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 8,
-                "started_at": "2025-09-16T12:27:57Z",
-                "completed_at": "2025-09-16T12:27:57Z"
+                "started_at": "2025-09-16T12:47:45Z",
+                "completed_at": "2025-09-16T12:47:45Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:27:57Z",
-                "completed_at": "2025-09-16T12:27:57Z"
+                "started_at": "2025-09-16T12:47:45Z",
+                "completed_at": "2025-09-16T12:47:45Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:27:57Z",
-                "completed_at": "2025-09-16T12:27:58Z"
+                "started_at": "2025-09-16T12:47:45Z",
+                "completed_at": "2025-09-16T12:47:46Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:27:58Z",
-                "completed_at": "2025-09-16T12:27:58Z"
+                "started_at": "2025-09-16T12:47:46Z",
+                "completed_at": "2025-09-16T12:47:47Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466278",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219725",
         "labels": [
             "macos-15"
         ],
-        "runner_id": 1000005048,
-        "runner_name": "GitHub Actions 1000005048",
+        "runner_id": 1000005088,
+        "runner_name": "GitHub Actions 1000005088",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466254,
-        "run_id": 17765655601,
+        "id": 50490219728,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbTg",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466254",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466254",
+        "node_id": "CR_kwDODClGW88AAAALwXOc0A",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219728",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219728",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:26:28Z",
-        "completed_at": "2025-09-16T12:29:13Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:47:24Z",
+        "completed_at": "2025-09-16T12:49:37Z",
         "name": "OpenEXR mingw-cxx17 windows-2022",
         "steps": [
             {
@@ -718,115 +718,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:26:29Z",
-                "completed_at": "2025-09-16T12:26:31Z"
+                "started_at": "2025-09-16T12:47:25Z",
+                "completed_at": "2025-09-16T12:47:27Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:26:31Z",
-                "completed_at": "2025-09-16T12:26:42Z"
+                "started_at": "2025-09-16T12:47:27Z",
+                "completed_at": "2025-09-16T12:47:39Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:26:42Z",
-                "completed_at": "2025-09-16T12:26:43Z"
+                "started_at": "2025-09-16T12:47:39Z",
+                "completed_at": "2025-09-16T12:47:40Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:26:43Z",
-                "completed_at": "2025-09-16T12:26:43Z"
+                "started_at": "2025-09-16T12:47:40Z",
+                "completed_at": "2025-09-16T12:47:41Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 5,
-                "started_at": "2025-09-16T12:26:43Z",
-                "completed_at": "2025-09-16T12:26:43Z"
+                "started_at": "2025-09-16T12:47:41Z",
+                "completed_at": "2025-09-16T12:47:41Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 6,
-                "started_at": "2025-09-16T12:26:43Z",
-                "completed_at": "2025-09-16T12:26:51Z"
+                "started_at": "2025-09-16T12:47:41Z",
+                "completed_at": "2025-09-16T12:47:49Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 7,
-                "started_at": "2025-09-16T12:26:51Z",
-                "completed_at": "2025-09-16T12:26:51Z"
+                "started_at": "2025-09-16T12:47:49Z",
+                "completed_at": "2025-09-16T12:47:49Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 8,
-                "started_at": "2025-09-16T12:26:51Z",
-                "completed_at": "2025-09-16T12:29:10Z"
+                "started_at": "2025-09-16T12:47:49Z",
+                "completed_at": "2025-09-16T12:49:34Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:29:10Z",
-                "completed_at": "2025-09-16T12:29:10Z"
+                "started_at": "2025-09-16T12:49:34Z",
+                "completed_at": "2025-09-16T12:49:34Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:29:10Z",
-                "completed_at": "2025-09-16T12:29:12Z"
+                "started_at": "2025-09-16T12:49:34Z",
+                "completed_at": "2025-09-16T12:49:35Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:29:12Z",
-                "completed_at": "2025-09-16T12:29:12Z"
+                "started_at": "2025-09-16T12:49:35Z",
+                "completed_at": "2025-09-16T12:49:36Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466254",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219728",
         "labels": [
             "windows-2022"
         ],
-        "runner_id": 1000005044,
-        "runner_name": "GitHub Actions 1000005044",
+        "runner_id": 1000005089,
+        "runner_name": "GitHub Actions 1000005089",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466313,
-        "run_id": 17765655601,
+        "id": 50490219723,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbiQ",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466313",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466313",
+        "node_id": "CR_kwDODClGW88AAAALwXOcyw",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219723",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219723",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:27:58Z",
-        "completed_at": "2025-09-16T12:30:48Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:46:30Z",
+        "completed_at": "2025-09-16T12:48:17Z",
         "name": "OpenEXR msys-cxx17 windows-2022",
         "steps": [
             {
@@ -834,115 +834,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:27:58Z",
-                "completed_at": "2025-09-16T12:27:59Z"
+                "started_at": "2025-09-16T12:46:32Z",
+                "completed_at": "2025-09-16T12:46:33Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:27:59Z",
-                "completed_at": "2025-09-16T12:28:10Z"
+                "started_at": "2025-09-16T12:46:33Z",
+                "completed_at": "2025-09-16T12:46:47Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:28:10Z",
-                "completed_at": "2025-09-16T12:28:11Z"
+                "started_at": "2025-09-16T12:46:47Z",
+                "completed_at": "2025-09-16T12:46:48Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:28:11Z",
-                "completed_at": "2025-09-16T12:28:11Z"
+                "started_at": "2025-09-16T12:46:48Z",
+                "completed_at": "2025-09-16T12:46:48Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 5,
-                "started_at": "2025-09-16T12:28:11Z",
-                "completed_at": "2025-09-16T12:28:11Z"
+                "started_at": "2025-09-16T12:46:48Z",
+                "completed_at": "2025-09-16T12:46:48Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 6,
-                "started_at": "2025-09-16T12:28:11Z",
-                "completed_at": "2025-09-16T12:28:21Z"
+                "started_at": "2025-09-16T12:46:48Z",
+                "completed_at": "2025-09-16T12:47:00Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 7,
-                "started_at": "2025-09-16T12:28:21Z",
-                "completed_at": "2025-09-16T12:28:21Z"
+                "started_at": "2025-09-16T12:47:00Z",
+                "completed_at": "2025-09-16T12:47:00Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 8,
-                "started_at": "2025-09-16T12:28:21Z",
-                "completed_at": "2025-09-16T12:30:45Z"
+                "started_at": "2025-09-16T12:47:00Z",
+                "completed_at": "2025-09-16T12:48:14Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:30:45Z",
-                "completed_at": "2025-09-16T12:30:45Z"
+                "started_at": "2025-09-16T12:48:14Z",
+                "completed_at": "2025-09-16T12:48:14Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:30:45Z",
-                "completed_at": "2025-09-16T12:30:47Z"
+                "started_at": "2025-09-16T12:48:14Z",
+                "completed_at": "2025-09-16T12:48:15Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:30:47Z",
-                "completed_at": "2025-09-16T12:30:47Z"
+                "started_at": "2025-09-16T12:48:15Z",
+                "completed_at": "2025-09-16T12:48:15Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466313",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219723",
         "labels": [
             "windows-2022"
         ],
-        "runner_id": 1000005053,
-        "runner_name": "GitHub Actions 1000005053",
+        "runner_id": 1000005079,
+        "runner_name": "GitHub Actions 1000005079",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466226,
-        "run_id": 17765655601,
+        "id": 50490219726,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbMg",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466226",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466226",
+        "node_id": "CR_kwDODClGW88AAAALwXOczg",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219726",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219726",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:26:22Z",
-        "completed_at": "2025-09-16T12:29:32Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:46:30Z",
+        "completed_at": "2025-09-16T12:47:55Z",
         "name": "OpenEXR ninja-vs-17-2022-win64-cxx17 windows-2022",
         "steps": [
             {
@@ -950,115 +950,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:26:23Z",
-                "completed_at": "2025-09-16T12:26:24Z"
+                "started_at": "2025-09-16T12:46:32Z",
+                "completed_at": "2025-09-16T12:46:33Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:26:24Z",
-                "completed_at": "2025-09-16T12:26:36Z"
+                "started_at": "2025-09-16T12:46:33Z",
+                "completed_at": "2025-09-16T12:46:48Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:26:36Z",
-                "completed_at": "2025-09-16T12:26:37Z"
+                "started_at": "2025-09-16T12:46:48Z",
+                "completed_at": "2025-09-16T12:46:49Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:26:37Z",
-                "completed_at": "2025-09-16T12:26:37Z"
+                "started_at": "2025-09-16T12:46:49Z",
+                "completed_at": "2025-09-16T12:46:49Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 5,
-                "started_at": "2025-09-16T12:26:37Z",
-                "completed_at": "2025-09-16T12:26:37Z"
+                "started_at": "2025-09-16T12:46:49Z",
+                "completed_at": "2025-09-16T12:46:49Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 6,
-                "started_at": "2025-09-16T12:26:37Z",
-                "completed_at": "2025-09-16T12:26:49Z"
+                "started_at": "2025-09-16T12:46:49Z",
+                "completed_at": "2025-09-16T12:46:57Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 7,
-                "started_at": "2025-09-16T12:26:49Z",
-                "completed_at": "2025-09-16T12:26:49Z"
+                "started_at": "2025-09-16T12:46:57Z",
+                "completed_at": "2025-09-16T12:46:57Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 8,
-                "started_at": "2025-09-16T12:26:49Z",
-                "completed_at": "2025-09-16T12:29:29Z"
+                "started_at": "2025-09-16T12:46:57Z",
+                "completed_at": "2025-09-16T12:47:52Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:29:29Z",
-                "completed_at": "2025-09-16T12:29:29Z"
+                "started_at": "2025-09-16T12:47:52Z",
+                "completed_at": "2025-09-16T12:47:52Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:29:29Z",
-                "completed_at": "2025-09-16T12:29:30Z"
+                "started_at": "2025-09-16T12:47:52Z",
+                "completed_at": "2025-09-16T12:47:53Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:29:30Z",
-                "completed_at": "2025-09-16T12:29:30Z"
+                "started_at": "2025-09-16T12:47:53Z",
+                "completed_at": "2025-09-16T12:47:54Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466226",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219726",
         "labels": [
             "windows-2022"
         ],
-        "runner_id": 1000005043,
-        "runner_name": "GitHub Actions 1000005043",
+        "runner_id": 1000005080,
+        "runner_name": "GitHub Actions 1000005080",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466259,
-        "run_id": 17765655601,
+        "id": 50490219776,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbUw",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466259",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466259",
+        "node_id": "CR_kwDODClGW88AAAALwXOdAA",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219776",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219776",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:27:52Z",
-        "completed_at": "2025-09-16T12:30:59Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:47:38Z",
+        "completed_at": "2025-09-16T12:49:08Z",
         "name": "OpenEXR nmake-vs-17-2022-win64-cxx17 windows-2022",
         "steps": [
             {
@@ -1066,115 +1066,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:27:53Z",
-                "completed_at": "2025-09-16T12:27:55Z"
+                "started_at": "2025-09-16T12:47:39Z",
+                "completed_at": "2025-09-16T12:47:40Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:27:55Z",
-                "completed_at": "2025-09-16T12:28:10Z"
+                "started_at": "2025-09-16T12:47:41Z",
+                "completed_at": "2025-09-16T12:47:52Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:28:10Z",
-                "completed_at": "2025-09-16T12:28:11Z"
+                "started_at": "2025-09-16T12:47:52Z",
+                "completed_at": "2025-09-16T12:47:53Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:28:11Z",
-                "completed_at": "2025-09-16T12:28:11Z"
+                "started_at": "2025-09-16T12:47:53Z",
+                "completed_at": "2025-09-16T12:47:53Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 5,
-                "started_at": "2025-09-16T12:28:11Z",
-                "completed_at": "2025-09-16T12:28:11Z"
+                "started_at": "2025-09-16T12:47:53Z",
+                "completed_at": "2025-09-16T12:47:53Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 6,
-                "started_at": "2025-09-16T12:28:11Z",
-                "completed_at": "2025-09-16T12:28:21Z"
+                "started_at": "2025-09-16T12:47:53Z",
+                "completed_at": "2025-09-16T12:48:02Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 7,
-                "started_at": "2025-09-16T12:28:21Z",
-                "completed_at": "2025-09-16T12:28:21Z"
+                "started_at": "2025-09-16T12:48:02Z",
+                "completed_at": "2025-09-16T12:48:02Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 8,
-                "started_at": "2025-09-16T12:28:21Z",
-                "completed_at": "2025-09-16T12:30:55Z"
+                "started_at": "2025-09-16T12:48:02Z",
+                "completed_at": "2025-09-16T12:49:04Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:30:55Z",
-                "completed_at": "2025-09-16T12:30:55Z"
+                "started_at": "2025-09-16T12:49:04Z",
+                "completed_at": "2025-09-16T12:49:04Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:30:55Z",
-                "completed_at": "2025-09-16T12:30:57Z"
+                "started_at": "2025-09-16T12:49:04Z",
+                "completed_at": "2025-09-16T12:49:06Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:30:57Z",
-                "completed_at": "2025-09-16T12:30:57Z"
+                "started_at": "2025-09-16T12:49:06Z",
+                "completed_at": "2025-09-16T12:49:06Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466259",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219776",
         "labels": [
             "windows-2022"
         ],
-        "runner_id": 1000005051,
-        "runner_name": "GitHub Actions 1000005051",
+        "runner_id": 1000005090,
+        "runner_name": "GitHub Actions 1000005090",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466221,
-        "run_id": 17765655601,
+        "id": 50490219686,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbLQ",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466221",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466221",
+        "node_id": "CR_kwDODClGW88AAAALwXOcpg",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219686",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219686",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:26:46Z",
-        "completed_at": "2025-09-16T12:28:39Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:46:34Z",
+        "completed_at": "2025-09-16T12:47:04Z",
         "name": "OpenEXR osx-15-4-arch-universal2-cxx17 macos-15",
         "steps": [
             {
@@ -1182,115 +1182,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:26:46Z",
-                "completed_at": "2025-09-16T12:26:48Z"
+                "started_at": "2025-09-16T12:46:34Z",
+                "completed_at": "2025-09-16T12:46:36Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:26:48Z",
-                "completed_at": "2025-09-16T12:26:54Z"
+                "started_at": "2025-09-16T12:46:36Z",
+                "completed_at": "2025-09-16T12:46:42Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:26:54Z",
-                "completed_at": "2025-09-16T12:26:55Z"
+                "started_at": "2025-09-16T12:46:42Z",
+                "completed_at": "2025-09-16T12:46:43Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:26:55Z",
-                "completed_at": "2025-09-16T12:26:55Z"
+                "started_at": "2025-09-16T12:46:43Z",
+                "completed_at": "2025-09-16T12:46:43Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 5,
-                "started_at": "2025-09-16T12:26:55Z",
-                "completed_at": "2025-09-16T12:26:55Z"
+                "started_at": "2025-09-16T12:46:43Z",
+                "completed_at": "2025-09-16T12:46:43Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 6,
-                "started_at": "2025-09-16T12:26:55Z",
-                "completed_at": "2025-09-16T12:26:55Z"
+                "started_at": "2025-09-16T12:46:43Z",
+                "completed_at": "2025-09-16T12:46:43Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 7,
-                "started_at": "2025-09-16T12:26:55Z",
-                "completed_at": "2025-09-16T12:28:34Z"
+                "started_at": "2025-09-16T12:46:43Z",
+                "completed_at": "2025-09-16T12:47:00Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 8,
-                "started_at": "2025-09-16T12:28:34Z",
-                "completed_at": "2025-09-16T12:28:34Z"
+                "started_at": "2025-09-16T12:47:00Z",
+                "completed_at": "2025-09-16T12:47:00Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:28:34Z",
-                "completed_at": "2025-09-16T12:28:35Z"
+                "started_at": "2025-09-16T12:47:00Z",
+                "completed_at": "2025-09-16T12:47:00Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:28:35Z",
-                "completed_at": "2025-09-16T12:28:35Z"
+                "started_at": "2025-09-16T12:47:00Z",
+                "completed_at": "2025-09-16T12:47:01Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:28:35Z",
-                "completed_at": "2025-09-16T12:28:36Z"
+                "started_at": "2025-09-16T12:47:01Z",
+                "completed_at": "2025-09-16T12:47:02Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466221",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219686",
         "labels": [
             "macos-15"
         ],
-        "runner_id": 1000005045,
-        "runner_name": "GitHub Actions 1000005045",
+        "runner_id": 1000005084,
+        "runner_name": "GitHub Actions 1000005084",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466256,
-        "run_id": 17765655601,
+        "id": 50490219768,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbUA",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466256",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466256",
+        "node_id": "CR_kwDODClGW88AAAALwXOc-A",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219768",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219768",
         "status": "completed",
-        "conclusion": "success",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:26:15Z",
-        "completed_at": "2025-09-16T12:29:21Z",
+        "conclusion": "failure",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:46:29Z",
+        "completed_at": "2025-09-16T12:48:45Z",
         "name": "OpenEXR vs-17-2022-win64-sdk-10-0-22000-0-cxx17 windows-2022",
         "steps": [
             {
@@ -1298,115 +1298,115 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:26:16Z",
-                "completed_at": "2025-09-16T12:26:17Z"
+                "started_at": "2025-09-16T12:46:30Z",
+                "completed_at": "2025-09-16T12:46:32Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:26:17Z",
-                "completed_at": "2025-09-16T12:26:29Z"
+                "started_at": "2025-09-16T12:46:32Z",
+                "completed_at": "2025-09-16T12:46:41Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:26:29Z",
-                "completed_at": "2025-09-16T12:26:30Z"
+                "started_at": "2025-09-16T12:46:41Z",
+                "completed_at": "2025-09-16T12:46:42Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:26:30Z",
-                "completed_at": "2025-09-16T12:26:30Z"
+                "started_at": "2025-09-16T12:46:42Z",
+                "completed_at": "2025-09-16T12:46:42Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 5,
-                "started_at": "2025-09-16T12:26:30Z",
-                "completed_at": "2025-09-16T12:26:30Z"
+                "started_at": "2025-09-16T12:46:42Z",
+                "completed_at": "2025-09-16T12:46:42Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 6,
-                "started_at": "2025-09-16T12:26:30Z",
-                "completed_at": "2025-09-16T12:26:43Z"
+                "started_at": "2025-09-16T12:46:42Z",
+                "completed_at": "2025-09-16T12:46:48Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 7,
-                "started_at": "2025-09-16T12:26:43Z",
-                "completed_at": "2025-09-16T12:26:43Z"
+                "started_at": "2025-09-16T12:46:48Z",
+                "completed_at": "2025-09-16T12:46:48Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "failure",
                 "number": 8,
-                "started_at": "2025-09-16T12:26:43Z",
-                "completed_at": "2025-09-16T12:29:18Z"
+                "started_at": "2025-09-16T12:46:48Z",
+                "completed_at": "2025-09-16T12:48:42Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
-                "conclusion": "success",
+                "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:29:18Z",
-                "completed_at": "2025-09-16T12:29:18Z"
+                "started_at": "2025-09-16T12:48:42Z",
+                "completed_at": "2025-09-16T12:48:42Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:29:18Z",
-                "completed_at": "2025-09-16T12:29:20Z"
+                "started_at": "2025-09-16T12:48:42Z",
+                "completed_at": "2025-09-16T12:48:43Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:29:20Z",
-                "completed_at": "2025-09-16T12:29:20Z"
+                "started_at": "2025-09-16T12:48:43Z",
+                "completed_at": "2025-09-16T12:48:44Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466256",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219768",
         "labels": [
             "windows-2022"
         ],
-        "runner_id": 1000005042,
-        "runner_name": "GitHub Actions 1000005042",
+        "runner_id": 1000005081,
+        "runner_name": "GitHub Actions 1000005081",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     },
     {
-        "id": 50488466264,
-        "run_id": 17765655601,
+        "id": 50490219718,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "OpenEXR_3.4.0",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765655601",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwVjbWA",
-        "head_sha": "462110e15ff3e7bac26c38a2a4cb4b754611ea21",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50488466264",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765655601/job/50488466264",
+        "node_id": "CR_kwDODClGW88AAAALwXOcxg",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490219718",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490219718",
         "status": "completed",
         "conclusion": "failure",
-        "created_at": "2025-09-16T12:26:07Z",
-        "started_at": "2025-09-16T12:26:48Z",
-        "completed_at": "2025-09-16T12:28:22Z",
+        "created_at": "2025-09-16T12:46:27Z",
+        "started_at": "2025-09-16T12:46:30Z",
+        "completed_at": "2025-09-16T12:49:05Z",
         "name": "OpenEXR vs-17-2022-win64-store-10-cxx17 windows-2022",
         "steps": [
             {
@@ -1414,96 +1414,96 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:26:49Z",
-                "completed_at": "2025-09-16T12:26:51Z"
+                "started_at": "2025-09-16T12:46:31Z",
+                "completed_at": "2025-09-16T12:46:33Z"
             },
             {
                 "name": "Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:26:51Z",
-                "completed_at": "2025-09-16T12:27:03Z"
+                "started_at": "2025-09-16T12:46:33Z",
+                "completed_at": "2025-09-16T12:46:46Z"
             },
             {
                 "name": "Download all workflow run artifacts",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 3,
-                "started_at": "2025-09-16T12:27:03Z",
-                "completed_at": "2025-09-16T12:27:04Z"
+                "started_at": "2025-09-16T12:46:46Z",
+                "completed_at": "2025-09-16T12:46:47Z"
             },
             {
                 "name": "Set up Python",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:27:04Z",
-                "completed_at": "2025-09-16T12:27:04Z"
+                "started_at": "2025-09-16T12:46:47Z",
+                "completed_at": "2025-09-16T12:46:47Z"
             },
             {
                 "name": "Set up Python environment variable (Unix)",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 5,
-                "started_at": "2025-09-16T12:27:04Z",
-                "completed_at": "2025-09-16T12:27:04Z"
+                "started_at": "2025-09-16T12:46:47Z",
+                "completed_at": "2025-09-16T12:46:47Z"
             },
             {
                 "name": "Set up Python environment variable (Windows)",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 6,
-                "started_at": "2025-09-16T12:27:04Z",
-                "completed_at": "2025-09-16T12:27:12Z"
+                "started_at": "2025-09-16T12:46:47Z",
+                "completed_at": "2025-09-16T12:46:55Z"
             },
             {
                 "name": "Build on Unix",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 7,
-                "started_at": "2025-09-16T12:27:12Z",
-                "completed_at": "2025-09-16T12:27:12Z"
+                "started_at": "2025-09-16T12:46:55Z",
+                "completed_at": "2025-09-16T12:46:55Z"
             },
             {
                 "name": "Build on Windows",
                 "status": "completed",
                 "conclusion": "failure",
                 "number": 8,
-                "started_at": "2025-09-16T12:27:12Z",
-                "completed_at": "2025-09-16T12:28:18Z"
+                "started_at": "2025-09-16T12:46:55Z",
+                "completed_at": "2025-09-16T12:49:02Z"
             },
             {
                 "name": "Post Set up Python",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 15,
-                "started_at": "2025-09-16T12:28:18Z",
-                "completed_at": "2025-09-16T12:28:18Z"
+                "started_at": "2025-09-16T12:49:02Z",
+                "completed_at": "2025-09-16T12:49:02Z"
             },
             {
                 "name": "Post Git checkout with submodules",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 16,
-                "started_at": "2025-09-16T12:28:18Z",
-                "completed_at": "2025-09-16T12:28:20Z"
+                "started_at": "2025-09-16T12:49:02Z",
+                "completed_at": "2025-09-16T12:49:04Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 17,
-                "started_at": "2025-09-16T12:28:20Z",
-                "completed_at": "2025-09-16T12:28:20Z"
+                "started_at": "2025-09-16T12:49:04Z",
+                "completed_at": "2025-09-16T12:49:04Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50488466264",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490219718",
         "labels": [
             "windows-2022"
         ],
-        "runner_id": 1000005046,
-        "runner_name": "GitHub Actions 1000005046",
+        "runner_id": 1000005078,
+        "runner_name": "GitHub Actions 1000005078",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     }

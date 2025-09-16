@@ -1,20 +1,20 @@
 [
     {
-        "id": 50487091890,
-        "run_id": 17765278777,
+        "id": 50490204870,
+        "run_id": 17766232620,
         "workflow_name": "CI",
-        "head_branch": "wip_openssl_rebuild",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17765278777",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/17766232620",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAALwUPisg",
-        "head_sha": "a378dc39e873afc1ce7b7b6e1ddb505394d66e79",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50487091890",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17765278777/job/50487091890",
+        "node_id": "CR_kwDODClGW88AAAALwXNixg",
+        "head_sha": "35bfc5701d73d70166b45770912677085c39e78d",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/50490204870",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/17766232620/job/50490204870",
         "status": "completed",
         "conclusion": "success",
-        "created_at": "2025-09-16T12:10:23Z",
-        "started_at": "2025-09-16T12:14:01Z",
-        "completed_at": "2025-09-16T12:14:09Z",
+        "created_at": "2025-09-16T12:46:17Z",
+        "started_at": "2025-09-16T12:46:19Z",
+        "completed_at": "2025-09-16T12:46:27Z",
         "name": "set_matrix",
         "steps": [
             {
@@ -22,72 +22,72 @@
                 "status": "completed",
                 "conclusion": "success",
                 "number": 1,
-                "started_at": "2025-09-16T12:14:02Z",
-                "completed_at": "2025-09-16T12:14:04Z"
+                "started_at": "2025-09-16T12:46:20Z",
+                "completed_at": "2025-09-16T12:46:22Z"
             },
             {
                 "name": "Git checkout",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 2,
-                "started_at": "2025-09-16T12:14:04Z",
-                "completed_at": "2025-09-16T12:14:05Z"
+                "started_at": "2025-09-16T12:46:22Z",
+                "completed_at": "2025-09-16T12:46:23Z"
             },
             {
                 "name": "Manual dispatch, get project name from input",
                 "status": "completed",
                 "conclusion": "skipped",
                 "number": 3,
-                "started_at": "2025-09-16T12:14:05Z",
-                "completed_at": "2025-09-16T12:14:05Z"
+                "started_at": "2025-09-16T12:46:23Z",
+                "completed_at": "2025-09-16T12:46:23Z"
             },
             {
                 "name": "Get changed files and save them to ${HOME}/files.json",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 4,
-                "started_at": "2025-09-16T12:14:05Z",
-                "completed_at": "2025-09-16T12:14:05Z"
+                "started_at": "2025-09-16T12:46:23Z",
+                "completed_at": "2025-09-16T12:46:24Z"
             },
             {
                 "name": "Set matrix for subsequent build",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 5,
-                "started_at": "2025-09-16T12:14:05Z",
-                "completed_at": "2025-09-16T12:14:05Z"
+                "started_at": "2025-09-16T12:46:24Z",
+                "completed_at": "2025-09-16T12:46:24Z"
             },
             {
                 "name": "Run actions/upload-artifact@v4",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 6,
-                "started_at": "2025-09-16T12:14:05Z",
-                "completed_at": "2025-09-16T12:14:06Z"
+                "started_at": "2025-09-16T12:46:24Z",
+                "completed_at": "2025-09-16T12:46:25Z"
             },
             {
                 "name": "Post Git checkout",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 12,
-                "started_at": "2025-09-16T12:14:06Z",
-                "completed_at": "2025-09-16T12:14:07Z"
+                "started_at": "2025-09-16T12:46:25Z",
+                "completed_at": "2025-09-16T12:46:25Z"
             },
             {
                 "name": "Complete job",
                 "status": "completed",
                 "conclusion": "success",
                 "number": 13,
-                "started_at": "2025-09-16T12:14:07Z",
-                "completed_at": "2025-09-16T12:14:07Z"
+                "started_at": "2025-09-16T12:46:25Z",
+                "completed_at": "2025-09-16T12:46:25Z"
             }
         ],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50487091890",
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/50490204870",
         "labels": [
             "ubuntu-latest"
         ],
-        "runner_id": 1000004931,
-        "runner_name": "GitHub Actions 1000004931",
+        "runner_id": 1000005077,
+        "runner_name": "GitHub Actions 1000005077",
         "runner_group_id": 0,
         "runner_group_name": "GitHub Actions"
     }
