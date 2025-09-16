@@ -24,6 +24,7 @@ hunter_add_version(
     a1c036469148b5c9e2d29861612a7cbb2ed75a9d
 )
 
+
 hunter_add_version(
     PACKAGE_NAME
     OpenCV
