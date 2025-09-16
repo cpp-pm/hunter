@@ -76,14 +76,38 @@ hunter_add_version(
     9c287054f1b2c0bb258c1a2832bad505f37fe30b
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    OpenEXR
+    VERSION
+    3.4.0-p0
+    URL
+    "https://github.com/cpp-pm/openexr/archive/refs/tags/v3.4.0-p0.tar.gz"
+    SHA1
+    b95c1ed9408c9fd2b373fcaac7ce3b524ca51d1e
+)
+
 hunter_cmake_args(
     OpenEXR
     CMAKE_ARGS
         BUILD_TESTING=OFF
+        # old < 3.1.5 flags
         INSTALL_OPENEXR_DOCS=OFF
         INSTALL_OPENEXR_EXAMPLES=OFF
         OPENEXR_BUILD_UTILS=OFF
         OPENEXR_INSTALL_EXAMPLES=OFF
+        # 3.4.0 flags
+        OPENEXR_BUILD_EXAMPLES=OFF
+        OPENEXR_BUILD_PYTHON=OFF
+        OPENEXR_BUILD_TOOLS=OFF
+        OPENEXR_FORCE_INTERNAL_DEFLATE=OFF
+        OPENEXR_FORCE_INTERNAL_IMATH=OFF
+        OPENEXR_FORCE_INTERNAL_OPENJPH=OFF
+        OPENEXR_INSTALL_DOCS=OFF
+        OPENEXR_INSTALL_TOOLS=OFF
+        OPENEXR_TEST_LIBRARIES=OFF
+        OPENEXR_TEST_PYTHON=OFF
+        OPENEXR_TEST_TOOLS=OFF
 )
 
 if(HUNTER_OpenEXR_VERSION VERSION_LESS 3.0.0)
