@@ -53,6 +53,17 @@ hunter_add_version(
     afc0f2d2a5e4630da6be4148c3cf67d9936b7302
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    Imath
+    VERSION
+    3.2.1
+    URL
+    "https://github.com/AcademySoftwareFoundation/Imath/archive/refs/tags/v3.2.1.tar.gz"
+    SHA1
+    afc0f2d2a5e4630da6be4148c3cf67d9936b7302
+)
+
 hunter_cmake_args(
     Imath
     CMAKE_ARGS
