@@ -32,8 +32,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#include <unistd.h>
-
 #include "tiffio.h"
 
 static const char filename[] = "ascii_test.tiff";
@@ -158,7 +156,7 @@ main()
   TIFFClose(tif);
 
   /* All tests passed; delete file and exit with success status. */
-  unlink(filename);
+  remove(filename);
   return 0;
 
 failure:
