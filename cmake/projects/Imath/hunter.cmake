@@ -61,7 +61,7 @@ hunter_add_version(
     URL
     "https://github.com/AcademySoftwareFoundation/Imath/archive/refs/tags/v3.2.1.tar.gz"
     SHA1
-    afc0f2d2a5e4630da6be4148c3cf67d9936b7302
+    07ed91019762d83b92d6e9a6a996fe8d7857405e
 )
 
 hunter_cmake_args(
