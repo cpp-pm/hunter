@@ -102,6 +102,7 @@ hunter_cmake_args(
     jbig=OFF # not implemented in 4.7.0-p0
     lerc=OFF # not implemented in 4.7.0-p0
     lzma=OFF # available since 4.7.0-p0
+    zstd=OFF # not implemented in 4.7.0-p0
     webp=OFF # not implemented in 4.7.0-p0
 )
 
