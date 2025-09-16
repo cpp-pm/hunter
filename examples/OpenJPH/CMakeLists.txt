@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2020, Rahul Sheth, Ruslan Baratov
+# Copyright (c) 2025, NeroBurner
 # All rights reserved.
 
 cmake_minimum_required(VERSION 3.10)

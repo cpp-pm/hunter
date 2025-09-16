@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2020, Rahul Sheth, Ruslan Baratov
+# Copyright (c) 2025, NeroBurner
 # All rights reserved.
 
 # !!! DO NOT PLACE HEADER GUARDS HERE !!!
