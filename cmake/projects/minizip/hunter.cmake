@@ -13,6 +13,17 @@ hunter_add_version(
     PACKAGE_NAME
     minizip
     VERSION
+    "1.0.1-p4"
+    URL
+    "https://github.com/cpp-pm/minizip/archive/refs/tags/v1.0.1-p4.tar.gz"
+    SHA1
+    2d63b244e4566b3f962d82d4d6d564796e0d314d
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    minizip
+    VERSION
     "1.0.1-p3"
     URL
     "https://github.com/hunter-packages/minizip/archive/v1.0.1-p3.tar.gz"
