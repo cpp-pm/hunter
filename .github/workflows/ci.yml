@@ -124,7 +124,7 @@ jobs:
       run: echo "HUNTER_PYTHON_LOCATION=$env:pythonLocation" | Out-File -Append -FilePath $env:GITHUB_ENV -Encoding utf8
 
     - name: Install requests python module for upload script
-      run: python -m pip install requests
+      run: python -m pip install requests gitpython
 
     - name: Build on Unix
       if: runner.os != 'Windows'
