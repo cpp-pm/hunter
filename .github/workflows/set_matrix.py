@@ -75,7 +75,9 @@ def create_toolchain(
         out += f"""\
 set(CMAKE_SYSTEM_NAME "Android")
 set(CMAKE_SYSTEM_VERSION "{android_api}") # API level
+set(ANDROID_PLATFORM "android-{android_api}") # API level
 set(CMAKE_ANDROID_ARCH_ABI "{android_arch_abi}")
+set(ANDROID_ABI "{android_arch_abi}")
 set(CMAKE_ANDROID_NDK "$ENV{{ANDROID_NDK}}") # provided by GitHub
 
 string(COMPARE EQUAL "${{CMAKE_ANDROID_NDK}}" "" _is_empty)
@@ -95,6 +97,7 @@ add_definitions("-DANDROID")
         # for android if we have libcxx in toolchain assume static runtime
         out += f"""\
 set(CMAKE_ANDROID_STL_TYPE "c++_static") # LLVM libc++ static
+set(ANDROID_STL "c++_static")
 """
 
     m = re.match(r"^osx-(\d+)-(\d+)", parsed_toolchain)
