@@ -32,7 +32,7 @@ hunter_add_version(
     886897af5b36a5d3179e31cf2c1f2d83170eae52
     )
 
-    hunter_add_version(
+hunter_add_version(
     PACKAGE_NAME
     giflib
     VERSION
@@ -41,7 +41,18 @@ hunter_add_version(
     "https://github.com/cpp-pm/giflib/archive/v5.2.1-p0.tar.gz"
     SHA1
     360566a40499f8e1149a0d94bff66dadcf7bdfae
-    )
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    giflib
+    VERSION
+    5.2.2-p0
+    URL
+    "https://github.com/cpp-pm/giflib/archive/v5.2.2-p0.tar.gz"
+    SHA1
+    7bd84de291e67105d490963a9b67d2df436bb123
+)
   
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(giflib)
