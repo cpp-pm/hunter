@@ -497,6 +497,17 @@ hunter_add_version(
     a0c2d5944364fc4f26b6160b33c03082b1fa08c1
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    OpenCV
+    VERSION
+    "4.12.0-p0"
+    URL
+    "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.12.0-p0.tar.gz"
+    SHA1
+    ad56c2f05c31767b1a665e7f69e61bbd2adadec1
+)
+
 if(ANDROID)
   # This feature doesn't work with new CMake 3.7+ toolchains
   set(_android_args ENABLE_PRECOMPILED_HEADERS=OFF)
@@ -552,6 +563,7 @@ hunter_cmake_args(
         WITH_QUIRC=OFF
         WITH_LAPACK=OFF
         WITH_PROTOBUF=OFF
+        WITH_VTK=OFF
 )
 
 # Pick a download scheme
