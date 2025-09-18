@@ -111,6 +111,17 @@ hunter_add_version(
     PACKAGE_NAME
     ZLIB
     VERSION
+    "1.3.1-p0"
+    URL
+    "https://github.com/cpp-pm/zlib/archive/refs/tags/v1.3.1-p0.tar.gz"
+    SHA1
+    95a5c97dda575b1487d30760c07330e078ffc3c9
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    ZLIB
+    VERSION
     "0.0.0-chromium-f87c2b10efb4-p0"
     URL
     "https://github.com/hunter-packages/chromium_zlib/archive/v0.0.0-f87c2b10efb4-p0.tar.gz"
