@@ -12,6 +12,20 @@ if("@openssl_dir@" STREQUAL "")
   message(FATAL_ERROR "openssl_dir is empty")
 endif()
 
+if("@MSVC@")
+  # Unset as we are already in a msvc environment 
+  # and the openssl perl script will figure things out.
+  # The created variable content by CMake is unqouted and will cause issues
+  unset(ENV{CC})
+  unset(ENV{CXX})
+  unset(ENV{RC})
+  unset(ENV{AR})
+  unset(ENV{RUNLIB})
+else()
+  set(log_opts "")
+endif()
+
+
 execute_process(COMMAND
   perl Configure @arch@ @opt@ @shared@ "--prefix=@openssl_install_dir@" "--libdir=lib" "--openssldir=@openssl_dir@" RESULT_VARIABLE result)
 
