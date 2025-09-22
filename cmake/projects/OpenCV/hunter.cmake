@@ -508,6 +508,17 @@ hunter_add_version(
     ad56c2f05c31767b1a665e7f69e61bbd2adadec1
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    OpenCV
+    VERSION
+    "4.12.0-p1"
+    URL
+    "https://github.com/cpp-pm/opencv/archive/refs/tags/v4.12.0-p1.tar.gz"
+    SHA1
+    56d49b1e7742d9059604295d3b0d0b1c305ec1fb
+)
+
 if(ANDROID)
   # This feature doesn't work with new CMake 3.7+ toolchains
   set(_android_args ENABLE_PRECOMPILED_HEADERS=OFF)
