@@ -12,7 +12,6 @@ include(hunter_cacheable)
 
 hunter_cacheable(Eigen)
 
-
 # List of versions here...
 hunter_add_version(
     PACKAGE_NAME
