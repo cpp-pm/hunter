@@ -123,6 +123,12 @@ else()
   else()
     set(_openblas_cflags)
   endif()
+  if(HUNTER_OpenBLAS_VERSION VERSION_LESS_EQUAL 0.3.27)
+    # CMake 4.0+ compatibility with older OpenBLAS packages
+    set(_hunter_openblas_cmake_compatibility_flag "CMAKE_POLICY_VERSION_MINIMUM=3.5")
+  else()
+    set(_hunter_openblas_cmake_compatibility_flag "")
+  endif()
   hunter_cmake_args(
     OpenBLAS
     CMAKE_ARGS
@@ -130,6 +136,7 @@ else()
     NOFORTRAN=1
     BUILD_WITHOUT_LAPACK=${_openblas_BUILD_WITHOUT_LAPACK}
     ${_openblas_cflags}
+    ${_hunter_openblas_cmake_compatibility_flag}
   )
   hunter_pick_scheme(DEFAULT url_sha1_cmake)
   set(_openblas_unrelocatable_text_files "")
