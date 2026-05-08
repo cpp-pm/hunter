@@ -98,6 +98,17 @@ hunter_add_version(
     a2fe037b96c3d7aae64d1a31b3362cfd8e89b8c6
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    OpenBLAS
+    VERSION
+    0.3.33
+    URL
+    "https://github.com/OpenMathLib/OpenBLAS/archive/v0.3.33.tar.gz"
+    SHA1
+    011399a8f27b635f2c6ef817e976a811e4fac636
+)
+
 hunter_configuration_types(OpenBLAS CONFIGURATION_TYPES Release)
 if(HUNTER_OpenBLAS_VERSION VERSION_LESS 0.3.1)
   hunter_pick_scheme(DEFAULT OpenBLAS)
