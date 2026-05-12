@@ -65,10 +65,17 @@ hunter_add_version(
     9125bd674fbe7c8169c8ea6a2a15a414a7dc2f86
 )
 
+if(HUNTER_BZip2_VERSION VERSION_LESS 1.0.9)
+    # CMake 4.0+ compatibility with older BZip2 packages
+    set(_hunter_BZip2_cmake_compatibility_flag "CMAKE_POLICY_VERSION_MINIMUM=3.5")
+else()
+    set(_hunter_BZip2_cmake_compatibility_flag "")
+endif()
 hunter_cmake_args(
     BZip2
     CMAKE_ARGS
     BUILD_TESTING=OFF
+    ${_hunter_BZip2_cmake_compatibility_flag}
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
