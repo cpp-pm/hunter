@@ -53,10 +53,18 @@ hunter_add_version(
     4d42470afb7236fb0cf90f8bbb0cec588073c17c
 )
 
+if(HUNTER_glfags_VERSION VERSION_LESS_EQUAL 2.2.2)
+    # CMake 4.0+ compatibility with older glfags packages
+    set(_hunter_glfags_cmake_compatibility_flag "CMAKE_POLICY_VERSION_MINIMUM=3.5")
+else()
+    set(_hunter_glfags_cmake_compatibility_flag "")
+endif()
+
 hunter_cmake_args(
     gflags
     CMAKE_ARGS
     REGISTER_INSTALL_PREFIX=OFF
+    ${_hunter_glfags_cmake_compatibility_flag}
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
