@@ -30,7 +30,16 @@ hunter_add_version(
     c49b9d07c3240ba624e6471a5e461ecaa2fc7dc2
 )
 
-hunter_cmake_args(termcolor CMAKE_ARGS ENABLE_TESTING=OFF)
+if(HUNTER_termcolor_VERSION VERSION_LESS_EQUAL 1.0.1)
+    # CMake 4.0+ compatibility with older termcolor packages
+    set(_hunter_termcolor_cmake_compatibility_flag "CMAKE_POLICY_VERSION_MINIMUM=3.5")
+else()
+    set(_hunter_termcolor_cmake_compatibility_flag "")
+endif()
+hunter_cmake_args(termcolor CMAKE_ARGS
+    ENABLE_TESTING=OFF
+    ${_hunter_termcolor_cmake_compatibility_flag}
+)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(termcolor)
