@@ -53,7 +53,16 @@ hunter_add_version(
     65728dbf7573d3f1826d04a3b686d80eb099d7b8
 )
 
-hunter_cmake_args(minizip CMAKE_ARGS USE_AES=FALSE)
+if(HUNTER_minizip_VERSION VERSION_LESS 1.0.2)
+    # CMake 4.0+ compatibility with older minizip packages
+    set(_hunter_minizip_cmake_compatibility_flag "CMAKE_POLICY_VERSION_MINIMUM=3.5")
+else()
+    set(_hunter_minizip_cmake_compatibility_flag "")
+endif()
+hunter_cmake_args(minizip CMAKE_ARGS
+    USE_AES=FALSE
+    ${_hunter_minizip_cmake_compatibility_flag}
+)
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(minizip)
