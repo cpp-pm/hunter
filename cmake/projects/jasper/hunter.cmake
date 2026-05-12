@@ -75,6 +75,13 @@ hunter_add_version(
     ef82c0800db4070de0972dde4fe1b6032f2012f2
 )
 
+if(HUNTER_jasper_VERSION VERSION_LESS 2.0.33)
+    # CMake 4.0+ compatibility with older jasper packages
+    set(_hunter_jasper_cmake_compatibility_flag "CMAKE_POLICY_VERSION_MINIMUM=3.5")
+else()
+    set(_hunter_jasper_cmake_compatibility_flag "")
+endif()
+
 hunter_cmake_args(
     jasper
     CMAKE_ARGS
@@ -82,6 +89,7 @@ hunter_cmake_args(
     JAS_ENABLE_OPENGL=OFF
     JAS_ENABLE_PROGRAMS=OFF
     JAS_ENABLE_DOC=OFF
+    ${_hunter_jasper_cmake_compatibility_flag}
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
