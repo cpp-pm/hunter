@@ -5,6 +5,7 @@
 
 include(hunter_add_version)
 include(hunter_cacheable)
+include(hunter_cmake_args)
 include(hunter_download)
 include(hunter_pick_scheme)
 
@@ -106,6 +107,18 @@ hunter_add_version(
     SHA1
     506109ef6fa0c3105be64bcebb5bd9e3fba1a24f
 )
+
+if(HUNTER_ICU_VERSION VERSION_LESS 63.2)
+    # CMake 4.0+ compatibility with older ICU packages
+    set(_hunter_ICU_cmake_compatibility_flag "CMAKE_POLICY_VERSION_MINIMUM=3.5")
+else()
+    set(_hunter_ICU_cmake_compatibility_flag "")
+endif()
+if(NOT _hunter_ICU_cmake_compatibility_flag STREQUAL "")
+    hunter_cmake_args(ICU CMAKE_ARGS
+        ${_hunter_ICU_cmake_compatibility_flag}
+    )
+endif()
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_cacheable(ICU)
