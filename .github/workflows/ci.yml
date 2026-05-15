@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v6
 
       - name: Manual dispatch, get project name from input
         if: github.event_name == 'workflow_dispatch'
@@ -56,7 +56,7 @@ jobs:
     steps:
 
     - name: Git checkout
-      uses: actions/checkout@v4.1.1
+      uses: actions/checkout@v6
 
     - name: Manual dispatch, get project name from input
       if: github.event_name == 'workflow_dispatch'
@@ -103,7 +103,7 @@ jobs:
     steps:
 
     - name: Git checkout with submodules
-      uses: actions/checkout@v4.1.1
+      uses: actions/checkout@v6
       with:
         submodules: true
 
@@ -160,7 +160,7 @@ jobs:
     steps:
 
     - name: Git checkout
-      uses: actions/checkout@v4.1.1
+      uses: actions/checkout@v6
 
     - name: Get job status via GitHub API
       uses: octokit/request-action@v2.x
