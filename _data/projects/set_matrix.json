@@ -1,29 +1,94 @@
 [
     {
-        "id": 76143078440,
-        "run_id": 25907244691,
+        "id": 76189148355,
+        "run_id": 25920845306,
         "workflow_name": "CI",
-        "head_branch": "ICU_cmake4_compatibility",
-        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/25907244691",
+        "head_branch": "master",
+        "run_url": "https://api.github.com/repos/cpp-pm/hunter/actions/runs/25920845306",
         "run_attempt": 1,
-        "node_id": "CR_kwDODClGW88AAAARunssKA",
-        "head_sha": "b971e6f7c1bc836c3639293ca0f0368ba88069d1",
-        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/76143078440",
-        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/25907244691/job/76143078440",
-        "status": "queued",
-        "conclusion": null,
-        "created_at": "2026-05-15T08:02:51Z",
-        "started_at": "2026-05-15T08:02:51Z",
-        "completed_at": null,
+        "node_id": "CR_kwDODClGW88AAAARvTokww",
+        "head_sha": "dba5f7f371f2bbc028df2f34cebe2a6a0cd84940",
+        "url": "https://api.github.com/repos/cpp-pm/hunter/actions/jobs/76189148355",
+        "html_url": "https://github.com/cpp-pm/hunter/actions/runs/25920845306/job/76189148355",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-05-15T13:37:41Z",
+        "started_at": "2026-05-15T13:38:15Z",
+        "completed_at": "2026-05-15T13:38:21Z",
         "name": "set_matrix",
-        "steps": [],
-        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/76143078440",
+        "steps": [
+            {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-05-15T13:38:15Z",
+                "completed_at": "2026-05-15T13:38:16Z"
+            },
+            {
+                "name": "Git checkout",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-05-15T13:38:16Z",
+                "completed_at": "2026-05-15T13:38:18Z"
+            },
+            {
+                "name": "Manual dispatch, get project name from input",
+                "status": "completed",
+                "conclusion": "skipped",
+                "number": 3,
+                "started_at": "2026-05-15T13:38:18Z",
+                "completed_at": "2026-05-15T13:38:18Z"
+            },
+            {
+                "name": "Get changed files and save them to ${HOME}/files.json",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-05-15T13:38:18Z",
+                "completed_at": "2026-05-15T13:38:18Z"
+            },
+            {
+                "name": "Set matrix for subsequent build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-05-15T13:38:18Z",
+                "completed_at": "2026-05-15T13:38:18Z"
+            },
+            {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-05-15T13:38:18Z",
+                "completed_at": "2026-05-15T13:38:19Z"
+            },
+            {
+                "name": "Post Git checkout",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-05-15T13:38:19Z",
+                "completed_at": "2026-05-15T13:38:19Z"
+            },
+            {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-05-15T13:38:19Z",
+                "completed_at": "2026-05-15T13:38:19Z"
+            }
+        ],
+        "check_run_url": "https://api.github.com/repos/cpp-pm/hunter/check-runs/76189148355",
         "labels": [
             "ubuntu-latest"
         ],
-        "runner_id": null,
-        "runner_name": null,
-        "runner_group_id": null,
-        "runner_group_name": null
+        "runner_id": 1000006541,
+        "runner_name": "GitHub Actions 1000006541",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
     }
 ]
