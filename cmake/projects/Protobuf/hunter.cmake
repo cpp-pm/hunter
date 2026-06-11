@@ -182,6 +182,12 @@ hunter_add_version(
     e5b797dbc4e6ad92d0924ae86c130be4354c35b6
 )
 
+if(HUNTER_Protobuf_VERSION VERSION_LESS 3.19.5)
+  # CMake 4.0+ compatibility with older Glog packages
+  set(_hunter_Protobuf_cmake_compatibility_flag "CMAKE_POLICY_VERSION_MINIMUM=3.5")
+else()
+  set(_hunter_Protobuf_cmake_compatibility_flag "")
+endif()
 string(
     COMPARE EQUAL "${CMAKE_SYSTEM_NAME}" "WindowsStore" _hunter_windows_store
 )
@@ -193,6 +199,7 @@ if(ANDROID OR IOS)
         protobuf_BUILD_TESTS=OFF
         protobuf_BUILD_PROTOC=OFF
         protobuf_BUILD_PROTOC_BINARIES=OFF
+        ${_hunter_Protobuf_cmake_compatibility_flag}
   )
 elseif(_hunter_windows_store)
   hunter_cmake_args(
@@ -201,6 +208,7 @@ elseif(_hunter_windows_store)
         protobuf_BUILD_TESTS=OFF
         protobuf_BUILD_PROTOC=OFF
         protobuf_MSVC_STATIC_RUNTIME=OFF # Do not force static runtime
+        ${_hunter_Protobuf_cmake_compatibility_flag}
   )
 elseif(MSVC)
   hunter_cmake_args(
@@ -208,12 +216,14 @@ elseif(MSVC)
       CMAKE_ARGS
         protobuf_BUILD_TESTS=OFF
         protobuf_MSVC_STATIC_RUNTIME=OFF # Do not force static runtime
+        ${_hunter_Protobuf_cmake_compatibility_flag}
   )
 else()
   hunter_cmake_args(
       Protobuf
       CMAKE_ARGS
         protobuf_BUILD_TESTS=OFF
+        ${_hunter_Protobuf_cmake_compatibility_flag}
   )
 endif()
 
