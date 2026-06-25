@@ -22,6 +22,18 @@ hunter_add_version(
     07f1a72f3938377615da6e4bb48be77d1e8938a4
 )
 
+# we can use the upstream version starting with v1.25
+hunter_add_version(
+    PACKAGE_NAME
+    libdeflate
+    VERSION
+    1.25
+    URL
+    "https://github.com/ebiggers/libdeflate/archive/refs/tags/v1.25.tar.gz"
+    SHA1
+    7a7a9f7b0123d388e4caa2c92c751b4c3170dcca
+)
+
 hunter_cmake_args(
     libdeflate
     CMAKE_ARGS
