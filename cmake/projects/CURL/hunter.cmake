@@ -142,6 +142,17 @@ hunter_add_version(
     8fa4300089fef1977dc636c1d3923726a8a76372
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    CURL
+    VERSION
+    "8.21.0-regula-p0"
+    URL
+    "https://github.com/regulaforensics/curl/archive/v8.21.0-regula-p0.tar.gz"
+    SHA1
+    04ad69d2523830419c6aff7688a030ed6b815913
+)
+
 if (ANDROID OR IOS OR RASPBERRY_PI OR OPENWRT)
   set(_curl_cmake_args
       HAVE_FSETXATTR_5=0
