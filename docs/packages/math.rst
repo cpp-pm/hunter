@@ -10,6 +10,7 @@ Math
  - :ref:`pkg.GSL` - GNU Scientific Library
  - :ref:`pkg.HastyNoise` - SIMD open source noise generation library with a large collection of different noise algorithms.
  - :ref:`pkg.OpenBLAS` - OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version
+ - :ref:`pkg.cppduals` - header-only dual number library for exact forward-mode automatic differentiation.
  - :ref:`pkg.double-conversion` - provides binary-decimal and decimal-binary routines for IEEE doubles.
  - :ref:`pkg.gemmlowp` - Low-precision matrix multiplication.
  - :ref:`pkg.glm` - header only C++ mathematics library for graphics software based on the OpenGL Shading Language (GLSL) specifications.
