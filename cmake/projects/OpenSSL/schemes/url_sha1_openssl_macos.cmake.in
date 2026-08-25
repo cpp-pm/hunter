@@ -88,6 +88,10 @@ set(build_command . "@HUNTER_GLOBAL_SCRIPT_DIR@/clear-all.sh" && make)
 # Configuration options
 set(configure_opts ${configure_opts} threads ${shared_flag})
 
+if(HUNTER_OPENSSL_NO_MODULE)
+  list(APPEND configure_opts "no-module")
+endif()
+
 hunter_status_debug("Configure command: ${configure_command}")
 hunter_status_debug("Configure architectures: ${configure_architectures}")
 hunter_status_debug("Configure options: ${configure_opts}")

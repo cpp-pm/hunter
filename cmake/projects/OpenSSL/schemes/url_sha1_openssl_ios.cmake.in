@@ -48,6 +48,10 @@ set(configure_opts threads no-shared)
 # Pass C flags through
 set(configure_opts ${configure_opts} ${CMAKE_C_FLAGS})
 
+if(HUNTER_OPENSSL_NO_MODULE)
+  list(APPEND configure_opts "no-module")
+endif()
+
 list(APPEND iphoneos_archs @IPHONEOS_ARCHS@)
 list(APPEND iphonesimulator_archs @IPHONESIMULATOR_ARCHS@)
 

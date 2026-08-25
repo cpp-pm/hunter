@@ -144,6 +144,10 @@ else()
   set(shared_flag no-shared)
 endif()
 
+if(HUNTER_OPENSSL_NO_MODULE)
+  list(APPEND configure_opts "no-module")
+endif()
+
 set(configure_opts ${configure_opts} threads ${shared_flag})
 
 hunter_status_debug("Configure command: ${configure_command}")

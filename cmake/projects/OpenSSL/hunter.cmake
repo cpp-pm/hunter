@@ -779,6 +779,18 @@ hunter_add_version(
     24c5d4308e0f901326f15c274c8c736117966499
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
+    "3.5.7"
+    URL
+    "https://www.openssl.org/source/openssl-3.5.7.tar.gz"
+    SHA1
+    53d331880fbde8e6fe25870d5325a61201f6264d
+)
+
+
 if(MINGW)
   hunter_pick_scheme(DEFAULT url_sha1_openssl)
 elseif(WIN32)
@@ -802,6 +814,11 @@ if(MINGW)
   if(_hunter_mingw64)
     hunter_cmake_args(OpenSSL CMAKE_ARGS HUNTER_OPENSSL_MINGW64=TRUE)
   endif()
+endif()
+
+# Add HUNTER_OPENSSL_NO_MODULE=TRUE if OpenSSL is 3.0 or higher
+if("${HUNTER_OpenSSL_VERSION}" VERSION_GREATER_EQUAL "3.0")
+  hunter_cmake_args(OpenSSL CMAKE_ARGS HUNTER_OPENSSL_NO_MODULE=TRUE)
 endif()
 
 hunter_cacheable(OpenSSL)

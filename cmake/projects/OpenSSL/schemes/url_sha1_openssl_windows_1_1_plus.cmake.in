@@ -91,6 +91,10 @@ else()
   set(opt "no-asm")
 endif()
 
+if(HUNTER_OPENSSL_NO_MODULE)
+  list(APPEND opt "no-module")
+endif()
+
 if("@MSVC@")
   # Logging as Workaround for VS_UNICODE_OUTPUT issue:
   # https://public.kitware.com/Bug/view.php?id=14266
