@@ -121,6 +121,7 @@ set(openssl_install_dir "@HUNTER_PACKAGE_INSTALL_PREFIX@")
 #   * opt
 #   * shared
 #   * NASM_ROOT
+#   * MSVC
 configure_file(
     "@HUNTER_PACKAGE_SETUP_DIR@/ep-stages/configure_1_1_plus.cmake.in"
     "@HUNTER_PACKAGE_BUILD_DIR@/configure_1_1_plus.cmake"
