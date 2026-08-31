@@ -146,6 +146,18 @@ foreach(configuration ${configuration_types})
     set(cmake_install_command --build . --target install)
   endif()
 
+  if("@HUNTER_EP_NAME@" STREQUAL "jasper")
+    set(jasper_patch_command
+        PATCH_COMMAND
+        "@CMAKE_COMMAND@"
+        "-DSOURCE_DIR=@HUNTER_PACKAGE_SOURCE_DIR@"
+        -P
+        "@HUNTER_SELF@/scripts/patch-jasper-stdc-version.cmake"
+    )
+  else()
+    set(jasper_patch_command "")
+  endif()
+
   ExternalProject_Add(
       "${current_project}"
       URL
@@ -164,6 +176,7 @@ foreach(configuration ${configuration_types})
           # not used, just avoid creating Install/<name> empty directory
       SOURCE_SUBDIR
       "@HUNTER_PACKAGE_SOURCE_SUBDIR@"
+      ${jasper_patch_command}
       BUILD_COMMAND
           # Separate build and install stage so we can suppress install log
           # which may consist of a long list of files

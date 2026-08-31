@@ -75,11 +75,28 @@ hunter_add_version(
     ef82c0800db4070de0972dde4fe1b6032f2012f2
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    jasper
+    VERSION
+    4.2.9
+    URL
+    "https://github.com/jasper-software/jasper/archive/refs/tags/version-4.2.9.tar.gz"
+    SHA1
+    c57ec2ba91d110515b6d865eb4fb61ca3d51987a
+)
+
 if(HUNTER_jasper_VERSION VERSION_LESS 2.0.33)
     # CMake 4.0+ compatibility with older jasper packages
     set(_hunter_jasper_cmake_compatibility_flag "CMAKE_POLICY_VERSION_MINIMUM=3.5")
 else()
     set(_hunter_jasper_cmake_compatibility_flag "")
+endif()
+
+if(HUNTER_jasper_VERSION VERSION_GREATER_EQUAL 4.2.6)
+    set(_hunter_jasper_package_config_flag "JAS_ENABLE_CMAKE_PACKAGE_CONFIG=ON")
+else()
+    set(_hunter_jasper_package_config_flag "")
 endif()
 
 hunter_cmake_args(
@@ -90,6 +107,7 @@ hunter_cmake_args(
     JAS_ENABLE_PROGRAMS=OFF
     JAS_ENABLE_DOC=OFF
     ${_hunter_jasper_cmake_compatibility_flag}
+    ${_hunter_jasper_package_config_flag}
 )
 
 hunter_pick_scheme(DEFAULT url_sha1_cmake)
