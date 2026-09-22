@@ -42,6 +42,17 @@ hunter_add_version(
     e9c71d72863b02442569c0a2b4da5507d846cfb2
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    cppduals
+    VERSION
+    0.9.6
+    URL
+    "https://gitlab.com/tesch1/cppduals/-/archive/v0.9.6/cppduals-v0.9.6.tar.gz"
+    SHA1
+    0383343d893ecdaad969c8312a25d1e0c0695ff0
+)
+
 hunter_cmake_args(
     cppduals
     CMAKE_ARGS
