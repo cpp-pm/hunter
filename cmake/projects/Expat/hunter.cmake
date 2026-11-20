@@ -43,7 +43,18 @@ hunter_add_version(
     73c4c258dff36a68dda2f3c39a413ac602bfb47e
 )
 
-if(NOT HUNTER_Expat_VERSION VERSION_LESS 2.2.9)
+hunter_add_version(
+    PACKAGE_NAME
+    Expat
+    VERSION
+    2.7.3
+    URL
+    "https://github.com/libexpat/libexpat/archive/R_2_7_3.tar.gz"
+    SHA1
+    bf21f464f9cdcf8dc23f059ec95faa3ad5289ab4
+)
+
+if(NOT HUNTER_Expat_VERSION VERSION_LESS 2.7.3)
     hunter_cmake_args(
         Expat
         CMAKE_ARGS
