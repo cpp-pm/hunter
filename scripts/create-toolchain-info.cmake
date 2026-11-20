@@ -77,7 +77,6 @@ try_compile(
     try_compile_result
     "${CMAKE_BINARY_DIR}/_test"
     "${predefined}"
-    CMAKE_FLAGS "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}"
     OUTPUT_VARIABLE outresult
 )
 
