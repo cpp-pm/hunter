@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Manual dispatch, get project name from input
         if: github.event_name == 'workflow_dispatch'
@@ -35,10 +35,9 @@ jobs:
 
       - name: Get changed files and save them to ${HOME}/files.json
         if: github.event_name != 'workflow_dispatch'
-        id: files
-        uses: lots0logs/gh-action-get-changed-files@2.2.2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash .github/workflows/changed_files.sh
 
       - name: Install dependencies
         run: |
@@ -56,7 +55,7 @@ jobs:
     steps:
 
     - name: Git checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
 
     - name: Manual dispatch, get project name from input
       if: github.event_name == 'workflow_dispatch'
@@ -65,10 +64,9 @@ jobs:
 
     - name: Get changed files and save them to ${HOME}/files.json
       if: github.event_name != 'workflow_dispatch'
-      id: files
-      uses: lots0logs/gh-action-get-changed-files@2.2.2
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: bash .github/workflows/changed_files.sh
 
     - name: Set matrix for subsequent build
       id: set-matrix
@@ -103,15 +101,15 @@ jobs:
     steps:
 
     - name: Git checkout with submodules
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         submodules: true
 
     - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
 
     - name: Set up Python
-      uses: actions/setup-python@v5.1.0
+      uses: actions/setup-python@v7
       with:
         python-version: ${{ matrix.python }}
 
@@ -160,24 +158,21 @@ jobs:
     steps:
 
     - name: Git checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
 
     - name: Get job status via GitHub API
-      uses: octokit/request-action@v2.x
-      id: get_job_data
-      with:
-        route: GET /repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs?per_page=100" > job_data.json
 
     - name: Parse job status
       run: |
         mkdir job_data
-        echo '${{ steps.get_job_data.outputs.data }}' > job_data.json
         python .github/workflows/set_status.py
 
     - name: Deploy job status to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4.0.0
+      uses: peaceiris/actions-gh-pages@v4.1.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: job_data
