@@ -105,8 +105,11 @@ jobs:
       with:
         submodules: true
 
-    - name: Download all workflow run artifacts
+    - name: Download toolchains artifact
       uses: actions/download-artifact@v8
+      with:
+        name: toolchains
+        path: toolchains
 
     - name: Set up Python
       uses: actions/setup-python@v7
