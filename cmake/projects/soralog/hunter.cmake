@@ -23,9 +23,9 @@ hunter_add_version(
     VERSION
     "0.4.0"
     URL
-    "https://github.com/xDimon/soralog/archive/46301b9481d33f138aa7bb181bf85ea21a155a58.tar.gz"
+    "https://github.com/xDimon/soralog/archive/refs/tags/v0.4.0.tar.gz"
     SHA1
-    f656d28962aa52aa224827fb6e293a4aba80d4ca
+    37ead569826d16f3bf03989a1934475d12d4b528
 )
 
 hunter_cmake_args(
