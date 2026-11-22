@@ -17,6 +17,17 @@ hunter_add_version(
     d8c9e4de276367f04e9d334953947a141e011a2e
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    soralog
+    VERSION
+    "0.4.0"
+    URL
+    "https://github.com/xDimon/soralog/archive/46301b9481d33f138aa7bb181bf85ea21a155a58.tar.gz"
+    SHA1
+    f656d28962aa52aa224827fb6e293a4aba80d4ca
+)
+
 hunter_cmake_args(
     soralog
     CMAKE_ARGS
